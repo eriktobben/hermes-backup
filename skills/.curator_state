@@ -1,0 +1,9 @@
+{
+  "last_report_path": "/home/erik/.hermes/logs/curator/20260603-101110",
+  "last_run_at": "2026-06-03T10:11:10.314054+00:00",
+  "last_run_duration_seconds": 418.785917,
+  "last_run_summary": "auto: no changes; llm: ## Summary\n\nThis curation pass processed **5 major clusters** across the 93 agent-created skills, consolidating **14 skills** into **3 new umbrella skills** and patching **2 existing skills**, plus archiving **5 stale platform-gated built-i…\narchived 11 skill(s):\n  • plan → writing-plans\n  • apple-notes — pruned (stale)\n  • apple-reminders — pruned (stale)\n  • claude-code — pruned (stale)\n  • codex — pruned (stale)\n  • findmy — pruned (stale)\n  • hermes-agent-skill-authoring — pruned (stale)\n  • imessage — pruned (stale)\n  • macos-computer-use — pruned (stale)\n  • opencode — pruned (stale)\n  … and 1 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin writing-plans",
+  "last_run_summary_shown_at": "2026-05-27T09:55:18.303788+00:00",
+  "paused": false,
+  "run_count": 6
+}

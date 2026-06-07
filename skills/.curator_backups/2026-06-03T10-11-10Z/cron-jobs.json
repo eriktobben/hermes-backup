@@ -1,0 +1,138 @@
+{
+  "jobs": [
+    {
+      "id": "b6d12ab73f07",
+      "name": "FINN bilvarsel (el + bensin-kjede)",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "finn_bilvarsel.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "display": "0 9 * * *"
+      },
+      "schedule_display": "0 9 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 6
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-05-29T21:05:58.668739+00:00",
+      "next_run_at": "2026-06-04T09:00:00+02:00",
+      "last_run_at": "2026-06-03T11:00:08.742513+02:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1510010610304155738",
+        "chat_name": "Tobben MC / #bilkj\u00f8p",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "8da45838ac6b",
+      "name": "Sjekk lyskorn.no ledig",
+      "prompt": "Daily check of whether lyskorn.no is available for registration.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "check-lyskorn.py",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *",
+        "display": "0 9 * * *"
+      },
+      "schedule_display": "0 9 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-03T00:39:28.995231+00:00",
+      "next_run_at": "2026-06-04T09:00:00+02:00",
+      "last_run_at": "2026-06-03T11:59:10.228185+02:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1511529337885691965",
+        "chat_name": "Tobben MC / #\ud83d\udd14-varslinger",
+        "thread_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
+    },
+    {
+      "id": "f3a42a49fae6",
+      "name": "AI Model Daily Briefing",
+      "prompt": "Your task: Produce a daily AI model news briefing in Norwegian.\n\nSearch the web for the LATEST news about AI models \u2014 with a strong focus on Chinese AI models.\n\n1. Search for Chinese AI model news \u2014 DeepSeek (all versions), Qwen (Alibaba), Kimi (Moonshot AI), Baidu ERNIE, Zhipu GLM/ChatGLM, ByteDance (Doubao/Seed), Baichuan, Yi (01.AI), SenseTime SenseNova, StepFun (MiniMax), Alibaba's Tongyi, Huawei's Pangu, Tencent's Hunyuan, and any new/emerging Chinese models. Include open-source releases, benchmark results, new architectures, API pricing changes, and regulatory news.\n\n2. Search for general AI model news \u2014 OpenAI (GPT, o-series), Anthropic (Claude), Google (Gemini, Gemma), Meta (Llama), Mistral, xAI (Grok), and other notable models.\n\n3. Check for new papers on arXiv relevant to model architecture, training efficiency, or benchmarks.\n\nFocus on news from the last 24-48 hours. If nothing major happened, note that concisely.\n\nFormat the briefing as follows (write in NORWEGIAN, keep it conversational and informative):\n\n**\ud83c\udde8\ud83c\uddf3 Kinesiske AI-modeller**\n- Key developments, bullet points\n\n**\ud83c\udf0d Globale AI-modeller**\n- Key developments, bullet points\n\n**\ud83d\udcc4 Interessante papers**\n- Any notable new papers\n\n**\ud83d\udcca Kort oppsummert**\n- 1-2 sentence bottom line\n\nUse web_search and browser_navigate to gather information. Cite your sources (URLs). Keep it concise \u2014 aim for 5-10 bullet points total unless there's exceptional news.\n\nYou are delivering this briefing to a Discord channel called \"\ud83d\uddde\ufe0f-briefings\". The user (Tobben / Erik) is a Laravel developer interested in AI trends but wants the info compact and actionable.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "display": "0 8 * * *"
+      },
+      "schedule_display": "0 8 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-03T00:41:44.094087+00:00",
+      "next_run_at": "2026-06-04T08:00:00+02:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1499183215494037554",
+        "chat_name": "Tobben MC / #\ud83d\uddde\ufe0f-briefings",
+        "thread_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "search",
+        "terminal"
+      ],
+      "workdir": null,
+      "profile": null
+    }
+  ],
+  "updated_at": "2026-06-03T11:59:10.228954+02:00"
+}

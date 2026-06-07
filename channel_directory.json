@@ -1,0 +1,415 @@
+{
+  "updated_at": "2026-06-07T22:01:41.915952",
+  "platforms": {
+    "discord": [
+      {
+        "id": "1499181433200312381",
+        "name": "general",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1499181605833670756",
+        "name": "serena",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1488819428568338492",
+        "name": "visualsai",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1488820747081093253",
+        "name": "kimaki-nora",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1490071103123488828",
+        "name": "serenahome",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1490319114085072949",
+        "name": "browserscroll",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1490490848054612120",
+        "name": "unclutter",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1490820015199490109",
+        "name": "cloudprint-mac-app",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1491728127083151501",
+        "name": "igflow",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1492850504894775307",
+        "name": "rasletind",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1493580416135987342",
+        "name": "igwebshop",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1479641599700111533",
+        "name": "lyra",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1479804333934510111",
+        "name": "kaira",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1480845753961152632",
+        "name": "🖼️-ads-generation",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1479972072326303995",
+        "name": "emilie",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1479996867101069604",
+        "name": "markus",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1480328006458282107",
+        "name": "nova",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1481057798962811112",
+        "name": "selma",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1482525623866888362",
+        "name": "athena",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1499183215494037554",
+        "name": "🗞️-briefings",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1500250374966218913",
+        "name": "masterfeed",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1501192826027770048",
+        "name": "cloudprint-server",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1501193824624705606",
+        "name": "cloudprint-deamon",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1501945621618229270",
+        "name": "masterfeed-app",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1503541508609937458",
+        "name": "exocard-shop",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1504522904023601187",
+        "name": "general",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1504940952983175169",
+        "name": "minify",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1505369502022504478",
+        "name": "browserscroll-online",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1505550121511813304",
+        "name": "iptv",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1508168768528842877",
+        "name": "vivaltopdf",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1510010610304155738",
+        "name": "bilkjøp",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1511404097302171818",
+        "name": "serena-dev",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1511501933180092478",
+        "name": "masterfeed-dev",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1511529337885691965",
+        "name": "🔔-varslinger",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1498959679550652420:1498959679550652420",
+        "name": "Tobben MC / #hermes / Hei / topic 1498959679550652420",
+        "type": "thread",
+        "thread_id": "1498959679550652420"
+      },
+      {
+        "id": "1498961199679668245:1498961199679668245",
+        "name": "Tobben MC / #hermes / Can you install and set up this? https://github.com/stainlu/hermes-labyrinth / topic 1498961199679668245",
+        "type": "thread",
+        "thread_id": "1498961199679668245"
+      },
+      {
+        "id": "1498966672923689022:1498966672923689022",
+        "name": "Tobben MC / #hermes / Can you configure yourself to rename the Discord thread name to an AI generat... / topic 1498966672923689022",
+        "type": "thread",
+        "thread_id": "1498966672923689022"
+      },
+      {
+        "id": "1498988262067273799:1498988262067273799",
+        "name": "Tobben MC / #hermes / What is the best way to handle multiple coding projects / repositories with H... / topic 1498988262067273799",
+        "type": "thread",
+        "thread_id": "1498988262067273799"
+      },
+      {
+        "id": "1499181605833670756",
+        "name": "Tobben MC / #serena",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1499183215494037554",
+        "name": "Tobben MC / #🗞️-briefings",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1500250374966218913",
+        "name": "Tobben MC / #masterfeed",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1500251237940072499:1500251237940072499",
+        "name": "Tobben MC / #masterfeed / Masterfeed security audit / topic 1500251237940072499",
+        "type": "thread",
+        "thread_id": "1500251237940072499"
+      },
+      {
+        "id": "1501193824624705606",
+        "name": "Tobben MC / #cloudprint-deamon",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1499181433200312381",
+        "name": "Tobben MC / #general",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1504940952983175169",
+        "name": "Tobben MC / #minify",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1504942759184830465:1504942759184830465",
+        "name": "Tobben MC / #minify / Mac image compressor with Liquid Glass UI / topic 1504942759184830465",
+        "type": "thread",
+        "thread_id": "1504942759184830465"
+      },
+      {
+        "id": "1510010610304155738",
+        "name": "Tobben MC / #bilkjøp",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1511404097302171818",
+        "name": "Tobben MC / #serena-dev",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1511501933180092478",
+        "name": "Tobben MC / #masterfeed-dev",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1511506529805926451:1511506529805926451",
+        "name": "Tobben MC / #general / Nå har gatewayen restartet. Hva nå? / topic 1511506529805926451",
+        "type": "thread",
+        "thread_id": "1511506529805926451"
+      },
+      {
+        "id": "1511512227046228109:1511512227046228109",
+        "name": "Tobben MC / #general / Problemet nå er at samtalen vi har her i får auto thread, det ønsker jeg ikke... / topic 1511512227046228109",
+        "type": "thread",
+        "thread_id": "1511512227046228109"
+      },
+      {
+        "id": "1511521166572130426:1511521166572130426",
+        "name": "Tobben MC / #masterfeed-dev / Dette er en test / topic 1511521166572130426",
+        "type": "thread",
+        "thread_id": "1511521166572130426"
+      },
+      {
+        "id": "1511522678270595246:1511522678270595246",
+        "name": "Tobben MC / #general / Hei / topic 1511522678270595246",
+        "type": "thread",
+        "thread_id": "1511522678270595246"
+      },
+      {
+        "id": "1511523424558907462:1511523424558907462",
+        "name": "Tobben MC / #general / hei / topic 1511523424558907462",
+        "type": "thread",
+        "thread_id": "1511523424558907462"
+      },
+      {
+        "id": "1511524263612649554:1511524263612649554",
+        "name": "Tobben MC / #general / Testmelding / topic 1511524263612649554",
+        "type": "thread",
+        "thread_id": "1511524263612649554"
+      },
+      {
+        "id": "1511529337885691965",
+        "name": "Tobben MC / #🔔-varslinger",
+        "type": "group",
+        "thread_id": null
+      },
+      {
+        "id": "1511531396081123468:1511531396081123468",
+        "name": "Tobben MC / #masterfeed-dev / Kan du gjøre en sikkerhetsvurdering av denne Laravel appen? Bruk Opencode / topic 1511531396081123468",
+        "type": "thread",
+        "thread_id": "1511531396081123468"
+      },
+      {
+        "id": "1511644514845069422:1511644514845069422",
+        "name": "Tobben MC / #serena-dev / Kan du kjøre full test suite og verifisere at den returnerer grønt? / topic 1511644514845069422",
+        "type": "thread",
+        "thread_id": "1511644514845069422"
+      },
+      {
+        "id": "1511646062438387834:1511646062438387834",
+        "name": "Tobben MC / #masterfeed-dev / Kan du gjøre en sikkerhetsvurdering eksplisitt på krypteringen av bilder? Hvo... / topic 1511646062438387834",
+        "type": "thread",
+        "thread_id": "1511646062438387834"
+      },
+      {
+        "id": "1513138239555506177:1513138239555506177",
+        "name": "Tobben MC / #general / SLM / topic 1513138239555506177",
+        "type": "thread",
+        "thread_id": "1513138239555506177"
+      },
+      {
+        "id": "1513151821089345597:1513151821089345597",
+        "name": "Tobben MC / #general / Sml 2 / topic 1513151821089345597",
+        "type": "thread",
+        "thread_id": "1513151821089345597"
+      },
+      {
+        "id": "1513254751503126559:1513254751503126559",
+        "name": "Tobben MC / #general / Kan du sette opp OpenCode til å bruke Deepseek V4 Pro som orchestrator og pla... / topic 1513254751503126559",
+        "type": "thread",
+        "thread_id": "1513254751503126559"
+      },
+      {
+        "id": "1513283477590511616:1513283477590511616",
+        "name": "Tobben MC / #general / Jeg bruker Kimaki som en bridge mellom OpenCode og Discord. Jeg har skrevet o... / topic 1513283477590511616",
+        "type": "thread",
+        "thread_id": "1513283477590511616"
+      },
+      {
+        "id": "1513301329345511595:1513301329345511595",
+        "name": "Tobben MC / #general / Kan du sette opp en cron job som comitter Hermes data til Github som en type ... / topic 1513301329345511595",
+        "type": "thread",
+        "thread_id": "1513301329345511595"
+      }
+    ],
+    "telegram": [],
+    "whatsapp": [],
+    "slack": [],
+    "signal": [],
+    "mattermost": [],
+    "matrix": [],
+    "homeassistant": [],
+    "email": [],
+    "sms": [],
+    "dingtalk": [],
+    "msgraph_webhook": [],
+    "feishu": [],
+    "wecom": [],
+    "wecom_callback": [],
+    "weixin": [],
+    "bluebubbles": [],
+    "qqbot": [],
+    "yuanbao": [],
+    "google_chat": [],
+    "irc": [],
+    "line": [],
+    "ntfy": [],
+    "simplex": [],
+    "teams": []
+  }
+}

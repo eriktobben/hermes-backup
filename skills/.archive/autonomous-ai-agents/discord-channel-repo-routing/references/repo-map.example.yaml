@@ -1,0 +1,7 @@
+projects:
+  serena:
+    repo_path: ~/code/serena
+    default_branch: main
+  ig-flow:
+    repo_path: ~/code/ig-flow
+    default_branch: main

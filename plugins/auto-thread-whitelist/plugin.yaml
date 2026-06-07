@@ -1,0 +1,5 @@
+name: auto-thread-whitelist
+version: 1.0.0
+description: "Whitelist-based auto-threading for Discord — only create auto-threads in channels listed in discord.auto_thread_channels."
+author: "Erik / Hermes"
+kind: standalone

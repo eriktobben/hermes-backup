@@ -1,0 +1,49 @@
+# Secrets — never commit raw API keys/tokens to git
+env.txt
+auth.json
+
+# Caches and temp
+audio_cache/
+image_cache/
+cache/
+*.cache.json
+*.lock
+
+# Sessions (large, not needed for restore)
+sessions/
+
+# Logs
+logs/
+
+# Source code (reinstallable via `hermes update`)
+hermes-agent/
+
+# Session DB (large, can be rebuilt from sessions/)
+state.db
+state.db-shm
+state.db-wal
+state-snapshots/
+
+# Sandbox ephemeral data
+sandboxes/
+
+# Binaries
+bin/
+
+# LSP state
+lsp/
+
+# Cosmetic only
+dashboard-themes/
+
+# Ephemeral process state
+processes.json
+gateway.pid
+gateway.lock
+.restart_last_processed.json
+
+# Context cache
+context_length_cache.yaml
+
+# Kanban lock
+kanban.db.init.lock
