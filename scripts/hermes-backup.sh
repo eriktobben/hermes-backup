@@ -5,6 +5,10 @@ set -euo pipefail
 # Hermes Backup Script
 # Runs every hour via Hermes cron.
 # Commits config + data (excluding secrets) to GitHub.
+#
+# Silent on success — only produces output/errors on
+# failure, so cron only notifies the user when something
+# goes wrong.
 # ──────────────────────────────────────────────────────
 
 HERMES_HOME="${HERMES_HOME:-$HOME/.hermes}"
@@ -29,7 +33,7 @@ cp "$HERMES_HOME/gateway_state.json"     "$BACKUP_DIR/"               2>/dev/nul
 cp "$HERMES_HOME/kanban.db"              "$BACKUP_DIR/kanban.db"      2>/dev/null || true
 
 # Keep env.template.txt up to date with current variable names
-grep -E '^[A-Z_]+\w*=' "$HERMES_HOME/.env" 2>/dev/null \
+grep -E '^[A-Z_]+[A-Z_0-9]*=' "$HERMES_HOME/.env" 2>/dev/null \
   | sed 's/=.*$/=""/' \
   > "$BACKUP_DIR/env.template.txt" \
   || true
@@ -50,17 +54,19 @@ rsync -a --delete "$HERMES_HOME/pairing/"   "$BACKUP_DIR/pairing/"    2>/dev/nul
 git add -A
 
 if git diff --cached --quiet; then
-  echo "[$TIMESTAMP] No changes to backup"
+  # Nothing changed — silent exit
   exit 0
 fi
 
-git commit -m "Hermes backup — $TIMESTAMP"
+git commit -q -m "Hermes backup — $TIMESTAMP"
 
-# Try pushing; two common branch names
+# Try pushing; only speak on failure
 if ! git push origin main 2>/dev/null; then
   if ! git push origin master 2>/dev/null; then
-    echo "[$TIMESTAMP] WARNING: Push failed — will retry next cycle" >&2
+    echo "ERROR: Git push failed at $TIMESTAMP" >&2
+    exit 1
   fi
 fi
 
-echo "[$TIMESTAMP] Backup complete: $(git rev-parse HEAD)"
+# Success — silent
+exit 0

@@ -165,7 +165,7 @@
       "last_status": null,
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "local",
+      "deliver": "origin",
       "origin": {
         "platform": "discord",
         "chat_id": "1513301329345511595",
@@ -177,5 +177,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-08T00:02:03.246786+02:00"
+  "updated_at": "2026-06-08T00:12:31.866189+02:00"
 }
