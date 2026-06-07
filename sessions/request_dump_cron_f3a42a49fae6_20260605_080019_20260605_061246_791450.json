@@ -1,0 +1,236 @@
+{
+  "timestamp": "2026-06-05T06:12:46.791392",
+  "session_id": "cron_f3a42a49fae6_20260605_080019",
+  "reason": "max_retries_exhausted",
+  "request": {
+    "method": "POST",
+    "url": "https://opencode.ai/zen/go/v1/chat/completions",
+    "headers": {
+      "Authorization": "Bearer sk-yp5sM...sHez",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "model": "deepseek-v4-flash",
+      "messages": [
+        {
+          "role": "system",
+          "content": "# Hermes Agent Persona\n\n<!--\nThis file defines the agent's personality and tone.\nThe agent will embody whatever you write here.\nEdit this to customize how Hermes communicates with you.\n\nExamples:\n  - \"You are a warm, playful assistant who uses kaomoji occasionally.\"\n  - \"You are a concise technical expert. No fluff, just facts.\"\n  - \"You speak like a friendly coworker who happens to know everything.\"\n\nThis file is loaded fresh each message -- no restart needed.\nDelete the contents (or this file) to use the default personality.\n-->\n\nIf the user asks about configuring, setting up, or using Hermes Agent itself, load the `hermes-agent` skill with skill_view(name='hermes-agent') before answering. Docs: https://hermes-agent.nousresearch.com/docs\n\n# Finishing the job\nWhen the user asks you to build, run, or verify something, the deliverable is a working artifact backed by real tool output — not a description of one. Do not stop after writing a stub, a plan, or a single command. Keep working until you have actually exercised the code or produced the requested result, then report what real execution returned.\nIf a tool, install, or network call fails and blocks the real path, say so directly and try an alternative (different package manager, different approach, ask the user). NEVER substitute plausible-looking fabricated output (made-up data, invented file contents, synthesised API responses) for results you couldn't actually produce. Reporting a blocker honestly is always better than inventing a result.\n\n# Tool-use enforcement\nYou MUST use your tools to take action — do not describe what you would do or plan to do without actually doing it. When you say you will perform an action (e.g. 'I will run the tests', 'Let me check the file', 'I will create the project'), you MUST immediately make the corresponding tool call in the same response. Never end your turn with a promise of future action — execute it now.\nKeep working until the task is actually complete. Do not stop with a summary of what you plan to do next time. If you have tools available that can accomplish the task, use them instead of telling the user what you would do.\nEvery response should either (a) contain tool calls that make progress, or (b) deliver a final result to the user. Responses that only describe intentions without acting are not acceptable.\n\nHost: Linux (6.8.0-117-generic)\nUser home directory: /home/erik\nCurrent working directory: /home/erik\n\nPython toolchain: python3=3.11.15, PEP 668=yes (use venv or uv).\n\nActive Hermes profile: default. Other profiles (if any) live under ~/.hermes/profiles/<name>/. Each profile has its own skills/, plugins/, cron/, and memories/ that affect a different session than this one. Do not modify another profile's skills/plugins/cron/memories unless the user explicitly directs you to.\n\nYou are running as a scheduled cron job. There is no user present — you cannot ask questions, request clarification, or wait for follow-up. Execute the task fully and autonomously, making reasonable decisions where needed. Your final response is automatically delivered to the job's configured destination — put the primary content directly in your response.\n\nConversation started: Friday, June 05, 2026\nModel: deepseek-v4-flash\nProvider: opencode-go"
+        },
+        {
+          "role": "user",
+          "content": "[IMPORTANT: You are running as a scheduled cron job. DELIVERY: Your final response will be automatically delivered to the user — do NOT use send_message or try to deliver the output yourself. Just produce your report/output as your final response and the system handles the rest. SILENT: If there is genuinely nothing new to report, respond with exactly \"[SILENT]\" (nothing else) to suppress delivery. Never combine [SILENT] with content — either report your findings normally, or say [SILENT] and nothing more.]\n\nYour task: Produce a daily AI model news briefing in Norwegian.\n\nSearch the web for the LATEST news about AI models — with a strong focus on Chinese AI models.\n\n1. Search for Chinese AI model news — DeepSeek (all versions), Qwen (Alibaba), Kimi (Moonshot AI), Baidu ERNIE, Zhipu GLM/ChatGLM, ByteDance (Doubao/Seed), Baichuan, Yi (01.AI), SenseTime SenseNova, StepFun (MiniMax), Alibaba's Tongyi, Huawei's Pangu, Tencent's Hunyuan, and any new/emerging Chinese models. Include open-source releases, benchmark results, new architectures, API pricing changes, and regulatory news.\n\n2. Search for general AI model news — OpenAI (GPT, o-series), Anthropic (Claude), Google (Gemini, Gemma), Meta (Llama), Mistral, xAI (Grok), and other notable models.\n\n3. Check for new papers on arXiv relevant to model architecture, training efficiency, or benchmarks.\n\nFocus on news from the last 24-48 hours. If nothing major happened, note that concisely.\n\nFormat the briefing as follows (write in NORWEGIAN, keep it conversational and informative):\n\n**🇨🇳 Kinesiske AI-modeller**\n- Key developments, bullet points\n\n**🌍 Globale AI-modeller**\n- Key developments, bullet points\n\n**📄 Interessante papers**\n- Any notable new papers\n\n**📊 Kort oppsummert**\n- 1-2 sentence bottom line\n\nUse web_search and browser_navigate to gather information. Cite your sources (URLs). Keep it concise — aim for 5-10 bullet points total unless there's exceptional news.\n\nYou are delivering this briefing to a Discord channel called \"🗞️-briefings\". The user (Tobben / Erik) is a Laravel developer interested in AI trends but wants the info compact and actionable."
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "reasoning_content": "The user wants me to produce a daily AI model news briefing in Norwegian, focusing on Chinese AI models and global AI developments. Let me search for the latest news. I'll do multiple searches in parallel to gather information efficiently.\n\nLet me start by searching for various topics.",
+          "tool_calls": [
+            {
+              "id": "call_00_eDpRrSnC67SWrXwyrVlf2921",
+              "type": "function",
+              "function": {
+                "name": "terminal",
+                "arguments": "{\"command\":\"curl -s \\\"https://www.google.com/search?q=DeepSeek+AI+model+news+2026&tbs=qdr:d2\\\" -H \\\"User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36\\\" 2>/dev/null | sed 's/<[^>]*>/\\\\n/g' | grep -i -E '(deepseek|qwen|kimi|baidu|ernie|zhipu|chatglm|doubao|baichuan|yi|01\\\\.ai|sensetime|stepfun|minimax|tongyi|huawei|pangu|tencent|hunyuan)' | head -40\",\"timeout\":15}"
+              }
+            },
+            {
+              "id": "call_01_v9KTyK60wGB920AX46Xd7026",
+              "type": "function",
+              "function": {
+                "name": "terminal",
+                "arguments": "{\"command\":\"curl -s \\\"https://www.google.com/search?q=AI+model+news+June+2026+latest&tbs=qdr:d2\\\" -H \\\"User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36\\\" 2>/dev/null | sed 's/<[^>]*>/\\\\n/g' | grep -i -E '(gpt|claude|gemini|llama|mistral|grok|openai|anthropic|google|meta|xai)' | head -40\",\"timeout\":15}"
+              }
+            },
+            {
+              "id": "call_02_S1CbkTtug1EmXMg4TsWO0916",
+              "type": "function",
+              "function": {
+                "name": "terminal",
+                "arguments": "{\"command\":\"curl -s \\\"https://arxiv.org/list/cs.AI/recent\\\" -H \\\"User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36\\\" 2>/dev/null | grep -oP '(?<=class=\\\"list-title mathjax\\\">).*?(?=</div>)' | head -20\",\"timeout\":15}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "name": "terminal",
+          "content": "{\"output\": \"\", \"exit_code\": 0, \"error\": null}",
+          "tool_call_id": "call_00_eDpRrSnC67SWrXwyrVlf2921"
+        },
+        {
+          "role": "tool",
+          "name": "terminal",
+          "content": "{\"output\": \"\", \"exit_code\": 0, \"error\": null}",
+          "tool_call_id": "call_01_v9KTyK60wGB920AX46Xd7026"
+        },
+        {
+          "role": "tool",
+          "name": "terminal",
+          "content": "{\"output\": \"\", \"exit_code\": 0, \"error\": null}",
+          "tool_call_id": "call_02_S1CbkTtug1EmXMg4TsWO0916"
+        },
+        {
+          "role": "assistant",
+          "content": "",
+          "reasoning_content": "The raw HTML parsing didn't work well. Let me try different approaches - maybe use some news aggregators or RSS feeds, or try to fetch actual news sources.",
+          "tool_calls": [
+            {
+              "id": "call_00_3vkDQvRfbZBKSrNLh4vd8722",
+              "type": "function",
+              "function": {
+                "name": "terminal",
+                "arguments": "{\"command\":\"curl -sL \\\"https://news.google.com/rss/search?q=Chinese+AI+model+DeepSeek+Qwen+2026&hl=en-US&gl=US&ceid=US:en\\\" -H \\\"User-Agent: Mozilla/5.0\\\" 2>/dev/null | grep -oP '(?<=<title>).*?(?=</title>)' | head -20\",\"timeout\":15}"
+              }
+            },
+            {
+              "id": "call_01_BxlOJNAV1NUgCGXjDJHl8349",
+              "type": "function",
+              "function": {
+                "name": "terminal",
+                "arguments": "{\"command\":\"curl -sL \\\"https://news.google.com/rss/search?q=AI+models+latest+news+2026&hl=en-US&gl=US&ceid=US:en\\\" -H \\\"User-Agent: Mozilla/5.0\\\" 2>/dev/null | grep -oP '(?<=<title>).*?(?=</title>)' | head -20\",\"timeout\":15}"
+              }
+            },
+            {
+              "id": "call_02_WRPjkMJzB7Hv8SMwS1tT3519",
+              "type": "function",
+              "function": {
+                "name": "terminal",
+                "arguments": "{\"command\":\"curl -sL \\\"https://arxiv.org/list/cs.AI/recent\\\" -H \\\"User-Agent: Mozilla/5.0\\\" 2>/dev/null | grep -oP '(?<=<span class=\\\"descriptor\\\">Title:</span>).*?(?=<)' | head -20\",\"timeout\":15}"
+              }
+            }
+          ]
+        },
+        {
+          "role": "tool",
+          "name": "terminal",
+          "content": "{\"output\": \"\\\"Chinese AI model DeepSeek Qwen 2026\\\" - Google News\\nGoogle News\\nChina’s DeepSeek V4 And Qwen Reshape The Open-Source AI Race - Forbes\\nWhy China’s Affordable AI Is a Worry for Silicon Valley - Bloomberg.com\\nA year on from DeepSeek shock, get set for flurry of low-cost Chinese AI models - Reuters\\nChina’s AI Is Spreading Fast. Here’s How to Stop the Security Risks - War on the Rocks\\nDeepSeek V4 - ChinaTalk | Jordan Schneider\\nAmerican companies can't stop buying Chinese AI - qz.com\\nOne year after DeepSeek, Chinese AI firms from Alibaba to Moonshot race to release new models - CNBC\\nLatest open artifacts (#19): Qwen 3.5, GLM 5, MiniMax 2.5 — Chinese labs' latest push of the frontier - Interconnects AI\\nAlibaba’s Qwen family captures over 50% of global open-source downloads: report - South China Morning Post\\nChinese AI Models Spread Propaganda Globally - Center for European Policy Analysis (CEPA)\\n[News] Chinese AI Models Reportedly Hit ~15% Global Share in Nov. 2025, Fueled by DeepSeek Open-Source Push - TrendForce\\nChinese AI models are popular. But can they make money? - The Economist\\nFree boba and “red envelopes”: China’s AI giants launch marketing blitz for Lunar New Year - Rest of World\\nChinese AI Makes Its Sales Pitch - The Wire China\\nChina's top AI players - Tech Xplore\\nWhat’s next for Chinese open-source AI - MIT Technology Review\\nAlibaba unveils new Qwen3.5 model for 'agentic AI era' - Reuters\\nAlibaba Unveils Major AI Model Upgrade Ahead of DeepSeek Release - Bloomberg.com\", \"exit_code\": 0, \"error\": null}",
+          "tool_call_id": "call_00_3vkDQvRfbZBKSrNLh4vd8722"
+        },
+        {
+          "role": "tool",
+          "name": "terminal",
+          "content": "{\"output\": \"\\\"AI models latest news 2026\\\" - Google News\\nGoogle News\\nMIT researchers teach AI models to interpret charts - MIT News\\nMicrosoft unveils new AI models to lessen reliance on OpenAI and lower costs for developers - CNBC\\nTrump signs AI safety order seeking voluntary review of new models - NPR\\nAI executive order sets stage for new cybersecurity directives - Federal News Network\\nNew AI Model Shows How to Evacuate for Fires One Safe Step at a Time - National Institute of Standards and Technology (.gov)\\nMicrosoft Build 2026: Securing code, agents, and models across the development lifecycle - Microsoft\\nTessera AI model offers accessible way to view Earth - Phys.org\\nWhich AI Model is Most Used in Q1 2026? New Research - 24-7 Press Release Newswire\\nHouse unveils AI draft that would preempt state laws - Politico\\nTrump Signs Executive Order Seeking Oversight of A.I. Models - The New York Times\\nMayo’s latest AI bet: A frontier model with Microsoft - Healthcare Dive\\nTrump signs executive order seeking early access to new AI releases - The Guardian\\nTrump signs executive order asking for access to new AI models before they launch - CNN\\nExclusive | Meta Keeps Delaying the Release of Its New AI Model to Developers - WSJ\\nMeta repeatedly pushes back new AI model release for developers, WSJ says - Reuters\\nHugging Face Transformers RCE flaw enables stealthy compromise via AI model configs - csoonline.com\\nTrump finds an AI policy he can live with - Politico\\nMicrosoft and Google are late to AI coding, but 'absolutely critical' they compete for growth - CNBC\", \"exit_code\": 0, \"error\": null}",
+          "tool_call_id": "call_01_BxlOJNAV1NUgCGXjDJHl8349"
+        },
+        {
+          "role": "tool",
+          "name": "terminal",
+          "content": "{\"output\": \"\", \"exit_code\": 0, \"error\": null}",
+          "tool_call_id": "call_02_WRPjkMJzB7Hv8SMwS1tT3519"
+        }
+      ],
+      "tools": [
+        {
+          "type": "function",
+          "function": {
+            "name": "process",
+            "description": "Manage background processes started with terminal(background=true). Actions: 'list' (show all), 'poll' (check status + new output), 'log' (full output with pagination), 'wait' (block until done or timeout), 'kill' (terminate), 'write' (send raw stdin data without newline), 'submit' (send data + Enter, for answering prompts), 'close' (close stdin/send EOF).",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "action": {
+                  "type": "string",
+                  "enum": [
+                    "list",
+                    "poll",
+                    "log",
+                    "wait",
+                    "kill",
+                    "write",
+                    "submit",
+                    "close"
+                  ],
+                  "description": "Action to perform on background processes"
+                },
+                "session_id": {
+                  "type": "string",
+                  "description": "Process session ID (from terminal background output). Required for all actions except 'list'."
+                },
+                "data": {
+                  "type": "string",
+                  "description": "Text to send to process stdin (for 'write' and 'submit' actions)"
+                },
+                "timeout": {
+                  "type": "integer",
+                  "description": "Max seconds to block for 'wait' action. Returns partial output on timeout.",
+                  "minimum": 1
+                },
+                "offset": {
+                  "type": "integer",
+                  "description": "Line offset for 'log' action (default: last 200 lines)"
+                },
+                "limit": {
+                  "type": "integer",
+                  "description": "Max lines to return for 'log' action",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "action"
+              ]
+            }
+          }
+        },
+        {
+          "type": "function",
+          "function": {
+            "name": "terminal",
+            "description": "Execute shell commands on a Linux environment. Filesystem usually persists between calls.\n\nDo NOT use cat/head/tail to read files — use read_file instead.\nDo NOT use grep/rg/find to search — use search_files instead.\nDo NOT use ls to list directories — use search_files(target='files') instead.\nDo NOT use sed/awk to edit files — use patch instead.\nDo NOT use echo/cat heredoc to create files — use write_file instead.\nReserve terminal for: builds, installs, git, processes, scripts, network, package managers, and anything that needs a shell.\n\nForeground (default): Commands return INSTANTLY when done, even if the timeout is high. Set timeout=300 for long builds/scripts — you'll still get the result in seconds if it's fast. Prefer foreground for short commands.\nBackground: Set background=true to get a session_id. Almost always pair with notify_on_complete=true — bg without notify runs SILENTLY and you have no way to learn it finished short of calling process(action='poll') yourself. Two legitimate uses:\n  (1) Long-lived processes that never exit (servers, watchers, daemons) — silent is correct, there's no exit to notify on.\n  (2) Long-running bounded tasks (tests, builds, deploys, CI pollers, batch jobs) — MUST set notify_on_complete=true. Without it you'll either forget to poll or sit blocked waiting for the user to surface the result.\nFor servers/watchers, do NOT use shell-level background wrappers (nohup/disown/setsid/trailing '&') in foreground mode. Use background=true so Hermes can track lifecycle and output.\nAfter starting a server, verify readiness with a health check or log signal, then run tests in a separate terminal() call. Avoid blind sleep loops.\nUse process(action=\"poll\") for progress checks, process(action=\"wait\") to block until done.\nWorking directory: Use 'workdir' for per-command cwd.\nPTY mode: Set pty=true for interactive CLI tools (Codex, Claude Code, Python REPL).\n\nDo NOT use vim/nano/interactive tools without pty=true — they hang without a pseudo-terminal. Pipe git output to cat if it might page.\n",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "command": {
+                  "type": "string",
+                  "description": "The command to execute on the VM"
+                },
+                "background": {
+                  "type": "boolean",
+                  "description": "Run the command in the background. Almost always pair with notify_on_complete=true — without it, the process runs silently and you'll have no way to learn it finished short of calling process(action='poll') yourself (easy to forget, leading to silent blindness on long jobs). Two legitimate patterns: (1) Long-lived processes that never exit (servers, watchers, daemons) — these stay silent because there's no exit to notify on. (2) Long-running bounded tasks (tests, builds, deploys, CI pollers, batch jobs) — these MUST set notify_on_complete=true. For short commands, prefer foreground with a generous timeout instead.",
+                  "default": false
+                },
+                "timeout": {
+                  "type": "integer",
+                  "description": "Max seconds to wait (default: 180, foreground max: 600). Returns INSTANTLY when command finishes — set high for long tasks, you won't wait unnecessarily. Foreground timeout above 600s is rejected; use background=true for longer commands.",
+                  "minimum": 1
+                },
+                "workdir": {
+                  "type": "string",
+                  "description": "Working directory for this command (absolute path). Defaults to the session working directory."
+                },
+                "pty": {
+                  "type": "boolean",
+                  "description": "Run in pseudo-terminal (PTY) mode for interactive CLI tools like Codex, Claude Code, or Python REPL. Only works with local and SSH backends. Default: false.",
+                  "default": false
+                },
+                "notify_on_complete": {
+                  "type": "boolean",
+                  "description": "When true (and background=true), you'll be automatically notified exactly once when the process finishes. **This is the right choice for almost every long-running task** — tests, builds, deployments, multi-item batch jobs, anything that takes over a minute and has a defined end. Use this and keep working on other things; the system notifies you on exit. MUTUALLY EXCLUSIVE with watch_patterns — when both are set, watch_patterns is dropped.",
+                  "default": false
+                },
+                "watch_patterns": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "Strings to watch for in background process output. HARD RATE LIMIT: at most 1 notification per 15 seconds per process — matches arriving inside the cooldown are dropped. After 3 consecutive 15-second windows with dropped matches, watch_patterns is automatically disabled for that process and promoted to notify_on_complete behavior (one notification on exit, no more mid-process spam). USE ONLY for truly rare, one-shot mid-process signals on LONG-LIVED processes that will never exit on their own — e.g. ['Application startup complete'] on a server so you know when to hit its endpoint, or ['migration done'] on a daemon. DO NOT use for: (1) end-of-run markers like 'DONE'/'PASS' — use notify_on_complete instead; (2) error patterns like 'ERROR'/'Traceback' in loops or multi-item batch jobs — they fire on every iteration and you'll hit the strike limit fast; (3) anything you'd ever combine with notify_on_complete. When in doubt, choose notify_on_complete. MUTUALLY EXCLUSIVE with notify_on_complete — set one, not both."
+                }
+              },
+              "required": [
+                "command"
+              ]
+            }
+          }
+        }
+      ],
+      "extra_body": {
+        "thinking": {
+          "type": "enabled"
+        }
+      }
+    }
+  },
+  "error": {
+    "type": "ReadError",
+    "message": "[Errno 32] Broken pipe"
+  }
+}

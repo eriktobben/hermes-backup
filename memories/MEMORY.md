@@ -13,3 +13,5 @@ WORKTREE-REGLER: FØR start — sjekk `git worktree list`. Bruk eksisterende hvi
 Epost-klassifisering SLM-prosjekt: ~/Projects/epost-klassifisering/. nb-bert-base (norsk BERT, 110 MB) finetunet for 5 kategorier: må_svare, spam, nyhetsbrev, bekreftelse, irrelevant. Kjøres som FastAPI-server (serve.py, :8000) som Laravel kaller internt. Supervisor-konfig + Laravel-kontroller i laravel/ og supervisor.conf. Tren: python train.py. Server: python serve.py.
 §
 Kimaki patching: Etter hver Kimaki-oppgradering må jeg kjøre ~/.local/bin/kimaki-patch-worktree for å gjenopprette worktree/branch-funksjonalitet. Hvis Tobben ber meg oppgradere Kimaki, skal jeg også kjøre denne patchen etterpå.
+§
+Hermes backup cron job: hourly commit of ~/.hermes/ config/data (excluding secrets) to https://github.com/eriktobben/hermes-backup. Script at ~/.hermes/scripts/hermes-backup.sh, job ID 180cd90f598f, runs every 1h via no_agent cron. Git repo at ~/Projects/hermes-backup.

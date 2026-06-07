@@ -9,8 +9,11 @@ cache/
 *.cache.json
 *.lock
 
-# Sessions (large, not needed for restore)
-sessions/
+# Session DB (large, volatile — regenerated from sessions/)
+state.db
+state.db-shm
+state.db-wal
+state-snapshots/
 
 # Logs
 logs/

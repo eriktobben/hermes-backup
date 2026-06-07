@@ -12,6 +12,7 @@ Automatic hourly backup of Hermes Agent configuration and data.
 | `plugins/` | All installed plugins (custom functionality) |
 | `memories/` | Persistent memory (user profile + agent notes) |
 | `scripts/` | Custom automation scripts |
+| `sessions/` | Conversation history (delta-friendly, individual JSONL files) |
 | `cron/` | Scheduled job definitions |
 | `gateway/` | Platform sync state (Discord, etc.) |
 | `hooks/` | Shell hook configuration |
@@ -27,7 +28,6 @@ Automatic hourly backup of Hermes Agent configuration and data.
 |------|-----|
 | `.env` (→ `env.txt`) | API keys / secrets — **not committed to git** |
 | `auth.json` | OAuth tokens — **not committed to git** |
-| `sessions/` | Conversation history (too large, optional) |
 | `logs/` | Runtime logs (not needed for restore) |
 | `hermes-agent/` | Source code (reinstall via `hermes update`) |
 | `state.db` | Session DB (large, state-snapshots excluded) |
@@ -52,6 +52,7 @@ cp /tmp/hermes-restore/discord_threads.json ~/.hermes/
 cp /tmp/hermes-restore/gateway_state.json ~/.hermes/
 cp /tmp/hermes-restore/kanban.db ~/.hermes/
 rsync -a /tmp/hermes-restore/skills/ ~/.hermes/skills/
+rsync -a /tmp/hermes-restore/sessions/ ~/.hermes/sessions/
 rsync -a /tmp/hermes-restore/plugins/ ~/.hermes/plugins/
 rsync -a /tmp/hermes-restore/memories/ ~/.hermes/memories/
 rsync -a /tmp/hermes-restore/scripts/ ~/.hermes/scripts/

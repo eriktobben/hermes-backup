@@ -132,7 +132,50 @@
       ],
       "workdir": null,
       "profile": null
+    },
+    {
+      "id": "180cd90f598f",
+      "name": "Hermes backup to GitHub",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "hermes-backup.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "interval",
+        "minutes": 60,
+        "display": "every 60m"
+      },
+      "schedule_display": "every 60m",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-08T00:02:03.246008+02:00",
+      "next_run_at": "2026-06-08T01:02:03.246076+02:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "local",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1513301329345511595",
+        "chat_name": "Tobben MC / #general / Kan du sette opp en cron job som comitter Hermes data til Github som en type ...",
+        "thread_id": "1513301329345511595"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-06-07T09:00:20.905746+02:00"
+  "updated_at": "2026-06-08T00:02:03.246786+02:00"
 }

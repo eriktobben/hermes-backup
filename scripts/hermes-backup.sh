@@ -36,6 +36,7 @@ grep -E '^[A-Z_]+\w*=' "$HERMES_HOME/.env" 2>/dev/null \
 
 # Directories (rsync for efficiency, --delete removes stale files)
 rsync -a --delete "$HERMES_HOME/skills/"    "$BACKUP_DIR/skills/"     2>/dev/null || true
+rsync -a --delete "$HERMES_HOME/sessions/"  "$BACKUP_DIR/sessions/"   2>/dev/null || true
 rsync -a --delete "$HERMES_HOME/plugins/"   "$BACKUP_DIR/plugins/"    2>/dev/null || true
 rsync -a --delete "$HERMES_HOME/memories/"  "$BACKUP_DIR/memories/"   2>/dev/null || true
 rsync -a --delete "$HERMES_HOME/scripts/"   "$BACKUP_DIR/scripts/"    2>/dev/null || true
