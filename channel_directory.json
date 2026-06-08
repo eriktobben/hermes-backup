@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T16:21:29.970514",
+  "updated_at": "2026-06-08T17:21:32.984254",
   "platforms": {
     "discord": [
       {
@@ -427,6 +427,12 @@
         "name": "Tobben MC / #general / Kan du sette opp følgende Kimaki prosjekt: git@github.com:Tobbens-Empire/embe... / topic 1513534243119038585",
         "type": "thread",
         "thread_id": "1513534243119038585"
+      },
+      {
+        "id": "1513591245929185290:1513591245929185290",
+        "name": "Tobben MC / #general / Jeg vurderer å spørre ei på date, og dette er bloggen hennes. Kan du gå gjenn... / topic 1513591245929185290",
+        "type": "thread",
+        "thread_id": "1513591245929185290"
       }
     ],
     "telegram": [],
