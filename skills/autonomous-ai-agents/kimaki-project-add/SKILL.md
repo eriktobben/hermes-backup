@@ -11,11 +11,22 @@ Use this after creating or cloning a repository that should appear in Discord vi
 ## Steps
 1. Ensure the project directory exists (typically under `/home/erik/Projects/<repo-folder>`).
 2. `cd` into the project directory.
-3. Run:
+3. **If the repo is empty (no commits yet), create a `main` branch:**
+   ```bash
+   git commit --allow-empty -m "Initial commit"
+   git push -u origin main
+   ```
+   This ensures the repo has a `main` branch before registering with Kimaki.
+4. Verify Kimaki starts without crashing:
+   ```bash
+   timeout 5 npx kimaki --version
+   ```
+   If it crashes with a SyntaxError, run the patch script (see pitfall below) and retry.
+5. Register the project:
    ```bash
    npx kimaki project add
    ```
-4. Confirm success output includes:
+6. Confirm success output includes:
    - Created channels for project
    - Directory path
    - Discord channel URL
@@ -24,6 +35,11 @@ Use this after creating or cloning a repository that should appear in Discord vi
 - Run the command **inside** the target project folder, or Kimaki may register the wrong directory.
 - If `kimaki` is not installed globally, `npx` will install and run it automatically.
 - If Git clone fails with "Repository not found", verify repo URL and access rights for the active GitHub SSH identity.
+- **Kimaki crashes with `SyntaxError: Illegal return statement`** after upgrade:
+  - Kimaki v0.14.0+ has a fragile `new-worktree.js` that can leave orphaned duplicate lines after partial patches, causing a crash loop at startup.
+  - First, run the patch script: `bash ~/.local/bin/kimaki-patch-worktree`
+  - If the patch script reports "No Kimaki instances needed patching" but Kimaki still crashes, the file may have orphaned lines the patch doesn't yet handle. See `references/kimaki-new-worktree-orphan-fix.md` for manual fix steps.
+  - After fixing, update `~/.local/bin/kimaki-patch-worktree` to cover the new orphan pattern so future upgrades handle it automatically.
 - If Discord-side automation becomes unresponsive, avoid rebooting first; run the troubleshooting checks in `references/unresponsive-discord-bot.md`.
 
 ## Operational hardening (PM2 / long-running bot)
