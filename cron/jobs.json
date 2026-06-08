@@ -160,7 +160,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-08T09:10:57.023725+02:00",
+      "next_run_at": "2026-06-08T09:22:57.096331+02:00",
       "last_run_at": "2026-06-08T08:10:57.023725+02:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nERROR: Git push failed at 2026-06-08 06:10:55",
@@ -177,5 +177,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-08T08:10:57.023936+02:00"
+  "updated_at": "2026-06-08T08:22:57.096610+02:00"
 }
