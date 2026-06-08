@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T08:21:05.427589",
+  "updated_at": "2026-06-08T09:21:08.468177",
   "platforms": {
     "discord": [
       {
@@ -397,6 +397,12 @@
         "name": "Tobben MC / #general / Kan du sette opp Kimaki prosjekt med repo git@github.com:Serena-AS/hermes-res... / topic 1513335652857544724",
         "type": "thread",
         "thread_id": "1513335652857544724"
+      },
+      {
+        "id": "1513469083998224384:1513469083998224384",
+        "name": "Tobben MC / #general / Nå bruker jeg Kimaki til å opprette Git Worktree Isolation per discord thread... / topic 1513469083998224384",
+        "type": "thread",
+        "thread_id": "1513469083998224384"
       }
     ],
     "telegram": [],
