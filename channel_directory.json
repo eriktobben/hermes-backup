@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T12:21:17.633063",
+  "updated_at": "2026-06-08T13:21:20.707200",
   "platforms": {
     "discord": [
       {
@@ -403,6 +403,18 @@
         "name": "Tobben MC / #general / Nå bruker jeg Kimaki til å opprette Git Worktree Isolation per discord thread... / topic 1513469083998224384",
         "type": "thread",
         "thread_id": "1513469083998224384"
+      },
+      {
+        "id": "1513520000051449996:1513520000051449996",
+        "name": "Tobben MC / #general / Jeg har en Polar-klokke jeg ønsker å søke reklamasjon på. Hvordan gjør jeg de... / topic 1513520000051449996",
+        "type": "thread",
+        "thread_id": "1513520000051449996"
+      },
+      {
+        "id": "1513523149889736804:1513523149889736804",
+        "name": "Tobben MC / #general / Jeg ønsker å lage en mail klient for Mac og iOS hvor en a hovedfunksjonene er... / topic 1513523149889736804",
+        "type": "thread",
+        "thread_id": "1513523149889736804"
       }
     ],
     "telegram": [],
