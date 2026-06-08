@@ -662,13 +662,13 @@
     "created_at": "2026-06-03T10:11:10.863094+00:00",
     "created_by": null,
     "last_patched_at": null,
-    "last_used_at": "2026-06-03T10:11:31.621332+00:00",
-    "last_viewed_at": "2026-06-03T10:11:31.615385+00:00",
+    "last_used_at": "2026-06-08T00:15:42.727890+00:00",
+    "last_viewed_at": "2026-06-08T00:15:42.722301+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 2,
+    "view_count": 2
   },
   "kanban-worker": {
     "archived_at": null,
@@ -687,13 +687,13 @@
     "archived_at": null,
     "created_at": "2026-05-24T18:05:09.698537+00:00",
     "last_patched_at": "2026-05-24T18:49:56.723604+00:00",
-    "last_used_at": null,
-    "last_viewed_at": "2026-05-24T18:49:38.177742+00:00",
+    "last_used_at": "2026-06-08T00:15:42.740853+00:00",
+    "last_viewed_at": "2026-06-08T00:15:42.735513+00:00",
     "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 4
+    "use_count": 1,
+    "view_count": 5
   },
   "linear": {
     "archived_at": null,
