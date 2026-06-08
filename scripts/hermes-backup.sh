@@ -60,13 +60,25 @@ fi
 
 git commit -q -m "Hermes backup — $TIMESTAMP"
 
-# Try pushing; only speak on failure
-if ! git push origin main 2>/dev/null; then
-  if ! git push origin master 2>/dev/null; then
-    echo "ERROR: Git push failed at $TIMESTAMP" >&2
-    exit 1
+# Try pushing; retry once on failure, then speak
+RETRY=0
+while [ $RETRY -lt 2 ]; do
+  if git push origin main 2>/dev/null; then
+    exit 0
   fi
+  RETRY=$((RETRY + 1))
+  if [ $RETRY -lt 2 ]; then
+    sleep 5
+  fi
+done
+
+# Also try master branch as fallback
+if git push origin master 2>/dev/null; then
+  exit 0
 fi
+
+echo "ERROR: Git push failed at $TIMESTAMP" >&2
+exit 1
 
 # Success — silent
 exit 0
