@@ -271,6 +271,19 @@
     "use_count": 0,
     "view_count": 0
   },
+  "creative-workstation-consulting": {
+    "archived_at": null,
+    "created_at": "2026-06-08T20:40:04.437847+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-06-08T20:40:23.850534+00:00",
+    "last_used_at": "2026-06-08T20:40:26.678589+00:00",
+    "last_viewed_at": "2026-06-08T20:40:26.673750+00:00",
+    "patch_count": 2,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
   "debugging-hermes-tui-commands": {
     "archived_at": null,
     "created_at": "2026-06-03T10:11:10.768131+00:00",
@@ -1097,6 +1110,19 @@
     "state": "active",
     "use_count": 0,
     "view_count": 0
+  },
+  "skill-authoring": {
+    "archived_at": null,
+    "created_at": "2026-06-08T20:39:43.309589+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-06-08T20:39:43.315604+00:00",
+    "last_viewed_at": "2026-06-08T20:39:43.309622+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   },
   "songsee": {
     "archived_at": null,
