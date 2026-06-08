@@ -337,14 +337,14 @@
     "archived_at": null,
     "created_at": "2026-06-02T22:28:55.940378+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-08T09:12:18.049430+00:00",
-    "last_used_at": "2026-06-08T09:12:22.487768+00:00",
-    "last_viewed_at": "2026-06-08T09:12:22.482052+00:00",
-    "patch_count": 26,
+    "last_patched_at": "2026-06-08T10:08:11.034914+00:00",
+    "last_used_at": "2026-06-08T10:08:15.589794+00:00",
+    "last_viewed_at": "2026-06-08T10:08:15.583400+00:00",
+    "patch_count": 29,
     "pinned": false,
     "state": "active",
-    "use_count": 31,
-    "view_count": 31
+    "use_count": 34,
+    "view_count": 34
   },
   "dogfood": {
     "archived_at": null,

@@ -241,8 +241,9 @@ python3 ~/.hermes/scripts/kimaki-worktree-cleanup.py --apply
 
 1. Leser `thread_worktrees`-tabellen i Kimaki DB (`~/.kimaki/discord-sessions.db`)
 2. For hver worktree med status `'ready'`:
-   - Sjekker siste commit-dato på **origin** først, så **lokal branch**
-   - Hvis ingen commits → bruker `created_at` fra DB
+   - Sjekker **siste session-event** i `session_events`-tabellen (PRIMÆR kilde)
+   - Fallback til siste commit-dato på **origin**, så **lokal branch**
+   - Siste fallback: `created_at` fra DB
 3. Hvis siste aktivitet > **14 dager** siden:
    - `git worktree remove --force <dir>`
    - `git branch -D <branch>` (lokal)
@@ -284,4 +285,4 @@ Bruk `--deliver local` for stillest kjøring (ingen varsel) eller `--deliver ori
 - **Whitelist-plugin må være enabled** i `plugins.enabled` i config.yaml for at auto-thread skal virke i dev-kanaler. Se `references/auto-thread-config.md` og `templates/auto-thread-whitelist-plugin/` for oppsett.
 - **Session reset kan "glemme" worktree** — default reset policy reseter sessions hver natt kl 04:00. Hvis en bruker kommer tilbake til en thread etter reset, starter agenten uten kontekst om eksisterende worktrees. Løsning: endre reset policy eller sjekk `git worktree list` ved oppstart. Se `references/session-reset-worktree-troubleshooting.md`.
 - **Bruker Kimaki for worktrees, ikke manuell opprettelse** — Erik/Tobben bruker Kimaki med `--use-worktrees`, så denne skillens manuelle worktree-steg (seksjon 7) gjelder kun for ikke-Kimaki-oppsett. Hopp til seksjon 7 hvis du selv skal opprette worktree uten Kimaki.
-- **Worktrees uten commits** — Kimaki oppretter en worktree/branch som peker til samme commit som main. Hvis brukeren aldri gjør endringer, har branchen **samme commit-dato som main**. Cleanup-skriptet faller da tilbake på `created_at` fra DB.
+- **Worktrees uten commits** — Kimaki oppretter en worktree/branch som peker til samme commit som main. Hvis brukeren aldri gjør endringer, har branchen **samme commit-dato som main**. Cleanup-skriptet har 3 kilder prioritert: (1) session-events, (2) git commit-dato, (3) `created_at` fra DB — så det treffer riktig uansett.

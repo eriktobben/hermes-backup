@@ -153,15 +153,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-08T12:23:08.474571+02:00",
-      "last_run_at": "2026-06-08T10:23:08.125154+02:00",
+      "next_run_at": "2026-06-08T13:23:11.578275+02:00",
+      "last_run_at": "2026-06-08T11:23:11.207933+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -175,7 +175,50 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null
+    },
+    {
+      "id": "3fca63db50fc",
+      "name": "Kimaki worktree cleanup (14 dager inaktiv)",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "kimaki-worktree-cleanup-wrapper.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-08T12:06:21.663512+02:00",
+      "next_run_at": "2026-06-09T04:00:00+02:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1513469083998224384",
+        "chat_name": "Tobben MC / #general / N\u00e5 bruker jeg Kimaki til \u00e5 opprette Git Worktree Isolation per discord thread...",
+        "thread_id": "1513469083998224384"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "profile": null
     }
   ],
-  "updated_at": "2026-06-08T11:23:08.474875+02:00"
+  "updated_at": "2026-06-08T12:23:11.578562+02:00"
 }
