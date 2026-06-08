@@ -13,3 +13,5 @@ WORKTREE-REGLER: FØR start — sjekk `git worktree list`. Bruk eksisterende hvi
 Epost-klassifisering SLM-prosjekt: ~/Projects/epost-klassifisering/. nb-bert-base (norsk BERT, 110 MB) finetunet for 5 kategorier: må_svare, spam, nyhetsbrev, bekreftelse, irrelevant. Kjøres som FastAPI-server (serve.py, :8000) som Laravel kaller internt. Supervisor-konfig + Laravel-kontroller i laravel/ og supervisor.conf. Tren: python train.py. Server: python serve.py.
 §
 Kimaki: patch worktree etter oppgradering (~/.local/bin/kimaki-patch-worktree). Cleanup cron (ID 3fca63db50fc) kjører 04:00 daglig — sletter worktrees > 14 dager inaktive via kimaki-worktree-cleanup.py.
+§
+Kimaki-prosjekt embermail: git@github.com:Tobbens-Empire/embermail.git, lokasjon /home/erik/Projects/embermail, Discord-kanal #embermail.

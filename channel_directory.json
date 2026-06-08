@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T13:21:20.707200",
+  "updated_at": "2026-06-08T14:21:23.666649",
   "platforms": {
     "discord": [
       {
@@ -213,6 +213,12 @@
         "type": "channel"
       },
       {
+        "id": "1513534387780849694",
+        "name": "embermail",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
         "id": "1498959679550652420:1498959679550652420",
         "name": "Tobben MC / #hermes / Hei / topic 1498959679550652420",
         "type": "thread",
@@ -415,6 +421,12 @@
         "name": "Tobben MC / #general / Jeg ønsker å lage en mail klient for Mac og iOS hvor en a hovedfunksjonene er... / topic 1513523149889736804",
         "type": "thread",
         "thread_id": "1513523149889736804"
+      },
+      {
+        "id": "1513534243119038585:1513534243119038585",
+        "name": "Tobben MC / #general / Kan du sette opp følgende Kimaki prosjekt: git@github.com:Tobbens-Empire/embe... / topic 1513534243119038585",
+        "type": "thread",
+        "thread_id": "1513534243119038585"
       }
     ],
     "telegram": [],
