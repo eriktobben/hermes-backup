@@ -153,17 +153,17 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-08T05:02:48.532026+02:00",
-      "last_run_at": "2026-06-08T03:02:48.174630+02:00",
+      "next_run_at": "2026-06-08T06:02:50.532783+02:00",
+      "last_run_at": "2026-06-08T04:02:50.196979+02:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstderr:\nERROR: Git push failed at 2026-06-08 01:02:46",
+      "last_error": "Script exited with code 1\nstderr:\nERROR: Git push failed at 2026-06-08 02:02:48",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -177,5 +177,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-08T04:02:48.532210+02:00"
+  "updated_at": "2026-06-08T05:02:50.533041+02:00"
 }
