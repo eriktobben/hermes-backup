@@ -13,6 +13,78 @@ metadata:
 
 > You're seeing this skill because the Hermes Kanban dispatcher spawned you as a worker with `--skills kanban-worker` — it's loaded automatically for every dispatched worker. The **lifecycle** (6 steps: orient → work → heartbeat → block/complete) also lives in the `KANBAN_GUIDANCE` block that's auto-injected into your system prompt. This skill is the deeper detail: good handoff shapes, retry diagnostics, edge cases.
 
+## Codex Lane (isolated implementation with Codex CLI)
+
+When a Kanban task is a bounded coding/refactor/test task with clear acceptance criteria, you may dispatch Codex CLI as an isolated implementation lane while keeping Kanban lifecycle ownership. This is a **subsection** of the worker skill — use only when:
+
+- The task produces a bounded diff you can evaluate in one run
+- The repo can be isolated in a git worktree
+- You can run the relevant tests independently after Codex exits
+
+### Ownership Rules
+
+1. Hermes owns the Kanban lifecycle — Codex must never call kanban tools
+2. Hermes owns final acceptance — treat Codex diffs as untrusted patches
+3. Hermes owns test execution — run canonical tests after Codex exits
+4. Hermes owns safety — reject if Codex changes risk gates, secrets, or safety boundaries
+5. Hermes owns cleanup — kill stuck Codex processes, remove worktrees
+
+### Required Worktree Pattern
+
+```bash
+TASK_ID="${HERMES_KANBAN_TASK:-t_manual}"
+REPO="/path/to/repo"
+BASE="$(git -C "$REPO" rev-parse --abbrev-ref HEAD)"
+SAFE_TASK="$(printf '%s' "$TASK_ID" | tr -cd '[:alnum:]_-')"
+BRANCH="codex/${SAFE_TASK}/$(date -u +%Y%m%d%H%M%S)"
+WORKTREE="/tmp/${SAFE_TASK}-codex-lane"
+
+git -C "$REPO" worktree add -b "$BRANCH" "$WORKTREE" "$BASE"
+```
+
+### Running Codex
+
+```python
+result = terminal(
+    command="codex exec --full-auto '$(cat /tmp/codex_prompt.md)'",
+    workdir=WORKTREE,
+    background=True,
+    pty=True,
+    notify_on_complete=True,
+)
+session_id = result["session_id"]
+```
+
+### Prompt Construction
+
+Every Codex prompt must include: task_id and acceptance criteria, worktree path, branch name, explicit statement that Hermes owns Kanban lifecycle, required output format (summary + files changed + risks), prohibited actions (no secrets access, no board mutation, no unrelated refactors).
+
+### Reconciliation Checklist
+
+- [ ] `git diff --stat` reviewed by Hermes
+- [ ] No secrets, credentials, or unrelated artifacts
+- [ ] Hermes ran canonical tests independently
+- [ ] Accepted commits applied to Hermes-owned workspace
+- [ ] Worktree cleaned up after acceptance
+
+### Handoff Metadata
+
+Include `codex_lane` object in `kanban_complete(metadata=...)`:
+```json
+{
+  "codex_lane": {
+    "used": true,
+    "mode": "exec | goal",
+    "worktree": "/abs/path/to/worktree",
+    "branch": "codex/t_caa69668/20260508100000",
+    "result": "accepted | rejected | partial | timed_out",
+    "rejected_reason": "why if not fully accepted"
+  }
+}
+```
+
+Full detail (templates, mode selection, PMB safety constraints): See archived `kanban-codex-lane`.
+
 ## Workspace handling
 
 Your workspace kind determines how you should behave inside `$HERMES_KANBAN_WORKSPACE`:
