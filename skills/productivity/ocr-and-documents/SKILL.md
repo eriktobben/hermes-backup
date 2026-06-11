@@ -1,7 +1,7 @@
 ---
 name: ocr-and-documents
 description: "Extract text from PDFs/scans (pymupdf, marker-pdf)."
-version: 2.3.0
+version: 2.4.0
 author: Hermes Agent
 license: MIT
 platforms: [linux, macos, windows]
@@ -199,4 +199,4 @@ python3 -c "import sys; sys.path.insert(0, '/home/erik/.hermes/skills/productivi
 - marker-pdf downloads ~2.5GB of models to `~/.cache/huggingface/` on first use
 - For Word docs: `pip install python-docx` (better than OCR — parses actual structure)
 - For PowerPoint: see the `powerpoint` skill (uses python-pptx)
-- **Consumer complaints (Norwegian law)**: see `references/norwegian-consumer-law.md` for guidance on forbrukerkjøpsloven §27 — 5-year reclamation period for products meant to last significantly longer than 2 years, with specific arguments about integrated/non-replaceable batteries.
+- **Consumer complaints (Norwegian law)**: see `references/norwegian-consumer-law.md` for guidance on forbrukerkjøpsloven §27 — 5-year reclamation period for products meant to last significantly longer than 2 years, with specific arguments about integrated/non-replaceable batteries, pricing traps, and escalation paths. A formal complaint letter template is in `templates/reklamasjonsbrev.md`.

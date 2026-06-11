@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11T08:23:27.638985",
+  "updated_at": "2026-06-11T09:23:30.687837",
   "platforms": {
     "discord": [
       {
@@ -445,6 +445,12 @@
         "name": "Tobben MC / #general / Jeg prøver å reklamere på en Polar-klokke jeg har kjøpt hos Fjellsport, men s... / topic 1514538440455094433",
         "type": "thread",
         "thread_id": "1514538440455094433"
+      },
+      {
+        "id": "1514552150800339105:1514552150800339105",
+        "name": "Tobben MC / #general / Kan du huske på at jeg ALDRI vi at du skal bruke em dash (–). Bruk alltid van... / topic 1514552150800339105",
+        "type": "thread",
+        "thread_id": "1514552150800339105"
       }
     ],
     "telegram": [],

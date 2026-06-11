@@ -1,4 +1,4 @@
-Coding workflow: project channels + feature/fix threads (OpenCode). Minimal setup — create channel, add bot, post repo, start chatting. Per-session worktree+branch isolation required; never work in main/master.
+Workflow: project channels + feature/fix threads (OpenCode). Minimal setup - create channel, add bot, post repo, start chatting. Per-session worktree+branch isolation; never work in main/master. No em dash (—) in text - use hyphen (-). OK in code.
 §
 Bruker: Erik. Uformell tone. Svar på norsk hvis han skriver norsk, engelsk hvis han skriver engelsk.
 Arbeider med Serena AS – Laravel + Livewire nettbutikk.
@@ -9,7 +9,7 @@ Prioritet: Gjør hverdagen enklere for ham.
 §
 User is in Norwegian timezone (CET/CEST, Europe/Oslo). All times should be referenced in this timezone.
 §
-Tobben (Erik) — bilkjøp 2026. Slutter i jobben, må gi fra seg firmabil. Driftssikker bil som holder 2-3 år uten verkstedbesøk. Maks 1500 kr/mnd i lån, 50k egenkapital = totalbudsjett ~120-130k. Kun automatgir.
+Tobben (Erik) - bilkjøp 2026. Slutter i jobben, må gi fra seg firmabil. Driftssikker bil som holder 2-3 år uten verkstedbesøk. Maks 1500 kr/mnd i lån, 50k egenkapital = totalbudsjett ~120-130k. Kun automatgir.
 - Unngå hybrid (to drivverk = mer som kan gå i stykker).
 - Foretrekker registerkjede fremfor registerreim.
 - Mye bykjøring 5-10 km daglig.
