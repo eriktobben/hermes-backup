@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11T21:24:06.676629",
+  "updated_at": "2026-06-11T22:24:24.674496",
   "platforms": {
     "discord": [
       {
@@ -451,6 +451,12 @@
         "name": "Tobben MC / #general / Kan du huske på at jeg ALDRI vi at du skal bruke em dash (–). Bruk alltid van... / topic 1514552150800339105",
         "type": "thread",
         "thread_id": "1514552150800339105"
+      },
+      {
+        "id": "1514751586134523924:1514751586134523924",
+        "name": "Tobben MC / #🗞️-briefings / Kan du oppdatere \"reminder AI Model Daily Briefing\" til å lage en here.now si... / topic 1514751586134523924",
+        "type": "thread",
+        "thread_id": "1514751586134523924"
       }
     ],
     "telegram": [],

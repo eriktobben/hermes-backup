@@ -1509,5 +1509,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1514552150800339105"
     }
+  },
+  "agent:main:discord:thread:1514751586134523924:1514751586134523924": {
+    "session_key": "agent:main:discord:thread:1514751586134523924:1514751586134523924",
+    "session_id": "20260611_220202_850f06f7",
+    "created_at": "2026-06-11T22:02:02.654375",
+    "updated_at": "2026-06-11T22:28:21.111897",
+    "display_name": "Tobben MC / #\ud83d\uddde\ufe0f-briefings / Kan du oppdatere \"reminder AI Model Daily Briefing\" til \u00e5 lage en here.now si...",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 69424,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1514751586134523924",
+      "chat_name": "Tobben MC / #\ud83d\uddde\ufe0f-briefings / Kan du oppdatere \"reminder AI Model Daily Briefing\" til \u00e5 lage en here.now si...",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1514751586134523924",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499183215494037554",
+      "message_id": "1514751586134523924"
+    }
   }
 }

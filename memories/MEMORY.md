@@ -2,11 +2,7 @@ For Laravel projects, follow Laravel conventions and best practices. Prefer Live
 §
 Default location for new projects on this machine is /home/erik/Projects/, using the repository name as the folder name.
 §
-Discord channel '#serena' (Tobben MC) is mapped to project Serena Home with local repo path /home/erik/Projects/serenahome and GitHub remote https://github.com/Serena-AS/SerenaHome.
-§
-Serena-prosjektet: Kun feature branches + PR. Aldri direkte commit til main med mindre eksplisitt bedt om det. Solo-prosjekt.
-§
-#serena-dev (1511404097302171818) → Serena-AS/SerenaHome. #masterfeed-dev (1511501933180092478) → eriktobben/masterfeed. Auto-thread whitelist styres via plugin i ~/.hermes/plugins/auto-thread-whitelist/.
+Serena-prosjekter: #serena → Serena-AS/SerenaHome (~/Projects/serenahome). #serena-dev (1511404097302171818) → Serena-AS/SerenaHome. #masterfeed-dev (1511501933180092478) → eriktobben/masterfeed. Kun feature branches + PR til main — aldri direkte commit. Auto-thread whitelist via plugin i ~/.hermes/plugins/auto-thread-whitelist/.
 §
 WORKTREE-REGLER: FØR start — sjekk `git worktree list`. Bruk eksisterende hvis det matcher. Ellers: opprett fra main/master, FLYTT til worktree-mappa. ALL koding i worktree. ALDRI i main/master. ALDRI rør andres worktrees/branches.
 §
@@ -15,3 +11,5 @@ Epost-klassifisering SLM-prosjekt: ~/Projects/epost-klassifisering/. nb-bert-bas
 Kimaki: patch worktree etter oppgradering (~/.local/bin/kimaki-patch-worktree). Cleanup cron (ID 3fca63db50fc) kjører 04:00 daglig — sletter worktrees > 14 dager inaktive via kimaki-worktree-cleanup.py.
 §
 Kimaki-prosjekt embermail: git@github.com:Tobbens-Empire/embermail.git, lokasjon /home/erik/Projects/embermail, Discord-kanal #embermail.
+§
+here.now skill installed (~/.hermes/skills/productivity/here-now/). API key saved (~/.herenow/credentials). publish.sh patched — `file` binary optional. Daily AI briefing cron (f3a42a49fae6, 08:00) publishes dark-themed HTML to here.now, delivers only link + teaser to #🗞️-briefings.
