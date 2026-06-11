@@ -907,14 +907,14 @@
     "archived_at": null,
     "created_at": "2026-06-03T10:11:10.953405+00:00",
     "created_by": null,
-    "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 0,
+    "last_patched_at": "2026-06-11T08:00:39.628571+00:00",
+    "last_used_at": "2026-06-11T08:00:43.188505+00:00",
+    "last_viewed_at": "2026-06-11T08:00:43.185142+00:00",
+    "patch_count": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 3,
+    "view_count": 3
   },
   "openhue": {
     "archived_at": null,

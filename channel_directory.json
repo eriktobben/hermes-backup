@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-11T07:23:24.664970",
+  "updated_at": "2026-06-11T08:23:27.638985",
   "platforms": {
     "discord": [
       {
@@ -439,6 +439,12 @@
         "name": "Tobben MC / #general / Jeg har en kunde som ønsker ny Mac. Her er hennes dialog: hei- vi har behov f... / topic 1513641142372139008",
         "type": "thread",
         "thread_id": "1513641142372139008"
+      },
+      {
+        "id": "1514538440455094433:1514538440455094433",
+        "name": "Tobben MC / #general / Jeg prøver å reklamere på en Polar-klokke jeg har kjøpt hos Fjellsport, men s... / topic 1514538440455094433",
+        "type": "thread",
+        "thread_id": "1514538440455094433"
       }
     ],
     "telegram": [],
