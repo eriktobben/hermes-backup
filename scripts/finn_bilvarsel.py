@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
+"""
+Collect FINN car ads matching filters (elbil + bensin med registerkjede).
+Maintains a rolling 10-day window in state. Outputs JSON for agent consumption.
+"""
 import json
 import math
 import re
+from datetime import datetime, timezone, timedelta
 from html import unescape
 from pathlib import Path
 
 import requests
 
-STATE_PATH = Path('/home/erik/.hermes/cron/state/finn_bilvarsel_seen.json')
-STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
-
+STATE_PATH = Path('/home/erik/.hermes/cron/state/finn_bilvarsel_data.json')
 HEADERS = {"User-Agent": "Mozilla/5.0 (Hermes car alert)"}
 
-# User prefs
+# User preferences
 EGENKAPITAL = 50_000
 RENTE_AARLIG = 0.07
-TERMS = [60, 84, 96]  # 5, 7, 8 years
+TERMS = [60, 84, 96]  # months
 MAX_MND = 2500
 PRICE_TO = 260000
 
@@ -98,15 +101,16 @@ def enrich_price(link: str):
 
 def load_state():
     if not STATE_PATH.exists():
-        return {"seen": []}
+        return {"ads": {}}
     try:
         return json.loads(STATE_PATH.read_text())
     except Exception:
-        return {"seen": []}
+        return {"ads": {}}
 
 
-def save_state(seen_ids):
-    STATE_PATH.write_text(json.dumps({"seen": sorted(seen_ids)}, ensure_ascii=False, indent=2))
+def save_state(state):
+    STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    STATE_PATH.write_text(json.dumps(state, ensure_ascii=False, indent=2))
 
 
 def classify_fuel(item):
@@ -125,69 +129,102 @@ def qualifies_bensin(item):
     return any(k in blob for k in BENSIN_KEYWORDS)
 
 
-def fmt_kr(v):
-    return f"{int(v):,}".replace(',', ' ') + " kr"
-
-
 def main():
-    st = load_state()
-    seen = set(st.get("seen", []))
+    now = datetime.now(timezone.utc)
+    now_iso = now.isoformat()
 
-    all_items = []
+    state = load_state()
+    ads = state.get("ads", {})
+
+    # Scrape current FINN results
+    all_found = []
     for s in SEARCHES:
         items = parse_search(s["url"])
         for it in items:
             fuel_kind = classify_fuel(it)
             if fuel_kind == "elbil":
                 it["kind"] = "elbil"
-                all_items.append(it)
+                all_found.append(it)
                 continue
             if fuel_kind == "bensin" and qualifies_bensin(it):
                 it["kind"] = "bensin"
-                all_items.append(it)
+                all_found.append(it)
                 continue
 
-    if not seen:
-        save_state({x["id"] for x in all_items})
-        print(f"Bilvarsel aktivert. Første synk lagret {len(all_items)} annonser (ingen varsling på første kjøring).")
-        return
+    # Merge current results into state
+    found_ids = set()
+    for it in all_found:
+        aid = it["id"]
+        found_ids.add(aid)
+        if aid in ads:
+            ads[aid]["last_seen"] = now_iso
+            ads[aid]["title"] = it["title"]
+            ads[aid]["meta"] = it["meta"]
+            ads[aid]["desc"] = it["desc"]
+            ads[aid]["img"] = it["img"]
+            ads[aid]["link"] = it["link"]
+        else:
+            price = enrich_price(it["link"])
+            ads[aid] = {
+                "id": aid,
+                "title": it["title"],
+                "link": it["link"],
+                "desc": it["desc"],
+                "meta": it["meta"],
+                "img": it["img"],
+                "kind": it["kind"],
+                "price": price,
+                "first_seen": now_iso,
+                "last_seen": now_iso,
+            }
 
-    new_items = [x for x in all_items if x["id"] not in seen]
-    seen.update([x["id"] for x in all_items])
-    save_state(seen)
+    # Purge ads first seen more than 10 days ago
+    cutoff = now - timedelta(days=10)
+    to_remove = []
+    for aid, ad in ads.items():
+        first = ad.get("first_seen", "")
+        try:
+            ft = datetime.fromisoformat(first)
+            if ft < cutoff:
+                to_remove.append(aid)
+        except (ValueError, TypeError):
+            to_remove.append(aid)
+    for aid in to_remove:
+        del ads[aid]
 
-    if not new_items:
-        return  # silent when nothing new
+    state["ads"] = ads
+    save_state(state)
 
-    lines = [f"🚗 FINN-varsel: {len(new_items)} nye annonser som matcher filtrene dine"]
+    # Sort newest first
+    sorted_ads = sorted(ads.values(), key=lambda x: x.get("first_seen", ""), reverse=True)
 
-    for it in new_items[:12]:
-        price = enrich_price(it["link"])
-        if not price:
-            continue
-        principal = max(0, price - EGENKAPITAL)
-        estimates = {m: annuity_monthly(principal, m, RENTE_AARLIG) for m in TERMS}
-        fits = any(v <= MAX_MND for v in estimates.values())
-        fit_mark = "✅" if fits else "⚠️"
+    # Enrich with loan estimates
+    for ad in sorted_ads:
+        price = ad.get("price")
+        if price and isinstance(price, (int, float)):
+            principal = max(0, int(price) - EGENKAPITAL)
+            estimates = {}
+            for m in TERMS:
+                estimates[str(m)] = annuity_monthly(principal, m, RENTE_AARLIG)
+            fits = any(v <= MAX_MND for v in estimates.values())
+            ad["estimates"] = estimates
+            ad["fits_budget"] = fits
+        else:
+            ad["estimates"] = {}
+            ad["fits_budget"] = False
 
-        lines.append("")
-        lines.append(f"{fit_mark} {it['title']} ({it['kind']})")
-        lines.append(f"Pris: {fmt_kr(price)}")
-        lines.append(
-            f"Estimat lån (50 000 egenkapital, 7% rente): 5 år {fmt_kr(estimates[60])}/mnd · 7 år {fmt_kr(estimates[84])}/mnd · 8 år {fmt_kr(estimates[96])}/mnd"
-        )
-        lines.append(f"Meta: {it['meta']}")
-        if it.get("desc"):
-            lines.append(f"Info: {it['desc']}")
-        lines.append(it["link"])
-        if it.get("img"):
-            lines.append(f"![annonsebilde]({it['img']})")
+    # Detect new ads since last run (for agent to mention)
+    prev_seen_ids = set(state.get("prev_seen_ids", []))
+    current_ids = {ad["id"] for ad in sorted_ads}
+    new_ids = current_ids - prev_seen_ids
+    state["prev_seen_ids"] = sorted(current_ids)
+    save_state(state)
 
-    if len(new_items) > 12:
-        lines.append("")
-        lines.append(f"... og {len(new_items)-12} flere nye treff.")
-
-    print("\n".join(lines))
+    print(json.dumps({
+        "generated_at": now_iso,
+        "total_ads": len(sorted_ads),
+        "ads": sorted_ads,
+    }, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

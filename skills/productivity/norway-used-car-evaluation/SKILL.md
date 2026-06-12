@@ -9,6 +9,7 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
 - User wants help choosing between EV and petrol/hybrid in Norway.
 - User provides a hard monthly budget and down payment.
 - User wants concrete FINN candidates (links + images), not only generic model advice.
+- User asks to set up automated daily FINN monitoring with here.now publishing (see `references/automated-finn-monitoring.md`).
 
 ## Core outcomes
 1. Convert monthly payment + down payment + term into a realistic car-price range.
@@ -74,3 +75,4 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
 
 ## References
 - See `references/finn-html-extraction-notes.md` for FINN extraction pattern and session-derived guardrails.
+- See `references/automated-finn-monitoring.md` for setting up automated daily FINN monitoring with cron + here.now publishing.

@@ -446,17 +446,19 @@ matrix:
   free_response_rooms: ''
   allowed_rooms: ''
 approvals:
-  mode: manual
+  mode: smart
   timeout: 60
-  cron_mode: deny
+  cron_mode: approve
   mcp_reload_confirm: true
   destructive_slash_confirm: true
 command_allowlist:
-- script execution via -e/-c flag
-- recursive delete
-- stop/restart system service
-- shell command via -c/-lc flag
 - stop/restart hermes gateway (kills running agents)
+- script execution via heredoc
+- recursive delete
+- script execution via -e/-c flag
+- shell command via -c/-lc flag
+- stop/restart system service
+- delete in root path
 quick_commands: {}
 hooks: {}
 hooks_auto_accept: false

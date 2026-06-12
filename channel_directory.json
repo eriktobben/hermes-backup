@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12T07:30:04.882534",
+  "updated_at": "2026-06-12T08:30:33.481489",
   "platforms": {
     "discord": [
       {
@@ -457,6 +457,18 @@
         "name": "Tobben MC / #🗞️-briefings / Kan du oppdatere \"reminder AI Model Daily Briefing\" til å lage en here.now si... / topic 1514751586134523924",
         "type": "thread",
         "thread_id": "1514751586134523924"
+      },
+      {
+        "id": "1514900468994932827:1514900468994932827",
+        "name": "Tobben MC / #bilkjøp / Kan du oppdatere \"reminder FINN bilvarsel (el + bensin-kjede)\" til å lage en ... / topic 1514900468994932827",
+        "type": "thread",
+        "thread_id": "1514900468994932827"
+      },
+      {
+        "id": "1514908138137194538:1514908138137194538",
+        "name": "Tobben MC / #general / Jeg får veldig ofte varsler om at jeg må godkjenne noe Hermes gjør, eks denne... / topic 1514908138137194538",
+        "type": "thread",
+        "thread_id": "1514908138137194538"
       }
     ],
     "telegram": [],

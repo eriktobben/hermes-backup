@@ -3,14 +3,16 @@
     {
       "id": "b6d12ab73f07",
       "name": "FINN bilvarsel (el + bensin-kjede)",
-      "prompt": "",
-      "skills": [],
-      "skill": null,
+      "prompt": "Du skal lage en FINN bilvarsel-side for Erik som viser aktuelle bilannonser.\n\nVIKTIG: Denne siden eksisterer allerede p\u00e5 here.now med slug `summit-lichen-sntr`. state.json ligger i workdir/.herenow/. Bruk --slug ved oppdatering.\n\nSteg for steg:\n\n1. KJ\u00d8R DATAINNSAMLING:\n   ```bash\n   python3 ~/.hermes/scripts/finn_bilvarsel.py 2>/dev/null > /home/erik/.hermes/cron/finn-bilvarsel/data.json\n   ```\n   Les JSON-output. Hver annonse har: id, title, link, desc, meta, kind (elbil/bensin), price, first_seen (ISO-dato), estimates (60/84/96 mnd), fits_budget (bool).\n\n2. LAG HTML i /home/erik/.hermes/cron/finn-bilvarsel/index.html:\n\n   Designkrav:\n   - **DAGSEPARATORER**: Grupper annonsene etter dato (fra first_seen). Hver dag skal ha en tydelig overskrift/seksjon med dato i norsk format (f.eks. \"12. juni 2026 \u00b7 4 annonser\") og en horisontal linje eller farget bunnlinje som skiller dagene. Nyeste dag \u00f8verst.\n   - **BILDER**: Bildene m\u00e5 v\u00e6re STORE nok til \u00e5 se hele bilen. Fjern max-height-begrensning p\u00e5 .img-wrap. La bildene vises i full bredde uten \u00e5 bli besk\u00e5ret. Bruk width:100%, height:auto, og IKKE max-height eller object-fit:cover som beskj\u00e6rer.\n   - **TESLA MODEL 3**: Hvis noen annonser er Tesla Model 3, vis dem i en egen seksjon \u00f8verst med bl\u00e5 overskrift \"\u26a1 Tesla Model 3\"\n   - M\u00f8rkt tema (#0d1117), mobilvennlig, self-contained (ingen eksterne avhengigheter)\n   - Hvert annonsekort viser: \u2705/\u26a0\ufe0f budsjettstatus, tittel (klikkbar lenke), type, pris i kr med mellomrom, m\u00e5nedskostnad 5/7/8 \u00e5r (50k egenkapital, 7% rente), meta, beskrivelse, bilde\n   - \u00d8verst: tittel \"\ud83d\ude97 FINN Bilvarsel \u2013 {dato}\", generert-tidspunkt, antall annonser\n   - Bruk inline CSS i <style> og JavaScript for \u00e5 rendere annonsene (samme m\u00f8nster som f\u00f8r, men med first_seen-dato p\u00e5 hver annonse)\n\n3. SLETT data.json f\u00f8r publisering:\n   ```bash\n   rm /home/erik/.hermes/cron/finn-bilvarsel/data.json\n   ```\n\n4. PUBLISER til here.now (NB: cd til workdir, og INGEN trailing slash p\u00e5 stien!):\n   ```bash\n   cd /home/erik/.hermes/cron/finn-bilvarsel\n   bash ~/.hermes/skills/productivity/here-now/scripts/publish.sh /home/erik/.hermes/cron/finn-bilvarsel --slug summit-lichen-sntr --client hermes --title \"FINN Bilvarsel - $(date +%d.%m.%Y)\"\n   ```\n\n5. DELIVERY: Kun URL + \u00e9n linje teaser:\n   \ud83d\ude97 **FINN Bilvarsel \u2013 12. juni 2026**\n   https://summit-lichen-sntr.here.now/\n   16 annonser fordelt p\u00e5 3 dager (elbil + bensin registerkjede)",
+      "skills": [
+        "here-now"
+      ],
+      "skill": "here-now",
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "finn_bilvarsel.py",
-      "no_agent": true,
+      "script": null,
+      "no_agent": false,
       "context_from": null,
       "schedule": {
         "kind": "cron",
@@ -20,7 +22,7 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 15
+        "completed": 16
       },
       "enabled": true,
       "state": "scheduled",
@@ -28,7 +30,7 @@
       "paused_reason": null,
       "created_at": "2026-05-29T21:05:58.668739+00:00",
       "next_run_at": "2026-06-13T09:00:00+02:00",
-      "last_run_at": "2026-06-12T09:00:04.689124+02:00",
+      "last_run_at": "2026-06-12T10:04:33.301445+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -39,8 +41,11 @@
         "chat_name": "Tobben MC / #bilkj\u00f8p",
         "thread_id": null
       },
-      "enabled_toolsets": null,
-      "workdir": null,
+      "enabled_toolsets": [
+        "terminal",
+        "web"
+      ],
+      "workdir": "/home/erik/.hermes/cron/finn-bilvarsel",
       "profile": null
     },
     {
@@ -155,15 +160,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 105
+        "completed": 106
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-12T10:34:04.895182+02:00",
-      "last_run_at": "2026-06-12T08:34:00.969965+02:00",
+      "next_run_at": "2026-06-12T11:34:33.495618+02:00",
+      "last_run_at": "2026-06-12T09:34:07.450972+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -222,5 +227,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-12T09:34:04.895349+02:00"
+  "updated_at": "2026-06-12T10:34:33.495787+02:00"
 }

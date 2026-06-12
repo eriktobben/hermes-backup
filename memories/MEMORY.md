@@ -12,4 +12,4 @@ Kimaki: patch worktree etter oppgradering (~/.local/bin/kimaki-patch-worktree). 
 §
 Kimaki-prosjekt embermail: git@github.com:Tobbens-Empire/embermail.git, lokasjon /home/erik/Projects/embermail, Discord-kanal #embermail.
 §
-here.now skill installed (~/.hermes/skills/productivity/here-now/). API key saved (~/.herenow/credentials). publish.sh patched — `file` binary optional. Daily AI briefing cron (f3a42a49fae6, 08:00) publishes dark-themed HTML to here.now, delivers only link + teaser to #🗞️-briefings.
+here.now publish.sh: trailing slash BUG. Sti UTEN trailing slash, ellers `${f#$TARGET/}` feiler og sender absolutt sti → API feiler. Daily AI brief (f3a42a49fae6, 08:00). FINN bilvarsel (b6d12ab73f07, 09:00) slug summit-lichen-sntr, workdir ~/.hermes/cron/finn-bilvarsel/.
