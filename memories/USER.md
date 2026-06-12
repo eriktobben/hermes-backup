@@ -9,9 +9,5 @@ Prioritet: Gjør hverdagen enklere for ham.
 §
 User is in Norwegian timezone (CET/CEST, Europe/Oslo). All times should be referenced in this timezone.
 §
-Tobben (Erik) - bilkjøp 2026. Slutter i jobben, må gi fra seg firmabil. Driftssikker bil som holder 2-3 år uten verkstedbesøk. Maks 1500 kr/mnd i lån, 50k egenkapital = totalbudsjett ~120-130k. Kun automatgir.
-- Unngå hybrid (to drivverk = mer som kan gå i stykker).
-- Foretrekker registerkjede fremfor registerreim.
-- Mye bykjøring 5-10 km daglig.
-- Åpen for elbil, men må klare Kr.sand-Oslo (320 km) med ett ladestopp om vinteren. Har ikke hjemmelader, må hurtiglade.
-- Ønsker godt verdisalg om 2-3 år.
+Tobben (Erik) - bilkjøp 2026. Slutter jobb, må gi fra seg firmabil. Driftssikker i 2-3 år uten verksted. Budsjett: 60k egenkap, 1500/mnd × 10år = ~195k. Kun automat. Unngå hybrid. Foretrekker registerkjede. Bykjøring 5-10 km. Åpen for elbil, men må klare Kr.sand-Oslo 320km med ett ladestopp om vinteren. Ingen hjemmelader. Godt verdisalg om 2-3 år.
+VIKTIG: Når han spør om Tesla-"alternativer" mener han annonser av samme modell, ikke andre merker.

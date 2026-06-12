@@ -31,6 +31,8 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
    - Add user down payment.
    - Reserve a buffer for fees/registration before setting target listing price.
    - Example: 50k down + 1500 kr/mnd at 7% over 5y ≈ 70k loan → ~120k total budget
+   - CRITICAL: Always verify the loan term (nedbetalingstid) — 5y vs 8y vs 10y dramatically changes the envelope. Same monthly payment at 10y gives ~135k loan → ~195k total.
+   - Always explicitly ask: "Hvor mange år vil du betale over?" — don't assume a term.
 
 3. **Decision framing**
    - If no home charging: explicitly warn that EV fast-charging can erase fuel-cost advantage vs a cheap petrol car used mostly for short trips. However, note that 5-10 km daily city driving on an EV still beats petrol on running cost.

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12T09:30:36.643675",
+  "updated_at": "2026-06-12T10:30:39.773362",
   "platforms": {
     "discord": [
       {
@@ -469,6 +469,12 @@
         "name": "Tobben MC / #general / Jeg får veldig ofte varsler om at jeg må godkjenne noe Hermes gjør, eks denne... / topic 1514908138137194538",
         "type": "thread",
         "thread_id": "1514908138137194538"
+      },
+      {
+        "id": "1514936625946169355:1514936625946169355",
+        "name": "Tobben MC / #bilkjøp / Kan du finne de beste Tesla-alternativene som er til salgs her basert på mine... / topic 1514936625946169355",
+        "type": "thread",
+        "thread_id": "1514936625946169355"
       }
     ],
     "telegram": [],

@@ -6,7 +6,38 @@
 
 Both approaches have known failure modes:
 - **Browser navigation** often times out (>60s) — Finn's JS bundle is heavy.
-- **curl HTML fetch** of search results pages returns only the shell HTML with no actual listing data. The JSON-LD markup found in the page is from related/random ads, NOT the search results.
+- **curl HTML fetch** of search results pages — limited data available via JSON-LD.
+
+You CAN extract listing data from search results pages. FINN embeds a `<script id="seoStructuredData" type="application/ld+json">` tag with the first ~49 listings as structured JSON-LD data containing price, brand, model, description, and URL.
+
+```bash
+# Extract JSON-LD from search page
+curl -sL 'https://www.finn.no/mobility/search/car?registration_class=1&variant=1.8078.2000501&price_to=200000' \
+  | sed -n '/seoStructuredData/,/<\/script>/p' \
+  | sed 's/.*<script[^>]*>//;s/<\/script>.*//' \
+  | python3 -m json.tool
+```
+
+The JSON-LD structure is:
+```json
+{
+  "@type": "CollectionPage",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {"@type": "ListItem", "item": {
+        "name": "...", "description": "...",
+        "offers": {"price": "160000"},
+        "url": "https://www.finn.no/mobility/item/466755434"
+      }}
+    ]
+  }
+}
+```
+
+**However**, the JSON-LD only includes description text (not year, km, battery size, etc.). For full details, still use individual ad page extraction on the URLs found.
+
+**Beware**: Some listings have out-of-band prices (e.g. "4400" or "5900" kr) — these are likely financing/monthly-rate displays, not the actual car price. Filter by price > 10000 to skip these.
 
 ## What works (three tiers)
 
