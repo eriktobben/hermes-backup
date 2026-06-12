@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12T20:31:10.582079",
+  "updated_at": "2026-06-12T21:31:13.612123",
   "platforms": {
     "discord": [
       {
@@ -215,6 +215,12 @@
       {
         "id": "1513534387780849694",
         "name": "embermail",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1515098441372532839",
+        "name": "masterfeed-scroll",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -481,6 +487,12 @@
         "name": "Tobben MC / #general / Jeg prøvde nå å fortsette en samtale i en thread som er fra 8. juni, men Herm... / topic 1515027326851612713",
         "type": "thread",
         "thread_id": "1515027326851612713"
+      },
+      {
+        "id": "1515097943097737287:1515097943097737287",
+        "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt med følgende repo? git@github.com:eriktobb... / topic 1515097943097737287",
+        "type": "thread",
+        "thread_id": "1515097943097737287"
       }
     ],
     "telegram": [],

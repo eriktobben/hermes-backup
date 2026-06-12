@@ -2,7 +2,7 @@ For Laravel projects, follow Laravel conventions and best practices. Prefer Live
 §
 Default location for new projects on this machine is /home/erik/Projects/, using the repository name as the folder name.
 §
-Serena-prosjekter: #serena → Serena-AS/SerenaHome (~/Projects/serenahome). #serena-dev (1511404097302171818) → Serena-AS/SerenaHome. #masterfeed-dev (1511501933180092478) → eriktobben/masterfeed. Kun feature branches + PR til main — aldri direkte commit. Auto-thread whitelist via plugin i ~/.hermes/plugins/auto-thread-whitelist/.
+#masterfeed-dev (1511501933180092478) → eriktobben/masterfeed (~/Projects/masterfeed). #masterfeed-scroll → eriktobben/masterfeed-scroll (~/Projects/masterfeed-scroll). Kun feature branches + PR til main — aldri direkte commit. Auto-thread whitelist via plugin i ~/.hermes/plugins/auto-thread-whitelist/.
 §
 WORKTREE-REGLER: FØR start — sjekk `git worktree list`. Bruk eksisterende hvis det matcher. Ellers: opprett fra main/master, FLYTT til worktree-mappa. ALL koding i worktree. ALDRI i main/master. ALDRI rør andres worktrees/branches.
 §
