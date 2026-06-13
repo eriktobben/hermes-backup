@@ -481,13 +481,175 @@
         "96": 2112
       },
       "fits_budget": true
+    },
+    "466802825": {
+      "id": "466802825",
+      "title": "Volkswagen e-Golf VII",
+      "link": "https://www.finn.no/mobility/item/466802825",
+      "desc": "Exclusive",
+      "meta": "2017 ∙ 84 211 km ∙ El ∙ 180 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466802825/04dfe830-ad4c-4b5e-accd-43b0ab98d7ad",
+      "kind": "elbil",
+      "price": 89532,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {
+        "60": 783,
+        "84": 597,
+        "96": 539
+      },
+      "fits_budget": true
+    },
+    "465018727": {
+      "id": "465018727",
+      "title": "Mercedes-Benz B250",
+      "link": "https://www.finn.no/mobility/item/465018727",
+      "desc": "",
+      "meta": "2017 ∙ 135 000 km ∙ El ∙ 200 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/465018727/31322cd7-57ae-4938-91ed-34180a74d721",
+      "kind": "elbil",
+      "price": 68532,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {
+        "60": 367,
+        "84": 280,
+        "96": 253
+      },
+      "fits_budget": true
+    },
+    "459773891": {
+      "id": "459773891",
+      "title": "Audi e-tron",
+      "link": "https://www.finn.no/mobility/item/459773891",
+      "desc": "50/ADVANCED-SPORT/390HK/QUATTRO/KROK/SKINN/360KAM/ACC",
+      "meta": "2021 ∙ 88 000 km ∙ El ∙ 311 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/459773891/a940bce0-c5cb-429a-ae32-5ea9f902c1a6",
+      "kind": "elbil",
+      "price": 259000,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {
+        "60": 4139,
+        "84": 3155,
+        "96": 2850
+      },
+      "fits_budget": false
+    },
+    "466833943": {
+      "id": "466833943",
+      "title": "MG 4",
+      "link": "https://www.finn.no/mobility/item/466833943",
+      "desc": "Luxury/LongRange/360/V.pumpe/LED/7års/ACC/BlackRoof/App",
+      "meta": "2024 ∙ 43 000 km ∙ El ∙ 435 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466833943/dbc5ab4d-6dbc-4c17-afe3-a708a4caeb8c",
+      "kind": "elbil",
+      "price": 239000,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {
+        "60": 3743,
+        "84": 2853,
+        "96": 2577
+      },
+      "fits_budget": false
+    },
+    "466832178": {
+      "id": "466832178",
+      "title": "Nissan Leaf",
+      "link": "https://www.finn.no/mobility/item/466832178",
+      "desc": "40kWh Tekna",
+      "meta": "2018 ∙ 82 000 km ∙ El ∙ 270 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": null,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {},
+      "fits_budget": false
+    },
+    "466832574": {
+      "id": "466832574",
+      "title": "Volkswagen Golf-Serie",
+      "link": "https://www.finn.no/mobility/item/466832574",
+      "desc": "ACC/ Varmepumpe/ Navi/ Kamera/ Delskinn/ Dynaudio++",
+      "meta": "2016 ∙ 134 450 km ∙ El ∙ Automat",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466832574/f6b47767-27cb-4f6a-afab-ba75df9ffe07",
+      "kind": "elbil",
+      "price": 64900,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {
+        "60": 296,
+        "84": 225,
+        "96": 204
+      },
+      "fits_budget": true
+    },
+    "458803011": {
+      "id": "458803011",
+      "title": "Tesla Model S",
+      "link": "https://www.finn.no/mobility/item/458803011",
+      "desc": "85 D",
+      "meta": "2015 ∙ 137 000 km ∙ El ∙ Automat",
+      "img": "https://images.finncdn.no/dynamic/480w/item/458803011/4e47481b-2e07-4a6a-b60c-6467fe25a954",
+      "kind": "elbil",
+      "price": 189532,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {
+        "60": 2763,
+        "84": 2106,
+        "96": 1903
+      },
+      "fits_budget": true
+    },
+    "465829350": {
+      "id": "465829350",
+      "title": "Nissan e-NV200",
+      "link": "https://www.finn.no/mobility/item/465829350",
+      "desc": "Evalia Premium 7-s.",
+      "meta": "2018 ∙ 82 100 km ∙ El ∙ 200 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/465829350/f75bdf10-fcb5-40e7-a5e3-fb0536e9986a",
+      "kind": "elbil",
+      "price": 164532,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {
+        "60": 2268,
+        "84": 1729,
+        "96": 1562
+      },
+      "fits_budget": true
+    },
+    "466829220": {
+      "id": "466829220",
+      "title": "Jaguar I-PACE",
+      "link": "https://www.finn.no/mobility/item/466829220",
+      "desc": "EV320 AWD // ACC PANO 360G SKINN PIVI-PRO MERIDIAN KROK",
+      "meta": "2021 ∙ 49 000 km ∙ El ∙ 464 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466829220/c507005e-1690-4a4f-abed-30620e78dc9e",
+      "kind": "elbil",
+      "price": 249000,
+      "first_seen": "2026-06-13T07:00:51.148077+00:00",
+      "last_seen": "2026-06-13T07:00:51.148077+00:00",
+      "estimates": {
+        "60": 3941,
+        "84": 3004,
+        "96": 2714
+      },
+      "fits_budget": false
     }
   },
   "prev_seen_ids": [
     "413183380",
     "448524754",
     "458663674",
+    "458803011",
     "458955939",
+    "459773891",
+    "465018727",
+    "465829350",
     "465982033",
     "466138563",
     "466229152",
@@ -510,6 +672,11 @@
     "466748301",
     "466748563",
     "466749038",
-    "466749241"
+    "466749241",
+    "466802825",
+    "466829220",
+    "466832178",
+    "466832574",
+    "466833943"
   ]
 }

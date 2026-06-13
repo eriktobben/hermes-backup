@@ -1,134 +1,619 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="nb">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FINN Bilvarsel - 12. juni 2026</title>
+<title>FINN Bilvarsel – 13. juni 2026</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;padding:16px;line-height:1.5}
-.container{max-width:720px;margin:0 auto}
-h1{font-size:1.5rem;margin-bottom:4px;color:#f0f6fc}
-.subtitle{color:#8b949e;font-size:.875rem;margin-bottom:16px}
-.count{border-left:3px solid #58a6ff;padding:8px 12px;background:#161b22;border-radius:6px;margin-bottom:20px;font-size:.95rem}
-.count strong{color:#58a6ff}
-.day-section{margin-bottom:24px}
-.day-header{display:flex;align-items:center;gap:12px;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid #30363d}
-.day-header h2{font-size:1.1rem;color:#f0f6fc;white-space:nowrap}
-.day-header .day-line{flex:1;height:2px;background:#21262d;border-radius:1px}
-.day-header .day-count{font-size:.8rem;color:#8b949e;background:#161b22;padding:2px 10px;border-radius:10px;white-space:nowrap}
-.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;margin-bottom:12px;transition:border-color .15s}
-.card:hover{border-color:#58a6ff}
-.card-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:6px}
-.card-title{font-size:1.05rem;font-weight:600;color:#f0f6fc;text-decoration:none;flex:1}
-.card-title:hover{color:#58a6ff;text-decoration:underline}
-.badge{display:inline-flex;align-items:center;gap:4px;font-size:.75rem;padding:2px 8px;border-radius:10px;font-weight:600;white-space:nowrap}
-.badge-ok{background:#1b3a2b;color:#3fb950}
-.badge-warn{background:#3d2e00;color:#d29922}
-.badge-elbil{background:#1f3a5f;color:#58a6ff}
-.badge-bensin{background:#3d2e00;color:#d29922}
-.meta{color:#8b949e;font-size:.825rem;margin:4px 0}
-.desc{color:#c9d1d9;font-size:.875rem;margin:4px 0;padding:6px 8px;background:#0d1117;border-radius:4px;border-left:2px solid #30363d}
-.price{font-size:1.1rem;font-weight:700;color:#f0f6fc;margin:6px 0}
-.estimates{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
-.est{background:#0d1117;border:1px solid #21262d;border-radius:6px;padding:6px 10px;text-align:center;flex:1;min-width:80px}
-.est-label{font-size:.7rem;color:#8b949e;text-transform:uppercase;letter-spacing:.5px}
-.est-value{font-size:.95rem;font-weight:600;color:#f0f6fc}
-.img-wrap{width:100%;border-radius:6px;margin-top:8px;background:#0d1117}
-.img-wrap img{width:100%;height:auto;display:block;border-radius:6px}
-.no-img{color:#484f58;font-size:.8rem;padding:8px;text-align:center;background:#0d1117;border-radius:6px;margin-top:8px}
-.section-tesla h2{color:#58a6ff;border-bottom-color:#1f3a5f}
-.footer{text-align:center;color:#484f58;font-size:.75rem;margin-top:28px;padding-top:16px;border-top:1px solid #21262d}
-@media(max-width:480px){body{padding:10px}h1{font-size:1.25rem}.card{padding:10px}.estimates{gap:4px}.est{padding:4px 6px;min-width:60px}}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  padding: 16px;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.header {
+  text-align: center;
+  padding: 24px 0 20px;
+  border-bottom: 1px solid #21262d;
+  margin-bottom: 28px;
+}
+.header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.header .subtitle {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+.header .subtitle span {
+  color: #58a6ff;
+}
+.day-section {
+  margin-bottom: 32px;
+}
+.day-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.day-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #f0f6fc;
+}
+.day-count {
+  font-size: 0.85rem;
+  color: #8b949e;
+  background: #161b22;
+  padding: 2px 10px;
+  border-radius: 12px;
+}
+.day-divider {
+  height: 3px;
+  background: linear-gradient(90deg, #30363d, #21262d);
+  border-radius: 2px;
+  margin-bottom: 18px;
+}
+.tesla-section .tesla-header .day-title {
+  color: #58a6ff;
+}
+.tesla-divider {
+  background: linear-gradient(90deg, #1f6feb, #0d1117);
+}
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+.budget-ok { color: #3fb950; }
+.budget-warn { color: #d29922; }
+.kind-badge {
+  background: #0d1117;
+  padding: 2px 10px;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+  font-size: 0.78rem;
+}
+.card-title {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #58a6ff;
+  text-decoration: none;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+.card-title:hover { text-decoration: underline; }
+.card-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f0f6fc;
+  margin-bottom: 4px;
+}
+.meta {
+  font-size: 0.82rem;
+  color: #8b949e;
+  margin-bottom: 8px;
+}
+.estimates {
+  font-size: 0.82rem;
+  color: #8b949e;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.estimates .est {
+  display: inline-block;
+}
+.estimates strong {
+  color: #e6edf3;
+}
+.desc {
+  font-size: 0.82rem;
+  color: #8b949e;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.img-wrap {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+.img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+@media (max-width: 480px) {
+  body { padding: 10px; }
+  .header h1 { font-size: 1.3rem; }
+  .card { padding: 12px; }
+  .card-title { font-size: 1rem; }
+}
 </style>
 </head>
 <body>
 <div class="container">
-<h1>🚗 FINN Bilvarsel - 12. juni 2026</h1>
-<p class="subtitle">Generert: 12. juni 2026 kl. 08:23</p>
-<div class="count"><strong>27</strong> aktive annonser siste 10 dager | <strong>27</strong> elbil | <strong>0</strong> bensin | <strong>21</strong> innenfor budsjett</div>
-<div id="ads-container"></div>
-<div class="footer">FINN Bilvarsel for Erik - oppdateres daglig kl 09:00 | 10-dagers rullerende vindu</div>
+  <div class="header">
+    <h1>🚗 FINN Bilvarsel – 13. juni 2026</h1>
+    <div class="subtitle">Generert 07:00 · <span>36 annonser</span></div>
+  </div>
+  
+    <div class="day-section tesla-section">
+      <div class="day-header tesla-header">
+        <h2 class="day-title">⚡ Tesla Model 3</h2>
+        <span class="day-count">1 annonse</span>
+      </div>
+      <div class="day-divider tesla-divider"></div>
+      
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/465982033" target="_blank" rel="noopener" class="card-title">Tesla Model 3</a>
+      <div class="card-price">249 500 kr</div>
+      <div class="meta">2021 ∙ 89 800 km ∙ El ∙ 614 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 951 kr/mnd</strong></span> · <span class="est">7 år: <strong>3 011 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 720 kr/mnd</strong></span></div>
+      <p class="desc">Long Range | 4x4 | 1-Eier | Premium | Rattvarmer</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/465982033/6a7b220f-8a13-41a5-a107-3f02f5b70cc6" alt="Tesla Model 3" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    </div>
+  
+    <div class="day-section">
+      <div class="day-header">
+        <h2 class="day-title">13. juni 2026</h2>
+        <span class="day-count">9 annonser</span>
+      </div>
+      <div class="day-divider"></div>
+      
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466802825" target="_blank" rel="noopener" class="card-title">Volkswagen e-Golf VII</a>
+      <div class="card-price">89 532 kr</div>
+      <div class="meta">2017 ∙ 84 211 km ∙ El ∙ 180 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>783 kr/mnd</strong></span> · <span class="est">7 år: <strong>597 kr/mnd</strong></span> · <span class="est">8 år: <strong>539 kr/mnd</strong></span></div>
+      <p class="desc">Exclusive</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466802825/04dfe830-ad4c-4b5e-accd-43b0ab98d7ad" alt="Volkswagen e-Golf VII" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/465018727" target="_blank" rel="noopener" class="card-title">Mercedes-Benz B250</a>
+      <div class="card-price">68 532 kr</div>
+      <div class="meta">2017 ∙ 135 000 km ∙ El ∙ 200 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>367 kr/mnd</strong></span> · <span class="est">7 år: <strong>280 kr/mnd</strong></span> · <span class="est">8 år: <strong>253 kr/mnd</strong></span></div>
+      
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/465018727/31322cd7-57ae-4938-91ed-34180a74d721" alt="Mercedes-Benz B250" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/459773891" target="_blank" rel="noopener" class="card-title">Audi e-tron</a>
+      <div class="card-price">259 000 kr</div>
+      <div class="meta">2021 ∙ 88 000 km ∙ El ∙ 311 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>4 139 kr/mnd</strong></span> · <span class="est">7 år: <strong>3 155 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 850 kr/mnd</strong></span></div>
+      <p class="desc">50/ADVANCED-SPORT/390HK/QUATTRO/KROK/SKINN/360KAM/ACC</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/459773891/a940bce0-c5cb-429a-ae32-5ea9f902c1a6" alt="Audi e-tron" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466833943" target="_blank" rel="noopener" class="card-title">MG 4</a>
+      <div class="card-price">239 000 kr</div>
+      <div class="meta">2024 ∙ 43 000 km ∙ El ∙ 435 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 743 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 853 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 577 kr/mnd</strong></span></div>
+      <p class="desc">Luxury/LongRange/360/V.pumpe/LED/7års/ACC/BlackRoof/App</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466833943/dbc5ab4d-6dbc-4c17-afe3-a708a4caeb8c" alt="MG 4" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466832178" target="_blank" rel="noopener" class="card-title">Nissan Leaf</a>
+      <div class="card-price">— kr</div>
+      <div class="meta">2018 ∙ 82 000 km ∙ El ∙ 270 km rekkevidde</div>
+      
+      <p class="desc">40kWh Tekna</p>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466832574" target="_blank" rel="noopener" class="card-title">Volkswagen Golf-Serie</a>
+      <div class="card-price">64 900 kr</div>
+      <div class="meta">2016 ∙ 134 450 km ∙ El ∙ Automat</div>
+      <div class="estimates"><span class="est">5 år: <strong>296 kr/mnd</strong></span> · <span class="est">7 år: <strong>225 kr/mnd</strong></span> · <span class="est">8 år: <strong>204 kr/mnd</strong></span></div>
+      <p class="desc">ACC/ Varmepumpe/ Navi/ Kamera/ Delskinn/ Dynaudio++</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466832574/f6b47767-27cb-4f6a-afab-ba75df9ffe07" alt="Volkswagen Golf-Serie" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/458803011" target="_blank" rel="noopener" class="card-title">Tesla Model S</a>
+      <div class="card-price">189 532 kr</div>
+      <div class="meta">2015 ∙ 137 000 km ∙ El ∙ Automat</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 763 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 106 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 903 kr/mnd</strong></span></div>
+      <p class="desc">85 D</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/458803011/4e47481b-2e07-4a6a-b60c-6467fe25a954" alt="Tesla Model S" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/465829350" target="_blank" rel="noopener" class="card-title">Nissan e-NV200</a>
+      <div class="card-price">164 532 kr</div>
+      <div class="meta">2018 ∙ 82 100 km ∙ El ∙ 200 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 268 kr/mnd</strong></span> · <span class="est">7 år: <strong>1 729 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 562 kr/mnd</strong></span></div>
+      <p class="desc">Evalia Premium 7-s.</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/465829350/f75bdf10-fcb5-40e7-a5e3-fb0536e9986a" alt="Nissan e-NV200" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466829220" target="_blank" rel="noopener" class="card-title">Jaguar I-PACE</a>
+      <div class="card-price">249 000 kr</div>
+      <div class="meta">2021 ∙ 49 000 km ∙ El ∙ 464 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 941 kr/mnd</strong></span> · <span class="est">7 år: <strong>3 004 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 714 kr/mnd</strong></span></div>
+      <p class="desc">EV320 AWD // ACC PANO 360G SKINN PIVI-PRO MERIDIAN KROK</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466829220/c507005e-1690-4a4f-abed-30620e78dc9e" alt="Jaguar I-PACE" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    </div>
+    <div class="day-section">
+      <div class="day-header">
+        <h2 class="day-title">12. juni 2026</h2>
+        <span class="day-count">26 annonser</span>
+      </div>
+      <div class="day-divider"></div>
+      
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466749241" target="_blank" rel="noopener" class="card-title">Opel Vivaro</a>
+      <div class="card-price">208 900 kr</div>
+      <div class="meta">2022 ∙ 68 300 km ∙ El ∙ 313 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 147 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 399 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 167 kr/mnd</strong></span></div>
+      <p class="desc">Elite L3 75 kWh 136hk | Hengerfeste | Apple Carplay</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466749241/709495aa-9926-44cf-8a2e-61d289e02984" alt="Opel Vivaro" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466749038" target="_blank" rel="noopener" class="card-title">Citroen E-C4</a>
+      <div class="card-price">224 900 kr</div>
+      <div class="meta">2023 ∙ 39 700 km ∙ El ∙ 349 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 464 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 640 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 385 kr/mnd</strong></span></div>
+      <p class="desc">Shine 136 hk | Head-up | Panorama | AdCruise</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466749038/7c478076-6d18-4d1e-8d52-4cecdaad022e" alt="Citroen E-C4" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/448524754" target="_blank" rel="noopener" class="card-title">Renault Megane</a>
+      <div class="card-price">— kr</div>
+      <div class="meta">2022 ∙ 29 650 km ∙ El ∙ 435 km rekkevidde</div>
+      
+      <p class="desc">TECHNO/MASSE UTSTYR/NAVI/RYGGGEKAMERA/INNBYTTE</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/448524754/dfb296e6-6f8f-420c-a958-1f878633371e" alt="Renault Megane" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466747539" target="_blank" rel="noopener" class="card-title">Polestar 2</a>
+      <div class="card-price">259 532 kr</div>
+      <div class="meta">2021 ∙ 127 km ∙ El ∙ 470 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>4 149 kr/mnd</strong></span> · <span class="est">7 år: <strong>3 163 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 857 kr/mnd</strong></span></div>
+      <p class="desc">Long Range Dual Motor</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466747539/ecc62dcb-b381-443d-8e1a-314ddde52167" alt="Polestar 2" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/458955939" target="_blank" rel="noopener" class="card-title">Volkswagen e-Golf VII</a>
+      <div class="card-price">84 532 kr</div>
+      <div class="meta">2017 ∙ 135 000 km ∙ El ∙ 190 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>684 kr/mnd</strong></span> · <span class="est">7 år: <strong>522 kr/mnd</strong></span> · <span class="est">8 år: <strong>471 kr/mnd</strong></span></div>
+      <p class="desc">Exclusive</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/458955939/c246a8dd-0efe-4df2-a3d0-3f1a30b2b159" alt="Volkswagen e-Golf VII" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466748563" target="_blank" rel="noopener" class="card-title">Toyota Proace</a>
+      <div class="card-price">195 000 kr</div>
+      <div class="meta">2021 ∙ 64 000 km ∙ El ∙ 313 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 872 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 189 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 977 kr/mnd</strong></span></div>
+      <p class="desc">Electric 75 kWh 313 KM WLTP</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466748563/2fe3fc1d-9f6b-48a5-a77e-c19f6602feae" alt="Toyota Proace" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466748301" target="_blank" rel="noopener" class="card-title">Kia e-Niro</a>
+      <div class="card-price">189 900 kr</div>
+      <div class="meta">2019 ∙ 122 000 km ∙ El ∙ 455 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 771 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 112 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 908 kr/mnd</strong></span></div>
+      <p class="desc">-NORSK-ACC-JBL LYD-FERSK EU/PKK-</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466748301/b0c63a8a-1748-4b92-b6cd-71a2bbae43e5" alt="Kia e-Niro" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466747862" target="_blank" rel="noopener" class="card-title">Mercedes-Benz B-Klasse</a>
+      <div class="card-price">79 000 kr</div>
+      <div class="meta">2017 ∙ 58 591 km ∙ El ∙ Automat</div>
+      <div class="estimates"><span class="est">5 år: <strong>575 kr/mnd</strong></span> · <span class="est">7 år: <strong>438 kr/mnd</strong></span> · <span class="est">8 år: <strong>396 kr/mnd</strong></span></div>
+      <p class="desc">B-250e Long Range Edition | EU2027 | LAV KM | R.KAM</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466747862/8dd351a4-9cc1-4739-aeb4-a20073e907a2" alt="Mercedes-Benz B-Klasse" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466747652" target="_blank" rel="noopener" class="card-title">MG 4</a>
+      <div class="card-price">184 900 kr</div>
+      <div class="meta">2023 ∙ 50 783 km ∙ El ∙ Automat</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 672 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 037 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 840 kr/mnd</strong></span></div>
+      <p class="desc">Standard VELHOLDT-WLPT 350 KM</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466747652/48c701fd-7b9a-4e8c-ac1f-ed67710ecb33" alt="MG 4" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466747467" target="_blank" rel="noopener" class="card-title">Nissan Leaf</a>
+      <div class="card-price">204 900 kr</div>
+      <div class="meta">2023 ∙ 39 525 km ∙ El ∙ 278 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 068 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 338 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 112 kr/mnd</strong></span></div>
+      <p class="desc">39kWh Tekna VELHOLDT-360 KAMERA-DELSKINN SETER-BOSE</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466747467/5f53548f-391d-4727-8541-7e9a0c24ec47" alt="Nissan Leaf" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466138563" target="_blank" rel="noopener" class="card-title">Nissan Leaf</a>
+      <div class="card-price">19 942 kr</div>
+      <div class="meta">2013 ∙ 144 056 km ∙ El ∙ 80 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>0 kr/mnd</strong></span> · <span class="est">7 år: <strong>0 kr/mnd</strong></span> · <span class="est">8 år: <strong>0 kr/mnd</strong></span></div>
+      <p class="desc">Zero</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466138563/27ce80db-b853-4461-91a8-44752bc17b78" alt="Nissan Leaf" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466744315" target="_blank" rel="noopener" class="card-title">BMW i3s</a>
+      <div class="card-price">179 532 kr</div>
+      <div class="meta">2019 ∙ 71 500 km ∙ El ∙ 285 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 565 kr/mnd</strong></span> · <span class="est">7 år: <strong>1 955 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 767 kr/mnd</strong></span></div>
+      <p class="desc">S 120Ah</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466744315/c33330b8-e9e2-4447-b759-3e1d61ef8114" alt="BMW i3s" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466747255" target="_blank" rel="noopener" class="card-title">Hyundai Kona</a>
+      <div class="card-price">189 000 kr</div>
+      <div class="meta">2020 ∙ 93 900 km ∙ El ∙ 484 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 753 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 098 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 896 kr/mnd</strong></span></div>
+      <p class="desc">64kWh/Premium/Skinn/KRELL/HUD/ACC/Carplay/Varmeratt/DAB</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466747255/b818c333-6c5c-4241-9762-7690d391711b" alt="Hyundai Kona" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466229152" target="_blank" rel="noopener" class="card-title">BMW i3</a>
+      <div class="card-price">99 532 kr</div>
+      <div class="meta">2017 ∙ 115 500 km ∙ El ∙ 220 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>981 kr/mnd</strong></span> · <span class="est">7 år: <strong>748 kr/mnd</strong></span> · <span class="est">8 år: <strong>676 kr/mnd</strong></span></div>
+      <p class="desc">94Ah Fully Charged Edition</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466229152/a614ddd0-a576-4aef-81aa-5195f096c8b0" alt="BMW i3" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466352895" target="_blank" rel="noopener" class="card-title">Citroen E-C4</a>
+      <div class="card-price">188 888 kr</div>
+      <div class="meta">2021 ∙ 66 918 km ∙ El ∙ 348 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 751 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 097 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 894 kr/mnd</strong></span></div>
+      <p class="desc">Shine TOPPMODELL! HENT I DAG!!!</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466352895/9382af13-fa59-41ea-b24a-91a0148cab72" alt="Citroen E-C4" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466743730" target="_blank" rel="noopener" class="card-title">Hyundai IONIQ</a>
+      <div class="card-price">139 532 kr</div>
+      <div class="meta">2018 ∙ 125 949 km ∙ El ∙ 125949 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>1 773 kr/mnd</strong></span> · <span class="est">7 år: <strong>1 352 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 221 kr/mnd</strong></span></div>
+      <p class="desc">Teknikk</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466743730/51a1f982-6a36-4f64-8bac-44ed047b7983" alt="Hyundai IONIQ" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/413183380" target="_blank" rel="noopener" class="card-title">Hyundai IONIQ</a>
+      <div class="card-price">154 532 kr</div>
+      <div class="meta">2019 ∙ 55 000 km ∙ El ∙ 280 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 070 kr/mnd</strong></span> · <span class="est">7 år: <strong>1 578 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 426 kr/mnd</strong></span></div>
+      <p class="desc">Teknikk</p>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466745976" target="_blank" rel="noopener" class="card-title">Peugeot e-2008</a>
+      <div class="card-price">188 000 kr</div>
+      <div class="meta">2021 ∙ 23 440 km ∙ El ∙ 319 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 733 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 083 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 882 kr/mnd</strong></span></div>
+      <p class="desc">Allure 136hk - R.Kam, ACC, Keyless GO, Bluetooth</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466745976/1491707b-d220-44f5-b96e-9c969c5d85e9" alt="Peugeot e-2008" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466745768" target="_blank" rel="noopener" class="card-title">Audi e-tron</a>
+      <div class="card-price">248 000 kr</div>
+      <div class="meta">2019 ∙ 49 300 km ∙ El ∙ Automat</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 921 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 989 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 700 kr/mnd</strong></span></div>
+      <p class="desc">55- Luft, 360Kam, ACC</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466745768/2bf1ca77-4ec6-4e50-b451-44803f445219" alt="Audi e-tron" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/458663674" target="_blank" rel="noopener" class="card-title">Cupra Born</a>
+      <div class="card-price">239 888 kr</div>
+      <div class="meta">2023 ∙ 42 555 km ∙ El ∙ 418 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 761 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 866 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 589 kr/mnd</strong></span></div>
+      <p class="desc">58 NORSKSOLGT/INBYTTE/FINANS/LEVERINGSKLAR</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/458663674/3b091f8b-f262-4082-a1e8-68a0136a7238" alt="Cupra Born" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-warn">⚠️ Over budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466745207" target="_blank" rel="noopener" class="card-title">MG 5</a>
+      <div class="card-price">259 000 kr</div>
+      <div class="meta">2024 ∙ 26 904 km ∙ El ∙ 380 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>4 139 kr/mnd</strong></span> · <span class="est">7 år: <strong>3 155 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 850 kr/mnd</strong></span></div>
+      <p class="desc">Luxury stv/Skinn/Adaptive cruise/360 kamera/Carplay</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466745207/0aba3f84-6994-4eb4-9916-0055651c087b" alt="MG 5" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466744846" target="_blank" rel="noopener" class="card-title">Audi e-tron</a>
+      <div class="card-price">229 900 kr</div>
+      <div class="meta">2020 ∙ 113 400 km ∙ El ∙ 395 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 563 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 716 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 453 kr/mnd</strong></span></div>
+      <p class="desc">55 426hk 395km Advanced Sport Skinn Memory 360 Krok ++</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466744846/fb0430fb-7f58-4e97-a35f-abb38cb6381b" alt="Audi e-tron" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466744798" target="_blank" rel="noopener" class="card-title">Audi e-tron</a>
+      <div class="card-price">229 900 kr</div>
+      <div class="meta">2019 ∙ 120 000 km ∙ El ∙ 396 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 563 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 716 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 453 kr/mnd</strong></span></div>
+      <p class="desc">55 396km Krok ACC Navi V.Pumpe Nye dekk EU27++</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466744798/c4805b7d-6ccf-4f9b-bd15-b176b4301daa" alt="Audi e-tron" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466744796" target="_blank" rel="noopener" class="card-title">Dongfeng Box</a>
+      <div class="card-price">179 900 kr</div>
+      <div class="meta">2025 ∙ 14 900 km ∙ El ∙ 310 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>2 573 kr/mnd</strong></span> · <span class="est">7 år: <strong>1 961 kr/mnd</strong></span> · <span class="est">8 år: <strong>1 772 kr/mnd</strong></span></div>
+      <p class="desc">310KM WLTP / ACC / SKINN / 360 / Fersk service</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466744796/7238609e-b6a8-40fe-9c3b-bbf2b92e49da" alt="Dongfeng Box" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466744741" target="_blank" rel="noopener" class="card-title">Hyundai IONIQ</a>
+      <div class="card-price">79 532 kr</div>
+      <div class="meta">2019 ∙ 150 000 km ∙ El ∙ 280 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>585 kr/mnd</strong></span> · <span class="est">7 år: <strong>446 kr/mnd</strong></span> · <span class="est">8 år: <strong>403 kr/mnd</strong></span></div>
+      <p class="desc">PREMIUM/SOLTAK/ADAPTIV CRUISE/1 EIER/VELHOLDT!</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466744741/8a9a9a77-5828-42a5-ac14-6a18f4415da7" alt="Hyundai IONIQ" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="budget-ok">✅ Innenfor budsjett</span>
+        <span class="kind-badge">🔋 Elbil</span>
+      </div>
+      <a href="https://www.finn.no/mobility/item/466743717" target="_blank" rel="noopener" class="card-title">Peugeot e-2008</a>
+      <div class="card-price">219 000 kr</div>
+      <div class="meta">2023 ∙ 45 000 km ∙ El ∙ 340 km rekkevidde</div>
+      <div class="estimates"><span class="est">5 år: <strong>3 347 kr/mnd</strong></span> · <span class="est">7 år: <strong>2 551 kr/mnd</strong></span> · <span class="est">8 år: <strong>2 305 kr/mnd</strong></span></div>
+      <p class="desc">Peugeot e-2008 GT line</p>
+      <div class="img-wrap"><img src="https://images.finncdn.no/dynamic/480w/item/466743717/3c69c8f0-d6b5-4335-87aa-642e75297120" alt="Peugeot e-2008" loading="lazy" onerror="this.parentElement.style.display='none'"></div>
+    </div>
+    </div>
 </div>
-<script>
-var dayGroups = {"2026-06-12": {"label": "12. juni 2026", "count": 27}};
-var ads = [["Opel Vivaro", "https://www.finn.no/mobility/item/466749241", "Elite L3 75 kWh 136hk | Hengerfeste | Apple Carplay", "2022 \u2219 68\u00a0300 km \u2219 El \u2219 313 km rekkevidde", "elbil", 208900, 1, "https://images.finncdn.no/dynamic/480w/item/466749241/709495aa-9926-44cf-8a2e-61d289e02984", 3147, 2399, 2167, "2026-06-12T08:22:56.461269+00:00"], ["Tesla Model 3", "https://www.finn.no/mobility/item/465982033", "Long Range | 4x4 | 1-Eier | Premium | Rattvarmer", "2021 \u2219 89\u00a0800 km \u2219 El \u2219 614 km rekkevidde", "elbil", 249500, 0, "https://images.finncdn.no/dynamic/480w/item/465982033/6a7b220f-8a13-41a5-a107-3f02f5b70cc6", 3951, 3011, 2720, "2026-06-12T08:22:56.461269+00:00"], ["Citroen E-C4", "https://www.finn.no/mobility/item/466749038", "Shine 136 hk | Head-up | Panorama | AdCruise", "2023 \u2219 39\u00a0700 km \u2219 El \u2219 349 km rekkevidde", "elbil", 224900, 1, "https://images.finncdn.no/dynamic/480w/item/466749038/7c478076-6d18-4d1e-8d52-4cecdaad022e", 3464, 2640, 2385, "2026-06-12T08:22:56.461269+00:00"], ["Renault Megane", "https://www.finn.no/mobility/item/448524754", "TECHNO/MASSE UTSTYR/NAVI/RYGGGEKAMERA/INNBYTTE", "2022 \u2219 29\u00a0650 km \u2219 El \u2219 435 km rekkevidde", "elbil", 0, 0, "https://images.finncdn.no/dynamic/480w/item/448524754/dfb296e6-6f8f-420c-a958-1f878633371e", 0, 0, 0, "2026-06-12T08:22:56.461269+00:00"], ["Polestar 2", "https://www.finn.no/mobility/item/466747539", "Long Range Dual Motor", "2021 \u2219 127 km \u2219 El \u2219 470 km rekkevidde", "elbil", 259532, 0, "https://images.finncdn.no/dynamic/480w/item/466747539/ecc62dcb-b381-443d-8e1a-314ddde52167", 4149, 3163, 2857, "2026-06-12T08:22:56.461269+00:00"], ["Volkswagen e-Golf VII", "https://www.finn.no/mobility/item/458955939", "Exclusive", "2017 \u2219 135\u00a0000 km \u2219 El \u2219 190 km rekkevidde", "elbil", 84532, 1, "https://images.finncdn.no/dynamic/480w/item/458955939/c246a8dd-0efe-4df2-a3d0-3f1a30b2b159", 684, 522, 471, "2026-06-12T08:22:56.461269+00:00"], ["Toyota Proace", "https://www.finn.no/mobility/item/466748563", "Electric 75 kWh 313 KM WLTP", "2021 \u2219 64\u00a0000 km \u2219 El \u2219 313 km rekkevidde", "elbil", 195000, 1, "https://images.finncdn.no/dynamic/480w/item/466748563/2fe3fc1d-9f6b-48a5-a77e-c19f6602feae", 2872, 2189, 1977, "2026-06-12T08:22:56.461269+00:00"], ["Kia e-Niro", "https://www.finn.no/mobility/item/466748301", "-NORSK-ACC-JBL LYD-FERSK EU/PKK-", "2019 \u2219 122\u00a0000 km \u2219 El \u2219 455 km rekkevidde", "elbil", 189900, 1, "https://images.finncdn.no/dynamic/480w/item/466748301/b0c63a8a-1748-4b92-b6cd-71a2bbae43e5", 2771, 2112, 1908, "2026-06-12T08:22:56.461269+00:00"], ["Mercedes-Benz B-Klasse", "https://www.finn.no/mobility/item/466747862", "B-250e Long Range Edition | EU2027 | LAV KM | R.KAM", "2017 \u2219 58\u00a0591 km \u2219 El \u2219 Automat", "elbil", 79000, 1, "https://images.finncdn.no/dynamic/480w/item/466747862/8dd351a4-9cc1-4739-aeb4-a20073e907a2", 575, 438, 396, "2026-06-12T08:22:56.461269+00:00"], ["MG 4", "https://www.finn.no/mobility/item/466747652", "Standard VELHOLDT-WLPT 350 KM", "2023 \u2219 50\u00a0783 km \u2219 El \u2219 Automat", "elbil", 184900, 1, "https://images.finncdn.no/dynamic/480w/item/466747652/48c701fd-7b9a-4e8c-ac1f-ed67710ecb33", 2672, 2037, 1840, "2026-06-12T08:22:56.461269+00:00"], ["Nissan Leaf", "https://www.finn.no/mobility/item/466747467", "39kWh Tekna VELHOLDT-360 KAMERA-DELSKINN SETER-BOSE", "2023 \u2219 39\u00a0525 km \u2219 El \u2219 278 km rekkevidde", "elbil", 204900, 1, "https://images.finncdn.no/dynamic/480w/item/466747467/5f53548f-391d-4727-8541-7e9a0c24ec47", 3068, 2338, 2112, "2026-06-12T08:22:56.461269+00:00"], ["Nissan Leaf", "https://www.finn.no/mobility/item/466138563", "Zero", "2013 \u2219 144\u00a0056 km \u2219 El \u2219 80 km rekkevidde", "elbil", 19942, 1, "https://images.finncdn.no/dynamic/480w/item/466138563/27ce80db-b853-4461-91a8-44752bc17b78", 0, 0, 0, "2026-06-12T07:59:28.430893+00:00"], ["BMW i3s", "https://www.finn.no/mobility/item/466744315", "S 120Ah", "2019 \u2219 71\u00a0500 km \u2219 El \u2219 285 km rekkevidde", "elbil", 179532, 1, "https://images.finncdn.no/dynamic/480w/item/466744315/c33330b8-e9e2-4447-b759-3e1d61ef8114", 2565, 1955, 1767, "2026-06-12T07:59:11.031397+00:00"], ["Hyundai Kona", "https://www.finn.no/mobility/item/466747255", "64kWh/Premium/Skinn/KRELL/HUD/ACC/Carplay/Varmeratt/DAB", "2020 \u2219 93\u00a0900 km \u2219 El \u2219 484 km rekkevidde", "elbil", 189000, 1, "https://images.finncdn.no/dynamic/480w/item/466747255/b818c333-6c5c-4241-9762-7690d391711b", 2753, 2098, 1896, "2026-06-12T07:59:11.031397+00:00"], ["BMW i3", "https://www.finn.no/mobility/item/466229152", "94Ah Fully Charged Edition", "2017 \u2219 115\u00a0500 km \u2219 El \u2219 220 km rekkevidde", "elbil", 99532, 1, "https://images.finncdn.no/dynamic/480w/item/466229152/a614ddd0-a576-4aef-81aa-5195f096c8b0", 981, 748, 676, "2026-06-12T07:55:26.139944+00:00"], ["Citroen E-C4", "https://www.finn.no/mobility/item/466352895", "Shine TOPPMODELL! HENT I DAG!!!", "2021 \u2219 66\u00a0918 km \u2219 El \u2219 348 km rekkevidde", "elbil", 188888, 1, "https://images.finncdn.no/dynamic/480w/item/466352895/9382af13-fa59-41ea-b24a-91a0148cab72", 2751, 2097, 1894, "2026-06-12T07:55:26.139944+00:00"], ["Hyundai IONIQ", "https://www.finn.no/mobility/item/466743730", "Teknikk", "2018 \u2219 125\u00a0949 km \u2219 El \u2219 125949 km rekkevidde", "elbil", 139532, 1, "https://images.finncdn.no/dynamic/480w/item/466743730/51a1f982-6a36-4f64-8bac-44ed047b7983", 1773, 1352, 1221, "2026-06-12T07:55:26.139944+00:00"], ["Hyundai IONIQ", "https://www.finn.no/mobility/item/413183380", "Teknikk", "2019 \u2219 55\u00a0000 km \u2219 El \u2219 280 km rekkevidde", "elbil", 154532, 1, "", 2070, 1578, 1426, "2026-06-12T07:55:26.139944+00:00"], ["Peugeot e-2008", "https://www.finn.no/mobility/item/466745976", "Allure 136hk - R.Kam, ACC, Keyless GO, Bluetooth", "2021 \u2219 23\u00a0440 km \u2219 El \u2219 319 km rekkevidde", "elbil", 188000, 1, "https://images.finncdn.no/dynamic/480w/item/466745976/1491707b-d220-44f5-b96e-9c969c5d85e9", 2733, 2083, 1882, "2026-06-12T07:55:26.139944+00:00"], ["Audi e-tron", "https://www.finn.no/mobility/item/466745768", "55- Luft, 360Kam, ACC", "2019 \u2219 49\u00a0300 km \u2219 El \u2219 Automat", "elbil", 248000, 0, "https://images.finncdn.no/dynamic/480w/item/466745768/2bf1ca77-4ec6-4e50-b451-44803f445219", 3921, 2989, 2700, "2026-06-12T07:55:26.139944+00:00"], ["Cupra Born", "https://www.finn.no/mobility/item/458663674", "58 NORSKSOLGT/INBYTTE/FINANS/LEVERINGSKLAR", "2023 \u2219 42\u00a0555 km \u2219 El \u2219 418 km rekkevidde", "elbil", 239888, 0, "https://images.finncdn.no/dynamic/480w/item/458663674/3b091f8b-f262-4082-a1e8-68a0136a7238", 3761, 2866, 2589, "2026-06-12T07:55:26.139944+00:00"], ["MG 5", "https://www.finn.no/mobility/item/466745207", "Luxury stv/Skinn/Adaptive cruise/360 kamera/Carplay", "2024 \u2219 26\u00a0904 km \u2219 El \u2219 380 km rekkevidde", "elbil", 259000, 0, "https://images.finncdn.no/dynamic/480w/item/466745207/0aba3f84-6994-4eb4-9916-0055651c087b", 4139, 3155, 2850, "2026-06-12T07:55:26.139944+00:00"], ["Audi e-tron", "https://www.finn.no/mobility/item/466744846", "55 426hk 395km Advanced Sport Skinn Memory 360 Krok ++", "2020 \u2219 113\u00a0400 km \u2219 El \u2219 395 km rekkevidde", "elbil", 229900, 1, "https://images.finncdn.no/dynamic/480w/item/466744846/fb0430fb-7f58-4e97-a35f-abb38cb6381b", 3563, 2716, 2453, "2026-06-12T07:55:26.139944+00:00"], ["Audi e-tron", "https://www.finn.no/mobility/item/466744798", "55 396km Krok ACC Navi V.Pumpe Nye dekk EU27++", "2019 \u2219 120\u00a0000 km \u2219 El \u2219 396 km rekkevidde", "elbil", 229900, 1, "https://images.finncdn.no/dynamic/480w/item/466744798/c4805b7d-6ccf-4f9b-bd15-b176b4301daa", 3563, 2716, 2453, "2026-06-12T07:55:26.139944+00:00"], ["Dongfeng Box", "https://www.finn.no/mobility/item/466744796", "310KM WLTP / ACC / SKINN / 360 / Fersk service", "2025 \u2219 14\u00a0900 km \u2219 El \u2219 310 km rekkevidde", "elbil", 179900, 1, "https://images.finncdn.no/dynamic/480w/item/466744796/7238609e-b6a8-40fe-9c3b-bbf2b92e49da", 2573, 1961, 1772, "2026-06-12T07:55:26.139944+00:00"], ["Hyundai IONIQ", "https://www.finn.no/mobility/item/466744741", "PREMIUM/SOLTAK/ADAPTIV CRUISE/1 EIER/VELHOLDT!", "2019 \u2219 150\u00a0000 km \u2219 El \u2219 280 km rekkevidde", "elbil", 79532, 1, "https://images.finncdn.no/dynamic/480w/item/466744741/8a9a9a77-5828-42a5-ac14-6a18f4415da7", 585, 446, 403, "2026-06-12T07:55:26.139944+00:00"], ["Peugeot e-2008", "https://www.finn.no/mobility/item/466743717", "Peugeot e-2008 GT line", "2023 \u2219 45\u00a0000 km \u2219 El \u2219 340 km rekkevidde", "elbil", 219000, 1, "https://images.finncdn.no/dynamic/480w/item/466743717/3c69c8f0-d6b5-4335-87aa-642e75297120", 3347, 2551, 2305, "2026-06-12T07:55:26.139944+00:00"]];
-
-function fmtPrice(n){return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g," ")+" kr";}
-
-function shortDate(iso) {
-  if(!iso) return '';
-  return iso.substring(0, 10);
-}
-
-var container = document.getElementById("ads-container");
-var currentDay = '';
-
-// Separate Tesla Model 3
-var teslaAds = [];
-var otherAds = [];
-ads.forEach(function(a) {
-  if(a[0].toLowerCase().includes('tesla') && a[0].toLowerCase().includes('model 3')) {
-    teslaAds.push(a);
-  } else {
-    otherAds.push(a);
-  }
-});
-
-// Helper to render a single ad card
-function renderAd(a) {
-  var title = a[0], link = a[1], desc = a[2], meta = a[3], kind = a[4];
-  var price = a[5], fits = a[6], img = a[7], e60 = a[8], e84 = a[9], e96 = a[10];
-
-  var badge = fits ? '<span class="badge badge-ok">✅ Innenfor budsjett</span>' : '<span class="badge badge-warn">⚠️ Over budsjett</span>';
-  var kindBadge = kind === 'elbil' ? '<span class="badge badge-elbil">Elbil</span>' : '<span class="badge badge-bensin">Bensin</span>';
-  var imgHtml = img ? '<div class="img-wrap"><img src="'+img+'" alt="'+title+'" loading="lazy"></div>' : '<div class="no-img">Ingen bilde tilgjengelig</div>';
-  var descHtml = desc ? '<div class="desc">'+desc+'</div>' : '';
-
-  return '<div class="card">'
-    + '<div class="card-header"><a class="card-title" href="'+link+'" target="_blank" rel="noopener">'+title+'</a>'+badge+'</div>'
-    + '<div class="meta">'+kindBadge+' <span style="margin-left:8px">'+meta+'</span></div>'
-    + '<div class="price">'+fmtPrice(price)+'</div>'
-    + descHtml
-    + '<div class="estimates">'
-    + '<div class="est"><div class="est-label">5 ar (60 mnd)</div><div class="est-value">'+fmtPrice(e60)+'/mnd</div></div>'
-    + '<div class="est"><div class="est-label">7 ar (84 mnd)</div><div class="est-value">'+fmtPrice(e84)+'/mnd</div></div>'
-    + '<div class="est"><div class="est-label">8 ar (96 mnd)</div><div class="est-value">'+fmtPrice(e96)+'/mnd</div></div>'
-    + '</div>'
-    + imgHtml
-    + '</div>';
-}
-
-// Render Tesla section if any
-if(teslaAds.length > 0) {
-  var section = document.createElement("div");
-  section.className = "section-tesla";
-  var h = document.createElement("h2");
-  h.textContent = "⚡ Tesla Model 3";
-  section.appendChild(h);
-  teslaAds.forEach(function(a) {
-    var div = document.createElement("div");
-    div.innerHTML = renderAd(a);
-    section.appendChild(div.firstElementChild);
-  });
-  container.appendChild(section);
-}
-
-// Render other ads grouped by day
-otherAds.forEach(function(a) {
-  var day = shortDate(a[11]);
-  if(day && day !== currentDay) {
-    currentDay = day;
-    var info = dayGroups[day] || {label: day, count: 0};
-    var sec = document.createElement("div");
-    sec.className = "day-section";
-    sec.innerHTML = '<div class="day-header"><h2>'+info.label+'</h2><div class="day-line"></div><span class="day-count">'+info.count+' annonser</span></div>';
-    container.appendChild(sec);
-  }
-  var cardDiv = document.createElement("div");
-  cardDiv.innerHTML = renderAd(a);
-  container.appendChild(cardDiv.firstElementChild);
-});
-</script>
 </body>
 </html>
