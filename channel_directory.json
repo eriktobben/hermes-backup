@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T05:31:40.833055",
+  "updated_at": "2026-06-13T06:31:43.855627",
   "platforms": {
     "discord": [
       {
@@ -493,6 +493,12 @@
         "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt med følgende repo? git@github.com:eriktobb... / topic 1515097943097737287",
         "type": "thread",
         "thread_id": "1515097943097737287"
+      },
+      {
+        "id": "1515235420009664662:1515235420009664662",
+        "name": "Tobben MC / #general / Kan du installere og sette opp følgende slik at både Hermes og OpenCode kan b... / topic 1515235420009664662",
+        "type": "thread",
+        "thread_id": "1515235420009664662"
       }
     ],
     "telegram": [],
