@@ -639,6 +639,204 @@
         "96": 2714
       },
       "fits_budget": false
+    },
+    "466834077": {
+      "id": "466834077",
+      "title": "Tesla Model 3",
+      "link": "https://www.finn.no/mobility/item/466834077",
+      "desc": "Long Range AWD",
+      "meta": "2019 ∙ 134 900 km ∙ El ∙ 560 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466834077/91e219ac-e3dc-42fa-a6ce-06e3d61dccc9",
+      "kind": "elbil",
+      "price": 179532,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 2565,
+        "84": 1955,
+        "96": 1767
+      },
+      "fits_budget": true
+    },
+    "466934665": {
+      "id": "466934665",
+      "title": "Tesla Model 3",
+      "link": "https://www.finn.no/mobility/item/466934665",
+      "desc": "Long Range AWD // Autopilot, Varmepumpe, HiFi, KROK+++",
+      "meta": "2021 ∙ 124 000 km ∙ El ∙ 580 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466934665/0886fac0-aee3-4a86-80d4-bbb1c15e2484",
+      "kind": "elbil",
+      "price": 235000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 3664,
+        "84": 2793,
+        "96": 2523
+      },
+      "fits_budget": false
+    },
+    "466934667": {
+      "id": "466934667",
+      "title": "Tesla Model 3",
+      "link": "https://www.finn.no/mobility/item/466934667",
+      "desc": "Long Range AWD // Autopilot, PremiumLyd, Hengerfeste+++",
+      "meta": "2019 ∙ 79 900 km ∙ El ∙ 560 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466934667/9ef483f3-d2c4-4da0-806f-ae287daf6b88",
+      "kind": "elbil",
+      "price": 205000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 3070,
+        "84": 2340,
+        "96": 2114
+      },
+      "fits_budget": true
+    },
+    "466934476": {
+      "id": "466934476",
+      "title": "Citroen C-Zero",
+      "link": "https://www.finn.no/mobility/item/466934476",
+      "desc": "",
+      "meta": "2015 ∙ 58 200 km ∙ El ∙ Automat",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466934476/2b2dcf39-0039-4a95-b5d8-12797c99e7fd",
+      "kind": "elbil",
+      "price": 38236,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 0,
+        "84": 0,
+        "96": 0
+      },
+      "fits_budget": true
+    },
+    "466933884": {
+      "id": "466933884",
+      "title": "Tesla Model X",
+      "link": "https://www.finn.no/mobility/item/466933884",
+      "desc": "75d AWD 7S // EAP, Summon, MCU2, CCS, 22\" ONYX, KROK+++",
+      "meta": "2018 ∙ 149 000 km ∙ El ∙ 490 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466933884/77ff2bef-ebe1-4176-87bf-1f953f4d168b",
+      "kind": "elbil",
+      "price": 208000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 3129,
+        "84": 2385,
+        "96": 2155
+      },
+      "fits_budget": true
+    },
+    "464668952": {
+      "id": "464668952",
+      "title": "Tesla Model 3",
+      "link": "https://www.finn.no/mobility/item/464668952",
+      "desc": "Standard Range Plus RWD",
+      "meta": "2020 ∙ 42 000 km ∙ El ∙ 409 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/464668952/46d35a4b-a7cc-4a53-bf00-fccea2d90b0f",
+      "kind": "elbil",
+      "price": 235000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 3664,
+        "84": 2793,
+        "96": 2523
+      },
+      "fits_budget": false
+    },
+    "466933749": {
+      "id": "466933749",
+      "title": "Tesla Model X",
+      "link": "https://www.finn.no/mobility/item/466933749",
+      "desc": "100d LONG RANGE 6-S // EAP, Summon, Vinter, CCS, KROK++",
+      "meta": "2017 ∙ 172 000 km ∙ El ∙ 565 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466933749/d4cb41ca-5d06-4099-85b3-49c589c7ae03",
+      "kind": "elbil",
+      "price": 229000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 3545,
+        "84": 2702,
+        "96": 2441
+      },
+      "fits_budget": true
+    },
+    "466933674": {
+      "id": "466933674",
+      "title": "Volkswagen ID.4 GTX",
+      "link": "https://www.finn.no/mobility/item/466933674",
+      "desc": "4MOTION 77kWh // IQMatrix, ACC, Rattvarme, KROK+++",
+      "meta": "2022 ∙ 128 000 km ∙ El ∙ 473 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466933674/a4d38bd6-2f13-4c92-8f6d-f411c0ce631d",
+      "kind": "elbil",
+      "price": 255000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 4060,
+        "84": 3094,
+        "96": 2795
+      },
+      "fits_budget": false
+    },
+    "466933558": {
+      "id": "466933558",
+      "title": "BMW i3",
+      "link": "https://www.finn.no/mobility/item/466933558",
+      "desc": "94Ah FULLY CHARGED // Suite, Soltak, Harman, ACC+++",
+      "meta": "2017 ∙ 98 000 km ∙ El ∙ 300 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466933558/8683d546-f181-4ba6-ad5d-9b091a338c08",
+      "kind": "elbil",
+      "price": 108000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 1149,
+        "84": 876,
+        "96": 791
+      },
+      "fits_budget": true
+    },
+    "466933403": {
+      "id": "466933403",
+      "title": "Tesla Model S",
+      "link": "https://www.finn.no/mobility/item/466933403",
+      "desc": "P85D+ Performance 700HK+ // NextGen, Ultra HiFi, Vinter",
+      "meta": "2015 ∙ 143 000 km ∙ El ∙ 460 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466933403/50cf4724-85d0-499e-980c-2343b650c43a",
+      "kind": "elbil",
+      "price": 158000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 2139,
+        "84": 1631,
+        "96": 1473
+      },
+      "fits_budget": true
+    },
+    "466933047": {
+      "id": "466933047",
+      "title": "Volkswagen ID.4",
+      "link": "https://www.finn.no/mobility/item/466933047",
+      "desc": "PRO 77kWh 516KM WLTP // Massasje, El.SETER, IQMatrix+++",
+      "meta": "2023 ∙ 139 000 km ∙ El ∙ 516 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/466933047/ec1bf4c9-1b0c-48ab-8af6-7eca0985c602",
+      "kind": "elbil",
+      "price": 229000,
+      "first_seen": "2026-06-14T07:01:01.511124+00:00",
+      "last_seen": "2026-06-14T07:01:01.511124+00:00",
+      "estimates": {
+        "60": 3545,
+        "84": 2702,
+        "96": 2441
+      },
+      "fits_budget": true
     }
   },
   "prev_seen_ids": [
@@ -648,6 +846,7 @@
     "458803011",
     "458955939",
     "459773891",
+    "464668952",
     "465018727",
     "465829350",
     "465982033",
@@ -677,6 +876,16 @@
     "466829220",
     "466832178",
     "466832574",
-    "466833943"
+    "466833943",
+    "466834077",
+    "466933047",
+    "466933403",
+    "466933558",
+    "466933674",
+    "466933749",
+    "466933884",
+    "466934476",
+    "466934665",
+    "466934667"
   ]
 }
