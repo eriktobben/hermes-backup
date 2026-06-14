@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14T01:34:49.542063",
+  "updated_at": "2026-06-14T02:34:52.714291",
   "platforms": {
     "discord": [
       {
@@ -499,6 +499,12 @@
         "name": "Tobben MC / #general / Kan du installere og sette opp følgende slik at både Hermes og OpenCode kan b... / topic 1515235420009664662",
         "type": "thread",
         "thread_id": "1515235420009664662"
+      },
+      {
+        "id": "1515533557869838376:1515533557869838376",
+        "name": "Tobben MC / #general / Serveren som du er på bruker Tailscale. Jeg har en Mac Mini hjemme som er kob... / topic 1515533557869838376",
+        "type": "thread",
+        "thread_id": "1515533557869838376"
       }
     ],
     "telegram": [],
