@@ -1356,9 +1356,9 @@
   },
   "agent:main:discord:thread:1513591245929185290:1513591245929185290": {
     "session_key": "agent:main:discord:thread:1513591245929185290:1513591245929185290",
-    "session_id": "20260612_153916_dd16c22d",
-    "created_at": "2026-06-12T15:39:16.369287",
-    "updated_at": "2026-06-12T17:29:44.484396",
+    "session_id": "20260615_082746_04b2e199",
+    "created_at": "2026-06-15T08:27:46.532845",
+    "updated_at": "2026-06-15T08:30:17.760408",
     "display_name": "Tobben MC / #general / Vurdering av blogg",
     "platform": "discord",
     "chat_type": "thread",
@@ -1367,10 +1367,10 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 129249,
+    "last_prompt_tokens": 37105,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
-    "expiry_finalized": true,
+    "expiry_finalized": false,
     "suspended": false,
     "resume_pending": false,
     "resume_reason": null,
@@ -1390,7 +1390,7 @@
       "chat_topic": null,
       "guild_id": "1479597162685006058",
       "parent_chat_id": "1499181433200312381",
-      "message_id": "1515017646783987763"
+      "message_id": "1515996220877701223"
     }
   },
   "agent:main:discord:thread:1513641142372139008:1513641142372139008": {
@@ -1898,6 +1898,45 @@
       "guild_id": "1479597162685006058",
       "parent_chat_id": "1499181433200312381",
       "message_id": "1515862452460327082"
+    }
+  },
+  "agent:main:discord:thread:1515999061432467457:1515999061432467457": {
+    "session_key": "agent:main:discord:thread:1515999061432467457:1515999061432467457",
+    "session_id": "20260615_083904_db2bfe20",
+    "created_at": "2026-06-15T08:39:04.674497",
+    "updated_at": "2026-06-15T08:41:00.469048",
+    "display_name": "Tobben MC / #general / Kan du installere mnemosyne for \u00e5 erstatte standard minne for Hermes? https:/...",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 56828,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1515999061432467457",
+      "chat_name": "Tobben MC / #general / Kan du installere mnemosyne for \u00e5 erstatte standard minne for Hermes? https:/...",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1515999061432467457",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499181433200312381",
+      "message_id": "1515999061432467457"
     }
   }
 }

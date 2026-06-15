@@ -1,0 +1,1 @@
+/home/erik/.hermes/hermes-agent/venv/lib/python3.11/site-packages/mnemosyne_hermes/install.py
