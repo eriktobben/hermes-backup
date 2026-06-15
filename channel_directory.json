@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-15T08:37:07.419971",
+  "updated_at": "2026-06-15T09:38:11.989702",
   "platforms": {
     "discord": [
       {
@@ -517,6 +517,12 @@
         "name": "Tobben MC / #general / Jeg har lyst til å lage min egen versjon av simplebackups.com ved bruk av Lar... / topic 1515862452460327082",
         "type": "thread",
         "thread_id": "1515862452460327082"
+      },
+      {
+        "id": "1515999061432467457:1515999061432467457",
+        "name": "Tobben MC / #general / Kan du installere mnemosyne for å erstatte standard minne for Hermes? https:/... / topic 1515999061432467457",
+        "type": "thread",
+        "thread_id": "1515999061432467457"
       }
     ],
     "telegram": [],
