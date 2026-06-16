@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-16T12:41:30.036395",
+  "updated_at": "2026-06-16T13:41:33.359989",
   "platforms": {
     "discord": [
       {
@@ -227,6 +227,12 @@
       {
         "id": "1516083900344963176",
         "name": "vivaltobackup",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1516432524706971818",
+        "name": "igmetrics",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -547,6 +553,12 @@
         "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt kalt VivaltoBackup med følgende repo: git@... / topic 1516083474560188578",
         "type": "thread",
         "thread_id": "1516083474560188578"
+      },
+      {
+        "id": "1516432050209423381:1516432050209423381",
+        "name": "Tobben MC / #general / Kan du sette opp Kimaki i en mappe kalt igMetrics. Legge til repo git@github.... / topic 1516432050209423381",
+        "type": "thread",
+        "thread_id": "1516432050209423381"
       }
     ],
     "telegram": [],
