@@ -22,15 +22,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 19
+        "completed": 20
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-29T21:05:58.668739+00:00",
-      "next_run_at": "2026-06-16T09:00:00+02:00",
-      "last_run_at": "2026-06-15T09:02:03.442899+02:00",
+      "next_run_at": "2026-06-17T09:00:00+02:00",
+      "last_run_at": "2026-06-16T09:04:13.570277+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -68,15 +68,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-06-16T09:00:00+02:00",
-      "last_run_at": "2026-06-15T09:02:03.983288+02:00",
+      "next_run_at": "2026-06-17T09:00:00+02:00",
+      "last_run_at": "2026-06-16T09:04:13.952191+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -160,15 +160,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 200
+        "completed": 201
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-16T09:43:14.396862+02:00",
-      "last_run_at": "2026-06-16T07:42:18.890121+02:00",
+      "next_run_at": "2026-06-16T10:44:14.237878+02:00",
+      "last_run_at": "2026-06-16T08:43:17.089449+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -227,5 +227,5 @@
       "profile": null
     }
   ],
-  "updated_at": "2026-06-16T08:43:14.397103+02:00"
+  "updated_at": "2026-06-16T09:44:14.238133+02:00"
 }
