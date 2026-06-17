@@ -505,3 +505,54 @@ so users who want a scheduled/CLI-driven compile pipeline can point it at the sa
 skill maintains. Trade-offs: it owns page generation (replaces the agent's judgment on page
 creation) and is tuned for small corpora. Use this skill when you want agent-in-the-loop curation;
 use llmwiki when you want batch compile of a source directory.
+
+---
+
+## Obsidian Vault Operations (Quick Reference)
+
+When working with an Obsidian vault that shares the same directory as the wiki, use file tools
+instead of shell commands:
+
+### Resolve the vault path
+
+Set `OBSIDIAN_VAULT_PATH` in `~/.hermes/.env`. If unset, default to `~/Documents/Obsidian Vault`
+or the wiki path. Resolve to an absolute path before passing to file tools — they don't expand
+shell variables.
+
+### Read a note
+
+```bash
+read_file "$WIKI/concepts/transformer-architecture.md"
+```
+
+### List notes
+
+```bash
+search_files "*.md" target="files" path="$WIKI"
+```
+
+### Search notes
+
+```bash
+search_files "attention mechanism" path="$WIKI" file_glob="*.md"
+```
+
+### Create a note
+
+```bash
+write_file "$WIKI/entities/new-entity.md" "---\ntitle: ...\n---\n\nContent"
+```
+
+### Append to a note
+
+For anchored appends, use `patch` with the heading text as anchor. For simple appends,
+`terminal` with `cat >>` is acceptable when `patch` has no stable anchor.
+
+### Targeted edits
+
+Use `patch` with stable surrounding context. Prefer this over `sed` or `awk`.
+
+### Wikilinks
+
+Obsidian links notes with `[[Note Name]]` syntax. When creating notes in the wiki,
+use these to link related content.

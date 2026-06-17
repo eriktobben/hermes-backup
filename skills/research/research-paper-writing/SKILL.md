@@ -2372,6 +2372,93 @@ See [templates/README.md](templates/README.md) for compilation instructions.
 - [Lipton: Heuristics for Scientific Writing](https://www.approximatelycorrect.com/2018/01/29/heuristics-technical-scientific-writing-machine-learning-perspective/)
 - [Perez: Easy Paper Writing Tips](https://ethanperez.net/easy-paper-writing-tips/)
 
+---
+
+## Paper Discovery (arXiv API)
+
+Search and retrieve papers from arXiv via their free REST API. No API key needed.
+
+### Quick reference
+
+```bash
+# Search
+curl "https://export.arxiv.org/api/query?search_query=all:GRPO+reinforcement+learning&max_results=5"
+
+# Fetch specific paper
+curl "https://export.arxiv.org/api/query?id_list=2402.03300"
+
+# Read abstract
+web_extract(urls=["https://arxiv.org/abs/2402.03300"])
+
+# Read full paper
+web_extract(urls=["https://arxiv.org/pdf/2402.03300"])
+```
+
+### Search prefix reference
+
+| Prefix | Field | Example |
+|--------|-------|---------|
+| `all:` | All fields | `all:transformer+attention` |
+| `ti:` | Title | `ti:large+language+models` |
+| `au:` | Author | `au:vaswani` |
+| `abs:` | Abstract | `abs:reinforcement+learning` |
+| `cat:` | Category | `cat:cs.AI` |
+
+Boolean: AND (default +), OR (`OR`), ANDNOT (`ANDNOT`).
+Exact phrase: `ti:"chain+of+thought"`.
+
+### Sort & Pagination
+
+`sortBy=relevance|lastUpdatedDate|submittedDate`, `sortOrder=ascending|descending`,
+`start=N`, `max_results=N` (max 30000).
+
+### Categories
+
+`cs.AI`, `cs.CL`, `cs.CV`, `cs.LG`, `cs.CR`, `stat.ML`, `math.OC`, etc.
+
+### Rate Limits
+
+arXiv: ~1 req / 3 sec. Semantic Scholar: 1 req / sec (100/sec with key).
+
+### Related: Semantic Scholar
+
+```bash
+# Paper details + citations
+curl -s "https://api.semanticscholar.org/graph/v1/paper/arXiv:2402.03300?fields=title,authors,citationCount,abstract"
+
+# Search
+curl -s "https://api.semanticscholar.org/graph/v1/paper/search?query=GRPO&limit=5"
+
+# Get citations OF a paper
+curl -s "https://api.semanticscholar.org/graph/v1/paper/arXiv:2402.03300/citations?limit=10"
+
+# Get references FROM a paper
+curl -s "https://api.semanticscholar.org/graph/v1/paper/arXiv:2402.03300/references?limit=10"
+
+# Recommendations
+curl -s -X POST "https://api.semanticscholar.org/recommendations/v1/papers/" \
+  -H "Content-Type: application/json" \
+  -d '{"positivePaperIds": ["arXiv:2402.03300"]}'
+
+# Author search
+curl -s "https://api.semanticscholar.org/graph/v1/author/search?query=LeCun&fields=name,hIndex"
+```
+
+### Research workflow
+
+1. **Discover**: `curl "https://export.arxiv.org/api/query?search_query=all:TOPIC&max_results=5"`
+2. **Assess impact**: Semantic Scholar for citation count
+3. **Read abstract**: `web_extract` on abs URL
+4. **Read full paper**: `web_extract` on PDF URL
+5. **Find related work**: Semantic Scholar references/citations
+
+### Notes
+
+- arXiv returns Atom XML — parse with Python's `xml.etree.ElementTree`
+- Use arXiv IDs: newer format `2402.03300`, older format `hep-th/0601001`
+- Semantic Scholar returns JSON — pipe through `python3 -m json.tool`
+- `arxiv.org/abs/1706.03762` always resolves to latest version; `...v1` is specific
+
 **APIs:** [Semantic Scholar](https://api.semanticscholar.org/api-docs/) | [CrossRef](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) | [arXiv](https://info.arxiv.org/help/api/basics.html)
 
 **Venues:** [NeurIPS](https://neurips.cc/Conferences/2025/PaperInformation/StyleFiles) | [ICML](https://icml.cc/Conferences/2025/AuthorInstructions) | [ICLR](https://iclr.cc/Conferences/2026/AuthorGuide) | [ACL](https://github.com/acl-org/acl-style-files)

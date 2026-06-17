@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/erik/.hermes/logs/curator/20260610-101130",
-  "last_run_at": "2026-06-10T10:11:30.055262+00:00",
-  "last_run_duration_seconds": 372.539077,
-  "last_run_summary": "auto: no changes; llm: ## Structured summary (required)\n\n```yaml\nconsolidations:\n  - from: baoyu-article-illustrator\n    into: baoyu-skills\n    reason: Same author, same image_generate constraints, same analyze→confirm→generate→download workflow\n  - from: baoyu-c…\narchived 20 skill(s):\n  • hermes-s6-container-supervision → hermes-agent\n  • kanban-codex-lane → kanban-worker\n  • baoyu-article-illustrator — pruned (stale)\n  • baoyu-comic — pruned (stale)\n  • baoyu-infographic — pruned (stale)\n  • codebase-inspection — pruned (stale)\n  • debugging-hermes-tui-commands — pruned (stale)\n  • github-auth — pruned (stale)\n  • github-code-review — pruned (stale)\n  • github-issues — pruned (stale)\n  … and 10 more\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-agent",
+  "last_report_path": "/home/erik/.hermes/logs/curator/20260617-103052",
+  "last_run_at": "2026-06-17T10:30:52.888114+00:00",
+  "last_run_duration_seconds": 351.794503,
+  "last_run_summary": "auto: no changes; llm: ## Curation Summary\n\n**11 skills archived** via 5 umbrella-building operations. The collection is now organized as class-level skills with labeled subsections instead of 11 narrow siblings with overlapping triggers.\n\n### Clusters processed\n…\narchived 9 skill(s):\n  • agent-config-backup → hermes-agent\n  • arxiv → research-paper-writing\n  • hermes-mnemosyne-memory → hermes-agent\n  • obsidian → llm-wiki\n  • blogwatcher — pruned (stale)\n  • classified-marketplace-alerts — pruned (stale)\n  • heartmula — pruned (stale)\n  • songsee — pruned (stale)\n  • songwriting-and-ai-music — pruned (stale)\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-agent",
   "last_run_summary_shown_at": "2026-05-27T09:55:18.303788+00:00",
   "paused": false,
-  "run_count": 7
+  "run_count": 8
 }
