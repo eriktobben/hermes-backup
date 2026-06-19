@@ -829,14 +829,14 @@
     "archived_at": null,
     "created_at": "2026-05-29T20:44:23.103374+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-06-12T10:25:21.547924+00:00",
-    "last_used_at": "2026-06-17T10:31:31.271388+00:00",
-    "last_viewed_at": "2026-06-17T10:31:31.257300+00:00",
-    "patch_count": 12,
+    "last_patched_at": "2026-06-19T12:48:39.780128+00:00",
+    "last_used_at": "2026-06-19T12:47:43.913766+00:00",
+    "last_viewed_at": "2026-06-19T12:47:43.908429+00:00",
+    "patch_count": 20,
     "pinned": false,
     "state": "active",
-    "use_count": 16,
-    "view_count": 16
+    "use_count": 22,
+    "view_count": 22
   },
   "notion": {
     "archived_at": null,

@@ -37,7 +37,67 @@ The JSON-LD structure is:
 
 **However**, the JSON-LD only includes description text (not year, km, battery size, etc.). For full details, still use individual ad page extraction on the URLs found.
 
+**The description text is surprisingly informative** — FINN listings use a short-hand format like `"560km(WLTP)/LR/AWD/MCU2/Navi/R.kamera/Pano/AP/Memory"`. You can filter and classify listings by matching these patterns (e.g., `"LR" in desc or "LONG RANGE" in desc` to find Long Range, `"AWD" in desc` for four-wheel drive, `"SR"` or `"SR+"` for Standard Range, `"Performance"` for Performance). This works well enough to identify trim levels without opening individual ads.
+
 **Beware**: Some listings have out-of-band prices (e.g. "4400" or "5900" kr) — these are likely financing/monthly-rate displays, not the actual car price. Filter by price > 10000 to skip these.
+
+## Bulk market overview: JSON-LD extraction (reliable, fast)
+
+**For getting ALL listings** on a search results page (up to ~50), the JSON-LD method works well:
+
+```bash
+# Download search page (follow redirects with -L)
+curl -sL 'https://www.finn.no/mobility/search/car?registration_class=1&sort=PUBLISHED_DESC&variant=0.8078&variant=1.8078.2000501&year_from=2020&year_to=2020' \
+  -o /tmp/finn_search.html
+
+# Extract from JSON-LD with python3
+python3 -c "
+import json, re
+html = open('/tmp/finn_search.html').read()
+m = re.search(r'<script id=\"seoStructuredData\" type=\"application/ld\+json\">(.*?)</script>', html, re.DOTALL)
+data = json.loads(m.group(1))
+items = data['mainEntity']['itemListElement']
+for e in items:
+    i = e['item']
+    print(i['offers']['price'], i['description'][:80], i['url'])
+"
+```
+
+**Important**: FINN redirects `make=` and `model=` query params to `variant=` internally. If you see a redirect response, follow it with `-L`. The final stable URL format uses `variant=0.XXXX&variant=1.XXXX.YYYYY` pairs.
+
+**What the JSON-LD gives you**:
+- Price (always accurate, shows total not financing)
+- Description (trim-level text like "LR/AWD/Pano/AP/Memory" — enough to filter SR vs LR vs Performance)
+- URL (ad ID for follow-up)
+- Model name and brand
+- Image URL
+
+**What it does NOT give**:
+- Mileage (km)
+- Year (but year is implicit from the search filter)
+- Location
+- Seller type (dealer/private/formidlingssalg)
+
+### Parallel deep-check with delegate_task
+
+When you need mileage + location + seller type for multiple comparables:
+
+1. First run JSON-LD extraction to get the ad IDs and prices
+2. Pick the ~10 most relevant comparables
+3. Use `delegate_task` with one task containing all URLs — subagent opens each via `browser_navigate` and reads the specs from the page
+
+```python
+# Pseudocode pattern for parallel checking
+delegate_task(
+    tasks=[{
+        "goal": "Check mileage for these 10 FINN ads at {urls}",
+        "context": "For each ad: open URL, extract km, location, seller type, extra features. Return table.",
+        "toolsets": ["browser", "terminal"]
+    }]
+)
+```
+
+One subagent handling 10 ads takes ~2 minutes (the main bottleneck is browser_navigate loading the JS shell). This is faster than checking them sequentially yourself.
 
 ## What works (three tiers)
 
