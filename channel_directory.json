@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T07:47:48.252734",
+  "updated_at": "2026-06-19T08:47:51.414449",
   "platforms": {
     "discord": [
       {
@@ -233,6 +233,12 @@
       {
         "id": "1516432524706971818",
         "name": "igmetrics",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1517444016348598334",
+        "name": "imsg-viewer",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -565,6 +571,12 @@
         "name": "Tobben MC / #general / Daten med Veronica varte fra kl 19.00 - 21.40 i dag. Kan du lagre det? / topic 1516552646864011428",
         "type": "thread",
         "thread_id": "1516552646864011428"
+      },
+      {
+        "id": "1517443904528711790:1517443904528711790",
+        "name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt kalt imsgViewer med følgende repo: git@gi... / topic 1517443904528711790",
+        "type": "thread",
+        "thread_id": "1517443904528711790"
       }
     ],
     "telegram": [],

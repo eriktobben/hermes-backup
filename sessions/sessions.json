@@ -2133,5 +2133,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1516552646864011428"
     }
+  },
+  "agent:main:discord:thread:1517443904528711790:1517443904528711790": {
+    "session_key": "agent:main:discord:thread:1517443904528711790:1517443904528711790",
+    "session_id": "20260619_082021_76261169",
+    "created_at": "2026-06-19T08:20:21.334637",
+    "updated_at": "2026-06-19T08:20:51.426967",
+    "display_name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt kalt imsgViewer med f\u00f8lgende repo: git@gi...",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 27353,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1517443904528711790",
+      "chat_name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt kalt imsgViewer med f\u00f8lgende repo: git@gi...",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1517443904528711790",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499181433200312381",
+      "message_id": "1517443904528711790"
+    }
   }
 }
