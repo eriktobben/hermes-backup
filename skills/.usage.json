@@ -532,12 +532,12 @@
     "created_at": "2026-06-11T22:05:36.630605+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-11T22:28:48.515290+00:00",
-    "last_used_at": "2026-06-18T07:00:44.837125+00:00",
+    "last_used_at": "2026-06-19T06:00:12.166821+00:00",
     "last_viewed_at": "2026-06-12T08:15:49.896300+00:00",
     "patch_count": 3,
     "pinned": false,
     "state": "active",
-    "use_count": 22,
+    "use_count": 23,
     "view_count": 5
   },
   "hermes-agent": {
