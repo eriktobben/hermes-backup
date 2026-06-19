@@ -2172,5 +2172,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1517443904528711790"
     }
+  },
+  "agent:main:discord:thread:1517459544127569950:1517459544127569950": {
+    "session_key": "agent:main:discord:thread:1517459544127569950:1517459544127569950",
+    "session_id": "20260619_092230_c6e39fb9",
+    "created_at": "2026-06-19T09:22:30.134980",
+    "updated_at": "2026-06-19T09:23:14.675085",
+    "display_name": "Tobben MC / #general / Kan du skrive om denne teksten slik at den ikke blir fanget opp av AI sjekker?",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 24000,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1517459544127569950",
+      "chat_name": "Tobben MC / #general / Kan du skrive om denne teksten slik at den ikke blir fanget opp av AI sjekker?",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1517459544127569950",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499181433200312381",
+      "message_id": "1517459544127569950"
+    }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T08:47:51.414449",
+  "updated_at": "2026-06-19T09:47:54.566161",
   "platforms": {
     "discord": [
       {
@@ -577,6 +577,12 @@
         "name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt kalt imsgViewer med følgende repo: git@gi... / topic 1517443904528711790",
         "type": "thread",
         "thread_id": "1517443904528711790"
+      },
+      {
+        "id": "1517459544127569950:1517459544127569950",
+        "name": "Tobben MC / #general / Kan du skrive om denne teksten slik at den ikke blir fanget opp av AI sjekker? / topic 1517459544127569950",
+        "type": "thread",
+        "thread_id": "1517459544127569950"
       }
     ],
     "telegram": [],
