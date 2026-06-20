@@ -1881,6 +1881,132 @@
         "96": 2714
       },
       "fits_budget": false
+    },
+    "467536722": {
+      "id": "467536722",
+      "title": "Volkswagen Golf",
+      "link": "https://www.finn.no/mobility/item/467536722",
+      "desc": "VARMEPUMPE/SKINN/LED/RYGGEKAMERA",
+      "meta": "2015 ∙ 121 900 km ∙ El ∙ 190 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467536722/da74fe4b-cf81-4f8b-a294-6d24a6e9b933",
+      "kind": "elbil",
+      "price": 69900,
+      "first_seen": "2026-06-20T07:03:09.353108+00:00",
+      "last_seen": "2026-06-20T07:03:09.353108+00:00",
+      "estimates": {
+        "60": 395,
+        "84": 301,
+        "96": 272
+      },
+      "fits_budget": true
+    },
+    "467535649": {
+      "id": "467535649",
+      "title": "Volkswagen Golf",
+      "link": "https://www.finn.no/mobility/item/467535649",
+      "desc": "E 136HK Exclusive Skinn/DigitalDisplay/Dynaudio/ACC/DAB",
+      "meta": "2018 ∙ 63 000 km ∙ El ∙ Automat",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467535649/91081fca-3fae-41ff-ad90-6a3f9d98dd09",
+      "kind": "elbil",
+      "price": 159900,
+      "first_seen": "2026-06-20T07:03:09.353108+00:00",
+      "last_seen": "2026-06-20T07:03:09.353108+00:00",
+      "estimates": {
+        "60": 2177,
+        "84": 1659,
+        "96": 1499
+      },
+      "fits_budget": true
+    },
+    "467532162": {
+      "id": "467532162",
+      "title": "Peugeot iOn",
+      "link": "https://www.finn.no/mobility/item/467532162",
+      "desc": "",
+      "meta": "2012 ∙ 77 000 km ∙ El ∙ 75 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467532162/53e01098-aed4-4785-820b-81c5e0576701",
+      "kind": "elbil",
+      "price": 15941,
+      "first_seen": "2026-06-20T07:03:09.353108+00:00",
+      "last_seen": "2026-06-20T07:03:09.353108+00:00",
+      "estimates": {
+        "60": 0,
+        "84": 0,
+        "96": 0
+      },
+      "fits_budget": true
+    },
+    "467532072": {
+      "id": "467532072",
+      "title": "Tesla Model 3",
+      "link": "https://www.finn.no/mobility/item/467532072",
+      "desc": "Long Range AWD 580km / AP / Premium / V.Pumpe ++",
+      "meta": "2021 ∙ 128 000 km ∙ El ∙ 580 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467532072/1a4e0fab-2a08-4f0b-b9b2-27f4e3f5c442",
+      "kind": "elbil",
+      "price": 229900,
+      "first_seen": "2026-06-20T07:03:09.353108+00:00",
+      "last_seen": "2026-06-20T07:03:09.353108+00:00",
+      "estimates": {
+        "60": 3563,
+        "84": 2716,
+        "96": 2453
+      },
+      "fits_budget": true
+    },
+    "467530084": {
+      "id": "467530084",
+      "title": "Volkswagen e-Golf VII",
+      "link": "https://www.finn.no/mobility/item/467530084",
+      "desc": "",
+      "meta": "2019 ∙ 59 300 km ∙ El ∙ 229 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467530084/9968453d-1f06-4d7f-886a-651734c6cdab",
+      "kind": "elbil",
+      "price": 109900,
+      "first_seen": "2026-06-20T07:03:09.353108+00:00",
+      "last_seen": "2026-06-20T07:03:09.353108+00:00",
+      "estimates": {
+        "60": 1187,
+        "84": 905,
+        "96": 817
+      },
+      "fits_budget": true
+    },
+    "467529538": {
+      "id": "467529538",
+      "title": "Nissan Leaf",
+      "link": "https://www.finn.no/mobility/item/467529538",
+      "desc": "40kWh TEKNA KR 1.600,-/MND",
+      "meta": "2018 ∙ 111 000 km ∙ El ∙ Automat",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467529538/b0a9dc65-dc17-4e89-bc85-0a19af59c8b0",
+      "kind": "elbil",
+      "price": 97000,
+      "first_seen": "2026-06-20T07:03:09.353108+00:00",
+      "last_seen": "2026-06-20T07:03:09.353108+00:00",
+      "estimates": {
+        "60": 931,
+        "84": 710,
+        "96": 641
+      },
+      "fits_budget": true
+    },
+    "467154955": {
+      "id": "467154955",
+      "title": "Volkswagen e-Up!",
+      "link": "https://www.finn.no/mobility/item/467154955",
+      "desc": "",
+      "meta": "2014 ∙ 107 576 km ∙ El ∙ Automat",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467154955/a24baae4-ccd8-44db-b485-b064d1113b4e",
+      "kind": "elbil",
+      "price": 36942,
+      "first_seen": "2026-06-20T07:03:09.353108+00:00",
+      "last_seen": "2026-06-20T07:03:09.353108+00:00",
+      "estimates": {
+        "60": 0,
+        "84": 0,
+        "96": 0
+      },
+      "fits_budget": true
     }
   },
   "prev_seen_ids": [
@@ -1951,6 +2077,7 @@
     "467066563",
     "467068442",
     "467068714",
+    "467154955",
     "467166372",
     "467168542",
     "467168979",
@@ -1988,6 +2115,12 @@
     "467449513",
     "467449599",
     "467449751",
-    "467449797"
+    "467449797",
+    "467529538",
+    "467530084",
+    "467532072",
+    "467532162",
+    "467535649",
+    "467536722"
   ]
 }
