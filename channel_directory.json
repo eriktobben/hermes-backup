@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T06:50:03.939307",
+  "updated_at": "2026-06-21T07:51:26.309031",
   "platforms": {
     "discord": [
       {
@@ -589,6 +589,12 @@
         "name": "Tobben MC / #bilkjøp / Med tanke på mine preferanser rundt bil. Hva tenker du om denne? https://www.... / topic 1517480917718007911",
         "type": "thread",
         "thread_id": "1517480917718007911"
+      },
+      {
+        "id": "1518158158806257756:1518158158806257756",
+        "name": "Tobben MC / #bilkjøp / Hvilken av disse bør jeg gå for? https://www.finn.no/466691937 https://www.fi... / topic 1518158158806257756",
+        "type": "thread",
+        "thread_id": "1518158158806257756"
       }
     ],
     "telegram": [],

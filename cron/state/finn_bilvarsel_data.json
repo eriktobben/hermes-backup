@@ -2007,6 +2007,114 @@
         "96": 0
       },
       "fits_budget": true
+    },
+    "467543266": {
+      "id": "467543266",
+      "title": "Kia e-Soul",
+      "link": "https://www.finn.no/mobility/item/467543266",
+      "desc": "64 kWt Exclusive, Skinn, HK lyd, HUD",
+      "meta": "2020 ∙ 100 713 km ∙ El ∙ 452 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467543266/47cfd57b-064d-43db-81d9-e48630a7b484",
+      "kind": "elbil",
+      "price": 162000,
+      "first_seen": "2026-06-21T07:00:10.412068+00:00",
+      "last_seen": "2026-06-21T07:00:10.412068+00:00",
+      "estimates": {
+        "60": 2218,
+        "84": 1691,
+        "96": 1527
+      },
+      "fits_budget": true
+    },
+    "467629668": {
+      "id": "467629668",
+      "title": "Nissan Leaf",
+      "link": "https://www.finn.no/mobility/item/467629668",
+      "desc": "FIN BIL / 109HK / NY EU 28 / LAV KM / GODE DEKK+++",
+      "meta": "2015 ∙ 75 500 km ∙ El ∙ Automat",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467629668/e4a2befa-ff72-4d67-95d3-9d63677ff079",
+      "kind": "elbil",
+      "price": 49900,
+      "first_seen": "2026-06-21T07:00:10.412068+00:00",
+      "last_seen": "2026-06-21T07:00:10.412068+00:00",
+      "estimates": {
+        "60": 0,
+        "84": 0,
+        "96": 0
+      },
+      "fits_budget": true
+    },
+    "467618582": {
+      "id": "467618582",
+      "title": "Renault Fluence",
+      "link": "https://www.finn.no/mobility/item/467618582",
+      "desc": "",
+      "meta": "2014 ∙ 73 720 km ∙ El ∙ 80 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467618582/81ca2d2e-911b-447a-a7ad-71a8f5994c52",
+      "kind": "elbil",
+      "price": 8442,
+      "first_seen": "2026-06-21T07:00:10.412068+00:00",
+      "last_seen": "2026-06-21T07:00:10.412068+00:00",
+      "estimates": {
+        "60": 0,
+        "84": 0,
+        "96": 0
+      },
+      "fits_budget": true
+    },
+    "467628732": {
+      "id": "467628732",
+      "title": "Tesla Model Y",
+      "link": "https://www.finn.no/mobility/item/467628732",
+      "desc": "LONG RANGE UTGAVE-SE DETALJER-SE FARGEKOMBINASJON++++",
+      "meta": "2022 ∙ 158 000 km ∙ El ∙ 533 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467628732/c5050ec0-c3ec-4b26-bfb9-5db43ba1eef3",
+      "kind": "elbil",
+      "price": 249900,
+      "first_seen": "2026-06-21T07:00:10.412068+00:00",
+      "last_seen": "2026-06-21T07:00:10.412068+00:00",
+      "estimates": {
+        "60": 3959,
+        "84": 3018,
+        "96": 2726
+      },
+      "fits_budget": false
+    },
+    "467627200": {
+      "id": "467627200",
+      "title": "Audi e-tron",
+      "link": "https://www.finn.no/mobility/item/467627200",
+      "desc": "50 Advanced Business",
+      "meta": "2020 ∙ 110 875 km ∙ El ∙ 303 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467627200/9d46cc86-7dc2-4437-959f-9ab8549a7517",
+      "kind": "elbil",
+      "price": 240000,
+      "first_seen": "2026-06-21T07:00:10.412068+00:00",
+      "last_seen": "2026-06-21T07:00:10.412068+00:00",
+      "estimates": {
+        "60": 3763,
+        "84": 2868,
+        "96": 2591
+      },
+      "fits_budget": false
+    },
+    "467626471": {
+      "id": "467626471",
+      "title": "Ford Mustang Mach-E",
+      "link": "https://www.finn.no/mobility/item/467626471",
+      "desc": "LR RWD Long Range",
+      "meta": "2021 ∙ 123 400 km ∙ El ∙ 610 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467626471/508c4447-65e4-4373-abb8-f8938048fe6f",
+      "kind": "elbil",
+      "price": 259532,
+      "first_seen": "2026-06-21T07:00:10.412068+00:00",
+      "last_seen": "2026-06-21T07:00:10.412068+00:00",
+      "estimates": {
+        "60": 4149,
+        "84": 3163,
+        "96": 2857
+      },
+      "fits_budget": false
     }
   },
   "prev_seen_ids": [
@@ -2121,6 +2229,12 @@
     "467532072",
     "467532162",
     "467535649",
-    "467536722"
+    "467536722",
+    "467543266",
+    "467618582",
+    "467626471",
+    "467627200",
+    "467628732",
+    "467629668"
   ]
 }
