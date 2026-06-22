@@ -231,13 +231,48 @@ When extraction fails or there's no specific ad to inspect:
    - Tesla Model 3 SR+ 2021: 180-210k for 80-120k km
    - Tesla Model 3 LR AWD 2021: 195-240k for 80-150k km
 
-3. Use **Google search** trick as last resort:
-   ```
-   site:finn.no Tesla Model 3 2021 pris
-   ```
-   (May also be blocked by rate-limiting.)
+3. Use **Google search** — see dedicated section above (`Google search — reliable first-pass technique`).
 
-## Fallback URL templates for common searches
+### Google search — reliable first-pass technique
+
+Google search with `site:finn.no` works **reliably** (not just as last resort) for quick market price comparison. It bypasses Finn's SPA entirely because Google indexes Finn's SSR content.
+
+**How to use:**
+```
+https://www.google.com/search?q=site:finn.no+Tesla+Model+3+Long+Range+2021+pris
+```
+
+**Each result snippet** (from Google) gives:
+- Price (kr)
+- Kilometerstand
+- Årsmodell
+- Key features (AWD, Hengerfeste, etc.)
+- Location
+
+**Example real snippet from session:**
+```
+Tesla Model 3. Long Range AWD 2021 | Hengerfeste | Garanti igjen.
+2021 • 75 400 km • El • 614 km rekkevidde. 259 532 kr.
+Rådal Smidig bilhandel – Privat • 7 ...
+```
+
+**When to use:**
+- **First pass**: Quick "is this price fair?" — 15 seconds gives you the market range
+- **When Finn's SPA times out**: Faster than trying browser_navigate on Finn search
+- **When JSON-LD extraction fails**: Fallback that still returns useful data
+
+**Limitations:**
+- Only ~6-10 results shown (not comprehensive)
+- No mileage filter — must open individual ads for km data on specific comparables
+- May miss some recently-published listings not yet indexed
+- Google may sometimes show rate-limiting CAPTCHA (rare for single queries)
+
+**Follow-up workflow:**
+1. Google search → gets price range
+2. Open individual Finn ad pages (from Google result links) for full specs
+3. Build comparison table
+
+### Fallback URL templates for common searches
 
 | Modell | Finn-søk URL |
 |--------|-------------|

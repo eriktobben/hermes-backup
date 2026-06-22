@@ -11,6 +11,7 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
 - User wants concrete FINN candidates (links + images), not only generic model advice.
 - User asks to set up automated daily FINN monitoring with here.now publishing (see `references/automated-finn-monitoring.md`).
 - User asks "is this price fair?" about a specific listing — trigger market comparison analysis.
+- User shares a Rebil.no (or similar fixed-price dealer) listing — enable Rebil extraction, technical test analysis, and dealer negotiation advice.
 
 ## Core outcomes
 1. Convert monthly payment + down payment + term into a realistic car-price range.
@@ -87,6 +88,108 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
 4. **Få alle avtaler skriftlig** — muntlige løfter fra forhandler er lite verdt.
 5. **Formidlingssalg påvirker markedsprissammenligning** — når du sammenligner med andre annonser, vær bevisst på om de er forhandler-, formidlings- eller privatsalg. Sammenlign epler med epler.
 
+## Rebil / fixed-price dealer evaluation
+
+Norwegian fixed-price dealers like **Rebil** operate differently from FINN private sellers or traditional dealers.
+
+### How Rebil works
+- **Fixed-price model**: Cars are priced at a fixed "lave priser" — limited negotiation margin. Their stated policy is that cosmetic wear is already factored into the price.
+- **No formidlingssalg risk**: Rebil sells as a proper dealer (forhandlerkjøp) with full consumer protections (5-year reclamation, 14-day angrerett at distance).
+- **Includes warranty**: Minimum 6 months (XtraGaranti Diamond via AutoConcept on their cars).
+- **Can still negotiate**: While they claim fixed pricing, you can (and should) ask for a discount — especially if you have leverage like a technical test showing outstanding issues. Expect small concessions (2–5%) rather than large discounts.
+
+### Extracting data from Rebil pages
+Rebil pages contain SSR JSON with the car data embedded. Extract with:
+
+```bash
+curl -sL 'https://app.rebil.no/cars/{car-id}' | grep -oP '"price":[0-9]+'
+curl -sL 'https://app.rebil.no/cars/{car-id}' | grep -oP '"km":[0-9]+'
+# Full JSON blob
+curl -sL 'https://app.rebil.no/cars/{car-id}' | grep -oP '__NEXT_DATA__.*</script>' | sed 's/.*<script id="__NEXT_DATA__" type="application\/json">//;s/<\/script>.*//' | python3 -m json.tool 2>/dev/null || echo "JSON extraction failed, try browser"
+```
+
+Key fields in the SSR JSON: `price`, `km`, `year`, `horsepower`, `el_battery_capacity`, `el_rang`, `reg_number`, `chassis_number`, `exterior_color.name`, `equipment[]`, `guarantee_duration`, `warranty_type`.
+
+### Interpreting a "Teknisk test med påkost" (technical inspection report)
+
+Rebil provides a detailed technical test PDF on request (before it's published publicly). The report follows a standard format:
+
+**Report structure:**
+1. **Front page**: Car identity, test date, km at test, overall status (OK/IKKE OK)
+2. **Anmerkninger (remarks) table**: Each issue numbered with:
+   - **Punkt** (category — Eksteriør, Hjuloppheng/styring, Bremser, Interiør, etc.)
+   - **Beskrivelse** (description of the issue)
+   - **Plassering** (location)
+   - **Påkost** (cost column — may be empty; indicates it was flagged for cost estimation)
+3. **Bildedokumentasjon**: Photo evidence of each issue (pages 3–12 typically)
+4. **Testforhold/Data**: Key numbers — nøkler, ladekabler, dekkdata (tread depth per wheel), klima test, servicehistorikk
+5. **Punkter kontrollert**: The full checklist of what was inspected (helps identify gaps in the inspection)
+
+**How to analyze the report:**
+- **Check overall status first** — "OK" means no safety-critical issues
+- **Categorize issues into tiers:**
+  - 🟠 **Safety/mechanical** (must fix): front windshield cracks, suspension bushings, wheel bearings, brake components
+  - 🟡 **Function** (should fix): door mechanisms, window regulators, lock mechanisms, door checks
+  - 🟢 **Cosmetic** (nice to fix): scratches, dents, stone chips, alloy curb rash, interior wear
+- **Cross-reference with what the dealer says they fixed** — ask explicitly which items from the report have been addressed
+- **Prioritize cost**: front windshield replacement in Norway is ~8–15k, suspension arms/bushings ~3–8k, cosmetic bodywork varies widely (see references/cosmetic-repair-costs.md)
+
+### Negotiation tactics with Norwegian dealers
+
+When you have a technical test, you have **information asymmetry** — other buyers haven't seen it yet.
+
+**Effective strategies:**
+1. **Leverage the test**: "Jeg har sett den tekniske testen, og det er X punkter som må utbedres. Kan vi justere prisen?"
+2. **Mekanisk vs kosmetisk**: Ask them to fix mechanical issues (they're more likely to agree since it affects safety/drivability), negotiate discount on cosmetic
+3. **Bundle the ask**: Get a list of what they'll fix (in writing) plus a cash discount
+4. **Don't overplay the cosmetic card**: Norwegian used car buyers expect normal wear at 100k+ km — dealers know this and price accordingly
+5. **Timing**: If the test is not yet published, you have a window — other buyers don't know the details you have
+6. **Typical outcomes**: 5–15k kr discount or ~10–20k in included repairs on a 200–250k car is a realistic win
+
+### Google search as first-pass Finn market technique
+
+Google search with `site:finn.no` is a **reliable first-pass technique** for quick market price comparison — not just a last-resort fallback. It bypasses Finn's SPA entirely:
+
+```bash
+# Quick price check — Google returns 6-10 results with prices in snippets
+# Navigate browser to:
+https://www.google.com/search?q=site:finn.no+Tesla+Model+3+Long+Range+2021+pris
+```
+
+**What Google snippets give you** (from session data):
+- Price (kr), km, year, key features, location
+- Enough to spot the price range in 15 seconds
+
+**Limitations:** ~6-10 results only (not comprehensive). Use JSON-LD when you need comprehensive data. Use Google when you need a quick answer.
+
+**Follow-up workflow after Google:**
+1. Google search → see price snapshots in results
+2. Pick the most comparable ads (same year, similar km, same trim)
+3. Open individual `/mobility/item/{id}` pages for full specs via browser_navigate or curl+grep
+4. Build a comparison table for the user
+
+### Tire data from technical inspection
+
+The "Teknisk test med påkost" report includes tire condition data on its "Testforhold/Data" page:
+
+```
+VINTERDEKK PRODUKSJONSDATO DEKK: Uke 34, 2024
+SOMMERDEKK PRODUKSJONSDATO DEKK: Uke 42, 2024
+
+MØNSTERDYBDE (mm):
+         Venstre  Høyre
+Aksel 1    5,0     4,9    (summer)
+Aksel 2    5,3     5,4
+Aksel 1    6,3     7,2    (winter)
+Aksel 2    4,6     4,8
+```
+
+**How to interpret:**
+- **Production date**: "Uke 34, 2024" = week 34 of 2024. Under 3 years = good.
+- **Tread depth**: Legal minimums — summer 3 mm, winter 5 mm. Above 5 mm summer / 6 mm winter = plenty of life. 4-5 mm = 1-2 more seasons. 3-4 mm = replace next season.
+- **Mixed production dates**: "2 dekk er fra 2425" = partial replacement, not full set. Note this.
+- **Asymmetric wear**: >1.5 mm difference left/right on same axle suggests alignment issues — cross-reference with suspension findings in the test report.
+
 ## Pitfalls
 - Returning only model names without live listings when user asked to check FINN.
 - Mixing lease campaign ads with purchase candidates.
@@ -117,3 +220,4 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
 - See `references/finn-html-extraction-notes.md` for FINN extraction pattern and session-derived guardrails.
 - See `references/automated-finn-monitoring.md` for setting up automated daily FINN monitoring with cron + here.now publishing.
 - See `references/car-color-detection.md` for methods to determine exterior color from Norwegian car ads, including vegvesen lookup, ad text parsing, and image analysis. Also includes Tesla Model 3 facelift timeline.
+- See `references/cosmetic-repair-costs.md` for estimated Norwegian body shop prices for common cosmetic issues (riper, bulk, steinsprut, felgmerker, interior wear, full packages).
