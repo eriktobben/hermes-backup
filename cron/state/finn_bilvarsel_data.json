@@ -902,7 +902,7 @@
       "kind": "elbil",
       "price": 109532,
       "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
       "estimates": {
         "60": 1179,
         "84": 899,
@@ -2115,6 +2115,222 @@
         "96": 2857
       },
       "fits_budget": false
+    },
+    "467745721": {
+      "id": "467745721",
+      "title": "Volkswagen Golf",
+      "link": "https://www.finn.no/mobility/item/467745721",
+      "desc": "300 km WLTP / Ryggekamera / DAB+ / Acc",
+      "meta": "2017 ∙ 144 500 km ∙ El ∙ Automat",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467745721/8d20729c-20b6-464d-9b44-ac3098171dc4",
+      "kind": "elbil",
+      "price": 109800,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 1185,
+        "84": 903,
+        "96": 816
+      },
+      "fits_budget": true
+    },
+    "467745732": {
+      "id": "467745732",
+      "title": "Opel Corsa",
+      "link": "https://www.finn.no/mobility/item/467745732",
+      "desc": "Elegance",
+      "meta": "2021 ∙ 59 083 km ∙ El ∙ 336 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467745732/3a4657f2-7e10-4af1-93b1-3edde0f466c3",
+      "kind": "elbil",
+      "price": 155400,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 2088,
+        "84": 1591,
+        "96": 1437
+      },
+      "fits_budget": true
+    },
+    "467745672": {
+      "id": "467745672",
+      "title": "Nissan Leaf",
+      "link": "https://www.finn.no/mobility/item/467745672",
+      "desc": "e+ 59kWh N-Connecta Meget pen bil, Service fulgt opp.",
+      "meta": "2023 ∙ 30 648 km ∙ El ∙ 395 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467745672/06c12384-ee79-47c4-b615-6271d852ad35",
+      "kind": "elbil",
+      "price": 234800,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 3660,
+        "84": 2790,
+        "96": 2520
+      },
+      "fits_budget": false
+    },
+    "467745614": {
+      "id": "467745614",
+      "title": "Volkswagen ID.3",
+      "link": "https://www.finn.no/mobility/item/467745614",
+      "desc": "PRO 1ST Edition / 417KM WLTP / Velholdt / ACC +++",
+      "meta": "2021 ∙ 54 150 km ∙ El ∙ 417 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467745614/99c7dca0-ccfc-4fbe-b049-ddac36a31273",
+      "kind": "elbil",
+      "price": 219000,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 3347,
+        "84": 2551,
+        "96": 2305
+      },
+      "fits_budget": true
+    },
+    "467745603": {
+      "id": "467745603",
+      "title": "Nissan Leaf",
+      "link": "https://www.finn.no/mobility/item/467745603",
+      "desc": "39kWh N-Connecta  ACC/Navi/360Kam/Rattvarme",
+      "meta": "2022 ∙ 43 997 km ∙ El ∙ 278 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467745603/e56e9e67-af7d-4b65-bba0-02f19e6242ab",
+      "kind": "elbil",
+      "price": 169900,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 2375,
+        "84": 1810,
+        "96": 1635
+      },
+      "fits_budget": true
+    },
+    "467745526": {
+      "id": "467745526",
+      "title": "Volkswagen ID.3",
+      "link": "https://www.finn.no/mobility/item/467745526",
+      "desc": "PRO MAX / Pano / El.stoler / Massasje / 424 km WLTP",
+      "meta": "2020 ∙ 63 500 km ∙ El ∙ 424 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467745526/92efc68f-6595-40ca-8151-3e03fe3d5d4a",
+      "kind": "elbil",
+      "price": 229800,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 3561,
+        "84": 2714,
+        "96": 2452
+      },
+      "fits_budget": true
+    },
+    "467745334": {
+      "id": "467745334",
+      "title": "Hyundai IONIQ",
+      "link": "https://www.finn.no/mobility/item/467745334",
+      "desc": "Velutstyrt | 311 km WLTP | Automat | BLIS",
+      "meta": "2020 ∙ 106 000 km ∙ El ∙ 311 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467745334/eab8800a-9f8c-4322-a98e-553375207ab6",
+      "kind": "elbil",
+      "price": 149000,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 1961,
+        "84": 1495,
+        "96": 1350
+      },
+      "fits_budget": true
+    },
+    "467745154": {
+      "id": "467745154",
+      "title": "Jaguar I-PACE",
+      "link": "https://www.finn.no/mobility/item/467745154",
+      "desc": "EV320 470km/ Meridian/ Pano/ 360/ H.Feste/ P.Varme/ LED",
+      "meta": "2021 ∙ 86 500 km ∙ El ∙ 449 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467745154/4fac6a11-d531-4960-b33a-fb469acafc7f",
+      "kind": "elbil",
+      "price": 239900,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 3761,
+        "84": 2867,
+        "96": 2590
+      },
+      "fits_budget": false
+    },
+    "467485582": {
+      "id": "467485582",
+      "title": "Volkswagen e-Golf VII",
+      "link": "https://www.finn.no/mobility/item/467485582",
+      "desc": "eGOLF 100KW (300 km) Skinn, ryggekamera, ACC, V cockpit",
+      "meta": "2018 ∙ 68 000 km ∙ El ∙ 300 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467485582/2abc4a6f-164f-4c57-8a92-f7c3146ca4c7",
+      "kind": "elbil",
+      "price": 145000,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 1882,
+        "84": 1434,
+        "96": 1296
+      },
+      "fits_budget": true
+    },
+    "467744994": {
+      "id": "467744994",
+      "title": "Kia Soul",
+      "link": "https://www.finn.no/mobility/item/467744994",
+      "desc": "EXCLUSIVE SKINN HUD ACC R-KAMERA RATTVARME EL-SETE+",
+      "meta": "2021 ∙ 29 000 km ∙ El ∙ 452 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467744994/c36cc03c-18e0-425a-b5ef-b0aea79c53bd",
+      "kind": "elbil",
+      "price": 199900,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 2969,
+        "84": 2263,
+        "96": 2044
+      },
+      "fits_budget": true
+    },
+    "467744119": {
+      "id": "467744119",
+      "title": "Volkswagen ID.3",
+      "link": "https://www.finn.no/mobility/item/467744119",
+      "desc": "Pro Limited 58 kWh 204hk - R.Kam, ACC, Navi",
+      "meta": "2023 ∙ 20 900 km ∙ El ∙ 420 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467744119/558a2791-5aa3-4f47-a6dd-26234308fcfd",
+      "kind": "elbil",
+      "price": 259900,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 4157,
+        "84": 3168,
+        "96": 2862
+      },
+      "fits_budget": false
+    },
+    "467742820": {
+      "id": "467742820",
+      "title": "Volkswagen GOLF",
+      "link": "https://www.finn.no/mobility/item/467742820",
+      "desc": "Exclusive - Skinn, R.Kam, Sp.Seter, Navi",
+      "meta": "2020 ∙ 55 999 km ∙ El ∙ 230 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/467742820/7b812616-5099-4d06-b8ab-cfb0d2e3b292",
+      "kind": "elbil",
+      "price": 149900,
+      "first_seen": "2026-06-22T07:06:34.680123+00:00",
+      "last_seen": "2026-06-22T07:06:34.680123+00:00",
+      "estimates": {
+        "60": 1979,
+        "84": 1508,
+        "96": 1363
+      },
+      "fits_budget": true
     }
   },
   "prev_seen_ids": [
@@ -2224,6 +2440,7 @@
     "467449599",
     "467449751",
     "467449797",
+    "467485582",
     "467529538",
     "467530084",
     "467532072",
@@ -2235,6 +2452,17 @@
     "467626471",
     "467627200",
     "467628732",
-    "467629668"
+    "467629668",
+    "467742820",
+    "467744119",
+    "467744994",
+    "467745154",
+    "467745334",
+    "467745526",
+    "467745603",
+    "467745614",
+    "467745672",
+    "467745721",
+    "467745732"
   ]
 }
