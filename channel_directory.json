@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T15:57:25.377828",
+  "updated_at": "2026-06-22T16:54:48.085228",
   "platforms": {
     "discord": [
       {
@@ -607,10 +607,23 @@
         "name": "Tobben MC / #bilkjøp / Hva tenker du om denne bilen? https://app.rebil.no/cars/b2c-698 / topic 1518629960875639005",
         "type": "thread",
         "thread_id": "1518629960875639005"
+      },
+      {
+        "id": "1518648508029341937:1518648508029341937",
+        "name": "Tobben MC / #general / Klarer du å formatere tabellene bedre slik at det ser bra ut på discord? Alle... / topic 1518648508029341937",
+        "type": "thread",
+        "thread_id": "1518648508029341937"
+      },
+      {
+        "id": "1518651500656721990:1518651500656721990",
+        "name": "Tobben MC / #general / Kan du oppdatere Hermès? / topic 1518651500656721990",
+        "type": "thread",
+        "thread_id": "1518651500656721990"
       }
     ],
     "telegram": [],
     "whatsapp": [],
+    "whatsapp_cloud": [],
     "slack": [],
     "signal": [],
     "mattermost": [],
@@ -627,10 +640,13 @@
     "bluebubbles": [],
     "qqbot": [],
     "yuanbao": [],
+    "relay": [],
     "google_chat": [],
     "irc": [],
     "line": [],
     "ntfy": [],
+    "photon": [],
+    "raft": [],
     "simplex": [],
     "teams": []
   }
