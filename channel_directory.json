@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-22T13:57:19.219727",
+  "updated_at": "2026-06-22T14:57:22.282575",
   "platforms": {
     "discord": [
       {
@@ -601,6 +601,12 @@
         "name": "Tobben MC / #bilkjøp / Kan du se gjennom disse annonsene. Jeg har bestilt NAF-test på 2020-modellen ... / topic 1518568603094614087",
         "type": "thread",
         "thread_id": "1518568603094614087"
+      },
+      {
+        "id": "1518629960875639005:1518629960875639005",
+        "name": "Tobben MC / #bilkjøp / Hva tenker du om denne bilen? https://app.rebil.no/cars/b2c-698 / topic 1518629960875639005",
+        "type": "thread",
+        "thread_id": "1518629960875639005"
       }
     ],
     "telegram": [],
