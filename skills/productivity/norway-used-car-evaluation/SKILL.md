@@ -101,6 +101,8 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
 - Rare car names like "E-TRON" in the ad title are not typos; let them pass through as-is.
 - **Formidlingssalg oversight**: forgetting to check whether a listing is formidlingssalg can lead to wrong price expectations and legal assumptions. Always verify before giving a buy recommendation.
 - **Price fairness without mileage context**: when comparing prices, kilometerstand is a primary price driver. JSON-LD gives price + description but not km — you MUST follow up with mileage data on comparables before concluding whether a price is fair.
+- **Inconsistent spec data pitfall**: FINN's SSR data may have inaccurate or mismatched `car_model_spec` field. Always cross-check `engine_effect` (hk) and `battery_capacity` (kWh) against `car_model_spec` to verify trim level. For Tesla Model 3: 498hk+70kWh=LR AWD, 462hk+75kWh=some LR variants, 346hk+65kWh=SR+ (even if spec says "Long Range AWD"). Report mismatches to the user as a red flag.
+- **Seller refuses NAF test**: If a seller (especially a dealer) declines a buyer-funded NAF test (or similar independent inspection), treat it as a strong negative signal. Legitimate sellers with nothing to hide have no reason to refuse. Flag this distinctly to the user — it may indicate hidden issues the seller knows about.
 
 ## Output template
 - `Budsjett (beregnet): [range]`

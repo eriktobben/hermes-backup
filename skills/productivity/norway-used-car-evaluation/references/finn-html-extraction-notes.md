@@ -54,7 +54,7 @@ curl -sL 'https://www.finn.no/mobility/search/car?registration_class=1&sort=PUBL
 python3 -c "
 import json, re
 html = open('/tmp/finn_search.html').read()
-m = re.search(r'<script id=\"seoStructuredData\" type=\"application/ld\+json\">(.*?)</script>', html, re.DOTALL)
+m = re.search(r'<script id=\\"seoStructuredData\\" type=\\"application/ld+json\\">(.*?)</script>', html, re.DOTALL)
 data = json.loads(m.group(1))
 items = data['mainEntity']['itemListElement']
 for e in items:
@@ -106,30 +106,110 @@ In rare sessions where `browser_navigate` loads quickly, look for:
 - Repeated `<article ...>` blocks with `sf-search-ad` classes
 - Per-listing data: title, URL (`/mobility/item/<id>`), image URL, year/km/fuel/transmission
 
-### Tier 2 (reliable): Individual ad‑page extraction via curl
-**Individual FINN ad pages** (`/mobility/item/{ad_id}`) contain **significant SSR data** despite the JS shell — it's embedded in the HTML server-side. Use curl + grep patterns:
+### Tier 2 (reliable): Individual ad-page extraction via curl/Python
+
+**Individual FINN ad pages** (`/mobility/item/{ad_id}`) contain **significant SSR data** despite the JS shell — it's embedded in the HTML server-side.
+
+#### Approach A: curl + grep (quick field extraction)
 
 ```bash
 # Basic info from <meta> and <title>
 curl -sL "https://www.finn.no/mobility/item/{id}" -H "User-Agent: Mozilla/5.0 ..." \
-  | grep -oP '<title>[^<]+</title>'                           # → "Hyundai Kona - 2021 - Grå"
-  | grep -oP '<meta name="description" content="[^"]*"'       # → ad description text
-  | grep -oP '<meta property="og:image" content="[^"]*"'      # → main image URL
+  | grep -oP '<title>[^<]+</title>'
+  | grep -oP '<meta name="description" content="[^"]*"'
+  | grep -oP '<meta property="og:image" content="[^"]*"'
 
-# Price — look for "price": NUMBER
+# Price
 grep -oP '"price":\s*[0-9]+'
 
-# Mileage — look for key-value blob
-grep -oP '"key":"mileage","value":\["([0-9]+)"\]'            # → 88000
+# Mileage
+grep -oP '"key":"mileage","value":\["([0-9]+)"\]'
 
-# Other specs (battery, year, drivetrain, color, seats, etc.)
-grep -oP '"key":"(batteryCapacity|modelYear|drivetrain|color|seats|owners|car_make|car_model)","value":\[[^\]]+\]'
-
-# Registration date
-grep -oP '"key":"first_registration","value":\["[^"]+"\]'
-
-# Ad ID is in the URL path — use as identifier
+# Other specs (use underscore-key variant names where available)
+grep -oP '"key":"(battery_capacity|modelYear|drivetrain|color|seats|owners|car_make|car_model|car_model_spec|engine_effect|wheel_drive|exterior_color|registration_number)","value":\[[^\]]+\]'
 ```
+
+Key fields and their values (Tesla Model 3 examples):
+| key | meaning | example values |
+|-----|---------|---------------|
+| `mileage` | km-stand | `154000` |
+| `price` | pris i kr | `199532` |
+| `year` | årsmodell | `2021` |
+| `car_model_spec` | trim/utstyr shorthand | `580km(WLTP)/LR/AWD/Krok/MCU2/Navi/R.kam/Pano/AP/V.pumpe` |
+| `engine_effect` | HK (hestekrefter) | `498` (LR AWD), `462` (some LR), `346` (SR+) |
+| `battery_capacity` | batteri kWh | `70`, `75`, `65` |
+| `driving_range` | WLTP rekkevidde km | `614`, `580` |
+| `exterior_color` | fargekode | `9`=Hvit, `14`=Svart, `6`=Grå/Midnight Silver |
+| `wheel_drive` | drivverk | `2`=AWD |
+| `owners` | antall eiere | `1`, `2` |
+| `transmission` | girkasse | `2`=automat |
+| `sales_form` | salgsform | `1`=brukt |
+| `dealer_segment` | selgertype | `1`=forhandler, `0`=privat |
+| `registration_number` | bilskilt | `ED18626` |
+| `feature_package` | utstyrspakke | `PREMIUM` |
+
+#### Approach B: Python script (better for complex extractions — recommended for 3+ ads)
+
+Complex shell escaping (dollar signs, curly braces, quotes in Python regex inside bash heredocs) leads to silent failures. Save a .py script to /tmp and invoke it per URL instead:
+
+```python
+# /tmp/finn_extract.py
+import sys, re, urllib.request
+
+url = sys.argv[1]
+headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36'}
+req = urllib.request.Request(url, headers=headers)
+html = urllib.request.urlopen(req, timeout=30).read().decode('utf-8', errors='replace')
+
+# Meta description (contains feature text!)
+m = re.search(r'<meta name="description" content="([^"]+)"', html)
+if m:
+    desc = m.group(1)
+    desc = desc.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
+    desc = desc.replace('&nbsp;', ' ').replace('&ndash;', '-')
+    print(f'META_DESC: {desc[:400]}')
+
+# All key-value specs — collect into dict
+for key in ['mileage', 'price', 'year', 'car_model_spec', 'engine_effect',
+            'battery_capacity', 'driving_range', 'exterior_color', 'owners',
+            'wheel_drive', 'sales_form', 'dealer_segment', 'registration_number',
+            'feature_package', 'first_registration', 'org_id']:
+    m = re.search(rf'"key":"{key}","value":\["([^"]+)"\]', html)
+    if m:
+        print(f'{key.upper()}: {m.group(1)}')
+```
+
+Run with:
+```bash
+python3 /tmp/finn_extract.py "https://www.finn.no/mobility/item/{ad_id}"
+```
+
+**What the meta description contains**: The `<meta name="description">` tag often holds the real ad text (features, condition, seller notes) — unlike `adBody` which is loaded via JS. Extract it first; it's the richest source of feature information.
+
+**What is NOT available via SSR**:
+- `adBody` (full ad description text — JS-loaded)
+- `first_registration` (first registration date — often absent from SSR)
+- `org_name` / `dealerName` (dealer/business name)
+- These must be obtained via browser_navigate or left as unknown
+
+**Field consistency pitfall**: Always cross-check `car_model_spec` against `engine_effect` and `battery_capacity`. In one session the spec field said "Long Range AWD" while the actual data (346hk, 65kWh) matched a Standard Range+ — either a mislabeled ad or a data error. Never trust `car_model_spec` alone; validate against the numerical specs.
+
+**car_model_spec shorthand decoding** (Tesla Model 3):
+| Code | Meaning |
+|------|---------|
+| LR | Long Range |
+| AWD | Firehjulstrekk |
+| SR / SR+ | Standard Range (Plus) |
+| P / Performance | Performance |
+| MCU2 | Media Control Unit 2 (3.0) |
+| AP | Autopilot |
+| Navi | Navigasjon |
+| R.kam / R.kamera | Ryggekamera |
+| Pano | Panoramatak |
+| V.pumpe | Varmepumpe |
+| Krok | Hengerfeste |
+| Skinn | Skinninteriør |
+| Memory | Seteminne |
 
 **Limitations**: Only works for individual ad pages (not search results). Price data may appear in JS bundles too — verify by checking multiple matches.
 
@@ -148,10 +228,12 @@ When extraction fails or there's no specific ad to inspect:
    - Hyundai Kona Electric 64 kWh 2019: 115-135k for 70-90k km
    - Kia e-Niro 64 kWh 2019: 130-155k for 60-80k km
    - Renault Zoe ZE50 R135 2020: 90-120k for 40-60k km
+   - Tesla Model 3 SR+ 2021: 180-210k for 80-120k km
+   - Tesla Model 3 LR AWD 2021: 195-240k for 80-150k km
 
 3. Use **Google search** trick as last resort:
    ```
-   site:finn.no Hyundai Kona Electric 64 kWh 2019 pris
+   site:finn.no Tesla Model 3 2021 pris
    ```
    (May also be blocked by rate-limiting.)
 
@@ -161,6 +243,7 @@ When extraction fails or there's no specific ad to inspect:
 |--------|-------------|
 | Kona Electric 64 kWh | `/car/used/search.html?fuel=2&make=65&model=2391&price_to=150000` |
 | Kia e-Niro 64 kWh | `/car/used/search.html?fuel=2&make=455&model=1262&price_to=160000` |
+| Tesla Model 3 LR | `/car/used/search.html?fuel=2&make=8078&model=2000501&price_to=250000` |
 | Mazda 3 | `/car/used/search.html?fuel=1&make=495&model=1396&price_to=110000` |
 
 ## Budget calculation helper
@@ -194,3 +277,6 @@ total_budget = P + down_payment - buffer (5000-10000 for fees)
 - Mazda 3 SkyActiv 2.0 (2015-2019): timing chain, reliable, 70-100k
 - Toyota Auris/Corolla 1.2T (2015-2018): timing chain, Toyota reliability, 80-110k
 - Suzuki Swift 1.2 (2017-2020): cheap, simple, chain-driven, 60-90k
+
+### Seller-refuses-NAF-test red flag
+- If a seller (especially a dealer) refuses a paid NAF test, treat it as a strong negative signal. A legitimate seller with nothing to hide has no reason to decline a buyer-funded independent inspection. Flag this to the user explicitly.
