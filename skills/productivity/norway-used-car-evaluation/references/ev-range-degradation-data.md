@@ -19,6 +19,32 @@ NAF's route includes city driving, country roads, and highways at posted speed l
 ### Classification
 Tesla Model 3 LR AWD (2021) is one of only **4 out of 66 EVs tested** that exceed 500 km in BOTH summer and winter (alongside Mercedes EQS 580, BMW iX xDrive50, Ford Mustang Mach-E LR RWD).
 
+## 2021 Model 3 LR AWD — 75 kWh vs 82 kWh battery variants
+
+The 2021 Model 3 LR AWD was sold with **two different battery packs** depending on production date:
+
+| Variant | Production | Battery | WLTP | OTA history |
+|:--------|:-----------|:-------:|:----:|:------------|
+| **Early 2021** | ~des 2020 – mai 2021 | 75 kWh LG NCA (opprinnelig) | 580 km → **614 km** (OTA update mai 2021) | Tesla unlocked extra capacity/efficiency via software |
+| **Late 2021** | ~nov 2021 → | **82 kWh** Panasonic/LG NCA | **614 km** from factory | Full 614 km from day one |
+
+### How to identify which one
+
+| Method | 75 kWh (OTA upgrade) | 82 kWh |
+|:-------|:--------------------:|:------:|
+| **Rebil/FINN listing says** | "580 km (WLTP)" or "75 kWh" | "614 km (WLTP)" or "82 kWh" |
+| **Vegvesen data shows** | Range may show 580 or 614 km | Range shows 614 km |
+| **First registration** | Before ~May 2021 | After ~November 2021 |
+| **Practical difference** | ~72,5 kWh usable → ~450-530 km real range | ~79 kWh usable → ~490-570 km real range |
+
+**Important**: The 614 km WLTP upgrade was pushed as an OTA update to ALL 2021 LR AWD cars (including the 75 kWh ones) in May 2021. So seeing "614 km" in an ad does NOT guarantee 82 kWh — it could be the 75 kWh software-upgraded version. The only reliable ways to tell are:
+1. Check the registration date — cars registered before May 2021 are almost certainly 75 kWh
+2. Check the Rebil/FINN spec — "75 kWh" in the listing = 75 kWh regardless of stated WLTP
+3. Read the actual battery capacity from the car's service menu during inspection
+
+### What it means in practice
+The 82 kWh version gives approximately **20-30 km more real-world range** at highway speeds. For daily driving the difference is negligible; for long journeys it means slightly more margin between Supercharger stops.
+
 ## Battery degradation references
 
 ### Recurrent Auto data (16.000+ vehicles)

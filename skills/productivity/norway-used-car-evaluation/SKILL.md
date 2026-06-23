@@ -61,6 +61,7 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
    - **If extraction fails** (>60s timeout or empty data), **do not fabricate listings**.
    - Fallback: provide market-informed model advice with known price ranges (e.g., "Kona Electric 64 kWh 2019: 115-135k for 70k km") and clickable search URLs the user can open.
    - Include `https://www.finn.no/car/used/search.html?fuel=2&make=65&model=2391&price_to=150000&transmission=1` style links — use proper query parameters (fuel=2=EV, transmission=1=automatic).
+   - **Verify critical specs via vegvesen lookup**: When the user has a specific car with a registration number, use `references/vegvesen-registration-lookup.md` to verify official WLTP range, motor effect (trim), colour, and first registration date directly from Statens vegvesen. This catches FINN ad inaccuracies (e.g., a car advertised as "614 km WLTP" may actually show 580 km in the official register).
 
 5. **Present shortlist clearly**
    - Group by powertrain (hybrid/petrol/EV).
@@ -320,4 +321,5 @@ Aksel 2    4,6     4,8
 - See `references/cosmetic-repair-costs.md` for estimated Norwegian body shop prices for common cosmetic issues (riper, bulk, steinsprut, felgmerker, interior wear, full packages).
 - See `references/tesla-white-interior-care.md` for protecting Tesla vegan leather white/black seats — ceramic coatings, seat cover options, maintenance routines, and confirmed-safe products.
 - See `references/tesla-subscription-pricing-norway.md` for Tesla software subscription prices (Premium Connectivity 129 kr/mnd, FSD 99 €/mnd), what's included on used vs new cars, and charging cost comparisons (home / Supercharger / petrol).
+- See `references/vegvesen-registration-lookup.md` for looking up official specs (WLTP range, motor effect, VIN, colour) from Statens vegvesen via registration number — use this to verify FINN ad claims.
 - See `references/tesla-model-3-beginner-guide.md` for a day-1 guide for new Tesla Model 3 owners: charging strategy, controls, Autopilot, maintenance, app features, and common questions.

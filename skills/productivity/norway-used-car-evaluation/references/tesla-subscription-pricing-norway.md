@@ -35,19 +35,37 @@ As of May 2026, Tesla **stopped selling EAP and FSD as one-time purchases** in E
 
 **Bottom line for used Model 3 buyers**: You get Basic Autopilot permanently, no subscription needed. Premium Connectivity is the only optional subscription most owners actually use (129 kr/mnd).
 
-## Cost comparison for home vs Supercharger vs petrol
+## Supercharger-specific pricing & idle fees
 
-Assumptions: 1.800 Wh/mil consumption (Model 3 LR AWD mixed winter/summer), or 0,65 L/mil for a compact petrol car.
+Tesla Supercharger pricing is typically 20-50% cheaper per kWh than competitors (Ionity, Recharge, Circle K, Mer) in Norway.
 
-| Scenario | Cost per mil | KRS-Oslo (330 km) one way | 15.000 km/år |
-|:---------|:-----------:|:-------------------------:|:------------:|
-| 🏠 **Tesla — home charging** (1 kr/kWh) | ~1,80 kr | ~60 kr | ~2.700 kr |
-| ⚡ **Tesla — Supercharger** (4,50 kr/kWh) | ~8,10 kr | ~270 kr | ~12.150 kr |
-| ⚡ **Tesla — Supercharger w/ membership** (3 kr/kWh) | ~5,40 kr | ~180 kr | ~8.100 kr |
-| ⚡ **Tesla — Ionity/other fast** (6 kr/kWh) | ~10,80 kr | ~360 kr | ~16.200 kr |
-| ⛽ **Petrol car** (21 kr/L, 0,65 L/mil) | ~13,65 kr | ~450 kr | ~20.500 kr |
+### Price structure
 
-**Supercharger vs other fast chargers**: Tesla Supercharger is typically 20-50% cheaper per kWh than competitors (Ionity, Recharge, Circle K, Mer) in Norway. The gap has widened as Tesla continues to operate at lower margin on charging.
+| Component | Rate |
+|:----------|:----:|
+| ⚡ **Charging (per kWh)** | ~3,50–4,50 kr/kWh (varies by location and time of day) |
+| 🅿️ **Idle fee** | **7 kr/min** — charged if car is parked **after** charging completes AND the station is >50 % occupied |
+| 🅿️ **No idle fee** | When station is <50 % occupied — no surcharge |
+| ⭐ **Subscription** (Tesla membership, ~99 kr/mnd) | Drops kWh price to ~2,50–3 kr/kWh |
+
+### How idle fee works
+- **Not charged during charging** — only after session ends
+- **Not charged at quiet stations** (<50 % full) — only when busy
+- **App notifies** before and after charging completes; move the car within ~2 min to avoid fees
+- **Grace period**: ~2 minutes after charge end before idle fee starts
+- **Practical tip**: Just navigate to the Supercharger (the car pre-heats the battery automatically for faster speeds) and move the car when the app tells you it's done
+
+### Cost comparison: home vs Supercharger vs petrol
+
+Model 3 LR AWD: ~1.800 Wh/mil mixed. Compact petrol: ~0,65 L/mil.
+
+| Scenario | Cost per mil | KRS–Oslo (330 km) | 15.000 km/år |
+|:---------|:-----------:|:-----------------:|:------------:|
+| 🏠 **Home charging** (1 kr/kWh) | ~1,80 kr | ~60 kr | ~2.700 kr |
+| ⚡ **Supercharger** (4,50 kr/kWh) | ~8,10 kr | ~270 kr | ~12.150 kr |
+| ⚡ **Supercharger + membership** (3 kr/kWh) | ~5,40 kr | ~180 kr | ~8.100 kr |
+| ⚡ **Other fast charger** (6 kr/kWh) | ~10,80 kr | ~360 kr | ~16.200 kr |
+| ⛽ **Petrol car** (21 kr/L) | ~13,65 kr | ~450 kr | ~20.500 kr |
 
 ## Sources
 
