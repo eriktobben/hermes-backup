@@ -317,3 +317,4 @@ Aksel 2    4,6     4,8
 - See `references/automated-finn-monitoring.md` for setting up automated daily FINN monitoring with cron + here.now publishing.
 - See `references/car-color-detection.md` for methods to determine exterior color from Norwegian car ads, including vegvesen lookup, ad text parsing, and image analysis. Also includes Tesla Model 3 facelift timeline.
 - See `references/cosmetic-repair-costs.md` for estimated Norwegian body shop prices for common cosmetic issues (riper, bulk, steinsprut, felgmerker, interior wear, full packages).
+- See `references/tesla-white-interior-care.md` for protecting Tesla vegan leather white/black seats — ceramic coatings, seat covers, maintenance routines, and confirmed-safe products.
