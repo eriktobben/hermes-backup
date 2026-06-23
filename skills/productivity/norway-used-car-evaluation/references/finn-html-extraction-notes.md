@@ -65,12 +65,27 @@ for e in items:
 
 **Important**: FINN redirects `make=` and `model=` query params to `variant=` internally. If you see a redirect response, follow it with `-L`. The final stable URL format uses `variant=0.XXXX&variant=1.XXXX.YYYYY` pairs.
 
-**What the JSON-LD gives you**:
+## What the JSON-LD gives you
 - Price (always accurate, shows total not financing)
 - Description (trim-level text like "LR/AWD/Pano/AP/Memory" — enough to filter SR vs LR vs Performance)
 - URL (ad ID for follow-up)
 - Model name and brand
 - Image URL
+
+**LIMITATION — single page only**: The JSON-LD only covers the FIRST search results page (~25-49 results). For a complete market overview when results exceed one page, iterate page=1, 2, 3 (beyond page 3 returns empty):
+
+```python
+# Multi-page merge pattern
+all_cars = []
+for page in [1, 2, 3]:
+    url = f"https://www.finn.no/mobility/search/car?...&page={page}"
+    html = urllib.request.urlopen(Request(url, headers=headers)).read()
+    items = json.loads(extract_json_ld(html))
+    all_cars.extend(items)
+# Deduplicate by ad_id — same car can appear on adjacent pages
+```
+
+In one real session (June 2026), page 1 gave 26 LR AWD candidates, page 2 gave 9 more for a total of 35 — skipping page 2 would miss 26% of the market.
 
 **What it does NOT give**:
 - Mileage (km)
@@ -191,6 +206,37 @@ python3 /tmp/finn_extract.py "https://www.finn.no/mobility/item/{ad_id}"
 - `first_registration` (first registration date — often absent from SSR)
 - `org_name` / `dealerName` (dealer/business name)
 - These must be obtained via browser_navigate or left as unknown
+
+### Statens vegvesen lookup for extra car specs
+
+When Finn's SSR doesn't include color, interior color, or first registration date, look up the registration number at vegvesen.no. This works even for deregistered cars (cars pending dealer resale):
+
+1. Get reg.nr from the ad (from text or Finn's `registration_number` key)
+2. Navigate to: `https://www.vegvesen.no/kjoretoy/kjop-og-salg/kjoretoyopplysninger/sjekk-kjoretoyopplysninger?registreringsnummer={reg_nr}`
+3. Click the "Registreringsdata" button to expand: shows **color**, first registration date, VIN, status
+4. Click the "Motor/kraftoverføring" button to expand: shows **official electric range (WLTP)** in km, motor count, kW per motor, AWD confirmation
+
+This is especially useful when:
+- The ad doesn't list exterior/interior color (common on Finn)
+- You need to verify WLTP range registrert vs what the ad claims
+- You need the exact first registration date (not just model year)
+
+### Statens vegvesen example (real session, EC63265):
+
+```
+Registreringsdata ekspandert:
+  Farge: Rød
+  Registrert første gang: 06.06.2021
+  VIN: 5YJ3E7EB3MF952838
+  Status: Avregistrert (09.06.2026)
+
+Motor/kraftoverføring ekspandert:
+  Elektrisk rekkevidde: 614 km
+  Antall motorer: 2
+  Motor 1: 158 kW (215 hk)
+  Motor 2: 208 kW (283 hk)
+  Totalt: 366 kW / 498 hk
+```
 
 **Field consistency pitfall**: Always cross-check `car_model_spec` against `engine_effect` and `battery_capacity`. In one session the spec field said "Long Range AWD" while the actual data (346hk, 65kWh) matched a Standard Range+ — either a mislabeled ad or a data error. Never trust `car_model_spec` alone; validate against the numerical specs.
 
