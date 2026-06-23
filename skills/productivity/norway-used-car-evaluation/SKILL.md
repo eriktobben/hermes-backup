@@ -88,6 +88,72 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
 4. **Få alle avtaler skriftlig** — muntlige løfter fra forhandler er lite verdt.
 5. **Formidlingssalg påvirker markedsprissammenligning** — når du sammenligner med andre annonser, vær bevisst på om de er forhandler-, formidlings- eller privatsalg. Sammenlign epler med epler.
 
+## Real-world EV range — beyond WLTP
+
+### Winter range by model (NAF-test data, Norway)
+
+Not all EVs are equal in winter. Do not use a generic "60-75% of WLTP" rule — retention varies dramatically:
+
+| Model (år) | WLTP | Sommer (NAF) | Vinter (NAF) | Vinterandel |
+|:-----------|:----:|:------------:|:------------:|:-----------:|
+| Tesla M3 LR AWD (2021) | 614 km | 654,9 km | 514,8 km | **84 %** |
+| Tesla M3 LR (2020) | 610 km | 612 km | 404 km | **66 %** |
+| Tesla MY LR Dual | ~565 km | 545 km | 452 km | **80 %** |
+| BMW iX xDrive50 | ~630 km | 568,5 km | 503 km | **80 %** |
+| BMW i4 M50 | ~510 km | 521 km | 406 km | **78 %** |
+| Ford Mach-E LR RWD | 610 km | 617,9 km | 502,5 km | **82 %** |
+| Kia EV6 2WD | ~530 km | 500,2 km | 429 km | **81 %** |
+| Hyundai IONIQ 5 AWD | ~480 km | 502 km | 369 km | **73 %** |
+| Polestar 2 SM | ~540 km | 520,6 km | 400 km | **74 %** |
+| VW ID.4 | ~520 km | 532 km | 414 km | **80 %** |
+| Skoda Enyaq iV80 | ~530 km | 522 km | 347 km | **65 %** |
+| Tesla MS LR | ~663 km | 645 km | 469,8 km | **71 %** |
+
+**Key takeaway**: Tesla 2021+ (med varmepumpe) er best i klassen på vinter — ~84 %. Skoda Enyaq taper ~35 %, IONIQ 5 AWD taper ~27 %. Velg modell med omhu når kunden kjører lange vinterturer.
+
+**Kilde**: NAF/Motor rekkeviddetester (NTB pressemelding juni 2022) — faktiske målinger til bilen stopper, på norsk vinterføre.
+
+### Battery degradation by mileage (NCA/NMC)
+
+Degradering flater ut etter ~80.000 km. Nyttig for å forventningsavstemme kjøper:
+
+| Km (ca.) | Forventet degradering | Gjenværende kapasitet |
+|:--------:|:---------------------:|:---------------------:|
+| 0-80.000 km | 3-7 % | 93-97 % |
+| 80.000-240.000 km | +3-5 % (flater ut) | 88-94 % |
+| 240.000+ km | +2-3 % | 85-90 % |
+
+For LFP (Tesla SR/SR+ 2021+): lavere total degradering, men mer kalibreringsavhengig.
+
+**Slik sjekker du batterihels på en Tesla under befaring:**
+- Lad til 100 % → les estimert range fra skjermen
+- Over 90 % av WLTP = 💚, 80-90 % = 💛, under 80 % = vurder garantisak
+
+Se `references/ev-range-degradation-data.md` for detaljerte datakilder og metoder.
+
+## XtraGaranti Diamond E — hva dekker den egentlig?
+
+Rebil inkluderer 6 mnd XtraGaranti Diamond E (AutoConcept). Dette er en reparasjonsforsikring, ikke utvidet nybilgaranti.
+
+### Dekning — Diamond E (elbil)
+
+| Dekkes ✅ | Dekkes ikke ❌ |
+|:----------|:--------------|
+| Elmotor | **Høyspenningsbatteri (eksplisitt unntatt)** |
+| Ladesystem (ladeport, ladeenhet, kabel) | Slitasje (bremser, fjæring) |
+| Varmepumpe/kjøle-/varmesystem | Støy, justering, smøring |
+| Elektronikk/styreenheter | Feil som fantes før garantiregistrering |
+| Multimedia (fabrikkskjerm) | Service må være fulgt |
+| Panorama/soltak | |
+| Firehjulsdrift | |
+| **Maks 100.000 kr per skade** | Nedgraderes til Sølv/Bronse ved 9 år / 180.000 km |
+
+### Vurdering
+
+- **Inkludert 6 mnd** = verdt å ha, ingen kostnad
+- **Betalt utvidelse** = sjelden verdt på Tesla. Du har allerede: forbrukerkjøpsloven (5 år reklamasjon) + Tesla-fabrikkgaranti på batteri (8 år / 192.000 km)
+- Unntak: kun vurder utvidelse om prisen er < 1.000 kr/år
+
 ## Rebil / fixed-price dealer evaluation
 
 Norwegian fixed-price dealers like **Rebil** operate differently from FINN private sellers or traditional dealers.
@@ -134,17 +200,45 @@ Rebil provides a detailed technical test PDF on request (before it's published p
 - **Cross-reference with what the dealer says they fixed** — ask explicitly which items from the report have been addressed
 - **Prioritize cost**: front windshield replacement in Norway is ~8–15k, suspension arms/bushings ~3–8k, cosmetic bodywork varies widely (see references/cosmetic-repair-costs.md)
 
-### Negotiation tactics with Norwegian dealers
+### Negotiation tactics — specific plays
 
-When you have a technical test, you have **information asymmetry** — other buyers haven't seen it yet.
+**Before negotiating, know what you want to optimize for**: lowest cash price, most included repairs, or fastest secure-the-car. These trade off against each other.
 
-**Effective strategies:**
-1. **Leverage the test**: "Jeg har sett den tekniske testen, og det er X punkter som må utbedres. Kan vi justere prisen?"
-2. **Mekanisk vs kosmetisk**: Ask them to fix mechanical issues (they're more likely to agree since it affects safety/drivability), negotiate discount on cosmetic
-3. **Bundle the ask**: Get a list of what they'll fix (in writing) plus a cash discount
-4. **Don't overplay the cosmetic card**: Norwegian used car buyers expect normal wear at 100k+ km — dealers know this and price accordingly
-5. **Timing**: If the test is not yet published, you have a window — other buyers don't know the details you have
-6. **Typical outcomes**: 5–15k kr discount or ~10–20k in included repairs on a 200–250k car is a realistic win
+**Good cop framing**: "Jeg er interessert og klar til å slå til — hjelp meg å komme i mål" works better than "jeg synes prisen er for høy".
+
+**Bundle-strategi (mest effektiv)**: Kombiner rabatt + tilleggstjenester + reparasjoner i én forespørsel i stedet for å forhandle punktvis.
+
+**Plays ranked by likelihood of success:**
+
+1. **🔧 Få dem til å utbedre feil fra teknisk test** (mest sannsynlig)
+   - De fleste forhandlere fikser mekaniske feil før salg uansett
+   - Spesielt: rutebytte, understell, dørlåser
+   - Si: "Jeg har sett testen — kan dere fikse punkt X og Y før levering?"
+
+2. **💰 Rabatt** (mulig, men begrenset hos fixed-price)
+   - 2-5 % typisk (5-12k på en 240k bil)
+   - Over 5 % er sjeldent hos Rebil
+
+3. **🧼 Tilleggstjenester** (lettest å få ja på)
+   - Polering, bulkutbedring (PDR), nye dekk
+   - Koster dem lite, føles verdifullt for deg
+
+4. **📦 Bundle-eksempel**
+   - "236.000 kr + polering + bulkfiks = vi har en avtale"
+   - Får flere små ja i stedet for å forhandle hver ting separat
+
+**Pitfalls in negotiation:**
+- ❌ **Ikke overforhandle** etter en god deal. Hvis de har gitt 5-15k i verdi (rabatt + reparasjoner + tjenester), stopp. Hver ekstra runde øker risikoen for at noen trykker "kjøp" på nettsiden.
+- ❌ **Ikke dra inn småting etter hverandre** — samle alt i én melding
+- ❌ **Ikke sammenlign med privatsalg** — forhandlerpris inkluderer garanti, reklamasjon og overhead
+- ✅ **Betinget kjøp**: "Kan vi signere kontrakt med forbehold om visuell sjekk?" — sikrer bilen mens du har handlingsrom
+
+**EU-kontroll som punkt:**
+- Bransjestandard: forhandler bør levere med ≥ 12 mnd gyldig kontroll
+- Rebil og lignende tar den kun innen 3 mnd før salg
+- Hvis nei: aksepter — kontroll koster ~1.000 kr
+
+**Tidsaspekt**: Når den tekniske testen er publisert forsvinner info-asymmetrien din. Handle raskt etter at forhandleren har svart.
 
 ### Google search as first-pass Finn market technique
 
@@ -193,8 +287,10 @@ Aksel 2    4,6     4,8
 ## Pitfalls
 - Returning only model names without live listings when user asked to check FINN.
 - Mixing lease campaign ads with purchase candidates.
-- Over-trusting WLTP for winter route feasibility (real-world winter range is 60-75% of WLTP depending on model and temperature).
+- Over-trusting WLTP for winter route feasibility. Use model-specific NAF test data instead of generic 60-75% rule — Tesla 2021+ LR beholder ~84% av WLTP om vinteren, mens Enyaq/IONIQ 5 taper 25-35%.
 - Ignoring user clarification that changes financing horizon (3y vs 5–8y materially changes budget).
+- Over-negotiating after already getting a good deal. Hvis Rebil/dealer har gitt deg 5-15k i verdi totalt (rabatt + reparasjoner + tjenester), stopp. Hver ekstra runde øker risikoen for at noen trykker "kjøp" på nettsiden.
+- Å be om EU-kontroll hos Rebil-type forhandlere: de tar den kun innen 3 mnd før salg. Ikke la et nei her bli en dealbreaker — den koster ~1.000 kr og bilen vil garantert passere.
 - FINN.no is a fully client-side rendered SPA — browser navigation may timeout and curl returns no listing data. Never rely on HTML extraction from Finn.no without first verifying it still works in the current session.
 - Individual FINN ad pages (`/mobility/item/{id}`) ARE extractable via curl+grep (see reference `finn-html-extraction-notes.md`). **Start with this approach when the user provides a specific URL** rather than trying browser_navigate.
 - FINN's search API (`/mobility/search/api/car?subvertical=car&...`) exists but returns unreliable/unfiltered data — do not use it for extracting live listings. Rely on the JSON-LD method or individual ad-page extraction instead.
