@@ -22,15 +22,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 26
+        "completed": 27
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-29T21:05:58.668739+00:00",
-      "next_run_at": "2026-06-23T09:00:00+02:00",
-      "last_run_at": "2026-06-22T09:07:58.914324+02:00",
+      "next_run_at": "2026-06-24T09:00:00+02:00",
+      "last_run_at": "2026-06-23T09:06:40.415866+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -46,7 +46,8 @@
         "web"
       ],
       "workdir": "/home/erik/.hermes/cron/finn-bilvarsel",
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
       "id": "8da45838ac6b",
@@ -68,15 +69,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 23
+        "completed": 24
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-06-23T09:00:00+02:00",
-      "last_run_at": "2026-06-22T09:07:59.336585+02:00",
+      "next_run_at": "2026-06-24T09:00:00+02:00",
+      "last_run_at": "2026-06-23T09:00:54.892087+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -89,7 +90,8 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
       "id": "f3a42a49fae6",
@@ -113,7 +115,7 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 23
+        "completed": 24
       },
       "enabled": true,
       "state": "scheduled",
@@ -121,9 +123,9 @@
       "paused_reason": null,
       "created_at": "2026-06-03T00:41:44.094087+00:00",
       "next_run_at": "2026-06-24T08:00:00+02:00",
-      "last_run_at": "2026-06-22T08:12:18.494071+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "last_run_at": "2026-06-23T08:23:00.980573+02:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: [Errno 32] Broken pipe",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -138,7 +140,8 @@
         "terminal"
       ],
       "workdir": null,
-      "profile": null
+      "profile": null,
+      "fire_claim": null
     },
     {
       "id": "180cd90f598f",
@@ -160,15 +163,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 367
+        "completed": 368
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-23T09:11:54.106205+02:00",
-      "last_run_at": "2026-06-23T07:10:56.307131+02:00",
+      "next_run_at": "2026-06-23T10:12:54.586762+02:00",
+      "last_run_at": "2026-06-23T08:11:56.957031+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -229,5 +232,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-06-23T08:11:54.106470+02:00"
+  "updated_at": "2026-06-23T09:12:54.587056+02:00"
 }
