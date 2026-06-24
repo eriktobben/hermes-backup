@@ -1,9 +1,9 @@
 {
-  "last_report_path": "/home/erik/.hermes/logs/curator/20260617-103052",
-  "last_run_at": "2026-06-17T10:30:52.888114+00:00",
-  "last_run_duration_seconds": 351.794503,
-  "last_run_summary": "auto: no changes; llm: ## Curation Summary\n\n**11 skills archived** via 5 umbrella-building operations. The collection is now organized as class-level skills with labeled subsections instead of 11 narrow siblings with overlapping triggers.\n\n### Clusters processed\n…\narchived 9 skill(s):\n  • agent-config-backup → hermes-agent\n  • arxiv → research-paper-writing\n  • hermes-mnemosyne-memory → hermes-agent\n  • obsidian → llm-wiki\n  • blogwatcher — pruned (stale)\n  • classified-marketplace-alerts — pruned (stale)\n  • heartmula — pruned (stale)\n  • songsee — pruned (stale)\n  • songwriting-and-ai-music — pruned (stale)\nfull report: hermes curator status\nkeep an umbrella stable: hermes curator pin hermes-agent",
+  "last_report_path": "/home/erik/.hermes/logs/curator/20260624-112503",
+  "last_run_at": "2026-06-24T11:25:03.688787+00:00",
+  "last_run_duration_seconds": 0.671696,
+  "last_run_summary": "auto: no changes; llm: skipped (consolidation off)",
   "last_run_summary_shown_at": "2026-06-17T10:30:52.888114+00:00",
   "paused": false,
-  "run_count": 8
+  "run_count": 9
 }

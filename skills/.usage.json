@@ -219,6 +219,19 @@
     "use_count": 1,
     "view_count": 1
   },
+  "computer-use": {
+    "archived_at": null,
+    "created_at": "2026-06-24T11:25:04.314877+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "content-monitoring": {
     "archived_at": null,
     "created_at": "2026-06-17T10:34:28.010238+00:00",
@@ -1088,6 +1101,19 @@
   "serving-llms-vllm": {
     "archived_at": null,
     "created_at": "2026-06-03T10:11:11.016523+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
+  "simplify-code": {
+    "archived_at": null,
+    "created_at": "2026-06-24T11:25:04.321425+00:00",
     "created_by": null,
     "last_patched_at": null,
     "last_used_at": null,
