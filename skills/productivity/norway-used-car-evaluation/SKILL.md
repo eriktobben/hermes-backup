@@ -46,7 +46,7 @@ description: Evaluate used-car options in Norway with strict monthly-loan caps, 
    - Elbil without home charging is viable IF the user can fast-charge weekly for city use, and the car has ≥ 100 kW CCS for efficient highway charging.
 
 4. **Pull live market examples (FINN) — with fallback**
-   - **If user provides a specific FINN URL**: extract via curl+grep from the individual ad page (`/mobility/item/{id}`). The page contains SSR data with price, km, year, battery, etc. embedded in the HTML — see `references/finn-html-extraction-notes.md` for exact grep patterns. Much faster than browser_navigate.
+   - **If user provides a specific FINN URL**: start with curl+grep from the individual ad page (`/mobility/item/{id}`) for a quick price check. Curl gives price and year from SSR data, but **NOT mileage** — mileage is loaded client-side. Follow up with browser_navigate on the item page to get complete specs (km, engine effect, description, location, seller type, interior/exterior color). Individual item pages load reliably via browser_navigate.
    - **If user asks for search results or "is this price fair?"**: attempt FINN extraction via JSON-LD method (see references). The JSON-LD on search pages gives you up to ~50 listings with prices and descriptions in one curl call — much faster than browser.
      - **MULTI-PAGE**: JSON-LD only covers the FIRST search results page (~25-49 results). When the user wants a complete market overview (e.g. all 2021 LR AWD under 260k), iterate pages 1, 2, 3 by appending &page=N to the search URL. Merge results and deduplicate by ad ID. A single page may miss 30-50% of total candidates.
      - When doing price fairness comparison: filter the JSON-LD output to comparable trim levels (e.g., filter out SR/SR+ when comparing LR AWD, filter out Performance when comparing standard Long Range), then sort by price to position the user's car in the market.
@@ -170,13 +170,31 @@ Norwegian fixed-price dealers like **Rebil** operate differently from FINN priva
 Rebil pages contain SSR JSON with the car data embedded. Extract with:
 
 ```bash
+# Quick price and km
 curl -sL 'https://app.rebil.no/cars/{car-id}' | grep -oP '"price":[0-9]+'
 curl -sL 'https://app.rebil.no/cars/{car-id}' | grep -oP '"km":[0-9]+'
-# Full JSON blob
-curl -sL 'https://app.rebil.no/cars/{car-id}' | grep -oP '__NEXT_DATA__.*</script>' | sed 's/.*<script id="__NEXT_DATA__" type="application\/json">//;s/<\/script>.*//' | python3 -m json.tool 2>/dev/null || echo "JSON extraction failed, try browser"
+
+# Full JSON blob — two methods:
+
+# Method 1: grep + sed + python (brittle with non-GNU grep)
+curl -sL 'https://app.rebil.no/cars/{car-id}' | grep -oP '__NEXT_DATA__.*</script>' | sed 's/.*<script id="__NEXT_DATA__" type="application\/json">//;s/<\\/script>.*//' | python3 -m json.tool 2>/dev/null || echo "JSON extraction failed, try browser"
+
+# Method 2: Python re (more robust, handles variable whitespace)
+curl -sL 'https://app.rebil.no/cars/{car-id}' | python3 -c "
+import sys, json, re
+html = sys.stdin.read()
+match = re.search(r'__NEXT_DATA__.*?</script>', html, re.DOTALL)
+if match:
+    data = json.loads(match.group())
+    props = data['props']['pageProps']['car']
+    for key in ['price','km','year','horsepower','el_battery_capacity','el_rang','reg_number','chassis_number']:
+        print(f'{key}: {props.get(key)}')
+    print(f'interior_color: {props.get(\"interior_color\", \"?\")}')
+    print(f'exterior_color: {props.get(\"exterior_color\", {}).get(\"name\", \"?\")}')
+"
 ```
 
-Key fields in the SSR JSON: `price`, `km`, `year`, `horsepower`, `el_battery_capacity`, `el_rang`, `reg_number`, `chassis_number`, `exterior_color.name`, `equipment[]`, `guarantee_duration`, `warranty_type`.
+Key fields in the SSR JSON: `price`, `km`, `year`, `horsepower`, `el_battery_capacity`, `el_rang`, `reg_number`, `chassis_number`, `exterior_color.name`, `interior_color`, `equipment[]`, `guarantee_duration`, `warranty_type`. Interior color is available even when not shown on the Rebil page.
 
 ### Interpreting a "Teknisk test med påkost" (technical inspection report)
 
@@ -250,6 +268,11 @@ Google search with `site:finn.no` is a **reliable first-pass technique** for qui
 # Quick price check — Google returns 6-10 results with prices in snippets
 # Navigate browser to:
 https://www.google.com/search?q=site:finn.no+Tesla+Model+3+Long+Range+2021+pris
+
+# Add time filter for more recent results:
+# &tbs=qdr:d  — last 24 hours
+# &tbs=qdr:w  — last week (removes stale/sold listings)
+https://www.google.com/search?q=site:finn.no+Tesla+Model+3+Long+Range+2021+pris&tbs=qdr:w
 ```
 
 **What Google snippets give you** (from session data):
@@ -293,11 +316,11 @@ Aksel 2    4,6     4,8
 - Ignoring user clarification that changes financing horizon (3y vs 5–8y materially changes budget).
 - Over-negotiating after already getting a good deal. Hvis Rebil/dealer har gitt deg 5-15k i verdi totalt (rabatt + reparasjoner + tjenester), stopp. Hver ekstra runde øker risikoen for at noen trykker "kjøp" på nettsiden.
 - Å be om EU-kontroll hos Rebil-type forhandlere: de tar den kun innen 3 mnd før salg. Ikke la et nei her bli en dealbreaker — den koster ~1.000 kr og bilen vil garantert passere.
-- FINN.no is a fully client-side rendered SPA — browser navigation may timeout and curl returns no listing data. Never rely on HTML extraction from Finn.no without first verifying it still works in the current session.
-- Individual FINN ad pages (`/mobility/item/{id}`) ARE extractable via curl+grep (see reference `finn-html-extraction-notes.md`). **Start with this approach when the user provides a specific URL** rather than trying browser_navigate.
+- FINN.no's search page is a fully client-side rendered SPA — URL-encoded filters may not render properly, and the JSON-LD on search pages may only contain breadcrumbs. Browser navigation on search pages can be slow. **Individual Finn ad pages (`/mobility/item/{id}`) load reliably** via browser_navigate and return full specs.
+- Individual FINN ad pages (`/mobility/item/{id}`) — curl+grep gives price and year from SSR data, but **not mileage**. Use it for a quick price check, then open the page with browser_navigate for complete specs (km, engine effect, interior/exterior color, description).
 - FINN's search API (`/mobility/search/api/car?subvertical=car&...`) exists but returns unreliable/unfiltered data — do not use it for extracting live listings. Rely on the JSON-LD method or individual ad-page extraction instead.
 - When scraping fails, **do not fabricate listings**. Instead give market-informed model advice + direct search links the user can open.
-- Long replies with repeated car details don't add value; keep the shortlist tight: per candidate = why it fits + one check-before-buy note. Avoid re-listing spec tables from the ad.
+- Google search snippet "Totalt: X kr" is the total LOAN cost (price + interest over the loan term), NOT the car's asking price. The actual car price is usually listed as "Pris eksl. omreg." or "Totalpris" on the ad page. Cross-check with curl or browser_navigate before quoting prices to the user.
 - Not all users share the same Norwegian dialect — some prefer **bokmål** (default), others nynorsk or English. Match user language.
 - Rare car names like "E-TRON" in the ad title are not typos; let them pass through as-is.
 - **Formidlingssalg oversight**: forgetting to check whether a listing is formidlingssalg can lead to wrong price expectations and legal assumptions. Always verify before giving a buy recommendation.
