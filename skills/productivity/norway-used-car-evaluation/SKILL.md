@@ -158,6 +158,36 @@ Rebil inkluderer 6 mnd XtraGaranti Diamond E (AutoConcept). Dette er en reparasj
 
 ## Rebil / fixed-price dealer evaluation
 
+### Car4Sale (megler) — extraction guide
+
+Car4Sale er en av Norges største bilmeklere — de formidler salg på vegne av private, ikke som forhandler. **Dette er formidlingssalg**, ikke forhandlerkjøp.
+
+**Extract SSR data:**
+```bash
+curl -sL 'https://app.car4sale.no/tilsalgs/{car-id}' | python3 -c "
+import sys, json, re
+html = sys.stdin.read()
+match = re.search(r'__NEXT_DATA__.*?</script>', html, re.DOTALL)
+if match:
+    data = json.loads(match.group())
+    bil = data['props']['pageProps']['bil']
+    for key in ['pris','kilometerstand','aarsmodell','effekt_hk','farge_interior','farge_eksterior','betegnelse','lokasjon','beskrivelse','kjennemerke','chassisnummer']:
+        print(f'{key}: {bil.get(key, \"?\")}')
+    print(f'utstyr: {bil.get(\"utstyr\", [])}')
+    svv = data['props']['pageProps']['svvData']
+    print(f'motorSamletHk: {svv.get(\"motorSamletHk\", \"?\")}')
+    print(f'rekkeviddeWltp: {svv.get(\"rekkeviddeWltp\", \"?\")}')
+    print(f'forsteGangReg: {svv.get(\"forsteGangReg\", \"?\")}')
+    print(f'fabrikkmodell: {svv.get(\"modell\", \"?\")}')
+"
+```
+
+**Key JSON fields in `bil`:** `pris`, `kilometerstand`, `effekt_hk`, `farge_interior` (f.eks. "Svart Premium Interiør"), `farge_eksterior`, `beskrivelse` (med feil/merknader), `utstyr` (array), `salgsstatus`.
+
+**SVV data i `props.pageProps.svvData`:** `motorSamletHk`, `motorSamletKw`, `rekkeviddeWltp`, `forsteGangReg`, `sistPKK`/`nestePKK`, `tilhengervekt`, `farge` (offisiell hos vegvesen).
+
+### Rebil / fixed-price dealer evaluation
+
 Norwegian fixed-price dealers like **Rebil** operate differently from FINN private sellers or traditional dealers.
 
 ### How Rebil works
@@ -316,6 +346,7 @@ Aksel 2    4,6     4,8
 - Ignoring user clarification that changes financing horizon (3y vs 5–8y materially changes budget).
 - Over-negotiating after already getting a good deal. Hvis Rebil/dealer har gitt deg 5-15k i verdi totalt (rabatt + reparasjoner + tjenester), stopp. Hver ekstra runde øker risikoen for at noen trykker "kjøp" på nettsiden.
 - Å be om EU-kontroll hos Rebil-type forhandlere: de tar den kun innen 3 mnd før salg. Ikke la et nei her bli en dealbreaker — den koster ~1.000 kr og bilen vil garantert passere.
+- **Inertia of existing due diligence**: Når brukeren allerede har en reservert bil med innarbeidet rabatt, teknisk test gjennomgått, og/eller familiemedlem som har sett bilen — en alternativ bil må være **vesentlig** bedre for å forsvare å starte på nytt. Et formidlingssalg (som Car4Sale) må være merkbart billigere eller i betraktelig bedre stand for å veie opp for tap av forhandlerkjøpsvern og den allerede gjennomførte due diligenceen. Vær tydelig på dette i vurderingen.
 - FINN.no's search page is a fully client-side rendered SPA — URL-encoded filters may not render properly, and the JSON-LD on search pages may only contain breadcrumbs. Browser navigation on search pages can be slow. **Individual Finn ad pages (`/mobility/item/{id}`) load reliably** via browser_navigate and return full specs.
 - Individual FINN ad pages (`/mobility/item/{id}`) — curl+grep gives price and year from SSR data, but **not mileage**. Use it for a quick price check, then open the page with browser_navigate for complete specs (km, engine effect, interior/exterior color, description).
 - FINN's search API (`/mobility/search/api/car?subvertical=car&...`) exists but returns unreliable/unfiltered data — do not use it for extracting live listings. Rely on the JSON-LD method or individual ad-page extraction instead.
@@ -336,6 +367,36 @@ Aksel 2    4,6     4,8
   - `FINN link`
   - `Image`
   - `Why fit + what to verify`
+
+## Sendbar sjekkliste (tredjeparts inspeksjon)
+
+Når brukeren skal sende noen andre (familiemedlem, bekjent) for å sjekke bilen visuelt: **formater svaret som en ferdig kopierbar blokk** brukeren kan videresende direkte. Bruk korte kulepunkter, praktiske steg, og konkrete tall å sammenligne mot. Ingen utfyllende forklaring — den som inspiserer trenger bare "gjør dette, se etter dette".
+
+Eksempel struktur:
+
+```
+SJEKK BATERIHELSE — Tesla Model 3
+
+1. Sett deg i bilen, se på displayet — noter batteri % og km
+2. Regn ut: km ÷ prosent × 100 = estimert rekkevidde ved fullt batteri
+3. For 2021 LR AWD: forvent 490-510 km (🟢 bra)
+4. Hvis mulig: lad til 100% og les av direkte
+5. Alt over 475 km estimert range ved 100% = 💚
+```
+
+Se `references/ev-range-degradation-data.md` for detaljert metode for delvis oppladet batteri.
+
+## Battery health estimation from partial charge
+
+When the seller hasn't fully charged the car, battery health can still be estimated:
+
+1. Read battery % and estimated range from the Tesla UI
+2. Calculate: **full range = (range ÷ battery%) × 100**
+3. Compare to EPA baseline for that model (e.g. ~507 km for 2021 LR AWD)
+4. Tesla BMS is less precise at low charge (~±5%), but still reliable for a green/yellow/red assessment
+5. Example: 35 % → 172 km → 491 km at 100 % → ~3 % degradation 🟢
+
+See `references/ev-range-degradation-data.md` for detailed method, calibration caveats, and expected ranges per model/year.
 
 ## References
 - See `references/finn-html-extraction-notes.md` for FINN extraction pattern and session-derived guardrails.
