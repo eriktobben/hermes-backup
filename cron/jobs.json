@@ -29,7 +29,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-29T21:05:58.668739+00:00",
-      "next_run_at": "2026-06-25T09:00:00+02:00",
+      "next_run_at": "2026-06-26T09:00:00+02:00",
       "last_run_at": "2026-06-24T09:07:08.721179+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -76,7 +76,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-06-25T09:00:00+02:00",
+      "next_run_at": "2026-06-26T09:00:00+02:00",
       "last_run_at": "2026-06-24T09:00:05.579137+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -115,17 +115,17 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 26
+        "completed": 27
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:41:44.094087+00:00",
-      "next_run_at": "2026-06-25T08:00:00+02:00",
-      "last_run_at": "2026-06-25T03:57:27.819543+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-06-26T08:00:00+02:00",
+      "last_run_at": "2026-06-25T08:15:49.281758+02:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: [Errno 32] Broken pipe",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -163,15 +163,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 414
+        "completed": 415
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-25T08:59:15.776675+02:00",
-      "last_run_at": "2026-06-25T06:58:17.849372+02:00",
+      "next_run_at": "2026-06-25T10:00:16.231252+02:00",
+      "last_run_at": "2026-06-25T07:59:18.414491+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -232,5 +232,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-06-25T07:59:15.777026+02:00"
+  "updated_at": "2026-06-25T09:00:16.231466+02:00"
 }
