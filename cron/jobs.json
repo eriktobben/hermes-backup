@@ -141,7 +141,10 @@
       ],
       "workdir": null,
       "profile": null,
-      "fire_claim": null
+      "fire_claim": {
+        "at": "2026-06-25T03:53:19.556810+02:00",
+        "by": "hetz-red-butterfly:1453047"
+      }
     },
     {
       "id": "180cd90f598f",
@@ -163,15 +166,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 409
+        "completed": 410
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-25T03:54:13.304268+02:00",
-      "last_run_at": "2026-06-25T01:53:15.544075+02:00",
+      "next_run_at": "2026-06-25T04:55:13.970364+02:00",
+      "last_run_at": "2026-06-25T02:54:15.848042+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -232,5 +235,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-06-25T02:54:13.304522+02:00"
+  "updated_at": "2026-06-25T03:55:13.970823+02:00"
 }

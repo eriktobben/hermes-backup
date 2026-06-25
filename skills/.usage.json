@@ -288,13 +288,13 @@
     "archived_at": null,
     "created_at": "2026-05-24T18:35:01.361036+00:00",
     "last_patched_at": null,
-    "last_used_at": "2026-06-03T08:43:18.115219+00:00",
-    "last_viewed_at": "2026-06-03T08:43:18.112693+00:00",
+    "last_used_at": "2026-06-25T01:52:48.306992+00:00",
+    "last_viewed_at": "2026-06-25T01:52:48.300665+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 8
+    "use_count": 4,
+    "view_count": 10
   },
   "discord-agent-runtime-diagnosis": {
     "archived_at": null,
@@ -545,13 +545,13 @@
     "created_at": "2026-06-11T22:05:36.630605+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-11T22:28:48.515290+00:00",
-    "last_used_at": "2026-06-24T07:00:05.247152+00:00",
-    "last_viewed_at": "2026-06-12T08:15:49.896300+00:00",
+    "last_used_at": "2026-06-25T01:53:19.584627+00:00",
+    "last_viewed_at": "2026-06-25T01:44:27.398335+00:00",
     "patch_count": 3,
     "pinned": false,
     "state": "active",
-    "use_count": 34,
-    "view_count": 5
+    "use_count": 38,
+    "view_count": 8
   },
   "hermes-agent": {
     "archived_at": null,
@@ -578,6 +578,19 @@
     "state": "active",
     "use_count": 2,
     "view_count": 2
+  },
+  "hermes-troubleshooting": {
+    "archived_at": null,
+    "created_at": "2026-06-25T01:53:14.136891+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-06-25T01:53:36.351805+00:00",
+    "last_used_at": "2026-06-25T01:53:44.670055+00:00",
+    "last_viewed_at": "2026-06-25T01:53:44.666505+00:00",
+    "patch_count": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
   },
   "himalaya": {
     "archived_at": null,

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-25T00:50:09.254751",
+  "updated_at": "2026-06-25T01:55:09.673642",
   "platforms": {
     "discord": [
       {
@@ -619,6 +619,18 @@
         "name": "Tobben MC / #general / Kan du oppdatere Hermès? / topic 1518651500656721990",
         "type": "thread",
         "thread_id": "1518651500656721990"
+      },
+      {
+        "id": "1519518530540798064:1519518530540798064",
+        "name": "Tobben MC / #🗞️-briefings / Kan du sjekke hvorfor jeg får følgende feilmelding? Cronjob Response: AI Mode... / topic 1519518530540798064",
+        "type": "thread",
+        "thread_id": "1519518530540798064"
+      },
+      {
+        "id": "1519519348463505530:1519519348463505530",
+        "name": "Tobben MC / #general / Hva gjør reasoning i deepseek v4 flash og pro? / topic 1519519348463505530",
+        "type": "thread",
+        "thread_id": "1519519348463505530"
       }
     ],
     "telegram": [],
