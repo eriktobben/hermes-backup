@@ -42,6 +42,35 @@ intermittent, not a permanent configuration problem.
 - `no delivery target resolved` — the job has no origin and no home channel configured.
   Check `deliver` field on the job and home channel config for the platform.
 
+### Upstream provider intermittent failure → `Broken pipe` on ALL jobs
+
+When `[Errno 32] Broken pipe` appears on MULTIPLE cron jobs using the **same provider** on
+the **same day(s)**, the root cause is likely the upstream provider (opencode.ai, etc.)
+dropping TCP connections mid-stream — not a local ACP subprocess crash.
+
+**Key diagnostic: cross-job correlation**
+
+```bash
+cronjob action=list
+# Check last_status and last_run_at across jobs sharing the same provider
+```
+
+If the AI Daily Briefing AND FINN bilvarsel (and any other job on the same provider)
+all failed on the same days with the same error, it is a **provider outage**:
+
+| Run | Briefing | FINN | Interpretation |
+|-----|:--------:|:----:|----------------|
+| Same-day failure (both ❌) | ❌ | ❌ | Upstream provider issue |
+| Staggered failure (one ❌, one ✅) | ❌ | ✅ | Job-specific / ACP crash |
+
+The 23–24 June incident showed all opencode-go jobs failing simultaneously — opencode.ai
+was dropping connections server-side. A manual retry on 25 June succeeded for both.
+
+**Mitigation: no_agent retry wrapper**
+
+For transient provider failures, convert the LLM-driven cron job to a no_agent
+wrapper script that retries with backoff. See `references/provider-retry-patterns.md`.
+
 ## Error tracing reference
 
 When an error is reported for a cron job, trace it through this chain:

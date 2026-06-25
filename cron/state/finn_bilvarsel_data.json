@@ -1,203 +1,5 @@
 {
   "ads": {
-    "458994394": {
-      "id": "458994394",
-      "title": "Citroen C-Zero",
-      "link": "https://www.finn.no/mobility/item/458994394",
-      "desc": "Lav km/eu ok 11/27",
-      "meta": "2018 ∙ 57 200 km ∙ El ∙ 150 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/458994394/b735cab0-7983-4bd4-a37b-36b9ab6df2ef",
-      "kind": "elbil",
-      "price": 38236,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 0,
-        "84": 0,
-        "96": 0
-      },
-      "fits_budget": true
-    },
-    "466758861": {
-      "id": "466758861",
-      "title": "Volkswagen e-Golf VII",
-      "link": "https://www.finn.no/mobility/item/466758861",
-      "desc": "",
-      "meta": "2016 ∙ 113 000 km ∙ El ∙ 190 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/466758861/c217f3bf-10cd-466a-8032-9120aea567b3",
-      "kind": "elbil",
-      "price": 59532,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 189,
-        "84": 144,
-        "96": 130
-      },
-      "fits_budget": true
-    },
-    "467068714": {
-      "id": "467068714",
-      "title": "Volkswagen Golf-Serie",
-      "link": "https://www.finn.no/mobility/item/467068714",
-      "desc": "300km / Aktiv Info / ACC / R.Kam / V.Pumpe / Navi / LED",
-      "meta": "2018 ∙ 52 000 km ∙ El ∙ Automat",
-      "img": "https://images.finncdn.no/dynamic/480w/item/467068714/5b09aa4a-214e-42fd-b730-c2588d1e7935",
-      "kind": "elbil",
-      "price": 119900,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 1385,
-        "84": 1055,
-        "96": 953
-      },
-      "fits_budget": true
-    },
-    "466935788": {
-      "id": "466935788",
-      "title": "Volkswagen e-Golf VII",
-      "link": "https://www.finn.no/mobility/item/466935788",
-      "desc": "",
-      "meta": "2018 ∙ 133 000 km ∙ El ∙ 300 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/466935788/653f3509-d228-4e36-b042-f0429a28670e",
-      "kind": "elbil",
-      "price": 109532,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-22T07:06:34.680123+00:00",
-      "estimates": {
-        "60": 1179,
-        "84": 899,
-        "96": 812
-      },
-      "fits_budget": true
-    },
-    "467068442": {
-      "id": "467068442",
-      "title": "Skoda Citigo",
-      "link": "https://www.finn.no/mobility/item/467068442",
-      "desc": "258km / Ny EU / P.Sensor / Navigasjon / LED / DAB+",
-      "meta": "2021 ∙ 56 000 km ∙ El ∙ 258 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/467068442/7caf334e-c449-40ad-b6ea-57f3791a1d3a",
-      "kind": "elbil",
-      "price": 129000,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 1565,
-        "84": 1193,
-        "96": 1078
-      },
-      "fits_budget": true
-    },
-    "449146618": {
-      "id": "449146618",
-      "title": "Renault Zoe",
-      "link": "https://www.finn.no/mobility/item/449146618",
-      "desc": "Z.E. 40 R110 Intens",
-      "meta": "2019 ∙ 89 500 km ∙ El ∙ 300 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/449146618/44f62e99-1b7b-4356-b6d3-3d2d4f2d7bf0",
-      "kind": "elbil",
-      "price": 85000,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 694,
-        "84": 529,
-        "96": 478
-      },
-      "fits_budget": true
-    },
-    "467066563": {
-      "id": "467066563",
-      "title": "Citroen E-C4",
-      "link": "https://www.finn.no/mobility/item/467066563",
-      "desc": "SHINE - VARME RATT/FRONTRUTE - HEADUP - KEYLESS",
-      "meta": "2022 ∙ 48 800 km ∙ El ∙ 353 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/467066563/ff1bde92-3637-402e-a192-d8a2b630250f",
-      "kind": "elbil",
-      "price": 208900,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 3147,
-        "84": 2399,
-        "96": 2167
-      },
-      "fits_budget": true
-    },
-    "467064226": {
-      "id": "467064226",
-      "title": "Volkswagen e-Golf VII",
-      "link": "https://www.finn.no/mobility/item/467064226",
-      "desc": "e m/ ACC Activeinfo Skinn R.kamera DAB LED AppConnect++",
-      "meta": "2018 ∙ 79 259 km ∙ El ∙ 300 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/467064226/8520ebd4-0002-42d3-a233-c17e8b0e6ca2",
-      "kind": "elbil",
-      "price": 134532,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 1674,
-        "84": 1276,
-        "96": 1153
-      },
-      "fits_budget": true
-    },
-    "467066439": {
-      "id": "467066439",
-      "title": "Audi e-tron",
-      "link": "https://www.finn.no/mobility/item/467066439",
-      "desc": "50 Advanced Business - R.Kam, ACC, Navi, Krok",
-      "meta": "2020 ∙ 86 300 km ∙ El ∙ 301 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/467066439/2e173cad-0273-4a8a-9bd6-023dd3d776d1",
-      "kind": "elbil",
-      "price": 219900,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 3365,
-        "84": 2565,
-        "96": 2317
-      },
-      "fits_budget": true
-    },
-    "467066357": {
-      "id": "467066357",
-      "title": "Citroen E-C4",
-      "link": "https://www.finn.no/mobility/item/467066357",
-      "desc": "SHINE//LAV KM// ADAPTIV CRUISE, CARPLAY, KAMERA,WLTP350",
-      "meta": "2022 ∙ 19 699 km ∙ El ∙ 353 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/467066357/6399ac18-b056-4e08-bddc-e5e23dc06a4a",
-      "kind": "elbil",
-      "price": 216900,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 3305,
-        "84": 2519,
-        "96": 2276
-      },
-      "fits_budget": true
-    },
-    "461358693": {
-      "id": "461358693",
-      "title": "Renault Twizy",
-      "link": "https://www.finn.no/mobility/item/461358693",
-      "desc": "",
-      "meta": "2017 ∙ 17 416 km ∙ El ∙ 55 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/461358693/b03bd14b-1393-4d05-bef9-3db693df34a6",
-      "kind": "elbil",
-      "price": 49600,
-      "first_seen": "2026-06-15T07:01:03.975576+00:00",
-      "last_seen": "2026-06-15T07:01:03.975576+00:00",
-      "estimates": {
-        "60": 0,
-        "84": 0,
-        "96": 0
-      },
-      "fits_budget": true
-    },
     "461021708": {
       "id": "461021708",
       "title": "Kia Soul",
@@ -1745,32 +1547,349 @@
         "96": 2039
       },
       "fits_budget": true
+    },
+    "465203001": {
+      "id": "465203001",
+      "title": "Renault Kangoo Electric",
+      "link": "https://www.finn.no/mobility/item/465203001",
+      "desc": "Maxi Lav km !!!!",
+      "meta": "2015 ∙ 69 461 km ∙ El ∙ Automat",
+      "img": "",
+      "kind": "elbil",
+      "price": 39553,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 0,
+        "84": 0,
+        "96": 0
+      },
+      "fits_budget": true
+    },
+    "468044081": {
+      "id": "468044081",
+      "title": "Volkswagen ID.3",
+      "link": "https://www.finn.no/mobility/item/468044081",
+      "desc": "Pro Business Navi/Kamera/Matrix/ACC",
+      "meta": "2021 ∙ 40 000 km ∙ El ∙ 420 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 209900,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3167,
+        "84": 2414,
+        "96": 2181
+      },
+      "fits_budget": true
+    },
+    "457170189": {
+      "id": "457170189",
+      "title": "Renault Zoe",
+      "link": "https://www.finn.no/mobility/item/457170189",
+      "desc": "Z.E. 40 R110 Intens",
+      "meta": "2018 ∙ 90 524 km ∙ El ∙ 300 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 75000,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 496,
+        "84": 378,
+        "96": 341
+      },
+      "fits_budget": true
+    },
+    "468040976": {
+      "id": "468040976",
+      "title": "Volkswagen UP!",
+      "link": "https://www.finn.no/mobility/item/468040976",
+      "desc": "1-EIER/E-UP!/CRUISE/R.KAM/DAB+/P-SENS/EU 09.27",
+      "meta": "2022 ∙ 29 900 km ∙ El ∙ 253 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 147990,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 1941,
+        "84": 1479,
+        "96": 1336
+      },
+      "fits_budget": true
+    },
+    "468043410": {
+      "id": "468043410",
+      "title": "Opel Corsa",
+      "link": "https://www.finn.no/mobility/item/468043410",
+      "desc": "Business Elegance-TOPPMODELL- LED MATRIX- DELSKINN",
+      "meta": "2023 ∙ 31 500 km ∙ El ∙ 360 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 229900,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3563,
+        "84": 2716,
+        "96": 2453
+      },
+      "fits_budget": true
+    },
+    "468043267": {
+      "id": "468043267",
+      "title": "Opel Mokka",
+      "link": "https://www.finn.no/mobility/item/468043267",
+      "desc": "Ultimate Adaptiv Cruise/360Kamera/Carplay/Android/S+V",
+      "meta": "2021 ∙ 52 000 km ∙ El ∙ 318 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 169900,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 2375,
+        "84": 1810,
+        "96": 1635
+      },
+      "fits_budget": true
+    },
+    "468043262": {
+      "id": "468043262",
+      "title": "Nissan Leaf",
+      "link": "https://www.finn.no/mobility/item/468043262",
+      "desc": "Nordic 24kWh",
+      "meta": "2017 ∙ 65 000 km ∙ El ∙ Automat",
+      "img": "",
+      "kind": "elbil",
+      "price": 59000,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 179,
+        "84": 136,
+        "96": 123
+      },
+      "fits_budget": true
+    },
+    "455383011": {
+      "id": "455383011",
+      "title": "Kia e-Soul",
+      "link": "https://www.finn.no/mobility/item/455383011",
+      "desc": "64 kWt Exclusive",
+      "meta": "2021 ∙ 62 000 km ∙ El ∙ 452 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 204500,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3060,
+        "84": 2332,
+        "96": 2107
+      },
+      "fits_budget": true
+    },
+    "468043148": {
+      "id": "468043148",
+      "title": "Volkswagen ID.4",
+      "link": "https://www.finn.no/mobility/item/468043148",
+      "desc": "Business, Style Plus, Hengerfeste",
+      "meta": "2021 ∙ 74 500 km ∙ El ∙ 492 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 249000,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3941,
+        "84": 3004,
+        "96": 2714
+      },
+      "fits_budget": false
+    },
+    "468043113": {
+      "id": "468043113",
+      "title": "BMW i3",
+      "link": "https://www.finn.no/mobility/item/468043113",
+      "desc": "120ah/Premium Selection/2 år garanti/Varmepumpe",
+      "meta": "2022 ∙ 22 934 km ∙ El ∙ 306 km rekkevidde",
+      "img": "https://images.finncdn.no/dynamic/480w/item/468043113/664054d1-dac9-4ca9-b3e7-5c29565800a4",
+      "kind": "elbil",
+      "price": 234500,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3654,
+        "84": 2785,
+        "96": 2516
+      },
+      "fits_budget": false
+    },
+    "463175480": {
+      "id": "463175480",
+      "title": "Tesla Model X",
+      "link": "https://www.finn.no/mobility/item/463175480",
+      "desc": "PREMIUM 75D / 5s / EU / EAP / MCU2",
+      "meta": "2019 ∙ 149 900 km ∙ El ∙ Automat",
+      "img": "",
+      "kind": "elbil",
+      "price": 199995,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 2971,
+        "84": 2264,
+        "96": 2045
+      },
+      "fits_budget": true
+    },
+    "468042458": {
+      "id": "468042458",
+      "title": "Skoda Enyaq",
+      "link": "https://www.finn.no/mobility/item/468042458",
+      "desc": "iV 80X - Matrix, R.Kam, Krok",
+      "meta": "2022 ∙ 139 900 km ∙ El ∙ 521 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 228000,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3525,
+        "84": 2687,
+        "96": 2427
+      },
+      "fits_budget": true
+    },
+    "468042243": {
+      "id": "468042243",
+      "title": "Renault Zoe",
+      "link": "https://www.finn.no/mobility/item/468042243",
+      "desc": "135hk - Bose, R.Kam, Skinn, Cruise, Navi",
+      "meta": "2020 ∙ 87 999 km ∙ El ∙ Automat",
+      "img": "",
+      "kind": "elbil",
+      "price": 98000,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 951,
+        "84": 725,
+        "96": 655
+      },
+      "fits_budget": true
+    },
+    "468042044": {
+      "id": "468042044",
+      "title": "Lexus UX300e",
+      "link": "https://www.finn.no/mobility/item/468042044",
+      "desc": "Premium | Skinn | Navigasjon | Velholdt",
+      "meta": "2022 ∙ 57 000 km ∙ El ∙ 310 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 219000,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3347,
+        "84": 2551,
+        "96": 2305
+      },
+      "fits_budget": true
+    },
+    "468042030": {
+      "id": "468042030",
+      "title": "Hyundai Kona",
+      "link": "https://www.finn.no/mobility/item/468042030",
+      "desc": "Premium",
+      "meta": "2020 ∙ 57 400 km ∙ El ∙ 484 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 219900,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3365,
+        "84": 2565,
+        "96": 2317
+      },
+      "fits_budget": true
+    },
+    "468041967": {
+      "id": "468041967",
+      "title": "Volkswagen e-Golf VII",
+      "link": "https://www.finn.no/mobility/item/468041967",
+      "desc": "136hk - Active info, R.Kam, Dynaudio, SKINN",
+      "meta": "2019 ∙ 121 900 km ∙ El ∙ Automat",
+      "img": "",
+      "kind": "elbil",
+      "price": 119000,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 1367,
+        "84": 1042,
+        "96": 941
+      },
+      "fits_budget": true
+    },
+    "468041410": {
+      "id": "468041410",
+      "title": "Hyundai IONIQ",
+      "link": "https://www.finn.no/mobility/item/468041410",
+      "desc": "Elektrisk Premium *VRAKPANT* LAV KM m/Skinn/ACC++",
+      "meta": "2022 ∙ 18 490 km ∙ El ∙ 311 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 224900,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3464,
+        "84": 2640,
+        "96": 2385
+      },
+      "fits_budget": true
+    },
+    "468041349": {
+      "id": "468041349",
+      "title": "Renault Megane E-Tech",
+      "link": "https://www.finn.no/mobility/item/468041349",
+      "desc": "E-TECH ICONIC/LYST INTERIØR/H.FESTE/360KAM/ACC/S+V",
+      "meta": "2022 ∙ 77 000 km ∙ El ∙ 429 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 225900,
+      "first_seen": "2026-06-25T09:13:35.431046+00:00",
+      "last_seen": "2026-06-25T09:13:35.431046+00:00",
+      "estimates": {
+        "60": 3484,
+        "84": 2655,
+        "96": 2399
+      },
+      "fits_budget": true
     }
   },
   "prev_seen_ids": [
     "401772312",
-    "449146618",
     "449764141",
     "450575856",
     "451506638",
     "454737761",
-    "458994394",
+    "455383011",
+    "457170189",
     "461021708",
-    "461358693",
     "462619240",
+    "463175480",
+    "465203001",
     "466394848",
     "466409230",
     "466739362",
-    "466758861",
     "466786961",
     "466835022",
-    "466935788",
-    "467064226",
-    "467066357",
-    "467066439",
-    "467066563",
-    "467068442",
-    "467068714",
     "467154955",
     "467166372",
     "467168542",
@@ -1844,6 +1963,20 @@
     "467931095",
     "467932434",
     "467935914",
-    "467936893"
+    "467936893",
+    "468040976",
+    "468041349",
+    "468041410",
+    "468041967",
+    "468042030",
+    "468042044",
+    "468042243",
+    "468042458",
+    "468043113",
+    "468043148",
+    "468043262",
+    "468043267",
+    "468043410",
+    "468044081"
   ]
 }

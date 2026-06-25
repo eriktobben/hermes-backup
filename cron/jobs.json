@@ -22,7 +22,7 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 29
+        "completed": 30
       },
       "enabled": true,
       "state": "scheduled",
@@ -30,9 +30,9 @@
       "paused_reason": null,
       "created_at": "2026-05-29T21:05:58.668739+00:00",
       "next_run_at": "2026-06-26T09:00:00+02:00",
-      "last_run_at": "2026-06-25T09:09:24.138587+02:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: [Errno 32] Broken pipe",
+      "last_run_at": "2026-06-25T11:14:32.531911+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -96,16 +96,14 @@
     {
       "id": "f3a42a49fae6",
       "name": "AI Model Daily Briefing",
-      "prompt": "Your task: Produce a daily AI model news briefing in Norwegian, publish it as a here.now page, and deliver the link.\n\nSKILL: The 'here-now' skill is loaded. It provides the publish.sh script.\n\nWORKDIR: Use /home/erik/Projects/ai-daily-briefing/ as working directory. The .herenow/state.json file is there with the slug and API key for permanent publishing.\n\nSLUG: The slug is \"whimsy-vow-vjzk\" \u2014 use --slug whimsy-vow-vjzk when publishing to update the existing page at https://whimsy-vow-vjzk.here.now/ instead of creating a new one.\n\nFRESHNESS RULES (critical):\n- Only include news from the LAST 24-48 HOURS. Discard anything older than 2 days.\n- This page is UPDATED DAILY with fresh content. Do NOT re-report news that was covered in previous briefings \u2014 every day should have fresh news only.\n- If nothing new has happened since last time, say \"Ingen store nyheter siste d\u00f8gn\" instead of recycling old news.\n- When in doubt about whether something is new, err on the side of excluding it.\n\nSTEP 1 \u2014 Research\nSearch the web for the LATEST news about AI models \u2014 with a strong focus on Chinese AI models.\n\n1. Search for Chinese AI model news \u2014 DeepSeek (all versions), Qwen (Alibaba), Kimi (Moonshot AI), Baidu ERNIE, Zhipu GLM/ChatGLM, ByteDance (Doubao/Seed), Baichuan, Yi (01.AI), SenseTime SenseNova, StepFun (MiniMax), Alibaba's Tongyi, Huawei's Pangu, Tencent's Hunyuan, and any new/emerging Chinese models. Include open-source releases, benchmark results, new architectures, API pricing changes, and regulatory news.\n\n2. Search for general AI model news \u2014 OpenAI (GPT, o-series), Anthropic (Claude), Google (Gemini, Gemma), Meta (Llama), Mistral, xAI (Grok), and other notable models.\n\n3. Check for new papers on arXiv relevant to model architecture, training efficiency, or benchmarks.\n\nFocus on news from the last 24-48 hours ONLY. If nothing major happened in a category, skip it rather than padding.\n\nSTEP 2 \u2014 Create the HTML page\nOverwrite /home/erik/Projects/ai-daily-briefing/index.html with a self-contained, dark-themed, mobile-friendly HTML page.\n\nLAYOUT (top to bottom):\n1. Date (e.g. \"13. juni 2026\") and header\n2. \ud83d\udcca Kort oppsummert \u2014 1-2 sentence bottom line (AT THE TOP, not at the bottom)\n3. \ud83c\udde8\ud83c\uddf3 Kinesiske AI-modeller \u2014 bullet points with dates\n4. \ud83c\udf0d Globale AI-modeller \u2014 bullet points with dates\n5. \ud83d\udcc4 Interessante papers \u2014 with dates\n6. Footer\n\nEACH news entry MUST include the date in format \"12. juni\" so the user can see how fresh it is. Example:\n- **DeepSeek R3** (12. juni) \u2014 685B MoE med MIT-lisens. Hevdes \u00e5 sl\u00e5 GPT-4.5 p\u00e5 resonnering.\n\nCite sources with URLs where possible. Keep it concise \u2014 aim for 5-10 bullet points total unless there's exceptional news.\n\nIf there is genuinely nothing new to report, just say so instead of padding with old news.\n\nSTEP 3 \u2014 Publish to here.now\nPublish the directory using the publish.sh script:\n```bash\ncd /home/erik/Projects/ai-daily-briefing\nPUBLISH=\"$HERMES_SKILL_DIR/scripts/publish.sh\"\nbash \"$PUBLISH\" /home/erik/Projects/ai-daily-briefing --slug whimsy-vow-vjzk --client hermes --title \"AI Model Daily Briefing - $(date +%d.%m.%Y)\"\n```\nThis updates the existing page at https://whimsy-vow-vjzk.here.now/ rather than creating a new URL.\n\nSTEP 4 \u2014 Deliver\nYour final response to the user should ONLY contain:\n- A link to the here.now page\n- The date\n- A very short 1-sentence summary of the top news (in Norwegian)\n\nDo NOT post the full briefing content in Discord \u2014 that's what the here.now page is for. Just the link and a teaser.\n\nEXAMPLE OUTPUT:\n\ud83e\udde0 **AI Model Daily Briefing \u2014 12. juni 2026**\nhttps://whimsy-vow-vjzk.here.now/\nDeepSeek slapp R3, og OpenAI lanserte GPT-5.",
-      "skills": [
-        "here-now"
-      ],
-      "skill": "here-now",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": null,
-      "no_agent": false,
+      "script": "ai-briefing-retry.py",
+      "no_agent": true,
       "context_from": null,
       "schedule": {
         "kind": "cron",
@@ -115,7 +113,7 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 27
+        "completed": 28
       },
       "enabled": true,
       "state": "scheduled",
@@ -123,9 +121,9 @@
       "paused_reason": null,
       "created_at": "2026-06-03T00:41:44.094087+00:00",
       "next_run_at": "2026-06-26T08:00:00+02:00",
-      "last_run_at": "2026-06-25T08:15:49.281758+02:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: [Errno 32] Broken pipe",
+      "last_run_at": "2026-06-25T11:13:30.578040+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -141,10 +139,7 @@
       ],
       "workdir": null,
       "profile": null,
-      "fire_claim": {
-        "at": "2026-06-25T11:00:14.774083+02:00",
-        "by": "hetz-red-butterfly:1453047"
-      }
+      "fire_claim": null
     },
     {
       "id": "180cd90f598f",
@@ -166,15 +161,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 417
+        "completed": 418
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-06-25T12:02:17.185815+02:00",
-      "last_run_at": "2026-06-25T10:01:19.400014+02:00",
+      "next_run_at": "2026-06-25T13:03:17.655832+02:00",
+      "last_run_at": "2026-06-25T11:02:19.882329+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -235,5 +230,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-06-25T11:02:17.186104+02:00"
+  "updated_at": "2026-06-25T12:03:17.656106+02:00"
 }

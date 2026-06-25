@@ -545,26 +545,26 @@
     "created_at": "2026-06-11T22:05:36.630605+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-11T22:28:48.515290+00:00",
-    "last_used_at": "2026-06-25T09:00:14.824855+00:00",
-    "last_viewed_at": "2026-06-25T01:44:27.398335+00:00",
+    "last_used_at": "2026-06-25T09:15:29.991816+00:00",
+    "last_viewed_at": "2026-06-25T09:15:29.986936+00:00",
     "patch_count": 3,
     "pinned": false,
     "state": "active",
-    "use_count": 41,
-    "view_count": 8
+    "use_count": 44,
+    "view_count": 10
   },
   "hermes-agent": {
     "archived_at": null,
     "created_at": "2026-06-03T07:43:46.748014+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-10T10:15:37.754105+00:00",
-    "last_used_at": "2026-06-22T16:18:59.160200+00:00",
-    "last_viewed_at": "2026-06-22T16:18:59.155423+00:00",
+    "last_used_at": "2026-06-25T09:14:59.615924+00:00",
+    "last_viewed_at": "2026-06-25T09:14:59.610427+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 16,
-    "view_count": 16
+    "use_count": 17,
+    "view_count": 17
   },
   "hermes-s6-container-supervision": {
     "archived_at": null,
@@ -583,14 +583,14 @@
     "archived_at": null,
     "created_at": "2026-06-25T01:53:14.136891+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-06-25T01:53:36.351805+00:00",
-    "last_used_at": "2026-06-25T01:53:44.670055+00:00",
-    "last_viewed_at": "2026-06-25T01:53:44.666505+00:00",
-    "patch_count": 1,
+    "last_patched_at": "2026-06-25T09:19:04.187062+00:00",
+    "last_used_at": "2026-06-25T09:19:10.315380+00:00",
+    "last_viewed_at": "2026-06-25T09:19:10.310550+00:00",
+    "patch_count": 3,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 5,
+    "view_count": 5
   },
   "himalaya": {
     "archived_at": null,
