@@ -672,11 +672,11 @@
       "link": "https://www.finn.no/mobility/item/466409230",
       "desc": "Z.E. 40 Intens",
       "meta": "2018 ∙ 143 500 km ∙ El ∙ 317 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/466409230/ab37f29b-d3f6-4bde-8231-dfb11ee856c6",
+      "img": "",
       "kind": "elbil",
       "price": 74532,
       "first_seen": "2026-06-19T07:03:13.472180+00:00",
-      "last_seen": "2026-06-19T07:03:13.472180+00:00",
+      "last_seen": "2026-06-26T07:00:32.887442+00:00",
       "estimates": {
         "60": 486,
         "84": 371,
@@ -726,11 +726,11 @@
       "link": "https://www.finn.no/mobility/item/466739362",
       "desc": "",
       "meta": "2020 ∙ 65 000 km ∙ El ∙ 263 km rekkevidde",
-      "img": "https://images.finncdn.no/dynamic/480w/item/466739362/adf9dc07-089a-4e92-811f-372162acd69d",
+      "img": "",
       "kind": "elbil",
       "price": 129532,
       "first_seen": "2026-06-19T07:03:13.472180+00:00",
-      "last_seen": "2026-06-19T07:03:13.472180+00:00",
+      "last_seen": "2026-06-26T07:00:32.887442+00:00",
       "estimates": {
         "60": 1575,
         "84": 1201,
@@ -1871,10 +1871,101 @@
         "96": 2399
       },
       "fits_budget": true
+    },
+    "468118650": {
+      "id": "468118650",
+      "title": "Nissan Leaf",
+      "link": "https://www.finn.no/mobility/item/468118650",
+      "desc": "N-Connecta 40 kWh 360kam/Økonomisk liten bil!",
+      "meta": "2021 ∙ 89 000 km ∙ El ∙ 270 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 189900,
+      "first_seen": "2026-06-26T07:00:32.887442+00:00",
+      "last_seen": "2026-06-26T07:00:32.887442+00:00",
+      "estimates": {
+        "60": 2771,
+        "84": 2112,
+        "96": 1908
+      },
+      "fits_budget": true
+    },
+    "411385356": {
+      "id": "411385356",
+      "title": "Tesla Model S",
+      "link": "https://www.finn.no/mobility/item/411385356",
+      "desc": "75D 4WD",
+      "meta": "2018 ∙ 125 000 km ∙ El ∙ 490 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 199434,
+      "first_seen": "2026-06-26T07:00:32.887442+00:00",
+      "last_seen": "2026-06-26T07:00:32.887442+00:00",
+      "estimates": {
+        "60": 2959,
+        "84": 2256,
+        "96": 2038
+      },
+      "fits_budget": true
+    },
+    "468116348": {
+      "id": "468116348",
+      "title": "Tesla Model 3",
+      "link": "https://www.finn.no/mobility/item/468116348",
+      "desc": "Long Range AWD",
+      "meta": "2021 ∙ 129 500 km ∙ El ∙ 614 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 223532,
+      "first_seen": "2026-06-26T07:00:32.887442+00:00",
+      "last_seen": "2026-06-26T07:00:32.887442+00:00",
+      "estimates": {
+        "60": 3437,
+        "84": 2620,
+        "96": 2366
+      },
+      "fits_budget": true
+    },
+    "468116405": {
+      "id": "468116405",
+      "title": "Volkswagen ID.3",
+      "link": "https://www.finn.no/mobility/item/468116405",
+      "desc": "pro perf. business/R.KAM/MATRIX/NAVI/ACC++",
+      "meta": "2021 ∙ 67 750 km ∙ El ∙ 420 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 199900,
+      "first_seen": "2026-06-26T07:00:32.887442+00:00",
+      "last_seen": "2026-06-26T07:00:32.887442+00:00",
+      "estimates": {
+        "60": 2969,
+        "84": 2263,
+        "96": 2044
+      },
+      "fits_budget": true
+    },
+    "468115989": {
+      "id": "468115989",
+      "title": "BMW i3",
+      "link": "https://www.finn.no/mobility/item/468115989",
+      "desc": "120Ah R-kamera|Navi",
+      "meta": "2020 ∙ 49 668 km ∙ El ∙ 306 km rekkevidde",
+      "img": "",
+      "kind": "elbil",
+      "price": 169000,
+      "first_seen": "2026-06-26T07:00:32.887442+00:00",
+      "last_seen": "2026-06-26T07:00:32.887442+00:00",
+      "estimates": {
+        "60": 2357,
+        "84": 1797,
+        "96": 1623
+      },
+      "fits_budget": true
     }
   },
   "prev_seen_ids": [
     "401772312",
+    "411385356",
     "449764141",
     "450575856",
     "451506638",
@@ -1977,6 +2068,10 @@
     "468043262",
     "468043267",
     "468043410",
-    "468044081"
+    "468044081",
+    "468115989",
+    "468116348",
+    "468116405",
+    "468118650"
   ]
 }
