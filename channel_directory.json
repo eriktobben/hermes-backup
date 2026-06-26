@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-26T09:25:21.434202",
+  "updated_at": "2026-06-26T10:25:21.793416",
   "platforms": {
     "discord": [
       {
@@ -631,6 +631,12 @@
         "name": "Tobben MC / #general / Hva gjør reasoning i deepseek v4 flash og pro? / topic 1519519348463505530",
         "type": "thread",
         "thread_id": "1519519348463505530"
+      },
+      {
+        "id": "1520003787769774141:1520003787769774141",
+        "name": "Tobben MC / #bilkjøp / Du kan stoppe cron jobben da jeg nå har kjøpt bil. / topic 1520003787769774141",
+        "type": "thread",
+        "thread_id": "1520003787769774141"
       }
     ],
     "telegram": [],

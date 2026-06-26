@@ -2523,5 +2523,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1519519348463505530"
     }
+  },
+  "agent:main:discord:thread:1520003787769774141:1520003787769774141": {
+    "session_key": "agent:main:discord:thread:1520003787769774141:1520003787769774141",
+    "session_id": "20260626_095225_a0ec6464",
+    "created_at": "2026-06-26T09:52:25.436647",
+    "updated_at": "2026-06-26T09:52:37.168346",
+    "display_name": "Tobben MC / #bilkj\u00f8p / Du kan stoppe cron jobben da jeg n\u00e5 har kj\u00f8pt bil.",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 24694,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1520003787769774141",
+      "chat_name": "Tobben MC / #bilkj\u00f8p / Du kan stoppe cron jobben da jeg n\u00e5 har kj\u00f8pt bil.",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1520003787769774141",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1510010610304155738",
+      "message_id": "1520003787769774141"
+    }
   }
 }
