@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-29T12:40:49.942079",
+  "updated_at": "2026-06-29T13:40:50.364272",
   "platforms": {
     "discord": [
       {
@@ -643,6 +643,12 @@
         "name": "Tobben MC / #general / Hei! Jeg har fått tilbud fra WaterCircles Forsikring på Innbo, Reise, Husdyr ... / topic 1521123806213570572",
         "type": "thread",
         "thread_id": "1521123806213570572"
+      },
+      {
+        "id": "1521145613612351508:1521145613612351508",
+        "name": "Tobben MC / #general / Jeg har i mange år betalt for Uførepensjon hos Gjensidige. Her betaler jeg 16... / topic 1521145613612351508",
+        "type": "thread",
+        "thread_id": "1521145613612351508"
       }
     ],
     "telegram": [],
