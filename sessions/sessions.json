@@ -2640,5 +2640,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1521145613612351508"
     }
+  },
+  "agent:main:discord:thread:1521523617865928874:1521523617865928874": {
+    "session_key": "agent:main:discord:thread:1521523617865928874:1521523617865928874",
+    "session_id": "20260630_143140_faef24fd",
+    "created_at": "2026-06-30T14:31:40.747496",
+    "updated_at": "2026-06-30T14:33:32.855054",
+    "display_name": "Tobben MC / #bilkj\u00f8p / P\u00e5 min Tesla, hvordan bruker jeg spylerv\u00e6ske og hvordan fyller jeg p\u00e5?",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 49070,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1521523617865928874",
+      "chat_name": "Tobben MC / #bilkj\u00f8p / P\u00e5 min Tesla, hvordan bruker jeg spylerv\u00e6ske og hvordan fyller jeg p\u00e5?",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1521523617865928874",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1510010610304155738",
+      "message_id": "1521523617865928874"
+    }
   }
 }
