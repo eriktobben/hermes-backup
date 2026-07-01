@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T14:26:10.078231",
+  "updated_at": "2026-07-01T15:31:10.475656",
   "platforms": {
     "discord": [
       {
@@ -239,6 +239,12 @@
       {
         "id": "1517444016348598334",
         "name": "imsg-viewer",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1521885249628274718",
+        "name": "trading",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -655,6 +661,12 @@
         "name": "Tobben MC / #bilkjøp / På min Tesla, hvordan bruker jeg spylervæske og hvordan fyller jeg på? / topic 1521523617865928874",
         "type": "thread",
         "thread_id": "1521523617865928874"
+      },
+      {
+        "id": "1521885335162720297:1521885335162720297",
+        "name": "Tobben MC / #trading / Hei! Dette er vår channel for trading crypto og aksjer / topic 1521885335162720297",
+        "type": "thread",
+        "thread_id": "1521885335162720297"
       }
     ],
     "telegram": [],
