@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01T19:31:12.074568",
+  "updated_at": "2026-07-01T20:36:12.561933",
   "platforms": {
     "discord": [
       {
@@ -667,6 +667,12 @@
         "name": "Tobben MC / #trading / Hei! Dette er vår channel for trading crypto og aksjer / topic 1521885335162720297",
         "type": "thread",
         "thread_id": "1521885335162720297"
+      },
+      {
+        "id": "1521967777563545785:1521967777563545785",
+        "name": "Tobben MC / #general / Kan du sjekke forsikringsvilkårene til Fremtind sin behandlingsforsikring? Je... / topic 1521967777563545785",
+        "type": "thread",
+        "thread_id": "1521967777563545785"
       }
     ],
     "telegram": [],
