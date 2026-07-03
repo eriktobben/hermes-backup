@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-03T19:21:31.141307",
+  "updated_at": "2026-07-03T20:21:31.539201",
   "platforms": {
     "discord": [
       {
@@ -673,6 +673,12 @@
         "name": "Tobben MC / #general / Kan du sjekke forsikringsvilkårene til Fremtind sin behandlingsforsikring? Je... / topic 1521967777563545785",
         "type": "thread",
         "thread_id": "1521967777563545785"
+      },
+      {
+        "id": "1522694571409149993:1522694571409149993",
+        "name": "Tobben MC / #bilkjøp / Hvilke sikkerhetsfunksjoner finnes på min Tesla? / topic 1522694571409149993",
+        "type": "thread",
+        "thread_id": "1522694571409149993"
       }
     ],
     "telegram": [],
