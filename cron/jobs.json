@@ -64,15 +64,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 638
+        "completed": 639
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-07-04T20:44:59.456402+02:00",
-      "last_run_at": "2026-07-04T18:44:01.899845+02:00",
+      "next_run_at": "2026-07-04T21:45:59.891763+02:00",
+      "last_run_at": "2026-07-04T19:45:02.262314+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -181,5 +181,5 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing"
     }
   ],
-  "updated_at": "2026-07-04T19:44:59.456528+02:00"
+  "updated_at": "2026-07-04T20:45:59.891899+02:00"
 }
