@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-04T13:36:38.668343",
+  "updated_at": "2026-07-04T14:41:39.135497",
   "platforms": {
     "discord": [
       {
@@ -685,6 +685,12 @@
         "name": "Tobben MC / #bilkjøp / Bytte kupefilter på Teslaen / topic 1522905934349860964",
         "type": "thread",
         "thread_id": "1522905934349860964"
+      },
+      {
+        "id": "1522966293513502762:1522966293513502762",
+        "name": "Tobben MC / #🗞️-briefings / Nå får jeg \"⚠️ Cron 'AI Model Daily Briefing' failed: provider timeout. Fallb... / topic 1522966293513502762",
+        "type": "thread",
+        "thread_id": "1522966293513502762"
       }
     ],
     "telegram": [],
