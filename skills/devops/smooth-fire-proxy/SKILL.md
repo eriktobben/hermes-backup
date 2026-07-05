@@ -11,12 +11,26 @@ Route traffic through Tobben's Mac Mini **smooth-fire** (Tailscale IP: `100.71.2
 
 | Detail | Value |
 |---|---|
-| Mac Mini hostname | smooth-fire |
-| Tailscale IP | `100.71.230.118` |
+| Mac Mini hostname | smooth-fire / smooth-fire-2 |
+| Tailscale hostname | `smooth-fire-2.tail75ed8a.ts.net` |
+| Tailscale IP | `100.101.252.60` (was `100.71.230.118` — now dead) |
 | SSH user | `hermes` |
 | Authentication | SSH key (`~/.ssh/id_ed25519`) — already deployed |
 | SOCKS5 proxy port | `127.0.0.1:1080` |
-| OS | macOS (Darwin smooth-fire.local 21.6.0) |
+| OS | macOS (Darwin smooth-fire.local 21.6.0, Monterey) |
+
+## SSH Connection
+
+```bash
+# Preferred: use the Tailscale hostname
+ssh hermes@smooth-fire-2.tail75ed8a.ts.net
+
+# Or direct IP
+ssh hermes@100.101.252.60
+
+# If hostname changed again, find the new IP:
+tailscale status | grep smooth-fire
+```
 
 ## Start the SOCKS5 Proxy
 
@@ -27,7 +41,7 @@ ssh -D 1080 -N -f \
   -o ServerAliveInterval=30 \
   -o ExitOnForwardFailure=yes \
   -o StrictHostKeyChecking=accept-new \
-  hermes@100.71.230.118
+  hermes@smooth-fire-2.tail75ed8a.ts.net
 ```
 
 Verify it's running:
@@ -77,7 +91,7 @@ kill <PID>
 Or stop all matching:
 
 ```bash
-pkill -f "ssh.*-D 1080.*hermes@100.71.230.118" 2>/dev/null; echo "Stopped"
+pkill -f "ssh.*-D 1080.*hermes@smooth-fire-2.tail75ed8a.ts.net" 2>/dev/null; echo "Stopped"
 ```
 
 ## Test Connectivity (if it stops working)
@@ -88,13 +102,18 @@ tailscale status | grep smooth-fire
 # Should show "online" or "idle"
 
 # 2. Can we SSH?
-ssh -o ConnectTimeout=5 hermes@100.71.230.118 "echo OK"
+ssh -o ConnectTimeout=5 hermes@smooth-fire-2.tail75ed8a.ts.net "echo OK"
 
 # 3. Restart the tunnel if needed
 ```
+
+## Diagnostics
+
+For troubleshooting storage issues (external RAID, FireWire, Thunderbolt) on smooth-fire, see the [remote-macos-storage-diagnostics](references/remote-macos-storage-diagnostics.md) reference.
 
 ## Troubleshooting
 
 - **"Connection refused"**: Run `tailscale status` to verify smooth-fire is online
 - **"Permission denied"**: The SSH key was deployed to `~hermes/.ssh/authorized_keys` on smooth-fire. If it was wiped, re-deploy: copy `~/.ssh/id_ed25519.pub` and ask Tobben to append it.
+- **Host key changed / "Host key verification failed"**: Run `ssh-keygen -R "smooth-fire-2.tail75ed8a.ts.net" && ssh-keygen -R "100.101.252.60"` then reconnect.
 - **Proxy slow/unresponsive**: The SSH tunnel might have died. Restart it with the command above.

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T12:01:47.761792",
+  "updated_at": "2026-07-05T13:01:48.205955",
   "platforms": {
     "discord": [
       {
@@ -691,6 +691,12 @@
         "name": "Tobben MC / #🗞️-briefings / Nå får jeg \"⚠️ Cron 'AI Model Daily Briefing' failed: provider timeout. Fallb... / topic 1522966293513502762",
         "type": "thread",
         "thread_id": "1522966293513502762"
+      },
+      {
+        "id": "1523307812149661828:1523307812149661828",
+        "name": "Tobben MC / #general / Jeg har problemer med en ekstern harddisk på maskinen smooth-fire-2.tail75ed8... / topic 1523307812149661828",
+        "type": "thread",
+        "thread_id": "1523307812149661828"
       }
     ],
     "telegram": [],

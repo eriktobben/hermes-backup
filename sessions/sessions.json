@@ -2874,5 +2874,44 @@
       "parent_chat_id": "1499183215494037554",
       "message_id": "1522966293513502762"
     }
+  },
+  "agent:main:discord:thread:1523307812149661828:1523307812149661828": {
+    "session_key": "agent:main:discord:thread:1523307812149661828:1523307812149661828",
+    "session_id": "20260705_124125_7dbd8bff",
+    "created_at": "2026-07-05T12:41:25.908529",
+    "updated_at": "2026-07-05T13:03:46.131323",
+    "display_name": "Tobben MC / #general / Jeg har problemer med en ekstern harddisk p\u00e5 maskinen smooth-fire-2.tail75ed8...",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 91900,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1523307812149661828",
+      "chat_name": "Tobben MC / #general / Jeg har problemer med en ekstern harddisk p\u00e5 maskinen smooth-fire-2.tail75ed8...",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1523307812149661828",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499181433200312381",
+      "message_id": "1523307812149661828"
+    }
   }
 }
