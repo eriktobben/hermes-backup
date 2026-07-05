@@ -107,9 +107,15 @@ ssh -o ConnectTimeout=5 hermes@smooth-fire-2.tail75ed8a.ts.net "echo OK"
 # 3. Restart the tunnel if needed
 ```
 
-## Diagnostics
+## Diagnostics — Storage Issues
 
-For troubleshooting storage issues (external RAID, FireWire, Thunderbolt) on smooth-fire, see the [remote-macos-storage-diagnostics](references/remote-macos-storage-diagnostics.md) reference.
+For troubleshooting external storage (RAID, FireWire, Thunderbolt, encrypted volumes) on this Mac, load the dedicated skill:
+
+```
+skill_view(name="macos-storage-diagnostics")
+```
+
+That skill covers all the techniques from this session — bus detection, SoftRAID/AppleRAID checking, APFS encryption unlock, and the physical checklist — as a reusable class-level workflow.
 
 ## Troubleshooting
 
