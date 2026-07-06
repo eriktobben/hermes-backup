@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06T13:26:58.506236",
+  "updated_at": "2026-07-06T14:26:58.939642",
   "platforms": {
     "discord": [
       {
@@ -703,6 +703,12 @@
         "name": "Tobben MC / #general / Jeg får plutselig følgende feil når jeg bruker Kimaki i Discord til å kode i ... / topic 1523615098567000096",
         "type": "thread",
         "thread_id": "1523615098567000096"
+      },
+      {
+        "id": "1523694543961329664:1523694543961329664",
+        "name": "Tobben MC / #general / Jeg ønsker å sette opp Coolify på en Hetzner-server. Hvis jeg oppretter serve... / topic 1523694543961329664",
+        "type": "thread",
+        "thread_id": "1523694543961329664"
       }
     ],
     "telegram": [],
