@@ -2913,5 +2913,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1523307812149661828"
     }
+  },
+  "agent:main:discord:thread:1523615098567000096:1523615098567000096": {
+    "session_key": "agent:main:discord:thread:1523615098567000096:1523615098567000096",
+    "session_id": "20260706_090228_ad1f1a30",
+    "created_at": "2026-07-06T09:02:28.647314",
+    "updated_at": "2026-07-06T09:08:32.312855",
+    "display_name": "Tobben MC / #general / Jeg f\u00e5r plutselig f\u00f8lgende feil n\u00e5r jeg bruker Kimaki i Discord til \u00e5 kode i ...",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 99639,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1523615098567000096",
+      "chat_name": "Tobben MC / #general / Jeg f\u00e5r plutselig f\u00f8lgende feil n\u00e5r jeg bruker Kimaki i Discord til \u00e5 kode i ...",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1523615098567000096",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499181433200312381",
+      "message_id": "1523615098567000096"
+    }
   }
 }

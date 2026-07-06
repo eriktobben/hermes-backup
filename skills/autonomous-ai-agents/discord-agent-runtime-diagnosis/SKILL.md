@@ -88,6 +88,32 @@ Then run `/restart-opencode-server` in Discord for a clean slate.
 ### Prevention
 After any Kimaki upgrade or manual restart, always run `/restart-opencode-server` to guarantee no orphaned processes remain. See `references/zombie-opencode-servers.md` for full analysis.
 
+## Bun runtime degradation — `posix_spawn('/bin/sh')` ENOENT after extended uptime
+
+If workspace creation fails with `err_e2b0c342` and the underlying error is `ENOENT: no such file or directory, posix_spawn '/bin/sh'` (even though `/bin/sh` exists on disk), the Bun-compiled `opcode serve` binary has developed an internal process-spawning failure.
+
+### Mechanism
+- The OpenCode ACP server is a Bun-compiled binary (`opencode.exe`).
+- After extended continuous uptime (~44+ hours), Bun's Node.js compatibility layer can lose the ability to spawn `/bin/sh` for `child_process.exec()` calls.
+- This is NOT a filesystem issue — `/bin/sh` exists, works from shell, and works from fresh Bun processes.
+- It is a Bun runtime degradation, likely memory corruption or internal state drift inside the single long-lived process.
+
+### Early-warning signals (precede the hard failure)
+- Repeated `service=snapshot exitCode=1 stderr= cleanup failed` warnings in Kimaki logs.
+- `service=snapshot exitCode=128 stderr=fatal: gc is already running` — git operations stalling.
+- Workspace creation eventually fails hard with `err_e2b0c342`.
+
+### Fix
+```bash
+pm2 restart kimaki
+```
+This kills the Kimaki Node.js process and its child OpenCode server. PM2 restarts Kimaki, which spawns a fresh OpenCode server with a clean Bun runtime.
+
+### Prevention
+- Monitor Kimaki uptime. If >48h, schedule a periodic `pm2 restart kimaki` during low-activity hours.
+- Watch for `cleanup failed` warning clusters in logs — they precede the hard failure.
+- After any OpenCode upgrade (`opencode upgrade`), restart the server immediately.
+
 ## Session-scoped LLM failure pattern (important)
 Do not treat all "stopped replying" reports as global runtime outages.
 

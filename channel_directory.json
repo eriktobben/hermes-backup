@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-06T08:21:56.422536",
+  "updated_at": "2026-07-06T09:21:56.815321",
   "platforms": {
     "discord": [
       {
@@ -697,6 +697,12 @@
         "name": "Tobben MC / #general / Jeg har problemer med en ekstern harddisk på maskinen smooth-fire-2.tail75ed8... / topic 1523307812149661828",
         "type": "thread",
         "thread_id": "1523307812149661828"
+      },
+      {
+        "id": "1523615098567000096:1523615098567000096",
+        "name": "Tobben MC / #general / Jeg får plutselig følgende feil når jeg bruker Kimaki i Discord til å kode i ... / topic 1523615098567000096",
+        "type": "thread",
+        "thread_id": "1523615098567000096"
       }
     ],
     "telegram": [],

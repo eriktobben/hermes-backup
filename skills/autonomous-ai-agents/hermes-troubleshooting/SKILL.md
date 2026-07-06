@@ -30,6 +30,22 @@ the ACP subprocess (opencode-go / copilot) crashed during execution. The unprote
 `proc.stdin.write()` in `agent/copilot_acp_client.py:492` is the crash site. This is
 intermittent, not a permanent configuration problem.
 
+### Kimaki/OpenCode workspace creation fails with `err_e2b0c342`
+
+**Symptom:** Kimaki reports `Workspace creation failed` with `ref=err_e2b0c342` and error `ENOENT: no such file or directory, posix_spawn '/bin/sh'` in the PM2 logs.
+
+**Root cause:** The OpenCode ACP server (Bun-compiled `opencode.exe` binary) has been running for 40+ hours. Bun's runtime develops an internal issue where `posix_spawn('/bin/sh')` fails with ENOENT even though `/bin/sh` exists and works from the shell. This prevents git commands from running for worktree creation.
+
+**Fix:** Restart Kimaki via PM2, which kills and re-spawns both Kimaki and its child OpenCode server:
+
+```bash
+pm2 restart kimaki
+```
+
+The new OpenCode instance will have a fresh Bun runtime. No data loss — worktrees are on disk.
+
+**Prevention:** Consider a weekly cron job to restart Kimaki (e.g. Sunday night) to avoid the ~44h degradation window.
+
 ### Provider connection errors
 
 - `ReadTimeout` / `TimeoutError` — provider slow or unreachable. Check provider status.
