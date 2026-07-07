@@ -208,6 +208,8 @@ Docker manipulates iptables directly. If Docker networking breaks after UFW enab
 
 See `references/coolify-http-error-troubleshooting.md` for debugging HTTP errors (429, 503, 502, 504) from applications deployed behind Coolify's Traefik proxy — covers app-level rate limiting (Rack::Attack), proxy middleware inspection, adding env vars to Coolify services, and verification commands.
 
+See `references/coolify-degraded-service-diagnosis.md` for diagnosing Coolify services showing **Degraded (unhealthy)** — covers PostgreSQL version incompatibility (PG18+ vs old volume format), Traefik not connected to the service Docker network, Python site-packages vs source directory mismatch, and the full diagnostic workflow via SSH.
+
 ## References
 
 - `references/ssh-lockout-recovery.md` — Detailed recovery steps if SSH hardening or Coolify installer causes a lockout
