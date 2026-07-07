@@ -427,14 +427,14 @@
     "archived_at": null,
     "created_at": "2026-07-06T14:30:47.146199+00:00",
     "created_by": "agent",
-    "last_patched_at": "2026-07-06T14:52:35.924994+00:00",
-    "last_used_at": "2026-07-06T14:52:45.885374+00:00",
-    "last_viewed_at": "2026-07-06T14:52:45.881030+00:00",
-    "patch_count": 13,
+    "last_patched_at": "2026-07-07T09:37:42.282290+00:00",
+    "last_used_at": "2026-07-07T09:37:48.098639+00:00",
+    "last_viewed_at": "2026-07-07T09:37:48.093593+00:00",
+    "patch_count": 15,
     "pinned": false,
     "state": "active",
-    "use_count": 8,
-    "view_count": 8
+    "use_count": 12,
+    "view_count": 12
   },
   "gex-swing-trading": {
     "archived_at": null,

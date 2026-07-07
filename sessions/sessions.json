@@ -2955,9 +2955,9 @@
   },
   "agent:main:discord:thread:1523694543961329664:1523694543961329664": {
     "session_key": "agent:main:discord:thread:1523694543961329664:1523694543961329664",
-    "session_id": "20260706_141809_15d55401",
-    "created_at": "2026-07-06T14:18:09.801032",
-    "updated_at": "2026-07-06T14:51:40.988488",
+    "session_id": "20260707_090945_875752c9",
+    "created_at": "2026-07-07T09:09:45.290436",
+    "updated_at": "2026-07-07T09:36:23.585437",
     "display_name": "Tobben MC / #general / Jeg \u00f8nsker \u00e5 sette opp Coolify p\u00e5 en Hetzner-server. Hvis jeg oppretter serve...",
     "platform": "discord",
     "chat_type": "thread",
@@ -2966,10 +2966,10 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 89897,
+    "last_prompt_tokens": 52522,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
-    "expiry_finalized": true,
+    "expiry_finalized": false,
     "suspended": false,
     "resume_pending": false,
     "resume_reason": null,
@@ -2989,7 +2989,7 @@
       "chat_topic": null,
       "guild_id": "1479597162685006058",
       "parent_chat_id": "1499181433200312381",
-      "message_id": "1523694543961329664"
+      "message_id": "1523979317191639142"
     }
   },
   "agent:main:discord:thread:1523965808584163399:1523965808584163399": {

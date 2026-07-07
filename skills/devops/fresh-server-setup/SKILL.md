@@ -204,9 +204,14 @@ Docker manipulates iptables directly. If Docker networking breaks after UFW enab
 - ✅ Traefik config generated: `cat /data/coolify/proxy/dynamic/coolify.yaml`
 - ✅ SSL valid: `curl -vI https://<domain> 2>&1 | grep "SSL certificate"`
 
+## Post-Setup Troubleshooting
+
+See `references/coolify-http-error-troubleshooting.md` for debugging HTTP errors (429, 503, 502, 504) from applications deployed behind Coolify's Traefik proxy — covers app-level rate limiting (Rack::Attack), proxy middleware inspection, adding env vars to Coolify services, and verification commands.
+
 ## References
 
 - `references/ssh-lockout-recovery.md` — Detailed recovery steps if SSH hardening or Coolify installer causes a lockout
 - `references/coolify-credentials.md` — How credentials are generated, delivered, and used post-install
 - `references/coolify-onboarding-traefik.md` — First-login onboarding wizard, domain setup through Coolify UI, Traefik config inspection, and SSL troubleshooting
 - `references/coolify-service-credentials.md` — Patterns for finding and recovering credentials for Coolify-deployed services (Umami, etc.), including direct database password reset for Umami v3
+- `references/coolify-http-error-troubleshooting.md` — Debugging HTTP errors (429 rate limiting, 503 startup failures, etc.) in Coolify-managed apps, including Rack::Attack widget rate limit fixes
