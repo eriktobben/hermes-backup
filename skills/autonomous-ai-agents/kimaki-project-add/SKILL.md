@@ -43,6 +43,12 @@ Use this after creating or cloning a repository that should appear in Discord vi
 - If Discord-side automation becomes unresponsive, avoid rebooting first; run the troubleshooting checks in `references/unresponsive-discord-bot.md`.
 - **Workspace creation fails with `err_e2b0c342`**: the OpenCode ACP server may have developed a Bun runtime degradation after extended uptime. See `discord-agent-runtime-diagnosis` → "Bun runtime degradation" section. Fix: `pm2 restart kimaki`.
 
+- **"Directory does not exist or is not accessible" on a known thread**: Kimaki worktrees under `~/.kimaki/worktrees/<hash>/` get cleaned up overnight (~02:00), likely by OpenCode's snapshot/git-GC cleanup. The git branch with all commits survives — only the local checkout directory is removed. 44 of 51 worktree hash dirs are typically empty. The fix:
+  1. Identify the thread's project and worktree branch. Check the kanal's `config.json` for project directory, or query the DB: `python3 -c "import sqlite3; c=sqlite3.connect('$HOME/.kimaki/discord-sessions.db'); print('\\n'.join(str(r) for r in c.execute('SELECT workspace_name, workspace_directory, project_directory FROM thread_workspaces WHERE thread_id=\"<thread_id>\"')))"` — or query by workspace_session: `SELECT w.* FROM thread_workspaces w JOIN thread_sessions s ON w.thread_id=s.thread_id WHERE s.session_id='<session_id>'`
+  2. Verify the git branch still exists: `cd <project_directory> && git branch -a | grep <worktree_name>`
+  3. Recreate the worktree: `cd <project_directory> && git worktree add <workspace_directory> <worktree_branch>`
+  See `references/worktree-cleanup-recovery.md` for full session detail with DB queries and log analysis.
+
 ## Operational hardening (PM2 / long-running bot)
 When Kimaki is run as a persistent bot process, reduce freeze/restart loops by:
 1. Avoid floating `npx kimaki` in PM2 for production-like runs; pin a known kimaki version.
