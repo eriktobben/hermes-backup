@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-07T09:47:07.359081",
+  "updated_at": "2026-07-07T10:47:07.860390",
   "platforms": {
     "discord": [
       {
@@ -715,6 +715,12 @@
         "name": "Tobben MC / #general / Jeg hadde en thread i Kimaki som jeg jobbet på i går. Når jeg i dag skal be d... / topic 1523965808584163399",
         "type": "thread",
         "thread_id": "1523965808584163399"
+      },
+      {
+        "id": "1523992796862611576:1523992796862611576",
+        "name": "Tobben MC / #general / Jeg har satt opp faraday i Coolify, men får status Degraded (unhealthy). Kan ... / topic 1523992796862611576",
+        "type": "thread",
+        "thread_id": "1523992796862611576"
       }
     ],
     "telegram": [],
