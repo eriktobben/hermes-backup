@@ -571,13 +571,13 @@
     "created_at": "2026-06-11T22:05:36.630605+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-11T22:28:48.515290+00:00",
-    "last_used_at": "2026-07-09T12:33:15.298051+00:00",
-    "last_viewed_at": "2026-07-09T12:33:15.293726+00:00",
+    "last_used_at": "2026-07-09T12:48:08.434736+00:00",
+    "last_viewed_at": "2026-07-09T12:48:08.430581+00:00",
     "patch_count": 3,
     "pinned": false,
     "state": "active",
-    "use_count": 61,
-    "view_count": 11
+    "use_count": 62,
+    "view_count": 12
   },
   "hermes-agent": {
     "archived_at": null,
@@ -765,13 +765,13 @@
     "archived_at": null,
     "created_at": "2026-05-24T18:05:09.698537+00:00",
     "last_patched_at": "2026-07-07T08:21:49.641077+00:00",
-    "last_used_at": "2026-07-07T08:21:52.755455+00:00",
-    "last_viewed_at": "2026-07-07T08:21:52.751545+00:00",
+    "last_used_at": "2026-07-09T12:43:18.842441+00:00",
+    "last_viewed_at": "2026-07-09T12:43:18.835738+00:00",
     "patch_count": 9,
     "pinned": false,
     "state": "active",
-    "use_count": 14,
-    "view_count": 18
+    "use_count": 15,
+    "view_count": 19
   },
   "linear": {
     "archived_at": null,
@@ -1092,6 +1092,19 @@
     "last_patched_at": null,
     "last_used_at": "2026-06-17T10:31:37.111379+00:00",
     "last_viewed_at": "2026-06-17T10:31:37.100897+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "product-launch-video": {
+    "archived_at": null,
+    "created_at": "2026-07-09T12:47:50.444976+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-07-09T12:47:50.447908+00:00",
+    "last_viewed_at": "2026-07-09T12:47:50.444997+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
@@ -1438,14 +1451,14 @@
     "archived_at": null,
     "created_at": "2026-07-09T12:25:43.268743+00:00",
     "created_by": "agent",
-    "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 0,
+    "last_patched_at": "2026-07-09T12:49:38.109436+00:00",
+    "last_used_at": "2026-07-09T12:49:43.669574+00:00",
+    "last_viewed_at": "2026-07-09T12:49:43.663867+00:00",
+    "patch_count": 7,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
   },
   "webhook-subscriptions": {
     "archived_at": null,

@@ -85,19 +85,47 @@ brightness = (avg_r + avg_g + avg_b) / 3
 print(f'avg_rgb=({avg_r:.0f},{avg_g:.0f},{avg_b:.0f}), brightness={brightness:.0f}')
 ```
 
-**Visual content analysis:**
-- Extract frames and view in browser (serve via `python3 -m http.server`)
-- Ask user to describe what's in each clip
-- Use vision-capable models for analysis (pass images as conversation attachments)
+**Visual content analysis via model API:**
 
-### Pitfall: Vision capability is conversation-attached
+When the model supports vision (e.g., mimo-v2.5, GPT-4o, Claude), you can analyze local frames by calling the model API directly with base64-encoded images:
 
-Model vision support works for images sent as conversation attachments, not for analyzing files on disk. To analyze local files:
-- Extract frames and analyze programmatically (color profiles, edge detection)
-- Serve them via HTTP and view in browser
-- Ask the user to describe the content
+```python
+import base64, requests, os
 
-Do NOT assume vision models can "see" local files — they need the image in the conversation context.
+def analyze_frame(image_path, api_key, base_url, model, prompt="Describe this video frame"):
+    with open(image_path, "rb") as f:
+        data = base64.b64encode(f.read()).decode("utf-8")
+    
+    headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+    payload = {
+        "model": model,
+        "messages": [{"role": "user", "content": [
+            {"type": "text", "text": prompt},
+            {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{data}"}}
+        ]}],
+        "max_tokens": 500
+    }
+    response = requests.post(f"{base_url}/chat/completions", headers=headers, json=payload, timeout=60)
+    return response.json()["choices"][0]["message"]["content"]
+
+# Usage
+api_key = os.environ.get("OPENCODE_GO_API_KEY")  # or other vision model key
+analysis = analyze_frame("frames/frame_0.jpg", api_key, "https://opencode.ai/zen/go/v1", "mimo-v2.5")
+```
+
+**Visual content analysis options (in preference order):**
+1. **Model API with base64** — most reliable for analyzing local files (see above)
+2. **Ask user to describe** — only when API analysis is unavailable or user prefers
+3. **Color profile analysis** — fallback for understanding lighting/mood only
+
+### Pitfall: Don't ask user to describe video content
+
+Users expect the agent to figure out what's in the video clips using vision capabilities. Asking "what's in this clip?" forces manual work the user doesn't want to do. Always try programmatic analysis first:
+1. Extract frames
+2. Analyze via model API (base64 images)
+3. Only ask user if analysis fails or is ambiguous
+
+The user's role is to approve/reject the edit plan, not to describe raw footage.
 
 ## Planning the edit
 
@@ -108,6 +136,19 @@ Before executing, clarify with the user:
 4. **Text/titles/logo/CTA**
 5. **Target platform** (social media, YouTube, website)
 6. **Aspect ratio** (9:16 portrait for reels, 16:9 landscape for YouTube)
+
+## Complete workflow: Vision analysis → Edit
+
+When the user provides clips and wants you to figure out the content:
+
+1. **Download clips** selectively from cloud storage
+2. **Extract frames** (4-5 per clip, evenly spaced)
+3. **Analyze frames** via model API (see `references/vision-pipeline.py`)
+4. **Plan the edit** based on analysis results
+5. **Execute** with ffmpeg (trim, slow-mo, text, fades)
+6. **Deliver** final video
+
+See `references/vision-pipeline.py` for the complete analysis script.
 
 ## Production: ffmpeg commands
 
@@ -124,11 +165,16 @@ ffmpeg -f concat -safe 0 -i list.txt -c copy output.MOV
 
 ### Change speed (slow-mo / time-lapse)
 ```bash
-# Slow to 50% (half speed)
-ffmpeg -i input.MOV -filter:v "setpts=0.5*PTS" -filter:a "atempo=2.0" output.MOV
+# SLOW-MOTION: 120fps → 24fps (5x slower)
+# CRITICAL: Use -t on INPUT only, not output. The setpts filter expands duration.
+ffmpeg -ss 0 -t 3 -i input.MOV -vf "setpts=5*PTS" -r 24 -c:v libx264 output_slow.MOV
+# 3 seconds input → 15 seconds output
 
-# Speed up 2x
-ffmpeg -i input.MOV -filter:v "setpts=0.5*PTS" -filter:a "atempo=2.0" output.MOV
+# 120fps → 30fps (4x slower)
+ffmpeg -ss 0 -t 3 -i input.MOV -vf "setpts=4*PTS" -r 30 -c:v libx264 output_slow.MOV
+
+# Time-lapse (speed up 4x)
+ffmpeg -i input.MOV -vf "setpts=0.25*PTS" -c:v libx264 output_timelapse.MOV
 ```
 
 ### Add text overlay
@@ -182,10 +228,14 @@ ffmpeg -i input.MOV -c:v libx264 -crf 23 -preset medium -c:a aac -b:a 128k outpu
 ### 🚫 Large files from cloud storage
 Dropbox shared folders can be GBs. Download selectively — ask which clips are relevant before downloading everything.
 
-### 🚫 120fps slow-mo needs special handling
-iPhone 120fps clips play at normal speed in most players. To get slow-mo:
+### 🚫 120fps slow-mo: -t must be on INPUT
+When using `setpts=N*PTS` for slow-motion, the `-t` flag MUST be on the INPUT, not the output. The filter expands timestamps, so limiting output duration cuts the result short:
 ```bash
-ffmpeg -i input.MOV -vf "setpts=0.25*PTS" -r 30 output_slowmo.MOV
+# WRONG — output will be 3 seconds, not 15
+ffmpeg -i input.MOV -t 3 -vf "setpts=5*PTS" output.MOV
+
+# CORRECT — 3 seconds input expands to 15 seconds output
+ffmpeg -ss 0 -t 3 -i input.MOV -vf "setpts=5*PTS" output.MOV
 ```
 
 ### 🚫 HEVC codec compatibility
@@ -200,8 +250,26 @@ When combining clips with different audio sample rates, normalize first:
 ffmpeg -i input.MOV -ar 48000 -ac 2 output.MOV
 ```
 
+## Hero Video Structure
+
+A typical product hero video follows this structure:
+1. **Opening** (3-5s): Establishing shot of the product/brand
+2. **Action** (5-10s): Product in use / demonstration
+3. **Detail** (3-5s): Close-up showing features/benefits
+4. **CTA** (3-5s): Call to action with brand/URL
+
+For slow-motion hero videos from 120fps iPhone footage:
+- 2-3 seconds raw footage → 10-15 seconds slow-motion
+- Target total: 30-45 seconds
+- Add text overlays at key moments
+- Fade in/out for polish
+
 ## Files created during editing
 - `clips/` — downloaded source footage
 - `frames/` — extracted keyframes for analysis
 - `output/` — final edited videos
 - `temp/` — intermediate files during editing
+
+## Reference files
+- `references/vision-pipeline.py` — reusable script for analyzing frames via model API
+- `references/hero-video-template.sh` — template for creating hero videos from 120fps footage

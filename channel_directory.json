@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09T12:37:29.797376",
+  "updated_at": "2026-07-09T13:37:30.309056",
   "platforms": {
     "discord": [
       {
@@ -245,6 +245,12 @@
       {
         "id": "1521885249628274718",
         "name": "trading",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1524760580479783124",
+        "name": "droplane",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -739,6 +745,12 @@
         "name": "Tobben MC / #general / Kan du installere dette slik at du kan bruke Hyperframes? https://github.com/... / topic 1524745812842774578",
         "type": "thread",
         "thread_id": "1524745812842774578"
+      },
+      {
+        "id": "1524757813031600350:1524757813031600350",
+        "name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt og konfigurere git: git@github.com:vivalt... / topic 1524757813031600350",
+        "type": "thread",
+        "thread_id": "1524757813031600350"
       }
     ],
     "telegram": [],
