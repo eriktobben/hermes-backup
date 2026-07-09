@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09T11:32:29.303337",
+  "updated_at": "2026-07-09T12:37:29.797376",
   "platforms": {
     "discord": [
       {
@@ -727,6 +727,18 @@
         "name": "Tobben MC / #general / Oppretter en ny tråd/samtale med Kimaki mot Opencode, men får følgende feil: ... / topic 1524711822056226828",
         "type": "thread",
         "thread_id": "1524711822056226828"
+      },
+      {
+        "id": "1524744970173550703:1524744970173550703",
+        "name": "Tobben MC / #general / Kan jeg få deg til å redigere videoer hvis jeg sender deg klipp? Det kan være... / topic 1524744970173550703",
+        "type": "thread",
+        "thread_id": "1524744970173550703"
+      },
+      {
+        "id": "1524745812842774578:1524745812842774578",
+        "name": "Tobben MC / #general / Kan du installere dette slik at du kan bruke Hyperframes? https://github.com/... / topic 1524745812842774578",
+        "type": "thread",
+        "thread_id": "1524745812842774578"
       }
     ],
     "telegram": [],
