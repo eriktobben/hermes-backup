@@ -90,29 +90,75 @@ After any Kimaki upgrade or manual restart, always run `/restart-opencode-server
 
 ## Bun runtime degradation — `posix_spawn('/bin/sh')` ENOENT after extended uptime
 
-If workspace creation fails with `err_e2b0c342` and the underlying error is `ENOENT: no such file or directory, posix_spawn '/bin/sh'` (even though `/bin/sh` exists on disk), the Bun-compiled `opcode serve` binary has developed an internal process-spawning failure.
+If workspace creation fails with a `posix_spawn '/bin/sh' ENOENT` error (underlying `UnknownError` with a ref like `err_e2b0c342` or `err_15f5fc94`), the Bun-compiled `opencode serve` binary has developed an internal process-spawning failure.
+
+**Error ref variation:** The leading error ref (e.g. `err_e2b0c342`, `err_15f5fc94`) changes per occurrence — **don't rely on the exact ref for diagnosis**. The real signature is the `child_process` stack trace and `posix_spawn '/bin/sh' ENOENT` in PM2/Kimaki logs.
 
 ### Mechanism
-- The OpenCode ACP server is a Bun-compiled binary (`opencode.exe`).
-- After extended continuous uptime (~44+ hours), Bun's Node.js compatibility layer can lose the ability to spawn `/bin/sh` for `child_process.exec()` calls.
+- The OpenCode ACP server is a Bun-compiled binary (`opencode`).
+- After extended continuous uptime (~44+ hours), Bun's Node.js compatibility layer loses the ability to spawn `/bin/sh` for `child_process.exec()` calls (used by `createWorktreeCore` → `execAsync`).
 - This is NOT a filesystem issue — `/bin/sh` exists, works from shell, and works from fresh Bun processes.
 - It is a Bun runtime degradation, likely memory corruption or internal state drift inside the single long-lived process.
 
 ### Early-warning signals (precede the hard failure)
 - Repeated `service=snapshot exitCode=1 stderr= cleanup failed` warnings in Kimaki logs.
 - `service=snapshot exitCode=128 stderr=fatal: gc is already running` — git operations stalling.
-- Workspace creation eventually fails hard with `err_e2b0c342`.
+- Workspace creation eventually fails hard with an `UnknownError` / `err_xxx` reference.
+
+### Detection — standalone vs PM2-managed server
+The opencode server may run in two configurations:
+
+**PM2-managed** (common):
+```bash
+pm2 list | grep opencode
+# or inspect Kimaki's child processes
+```
+
+**Standalone** (not under PM2 — started directly):
+```bash
+ps aux | grep 'opencode serve' | grep -v grep
+```
+Independent server processes survive Kimaki restarts and must be killed directly.
 
 ### Fix
+
+**If under PM2:**
 ```bash
 pm2 restart kimaki
 ```
 This kills the Kimaki Node.js process and its child OpenCode server. PM2 restarts Kimaki, which spawns a fresh OpenCode server with a clean Bun runtime.
 
+**If standalone (not under PM2):**
+```bash
+# Kill the server process directly
+pkill -f "opencode serve"
+# Or with a specific PID:
+kill <pid>
+```
+After killing, Kimaki typically auto-starts a new opencode server on a random port (detectable via `ps aux | grep opencode`). Verify the new server responds:
+```bash
+# Find the new port
+ps aux | grep "opencode serve" | grep -v grep
+curl -s -o /dev/null -w "%{http_code}" http://localhost:<new-port>/
+```
+
+### Kimaki fallthrough — session created despite worktree failure
+Kimaki may still create the Discord session (thread renamed, `[INGRESS] promptAsync accepted` logged) even when `git worktree add` fails. The session runs without an isolated worktree. Evidence:
+- Discord thread shows the renamed title and model footer.
+- `.kimaki/worktrees/<hash>/` directory exists but is **empty** (no git data).
+- `git worktree list` in the project repo shows only the main checkout.
+- `cleanup failed` is logged after the error.
+
+If this happens, the session is functional but uses the main checkout rather than a worktree. The empty worktree directory can be cleaned up:
+```bash
+rmdir ~/.kimaki/worktrees/<hash>/
+```
+
 ### Prevention
-- Monitor Kimaki uptime. If >48h, schedule a periodic `pm2 restart kimaki` during low-activity hours.
+- Monitor Kimaki **and opencode server** uptime. If either is >48h, schedule a periodic restart during low-activity hours.
 - Watch for `cleanup failed` warning clusters in logs — they precede the hard failure.
 - After any OpenCode upgrade (`opencode upgrade`), restart the server immediately.
+- See `references/bun-runtime-degradation-err-variant.md` for session-specific reproduction details.
 
 ## Session-scoped LLM failure pattern (important)
 Do not treat all "stopped replying" reports as global runtime outages.

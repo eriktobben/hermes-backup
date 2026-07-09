@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-09T09:32:28.532644",
+  "updated_at": "2026-07-09T10:32:28.882809",
   "platforms": {
     "discord": [
       {
@@ -721,6 +721,12 @@
         "name": "Tobben MC / #general / Jeg har satt opp faraday i Coolify, men får status Degraded (unhealthy). Kan ... / topic 1523992796862611576",
         "type": "thread",
         "thread_id": "1523992796862611576"
+      },
+      {
+        "id": "1524711822056226828:1524711822056226828",
+        "name": "Tobben MC / #general / Oppretter en ny tråd/samtale med Kimaki mot Opencode, men får følgende feil: ... / topic 1524711822056226828",
+        "type": "thread",
+        "thread_id": "1524711822056226828"
       }
     ],
     "telegram": [],

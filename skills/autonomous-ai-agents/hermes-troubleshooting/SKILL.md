@@ -30,21 +30,36 @@ the ACP subprocess (opencode-go / copilot) crashed during execution. The unprote
 `proc.stdin.write()` in `agent/copilot_acp_client.py:492` is the crash site. This is
 intermittent, not a permanent configuration problem.
 
-### Kimaki/OpenCode workspace creation fails with `err_e2b0c342`
+### Kimaki/OpenCode workspace creation fails with Bun posix_spawn ENOENT
 
-**Symptom:** Kimaki reports `Workspace creation failed` with `ref=err_e2b0c342` and error `ENOENT: no such file or directory, posix_spawn '/bin/sh'` in the PM2 logs.
+**Symptom:** Kimaki reports `Workspace creation failed` with `UnknownError` and a ref like `err_e2b0c342` or `err_15f5fc94`, and the underlying error is `ENOENT: no such file or directory, posix_spawn '/bin/sh'` in logs.
 
-**Root cause:** The OpenCode ACP server (Bun-compiled `opencode.exe` binary) has been running for 40+ hours. Bun's runtime develops an internal issue where `posix_spawn('/bin/sh')` fails with ENOENT even though `/bin/sh` exists and works from the shell. This prevents git commands from running for worktree creation.
+> **Error ref varies per occurrence** — do NOT match on the exact ref string. The real signature is the `child_process` stack trace and `posix_spawn('/bin/sh') ENOENT` in PM2/Kimaki logs. See `expert-skill:discord-agent-runtime-diagnosis` → "Bun runtime degradation" section for full detail.
 
-**Fix:** Restart Kimaki via PM2, which kills and re-spawns both Kimaki and its child OpenCode server:
+**Root cause:** The OpenCode ACP server (Bun-compiled `opencode` binary) has been running for 40+ hours. Bun's runtime develops an internal issue where `posix_spawn('/bin/sh')` fails with ENOENT even though `/bin/sh` exists and works from the shell. This prevents git commands from running for worktree creation.
 
+**Detection (server may be PM2-managed or standalone):**
+```bash
+pm2 list | grep -i opencode
+ps aux | grep 'opencode serve' | grep -v grep
+```
+
+**Fix**
+
+*If under PM2:*
 ```bash
 pm2 restart kimaki
 ```
 
-The new OpenCode instance will have a fresh Bun runtime. No data loss — worktrees are on disk.
+*If standalone (not under PM2):*
+```bash
+pkill -f "opencode serve"
+```
+Kimaki will auto-start a replacement on a random port.
 
-**Prevention:** Consider a weekly cron job to restart Kimaki (e.g. Sunday night) to avoid the ~44h degradation window.
+**Fallthrough note:** Kimaki may still create the Discord session despite the worktree failure — the thread is renamed and a session is created, just without an isolated worktree. An empty worktree directory is left behind in `.kimaki/worktrees/<hash>/`.
+
+**Prevention:** Consider a weekly cron job to restart both Kimaki and the opencode server (e.g. Sunday night) to avoid the ~44h degradation window.
 
 ### Provider connection errors
 

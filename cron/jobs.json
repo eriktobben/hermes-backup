@@ -64,15 +64,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 748
+        "completed": 749
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-07-09T12:34:53.571543+02:00",
-      "last_run_at": "2026-07-09T10:33:55.878920+02:00",
+      "next_run_at": "2026-07-09T13:35:54.048146+02:00",
+      "last_run_at": "2026-07-09T11:34:56.178132+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -180,7 +180,49 @@
       ],
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null
+    },
+    {
+      "id": "8b03d0881387",
+      "name": "restart-opencode",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "./restart-opencode.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 5 * * *",
+        "display": "0 5 * * *"
+      },
+      "schedule_display": "0 5 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-09T11:45:38.111899+02:00",
+      "next_run_at": "2026-07-10T05:00:00+02:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1524711822056226828",
+        "chat_name": "Tobben MC / #general / Oppretter en ny tr\u00e5d/samtale med Kimaki mot Opencode, men f\u00e5r f\u00f8lgende feil: ...",
+        "thread_id": "1524711822056226828"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-07-09T11:34:53.571816+02:00"
+  "updated_at": "2026-07-09T12:35:54.048350+02:00"
 }
