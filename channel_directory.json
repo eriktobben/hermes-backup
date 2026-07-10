@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10T09:57:39.518365",
+  "updated_at": "2026-07-10T10:57:39.905028",
   "platforms": {
     "discord": [
       {
@@ -751,6 +751,12 @@
         "name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt og konfigurere git: git@github.com:vivalt... / topic 1524757813031600350",
         "type": "thread",
         "thread_id": "1524757813031600350"
+      },
+      {
+        "id": "1525088315949453384:1525088315949453384",
+        "name": "Tobben MC / #general / Jeg får fortsatt følgende feilmelding når jeg fortsetter en tråd som er 12-14... / topic 1525088315949453384",
+        "type": "thread",
+        "thread_id": "1525088315949453384"
       }
     ],
     "telegram": [],
