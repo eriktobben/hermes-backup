@@ -934,13 +934,26 @@
     "created_at": "2026-05-29T20:44:23.103374+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-06-24T08:59:47.594460+00:00",
-    "last_used_at": "2026-06-24T08:59:18.572166+00:00",
-    "last_viewed_at": "2026-06-24T08:59:18.565982+00:00",
+    "last_used_at": "2026-07-12T17:12:02.102385+00:00",
+    "last_viewed_at": "2026-07-12T17:12:02.097411+00:00",
     "patch_count": 58,
     "pinned": false,
     "state": "active",
-    "use_count": 60,
-    "view_count": 60
+    "use_count": 61,
+    "view_count": 61
+  },
+  "norwegian-price-comparison": {
+    "archived_at": null,
+    "created_at": "2026-07-12T17:11:42.895967+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-07-12T17:46:07.777207+00:00",
+    "last_used_at": "2026-07-12T17:46:14.093167+00:00",
+    "last_viewed_at": "2026-07-12T17:46:14.088935+00:00",
+    "patch_count": 7,
+    "pinned": false,
+    "state": "active",
+    "use_count": 4,
+    "view_count": 4
   },
   "notion": {
     "archived_at": null,
