@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-14T22:43:25.280157",
+  "updated_at": "2026-07-14T23:43:25.784833",
   "platforms": {
     "discord": [
       {
@@ -769,6 +769,12 @@
         "name": "Tobben MC / #general / Har du tilgang til Playwright? / topic 1526645744805740845",
         "type": "thread",
         "thread_id": "1526645744805740845"
+      },
+      {
+        "id": "1526722030932856863:1526722030932856863",
+        "name": "Tobben MC / #general / Ladet Teslaen til 89% og den viser 440km / topic 1526722030932856863",
+        "type": "thread",
+        "thread_id": "1526722030932856863"
       }
     ],
     "telegram": [],

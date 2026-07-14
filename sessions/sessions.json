@@ -3342,5 +3342,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1526645744805740845"
     }
+  },
+  "agent:main:discord:thread:1526722030932856863:1526722030932856863": {
+    "session_key": "agent:main:discord:thread:1526722030932856863:1526722030932856863",
+    "session_id": "20260714_224819_1478cb63",
+    "created_at": "2026-07-14T22:48:19.501097",
+    "updated_at": "2026-07-14T22:49:14.224337",
+    "display_name": "Tobben MC / #general / Ladet Teslaen til 89% og den viser 440km",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 25705,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1526722030932856863",
+      "chat_name": "Tobben MC / #general / Ladet Teslaen til 89% og den viser 440km",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1526722030932856863",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499181433200312381",
+      "message_id": "1526722030932856863"
+    }
   }
 }
