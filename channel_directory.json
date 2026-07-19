@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T13:34:19.253328",
+  "updated_at": "2026-07-19T14:34:19.704340",
   "platforms": {
     "discord": [
       {
@@ -781,6 +781,12 @@
         "name": "Tobben MC / #general / Kan du fikse dette? ✗ Directory does not exist or is not accessible: /home/er... / topic 1528235691245568012",
         "type": "thread",
         "thread_id": "1528235691245568012"
+      },
+      {
+        "id": "1528399715861790790:1528399715861790790",
+        "name": "Tobben MC / #general / Jeg har lenge gått med planer om å lage en leasing-first nettbutikk som selge... / topic 1528399715861790790",
+        "type": "thread",
+        "thread_id": "1528399715861790790"
       }
     ],
     "telegram": [],
