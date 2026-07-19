@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T02:24:10.525632",
+  "updated_at": "2026-07-19T03:24:15.164631",
   "platforms": {
     "discord": [
       {
@@ -775,6 +775,12 @@
         "name": "Tobben MC / #general / Ladet Teslaen til 89% og den viser 440km / topic 1526722030932856863",
         "type": "thread",
         "thread_id": "1526722030932856863"
+      },
+      {
+        "id": "1528235691245568012:1528235691245568012",
+        "name": "Tobben MC / #general / Kan du fikse dette? ✗ Directory does not exist or is not accessible: /home/er... / topic 1528235691245568012",
+        "type": "thread",
+        "thread_id": "1528235691245568012"
       }
     ],
     "telegram": [],
