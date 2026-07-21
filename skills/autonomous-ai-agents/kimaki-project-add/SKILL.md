@@ -49,6 +49,40 @@ Use this after creating or cloning a repository that should appear in Discord vi
   3. Recreate the worktree: `cd <project_directory> && git worktree add <workspace_directory> <worktree_branch>`
   See `references/worktree-cleanup-recovery.md` for full session detail with DB queries and log analysis.
 
+## Model switching via agent files
+
+Kimaki uses OpenCode under the hood. Agent files (`.opencode/agent/*.md`) let you switch models with a single slash command instead of clicking through the `/model` menus.
+
+### How it works
+1. Create `.md` files in the project's `.opencode/agent/` directory
+2. Restart Kimaki (`pm2 restart kimaki`)
+3. Use `/agent` dropdown or `/<name>-agent` slash commands to switch
+
+### Agent file format
+```yaml
+---
+description: Short human-readable description
+primary model: provider/model-id
+permission:
+  question: allow
+  plan_enter: allow
+---
+```
+
+### Provider names (as of July 2026)
+- **OpenCode Go**: `opencode-go/<model-id>` — models like `deepseek-v4-flash`, `deepseek-v4-pro`, `mimo-v2.5`, `mimo-v2.5-pro`, `minimax-m3`
+- **MiniMax direct**: `minimax/minimax-m3` — uses MiniMax token plan directly, not via OpenCode Go
+- **Anthropic**: `anthropic/<model-id>`
+- **OpenAI**: `openai/<model-id>`
+
+To list available models: `curl -s "https://opencode.ai/zen/go/v1/models" -H "Authorization: Bearer dummy" | python3 -c "import sys,json; [print(m['id']) for m in json.load(sys.stdin).get('data',[])]"`
+
+### Pitfalls
+- **Agent files are per-project, NOT global.** Kimaki calls `getClient().app.agents({ directory: projectDir })` — it only looks in the active project's `.opencode/agent/`. There is no global agent directory in OpenCode.
+- **Wrong project directory = no agents visible.** Each Discord channel is mapped to a project directory. If you put agent files in `~/.kimaki/projects/kimaki/.opencode/agent/` but the thread uses `/home/erik/Projects/serenahome`, the agents won't appear. Check `kimaki.log` for `Using project directory: ...` to find the correct path.
+- **Must restart Kimaki after adding/changing agent files.** `pm2 restart kimaki` — the agent list is loaded at OpenCode server startup.
+- **Agent filter**: only agents with `mode: primary` or `mode: all` and `hidden: false` appear in the `/agent` dropdown. OpenCode's built-in `build` and `plan` agents are always present.
+
 ## Operational hardening (PM2 / long-running bot)
 When Kimaki is run as a persistent bot process, reduce freeze/restart loops by:
 1. Avoid floating `npx kimaki` in PM2 for production-like runs; pin a known kimaki version.
