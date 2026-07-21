@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T11:19:38.230371",
+  "updated_at": "2026-07-21T12:19:38.747037",
   "platforms": {
     "discord": [
       {
@@ -793,6 +793,12 @@
         "name": "Tobben MC / #bilkjøp / Nå har jeg hatt Teslaen inne til NAF-test, og her er resultatet: Sender som a... / topic 1529078145184038923",
         "type": "thread",
         "thread_id": "1529078145184038923"
+      },
+      {
+        "id": "1529095944942129174:1529095944942129174",
+        "name": "Tobben MC / #general / Kan du hjelpe meg å sette opp enkel modell switching via Kimaki? https://kima... / topic 1529095944942129174",
+        "type": "thread",
+        "thread_id": "1529095944942129174"
       }
     ],
     "telegram": [],

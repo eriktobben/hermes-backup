@@ -597,13 +597,13 @@
     "created_at": "2026-06-03T07:43:46.748014+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-10T10:15:37.754105+00:00",
-    "last_used_at": "2026-06-25T09:14:59.615924+00:00",
-    "last_viewed_at": "2026-06-25T09:14:59.610427+00:00",
+    "last_used_at": "2026-07-21T12:01:38.778626+00:00",
+    "last_viewed_at": "2026-07-21T12:01:38.773199+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 17,
-    "view_count": 17
+    "use_count": 18,
+    "view_count": 18
   },
   "hermes-s6-container-supervision": {
     "archived_at": null,
