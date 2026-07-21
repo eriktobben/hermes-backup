@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-21T10:19:37.713970",
+  "updated_at": "2026-07-21T11:19:38.230371",
   "platforms": {
     "discord": [
       {
@@ -787,6 +787,12 @@
         "name": "Tobben MC / #general / Jeg har lenge gått med planer om å lage en leasing-first nettbutikk som selge... / topic 1528399715861790790",
         "type": "thread",
         "thread_id": "1528399715861790790"
+      },
+      {
+        "id": "1529078145184038923:1529078145184038923",
+        "name": "Tobben MC / #bilkjøp / Nå har jeg hatt Teslaen inne til NAF-test, og her er resultatet: Sender som a... / topic 1529078145184038923",
+        "type": "thread",
+        "thread_id": "1529078145184038923"
       }
     ],
     "telegram": [],
