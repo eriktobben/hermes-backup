@@ -64,15 +64,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 1074
+        "completed": 1075
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-07-23T08:02:27.522213+02:00",
-      "last_run_at": "2026-07-23T06:01:29.831084+02:00",
+      "next_run_at": "2026-07-23T09:03:27.998773+02:00",
+      "last_run_at": "2026-07-23T07:02:30.577040+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -154,17 +154,17 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 19
+        "completed": 20
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-07-23T08:00:00+02:00",
-      "last_run_at": "2026-07-22T08:05:16.555366+02:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 400: Error from provider (Console Go): Upstream request failed",
+      "next_run_at": "2026-07-24T08:00:00+02:00",
+      "last_run_at": "2026-07-23T08:02:57.362633+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -225,5 +225,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-07-23T07:02:27.522447+02:00"
+  "updated_at": "2026-07-23T08:03:27.999034+02:00"
 }
