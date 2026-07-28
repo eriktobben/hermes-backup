@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-28T22:16:02.371750",
+  "updated_at": "2026-07-28T23:16:02.733505",
   "platforms": {
     "discord": [
       {
@@ -253,12 +253,6 @@
         "name": "droplane",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1498961199679668245:1498961199679668245",
-        "name": "Tobben MC / #hermes / Can you install and set up this? https://github.com/stainlu/hermes-labyrinth / topic 1498961199679668245",
-        "type": "thread",
-        "thread_id": "1498961199679668245"
       },
       {
         "id": "1499181605833670756",
