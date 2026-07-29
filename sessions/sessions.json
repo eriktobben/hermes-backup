@@ -2644,9 +2644,9 @@
   },
   "agent:main:discord:thread:1522966293513502762:1522966293513502762": {
     "session_key": "agent:main:discord:thread:1522966293513502762:1522966293513502762",
-    "session_id": "20260704_140422_26e509da",
-    "created_at": "2026-07-04T14:04:22.038488",
-    "updated_at": "2026-07-04T18:53:24.335107",
+    "session_id": "20260729_061256_6f45323e",
+    "created_at": "2026-07-29T06:12:56.571880",
+    "updated_at": "2026-07-29T06:13:17.205296",
     "display_name": "Tobben MC / #\ud83d\uddde\ufe0f-briefings / N\u00e5 f\u00e5r jeg \"\u26a0\ufe0f Cron 'AI Model Daily Briefing' failed: provider timeout. Fallb...",
     "platform": "discord",
     "chat_type": "thread",
@@ -2655,10 +2655,10 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 49129,
+    "last_prompt_tokens": 27965,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
-    "expiry_finalized": true,
+    "expiry_finalized": false,
     "suspended": false,
     "resume_pending": false,
     "resume_reason": null,
@@ -2678,7 +2678,7 @@
       "chat_topic": null,
       "guild_id": "1479597162685006058",
       "parent_chat_id": "1499183215494037554",
-      "message_id": "1522966293513502762"
+      "message_id": "1531907354788888676"
     }
   },
   "agent:main:discord:thread:1523307812149661828:1523307812149661828": {
