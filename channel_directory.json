@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-28T23:16:02.733505",
+  "updated_at": "2026-07-29T00:16:03.163092",
   "platforms": {
     "discord": [
       {
@@ -253,12 +253,6 @@
         "name": "droplane",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1499181605833670756",
-        "name": "Tobben MC / #serena",
-        "type": "group",
-        "thread_id": null
       },
       {
         "id": "1499183215494037554",
