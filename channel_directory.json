@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31T21:26:34.947176",
+  "updated_at": "2026-07-31T22:26:35.436112",
   "platforms": {
     "discord": [
       {
@@ -257,12 +257,6 @@
       {
         "id": "1499183215494037554",
         "name": "Tobben MC / #🗞️-briefings",
-        "type": "group",
-        "thread_id": null
-      },
-      {
-        "id": "1500250374966218913",
-        "name": "Tobben MC / #masterfeed",
         "type": "group",
         "thread_id": null
       },
