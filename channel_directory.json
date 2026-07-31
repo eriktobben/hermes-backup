@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31T22:26:35.436112",
+  "updated_at": "2026-07-31T23:26:35.936520",
   "platforms": {
     "discord": [
       {
@@ -259,12 +259,6 @@
         "name": "Tobben MC / #🗞️-briefings",
         "type": "group",
         "thread_id": null
-      },
-      {
-        "id": "1500251237940072499:1500251237940072499",
-        "name": "Tobben MC / #masterfeed / Masterfeed security audit / topic 1500251237940072499",
-        "type": "thread",
-        "thread_id": "1500251237940072499"
       },
       {
         "id": "1501193824624705606",
