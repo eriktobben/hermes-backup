@@ -301,13 +301,13 @@
     "archived_at": null,
     "created_at": "2026-05-24T18:35:01.361036+00:00",
     "last_patched_at": null,
-    "last_used_at": "2026-08-02T00:09:38.276214+00:00",
-    "last_viewed_at": "2026-08-02T00:09:38.270815+00:00",
+    "last_used_at": "2026-08-02T01:06:21.791866+00:00",
+    "last_viewed_at": "2026-08-02T01:06:21.787800+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 6,
-    "view_count": 12
+    "use_count": 7,
+    "view_count": 13
   },
   "discord-agent-runtime-diagnosis": {
     "archived_at": null,
@@ -843,13 +843,13 @@
     "created_at": "2026-07-05T13:08:31.333515+00:00",
     "created_by": "agent",
     "last_patched_at": null,
-    "last_used_at": "2026-08-02T00:14:54.481444+00:00",
-    "last_viewed_at": "2026-08-02T00:14:54.477956+00:00",
+    "last_used_at": "2026-08-02T01:05:00.796060+00:00",
+    "last_viewed_at": "2026-08-02T01:05:00.790047+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 2,
-    "view_count": 2
+    "use_count": 3,
+    "view_count": 3
   },
   "manim-video": {
     "archived_at": null,
@@ -1284,14 +1284,14 @@
     "archived_at": null,
     "created_at": "2026-06-14T14:05:21.740887+00:00",
     "created_by": null,
-    "last_patched_at": "2026-08-02T00:47:39.336335+00:00",
-    "last_used_at": "2026-08-02T00:47:43.235657+00:00",
-    "last_viewed_at": "2026-08-02T00:47:43.231518+00:00",
-    "patch_count": 19,
+    "last_patched_at": "2026-08-02T01:05:46.807812+00:00",
+    "last_used_at": "2026-08-02T01:05:08.485964+00:00",
+    "last_viewed_at": "2026-08-02T01:05:08.482931+00:00",
+    "patch_count": 20,
     "pinned": false,
     "state": "active",
-    "use_count": 13,
-    "view_count": 13
+    "use_count": 16,
+    "view_count": 16
   },
   "software-development-workflow": {
     "archived_at": null,
