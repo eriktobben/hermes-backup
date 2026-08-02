@@ -301,13 +301,13 @@
     "archived_at": null,
     "created_at": "2026-05-24T18:35:01.361036+00:00",
     "last_patched_at": null,
-    "last_used_at": "2026-07-05T12:46:52.295104+00:00",
-    "last_viewed_at": "2026-07-05T12:46:52.288194+00:00",
+    "last_used_at": "2026-08-02T00:09:38.276214+00:00",
+    "last_viewed_at": "2026-08-02T00:09:38.270815+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 5,
-    "view_count": 11
+    "use_count": 6,
+    "view_count": 12
   },
   "discord-agent-runtime-diagnosis": {
     "archived_at": null,
@@ -843,13 +843,13 @@
     "created_at": "2026-07-05T13:08:31.333515+00:00",
     "created_by": "agent",
     "last_patched_at": null,
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_used_at": "2026-08-02T00:14:54.481444+00:00",
+    "last_viewed_at": "2026-08-02T00:14:54.477956+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
   },
   "manim-video": {
     "archived_at": null,
@@ -1284,14 +1284,14 @@
     "archived_at": null,
     "created_at": "2026-06-14T14:05:21.740887+00:00",
     "created_by": null,
-    "last_patched_at": "2026-07-05T13:08:37.962010+00:00",
-    "last_used_at": "2026-07-05T13:08:14.031006+00:00",
-    "last_viewed_at": "2026-07-05T13:08:14.025529+00:00",
-    "patch_count": 10,
+    "last_patched_at": "2026-08-02T00:47:39.336335+00:00",
+    "last_used_at": "2026-08-02T00:47:43.235657+00:00",
+    "last_viewed_at": "2026-08-02T00:47:43.231518+00:00",
+    "patch_count": 19,
     "pinned": false,
     "state": "active",
-    "use_count": 9,
-    "view_count": 9
+    "use_count": 13,
+    "view_count": 13
   },
   "software-development-workflow": {
     "archived_at": null,
@@ -1387,13 +1387,13 @@
     "created_at": "2026-06-14T13:46:11.315230+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-06-14T14:01:55.523150+00:00",
-    "last_used_at": "2026-06-17T10:31:42.709189+00:00",
-    "last_viewed_at": "2026-06-17T10:31:42.696413+00:00",
+    "last_used_at": "2026-08-02T00:09:38.327295+00:00",
+    "last_viewed_at": "2026-08-02T00:09:38.317701+00:00",
     "patch_count": 2,
     "pinned": false,
     "state": "stale",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 4,
+    "view_count": 4
   },
   "tdd": {
     "archived_at": null,

@@ -5,43 +5,49 @@ description: Route outbound traffic through Tobben's Mac Mini (smooth-fire) via 
 
 # Smooth-fire SOCKS5 Proxy
 
-Route traffic through Tobben's Mac Mini **smooth-fire** (Tailscale IP: `100.71.230.118`) from this Hetzner server via a SSH SOCKS5 tunnel.
+Route traffic through Tobben's Mac Mini **smooth-fire** (Tailscale IP: `100.67.84.10`, verify with `tailscale status`) from this Hetzner server via a SSH SOCKS5 tunnel.
 
 ## Connection Details
 
 | Detail | Value |
 |---|---|
 | Mac Mini hostname | smooth-fire / smooth-fire-2 |
-| Tailscale hostname | `smooth-fire-2.tail75ed8a.ts.net` |
-| Tailscale IP | `100.101.252.60` (was `100.71.230.118` — now dead) |
+| Tailscale hostname | `smooth-fire.tail75ed8a.ts.net` (may change — always verify) |
+| Tailscale IP | `100.67.84.10` (as of 2026-08-02 — verify with `tailscale status`) |
 | SSH user | `hermes` |
+| Sudo access | ❌ hermes has NO sudo — all sudo commands must be run by user locally |
 | Authentication | SSH key (`~/.ssh/id_ed25519`) — already deployed |
 | SOCKS5 proxy port | `127.0.0.1:1080` |
 | OS | macOS (Darwin smooth-fire.local 21.6.0, Monterey) |
 
 ## SSH Connection
 
+**Always discover the current IP first** — the Tailscale hostname may not resolve, and the IP changes periodically:
+
 ```bash
-# Preferred: use the Tailscale hostname
-ssh hermes@smooth-fire-2.tail75ed8a.ts.net
-
-# Or direct IP
-ssh hermes@100.101.252.60
-
-# If hostname changed again, find the new IP:
+# Find current IP (most reliable)
 tailscale status | grep smooth-fire
+# Output: 100.67.84.10     smooth-fire             erik@  macOS  -
+
+# Then SSH with the IP
+ssh hermes@<current-ip>
+```
+
+If hostname resolves, this also works:
+```bash
+ssh hermes@<tailscale-ip>
 ```
 
 ## Start the SOCKS5 Proxy
 
-Run this to start the SSH tunnel in the background:
+Run this to start the SSH tunnel in the background (use the IP from `tailscale status`):
 
 ```bash
 ssh -D 1080 -N -f \
   -o ServerAliveInterval=30 \
   -o ExitOnForwardFailure=yes \
   -o StrictHostKeyChecking=accept-new \
-  hermes@smooth-fire-2.tail75ed8a.ts.net
+  hermes@<tailscale-ip>
 ```
 
 Verify it's running:
@@ -91,7 +97,7 @@ kill <PID>
 Or stop all matching:
 
 ```bash
-pkill -f "ssh.*-D 1080.*hermes@smooth-fire-2.tail75ed8a.ts.net" 2>/dev/null; echo "Stopped"
+pkill -f "ssh.*-D 1080.*hermes@<tailscale-ip>" 2>/dev/null; echo "Stopped"
 ```
 
 ## Test Connectivity (if it stops working)
@@ -102,7 +108,7 @@ tailscale status | grep smooth-fire
 # Should show "online" or "idle"
 
 # 2. Can we SSH?
-ssh -o ConnectTimeout=5 hermes@smooth-fire-2.tail75ed8a.ts.net "echo OK"
+ssh -o ConnectTimeout=5 hermes@<tailscale-ip> "echo OK"
 
 # 3. Restart the tunnel if needed
 ```
@@ -117,9 +123,12 @@ skill_view(name="macos-storage-diagnostics")
 
 That skill covers all the techniques from this session — bus detection, SoftRAID/AppleRAID checking, APFS encryption unlock, and the physical checklist — as a reusable class-level workflow.
 
+For **APFS read-only mount with I/O errors on FireWire RAID** (ICYBOX scenario), see:
+`references/icybox-io-error-diagnostics.md`
+
 ## Troubleshooting
 
 - **"Connection refused"**: Run `tailscale status` to verify smooth-fire is online
 - **"Permission denied"**: The SSH key was deployed to `~hermes/.ssh/authorized_keys` on smooth-fire. If it was wiped, re-deploy: copy `~/.ssh/id_ed25519.pub` and ask Tobben to append it.
-- **Host key changed / "Host key verification failed"**: Run `ssh-keygen -R "smooth-fire-2.tail75ed8a.ts.net" && ssh-keygen -R "100.101.252.60"` then reconnect.
+- **Host key changed / "Host key verification failed"**: Run `ssh-keygen -R "smooth-fire.tail75ed8a.ts.net" && ssh-keygen -R "<old-ip>"` then reconnect.
 - **Proxy slow/unresponsive**: The SSH tunnel might have died. Restart it with the command above.
