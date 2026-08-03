@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-03T12:27:04.662629",
+  "updated_at": "2026-08-03T13:32:05.184759",
   "platforms": {
     "discord": [
       {
@@ -257,12 +257,6 @@
       {
         "id": "1499183215494037554",
         "name": "Tobben MC / #🗞️-briefings",
-        "type": "group",
-        "thread_id": null
-      },
-      {
-        "id": "1501193824624705606",
-        "name": "Tobben MC / #cloudprint-deamon",
         "type": "group",
         "thread_id": null
       },
