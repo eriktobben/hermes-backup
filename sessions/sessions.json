@@ -3344,5 +3344,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1533265452200104017"
     }
+  },
+  "agent:main:discord:thread:1533755624909701250:1533755624909701250": {
+    "session_key": "agent:main:discord:thread:1533755624909701250:1533755624909701250",
+    "session_id": "20260803_083718_ea10bd6a",
+    "created_at": "2026-08-03T08:37:18.942491",
+    "updated_at": "2026-08-03T08:38:12.824962",
+    "display_name": "Tobben MC / #general / Jeg har i dag boxere fra Piere Robert som jeg er veldig forn\u00f8yd med. Kj\u00f8pte d...",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 35776,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1533755624909701250",
+      "chat_name": "Tobben MC / #general / Jeg har i dag boxere fra Piere Robert som jeg er veldig forn\u00f8yd med. Kj\u00f8pte d...",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1533755624909701250",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499181433200312381",
+      "message_id": "1533755624909701250"
+    }
   }
 }
