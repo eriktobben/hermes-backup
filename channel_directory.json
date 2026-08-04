@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-04T09:52:14.761771",
+  "updated_at": "2026-08-04T10:52:15.242069",
   "platforms": {
     "discord": [
       {
@@ -251,6 +251,12 @@
       {
         "id": "1524760580479783124",
         "name": "droplane",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1534140860864925698",
+        "name": "autoads",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -769,6 +775,18 @@
         "name": "Tobben MC / #general / Jeg har i dag boxere fra Piere Robert som jeg er veldig fornøyd med. Kjøpte d... / topic 1533755624909701250",
         "type": "thread",
         "thread_id": "1533755624909701250"
+      },
+      {
+        "id": "1534140717721456712:1534140717721456712",
+        "name": "Tobben MC / #general / Kan du sette opp Kimaki på dette repoet: git@github.com:Serena-AS/autoads.git / topic 1534140717721456712",
+        "type": "thread",
+        "thread_id": "1534140717721456712"
+      },
+      {
+        "id": "1534143288754573373:1534143288754573373",
+        "name": "Tobben MC / #autoads / Jeg ønsker å lage et SaaS for automatisk håndtering av annonser på Meta (Face... / topic 1534143288754573373",
+        "type": "thread",
+        "thread_id": "1534143288754573373"
       }
     ],
     "telegram": [],

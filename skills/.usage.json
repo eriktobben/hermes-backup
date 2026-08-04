@@ -778,13 +778,13 @@
     "archived_at": null,
     "created_at": "2026-05-24T18:05:09.698537+00:00",
     "last_patched_at": "2026-07-21T13:44:06.284749+00:00",
-    "last_used_at": "2026-07-21T13:43:48.774453+00:00",
-    "last_viewed_at": "2026-07-21T13:43:48.770336+00:00",
+    "last_used_at": "2026-08-04T10:07:38.448692+00:00",
+    "last_viewed_at": "2026-08-04T10:07:38.443464+00:00",
     "patch_count": 10,
     "pinned": false,
     "state": "active",
-    "use_count": 18,
-    "view_count": 22
+    "use_count": 19,
+    "view_count": 23
   },
   "linear": {
     "archived_at": null,
@@ -1298,13 +1298,13 @@
     "created_at": "2026-06-10T10:16:36.301242+00:00",
     "created_by": null,
     "last_patched_at": "2026-06-10T10:16:36.301272+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_used_at": "2026-08-04T10:22:18.548084+00:00",
+    "last_viewed_at": "2026-08-04T10:22:18.542947+00:00",
     "patch_count": 1,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
   },
   "sports-fixture-h2h-data-collection": {
     "archived_at": null,
@@ -1441,6 +1441,32 @@
     "last_patched_at": null,
     "last_used_at": "2026-06-10T10:15:56.730072+00:00",
     "last_viewed_at": "2026-06-10T10:15:56.721791+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "to-issues": {
+    "archived_at": null,
+    "created_at": "2026-08-04T10:17:57.756497+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-08-04T10:17:57.761482+00:00",
+    "last_viewed_at": "2026-08-04T10:17:57.756522+00:00",
+    "patch_count": 0,
+    "pinned": false,
+    "state": "active",
+    "use_count": 1,
+    "view_count": 1
+  },
+  "to-prd": {
+    "archived_at": null,
+    "created_at": "2026-08-04T10:17:56.714945+00:00",
+    "created_by": null,
+    "last_patched_at": null,
+    "last_used_at": "2026-08-04T10:17:56.721561+00:00",
+    "last_viewed_at": "2026-08-04T10:17:56.715578+00:00",
     "patch_count": 0,
     "pinned": false,
     "state": "active",
