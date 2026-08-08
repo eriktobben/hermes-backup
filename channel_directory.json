@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08T20:33:02.027908",
+  "updated_at": "2026-08-08T21:38:02.575962",
   "platforms": {
     "discord": [
       {
@@ -787,6 +787,12 @@
         "name": "Tobben MC / #autoads / Jeg ønsker å lage et SaaS for automatisk håndtering av annonser på Meta (Face... / topic 1534143288754573373",
         "type": "thread",
         "thread_id": "1534143288754573373"
+      },
+      {
+        "id": "1535748787241361540:1535748787241361540",
+        "name": "Tobben MC / #general / Kan du sende meg swot analysen og dokumentene knyttet til leasing prosjektet? / topic 1535748787241361540",
+        "type": "thread",
+        "thread_id": "1535748787241361540"
       }
     ],
     "telegram": [],

@@ -33,6 +33,8 @@ Use when the user wants to brainstorm names for a project, SaaS, or brand and ch
 - Examples: *Trygg* (safe), *Borg* (fortress), *Vern* (protection), *Vakt* (guard), *Heim* (home), *Kopi* (copy), *Stasj* (stash), *Lagre* (save/store)
 - Past participles (*backupet*, *lagret*, *kopiert*) work as memorable brands
 
+6. **Abstract tech brand names** — short made-up words with no literal meaning but a tech/futuristic vibe (e.g. *zynk*, *nexa*, *velo*, *pixl*, *kiro*). These are often 4-5 letters, easy to pronounce internationally, and evoke brands like Stripe, Vercel, Linear. Good when the user explicitly wants "tech vibe" without semantic baggage. Combine phonemes that sound modern: x, z, v, k, p endings; soft vowels; sharp consonant clusters.
+
 ## Phase 2: Domain Availability Check
 
 When registrar websites (Namecheap, GoDaddy) and the `whois` CLI are rate-limited or blocked, use **raw TCP WHOIS** via Python's `socket` module.
@@ -125,3 +127,5 @@ Highlight top 5 recommendations with:
 - .com availability is rare for short words; compound names have better odds
 - .co WHOIS server (whois.nic.co) is unreliable from some networks
 - Some registry WHOIS servers only show NOT FOUND versus registered state; pattern-match carefully
+- .no (NORID) requires `domain: <name>.no` format, not bare domain — `nc whois.norid.no 43` works when `whois` CLI is missing
+- Batch WHOIS lookups via subagents can return inconsistent results due to rate limiting or format issues. Always re-verify a subset individually before presenting final results to the user

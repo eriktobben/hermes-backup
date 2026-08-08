@@ -2,6 +2,7 @@
 
 | TLD | WHOIS Server | Protocol |
 |-----|-------------|----------|
+| .no | whois.norid.no | Port 43 (raw TCP) |
 | .io | whois.nic.io | Port 43 (raw TCP) |
 | .com | whois.verisign-grs.com | Port 43 (raw TCP) |
 | .net | whois.verisign-grs.com | Port 43 (raw TCP) |
@@ -11,6 +12,25 @@
 | .xyz | whois.nic.xyz | Port 43 (raw TCP) |
 | .app | whois.nic.google | Port 43 (raw TCP) |
 | .dev | whois.nic.google | Port 43 (raw TCP) |
+
+## .no (NORID) specific
+
+Query format — must send `domain: <name>.no` (not just the domain):
+```bash
+echo "domain: test.no" | nc whois.norid.no 43
+```
+
+### Available signals (NORID)
+- `No match for` — domain is available
+
+### Registered signals (NORID)
+- `Handle:` or `Holder:` — domain is registered
+- `created:` — domain has a creation date
+
+### Pitfalls
+- NORID does NOT accept bare domain queries (e.g. `test.no\r\n`). Must use `domain: test.no` format.
+- `whois` CLI may not be installed; use `nc whois.norid.no 43` directly.
+- Batch WHOIS lookups can return inconsistent results due to rate limiting. If results look wrong, re-verify individually before presenting to the user.
 
 # Response Pattern Reference
 
@@ -24,7 +44,7 @@
 - `No entries found`
 - `Status: free`
 
-## Registered signls — any of these confirms registration
+## Registered signals — any of these confirms registration
 - `Domain ID:`
 - `Registry Domain ID:`
 - `Creation Date:`
@@ -32,6 +52,8 @@
 - `Registry Expiry Date:`
 - `Registrar:`
 - `Registrar IANA ID:`
+- `Handle:` (NORID)
+- `Holder:` (NORID)
 
 # Registrar Website URLs (alternative to WHOIS)
 
