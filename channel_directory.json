@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-10T10:13:17.716437",
+  "updated_at": "2026-08-10T11:13:18.173494",
   "platforms": {
     "discord": [
       {
@@ -257,6 +257,12 @@
       {
         "id": "1534140860864925698",
         "name": "autoads",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1536320892613689394",
+        "name": "loyalty",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -793,6 +799,12 @@
         "name": "Tobben MC / #general / Kan du sende meg swot analysen og dokumentene knyttet til leasing prosjektet? / topic 1535748787241361540",
         "type": "thread",
         "thread_id": "1535748787241361540"
+      },
+      {
+        "id": "1536320658361942066:1536320658361942066",
+        "name": "Tobben MC / #general / Kan du sette opp Kimaki med følgende repo? git@github.com:Tobbens-Empire/loya... / topic 1536320658361942066",
+        "type": "thread",
+        "thread_id": "1536320658361942066"
       }
     ],
     "telegram": [],
