@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T12:38:29.014082",
+  "updated_at": "2026-08-11T13:38:29.530264",
   "platforms": {
     "discord": [
       {
@@ -263,6 +263,12 @@
       {
         "id": "1536320892613689394",
         "name": "loyalty",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1536730327945322500",
+        "name": "helix",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -805,6 +811,12 @@
         "name": "Tobben MC / #general / Kan du sette opp Kimaki med følgende repo? git@github.com:Tobbens-Empire/loya... / topic 1536320658361942066",
         "type": "thread",
         "thread_id": "1536320658361942066"
+      },
+      {
+        "id": "1536730055441383534:1536730055441383534",
+        "name": "Tobben MC / #general / Kan du setet opp Kimaki med følgende repo? git@github.com:Serena-AS/helix.git / topic 1536730055441383534",
+        "type": "thread",
+        "thread_id": "1536730055441383534"
       }
     ],
     "telegram": [],
