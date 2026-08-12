@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T21:08:44.791650",
+  "updated_at": "2026-08-12T22:13:45.329795",
   "platforms": {
     "discord": [
       {
@@ -823,6 +823,12 @@
         "name": "Tobben MC / #general / Kan du opprette en cron som daglig sjekker linken under og KUN gir meg beskje... / topic 1537002411758067743",
         "type": "thread",
         "thread_id": "1537002411758067743"
+      },
+      {
+        "id": "1537213588752695447:1537213588752695447",
+        "name": "Tobben MC / #general / Deepseek har kommet med en ny versjon av V4 Pro, men jeg får den ikke frem nå... / topic 1537213588752695447",
+        "type": "thread",
+        "thread_id": "1537213588752695447"
       }
     ],
     "telegram": [],
