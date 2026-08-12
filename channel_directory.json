@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-12T06:58:38.012636",
+  "updated_at": "2026-08-12T07:58:38.491565",
   "platforms": {
     "discord": [
       {
@@ -817,6 +817,12 @@
         "name": "Tobben MC / #general / Kan du setet opp Kimaki med følgende repo? git@github.com:Serena-AS/helix.git / topic 1536730055441383534",
         "type": "thread",
         "thread_id": "1536730055441383534"
+      },
+      {
+        "id": "1537002411758067743:1537002411758067743",
+        "name": "Tobben MC / #general / Kan du opprette en cron som daglig sjekker linken under og KUN gir meg beskje... / topic 1537002411758067743",
+        "type": "thread",
+        "thread_id": "1537002411758067743"
       }
     ],
     "telegram": [],

@@ -249,14 +249,14 @@
     "archived_at": null,
     "created_at": "2026-06-17T10:34:28.010238+00:00",
     "created_by": null,
-    "last_patched_at": "2026-06-17T10:34:28.010267+00:00",
-    "last_used_at": null,
-    "last_viewed_at": null,
-    "patch_count": 1,
+    "last_patched_at": "2026-08-12T07:42:40.643784+00:00",
+    "last_used_at": "2026-08-12T07:42:34.402465+00:00",
+    "last_viewed_at": "2026-08-12T07:42:34.397691+00:00",
+    "patch_count": 4,
     "pinned": false,
     "state": "active",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 2,
+    "view_count": 2
   },
   "creative-workstation-consulting": {
     "archived_at": null,
