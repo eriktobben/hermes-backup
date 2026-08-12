@@ -368,7 +368,7 @@
     "last_viewed_at": "2026-08-08T20:57:27.869248+00:00",
     "patch_count": 4,
     "pinned": false,
-    "state": "stale",
+    "state": "active",
     "use_count": 3,
     "view_count": 3
   },
@@ -445,7 +445,7 @@
     "last_viewed_at": "2026-07-07T10:57:45.882482+00:00",
     "patch_count": 17,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 15,
     "view_count": 15
   },
@@ -627,7 +627,7 @@
     "last_viewed_at": "2026-07-09T09:43:53.274754+00:00",
     "patch_count": 5,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 9,
     "view_count": 9
   },
@@ -951,7 +951,7 @@
     "last_viewed_at": "2026-07-12T17:12:02.097411+00:00",
     "patch_count": 58,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 61,
     "view_count": 61
   },
@@ -1508,7 +1508,7 @@
     "last_viewed_at": "2026-07-09T12:49:43.663867+00:00",
     "patch_count": 7,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 2,
     "view_count": 2
   },
