@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T20:33:56.765802",
+  "updated_at": "2026-08-13T21:33:57.291854",
   "platforms": {
     "discord": [
       {
@@ -283,18 +283,6 @@
         "name": "Tobben MC / #general",
         "type": "group",
         "thread_id": null
-      },
-      {
-        "id": "1504940952983175169",
-        "name": "Tobben MC / #minify",
-        "type": "group",
-        "thread_id": null
-      },
-      {
-        "id": "1504942759184830465:1504942759184830465",
-        "name": "Tobben MC / #minify / Mac image compressor with Liquid Glass UI / topic 1504942759184830465",
-        "type": "thread",
-        "thread_id": "1504942759184830465"
       },
       {
         "id": "1510010610304155738",
