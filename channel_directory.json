@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-13T08:23:50.627677",
+  "updated_at": "2026-08-13T09:23:51.118634",
   "platforms": {
     "discord": [
       {
@@ -829,6 +829,12 @@
         "name": "Tobben MC / #general / Deepseek har kommet med en ny versjon av V4 Pro, men jeg får den ikke frem nå... / topic 1537213588752695447",
         "type": "thread",
         "thread_id": "1537213588752695447"
+      },
+      {
+        "id": "1537383051007627315:1537383051007627315",
+        "name": "Tobben MC / #general / Jeg får denne feilmeldingen, kan du fikse? ✗ Directory does not exist or is n... / topic 1537383051007627315",
+        "type": "thread",
+        "thread_id": "1537383051007627315"
       }
     ],
     "telegram": [],

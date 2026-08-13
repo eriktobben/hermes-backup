@@ -7,8 +7,19 @@ User says "I worked on a Kimaki thread yesterday, today when I try to continue I
 ✗ Directory does not exist or is not accessible: /home/erik/.kimaki/worktrees/<hash>/<worktree-name>
 ```
 
-## Root cause
-OpenCode's snapshot/git-GC cleanup removes stale git worktree directories overnight (~02:00). The DB (`thread_workspaces` table) and git branch survive. Only the local checkout on disk is deleted.
+## Root cause — two separate cleanup mechanisms
+
+Kimaki worktrees are affected by **two independent nightly cleanup processes**:
+
+1. **OpenCode snapshot GC (~02:00)**: The OpenCode binary runs `git gc --prune=7.days` on snapshot repos (under `~/.local/share/opencode/snapshot/`). Each snapshot repo has `worktree = <kimaki-worktree-path>` in its git config. This GC empties the worktree directory but the git branch always survives. **Cannot be disabled** — it's compiled into the OpenCode binary with no config knob. Error in kimaki.log:
+   ```
+   [ERROR] [OPENCODE] cleanup failed ... git gc --prune=7.days ... NotFound: FileSystem.access (<worktree-path>)
+   ```
+   The error appears AFTER the directory is already gone — the GC is a downstream effect, not the cause.
+
+2. **Our cron job (04:00, `3fca63db50fc`)**: `kimaki-worktree-cleanup.py --apply` deletes worktrees inactive >14 days — both directory AND git branch. This is controllable (edit/remove the cron job). Check with: `hermes cron list`.
+
+The DB (`thread_workspaces` table) survives both cleanups. Only the local checkout on disk is deleted by #1; #2 also deletes the branch.
 
 ## Diagnosis (what to check)
 
@@ -95,4 +106,4 @@ The relevant Kimaki source:
 - `worktrees.js:createWorktreeWithSubmodules()` — creates new worktrees (not called on resume)
 
 ## Why it happens
-OpenCode's `snapshot` service periodically runs git GC and cleanup. The "cleanup failed" messages in the log (168 occurrences in the log) are from this service failing to clean up its own snapshot repos, but the side effect is git worktree removal. The `thread_workspaces` DB status is never updated to reflect the physical deletion, so Kimaki silently passes a stale path to the agent.
+OpenCode's snapshot service periodically runs `git gc --prune=7.days` on snapshot repos. Each snapshot repo points to the Kimaki worktree directory via its `worktree` git config. The GC prunes unreachable objects and cleans up the worktree checkout. The "cleanup failed" messages in the log (168 occurrences) are from this service failing when the directory is already gone. The `thread_workspaces` DB status is never updated to reflect the physical deletion, so Kimaki silently passes a stale path to the agent. The separate cron job at 04:00 handles long-term cleanup (branches after 14 days inactivity).
