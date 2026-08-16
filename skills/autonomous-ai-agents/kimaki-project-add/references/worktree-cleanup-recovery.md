@@ -80,17 +80,44 @@ From the DB or log:
 - Branch name: e.g. `opencode/kimaki--jg-nskr--lgg-tl-anlystcs-vd-brk-av-um`
 - Worktree path: e.g. `/home/erik/.kimaki/worktrees/38586ea2/-jg-nskr--lgg-tl-anlystcs-vd-brk-av-um`
 
+Query the DB:
+```python
+python3 -c "
+import sqlite3, os
+db = sqlite3.connect(os.path.expanduser('~/.kimaki/discord-sessions.db'))
+for r in db.execute(\"SELECT thread_id, workspace_name, workspace_directory, project_directory FROM thread_workspaces WHERE workspace_directory LIKE '%<hash>%'\"):
+    print(r)
+"
+```
+
 ### 2. Verify the git branch exists
 ```bash
 cd <project_directory>
 git branch -a | grep <worktree_branch_fragment>
 ```
 
-### 3. Recreate the worktree
+### 3a. If branch exists → recreate worktree
 ```bash
 cd <project_directory>
 git worktree add <worktree_path> <branch_name>
 ```
+
+### 3b. If branch is GONE → find the project's main dev branch
+The Kimaki branch may have been deleted by the 14-day cleanup cron. Check if the project has a main development branch with all the work:
+
+```bash
+cd <project_directory>
+git branch -a
+git log --oneline <candidate_branch> --since="<date thread was active>"
+```
+
+Common pattern: projects use `v2`, `develop`, or `main` as the real dev branch. The Kimaki branch was just a working copy. If the candidate branch has commits matching the thread's work, point the worktree there:
+
+```bash
+git worktree add <worktree_path> <candidate_branch>
+```
+
+**Example**: Thread "lag en v2 av rasletind en nett" — Kimaki branch gone, but `v2` branch had all 27 commits (fase0 + fase1). Recreated worktree on `v2`.
 
 ### 4. Verify
 ```bash
