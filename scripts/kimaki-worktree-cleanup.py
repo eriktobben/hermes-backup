@@ -1,30 +1,13 @@
 #!/usr/bin/env python3
 """
-Kimaki Worktree Cleanup Script
-===============================
-Fjerner worktrees og branches som har vært inaktive i > 14 dager.
-
-Kriterier for "inaktiv" (prioritert):
-  1. Siste event i Kimaki session_events > 14 dager siden  (PRIMÆR)
-  2. Siste commit på branch > 14 dager siden               (FALLBACK)
-  3. Worktree created_at > 14 dager siden                   (FALLBACK)
-  4. Orphaned worktree-katalog uten DB-oppføring            (ryddes direkte)
-
-Kilder for "sist aktivitet":
-  - Kimaki DB: session_events.timestamp (millisekunder) — alle events fra session-en
-  - Git commit-dato (origin branch, så lokal)
-  - thread_worktrees.created_at
-
-Cleanup:
-  - git worktree remove --force <dir>
-  - git branch -D <branch> (lokal)
-  - git push origin --delete <branch> (hvis den finnes på origin)
-  - Sletter worktree-katalogen hvis den fortsatt eksisterer
-  - Oppdaterer status i Kimaki DB til 'cleaned'
+Kimaki Worktree Restore & Cleanup Script
+=========================================
+Gjenoppretter worktrees som er slettet av OpenCode's snapshot-cleanup,
+og rydder opp worktrees som har vært inaktive i > 14 dager.
 
 Kjøring:
   python3 kimaki-worktree-cleanup.py          # dry-run (rapport uten endringer)
-  python3 kimaki-worktree-cleanup.py --apply  # faktisk cleanup
+  python3 kimaki-worktree-cleanup.py --apply  # faktisk restore/cleanup
 """
 
 import sqlite3
@@ -214,14 +197,15 @@ def cleanup_worktree(project_dir, worktree_dir, branch_name, reason=""):
 # ─── Hovedfunksjon ─────────────────────────────────────────────────────
 
 
+# ─── Main ──────────────────────────────────────────────────────────────
+
 def main():
     print(f"{'='*60}")
-    print(f"  KIMAKI WORKTREE CLEANUP")
-    print(f"  Terskel: {DAYS_THRESHOLD} dager siden siste aktivitet")
-    print(f"  Modus: {'🔍 DRY-RUN (ingen endringer)' if DRY_RUN else '⚡ APPLY (utfører cleanup)'}")
-    print(f"  Dato: {NOW.strftime('%Y-%m-%d %H:%M UTC')}")
-    print(f"{'='*60}")
-    print()
+    print(f"  KIMAKI WORKTREE RESTORE & CLEANUP")
+    print(f"  terskel: {DAYS_THRESHOLD} dager inaktiv")
+    print(f"  modus: {'🔍 DRY-RUN' if DRY_RUN else '⚡ APPLY'}")
+    print(f"  dato: {NOW.strftime('%Y-%m-%d %H:%M UTC')}")
+    print(f"{'='*60}\n")
 
     if not os.path.exists(KIMAKI_DB):
         print(f"❌ Finner ikke Kimaki DB: {KIMAKI_DB}")
@@ -231,141 +215,200 @@ def main():
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
 
-    # Hent alle worktrees med status 'ready'
+    # ═══════════════════════════════════════════════════════════════════
+    # FASE 1: Gjenopprett worktrees slettet av OpenCode's GC
+    # ═══════════════════════════════════════════════════════════════════
+    print(f"{'='*60}")
+    print("  FASE 1: GJENOPPRETT ARBEIDSOMRÅDER")
+    print(f"{'='*60}\n")
+
+    # Hent alle workspaces med status 'ready' fra thread_workspaces
     cur.execute("""
-        SELECT tw.*, ts.session_id, ts.last_synced_name as session_name
-        FROM thread_worktrees tw
-        LEFT JOIN thread_sessions ts ON tw.thread_id = ts.thread_id
-        WHERE tw.status = 'ready'
-        ORDER BY tw.created_at
+        SELECT ws.*, ts.session_id
+        FROM thread_workspaces ws
+        LEFT JOIN thread_sessions ts ON ws.thread_id = ts.thread_id
+        WHERE ws.status = 'ready'
+        ORDER BY ws.created_at
     """)
     rows = cur.fetchall()
 
-    if not rows:
-        print("✅ Ingen worktrees å rydde opp!")
-    else:
-        print(f"Fant {len(rows)} worktrees med status='ready':")
-        print()
-
-    cleaned = 0
-    skipped_active = 0
-    errors = 0
+    restored = 0
+    already_ok = 0
+    restore_errors = 0
+    skipped_old = 0
 
     for row in rows:
         thread_id = row['thread_id']
-        branch_name = row['worktree_name']
-        worktree_dir = row['worktree_directory']
+        branch_name = row['workspace_name']
+        worktree_dir = row['workspace_directory']
+        project_dir = row['project_directory']
+        created_at_str = row['created_at']
+
+        if not worktree_dir or not project_dir:
+            continue
+
+        worktree_exists = os.path.isdir(worktree_dir)
+        project_exists = os.path.isdir(project_dir)
+
+        if worktree_exists:
+            already_ok += 1
+            continue
+
+        # Hopp over worktrees eldre enn 7 dager (disse bør ryddes, ikke gjenopprettes)
+        created_at = parse_timestamp(created_at_str) if created_at_str else None
+        if created_at:
+            days_old = (NOW - created_at).days
+            if days_old > 7:
+                skipped_old += 1
+                continue
+
+        if not project_exists:
+            print(f"  ⚠️  {branch_name}: prosjekt {project_dir} finnes ikke — hopper over")
+            restore_errors += 1
+            continue
+
+        # Sjekk om git-greinen finnes
+        stdout, _, rc = run_git(project_dir, 'branch', '--list', branch_name)
+        branch_exists = rc == 0 and branch_name in stdout
+
+        if not branch_exists:
+            print(f"  ⚠️  {branch_name}: verken worktree eller branch — hopper over")
+            restore_errors += 1
+            continue
+
+        # Gjenopprett worktree
+        print(f"  🔷 {branch_name}")
+        print(f"     prosjekt: {project_dir}")
+        print(f"     worktree: {worktree_dir}")
+
+        if not DRY_RUN:
+            # Opprett worktree-mappe om den mangler
+            os.makedirs(os.path.dirname(worktree_dir), exist_ok=True)
+
+            # Kjør git worktree add
+            _, stderr, rc = run_git(
+                project_dir,
+                'worktree', 'add', worktree_dir, branch_name,
+                timeout=60
+            )
+
+            if rc == 0:
+                print(f"     ✅ Gjenopprettet fra branch '{branch_name}'")
+                restored += 1
+            else:
+                print(f"     ❌ Feil: {stderr}")
+                restore_errors += 1
+        else:
+            print(f"     🔷 [DRY-RUN] Ville gjenopprettet fra branch '{branch_name}'")
+            restored += 1
+
+    print(f"\n  Oppsummert: {restored} gjenopprettet, {already_ok} OK, {skipped_old} for gamle, {restore_errors} feil\n")
+
+    # ═══════════════════════════════════════════════════════════════════
+    # FASE 2: Rydd opp inaktive worktrees (>14 dager)
+    # ═══════════════════════════════════════════════════════════════════
+    print(f"{'='*60}")
+    print("  FASE 2: RYDD OPP INAKTIVE ARBEIDSOMRÅDER (>14 dager)")
+    print(f"{'='*60}\n")
+
+    # Hent på nytt etter gjenoppretting
+    cur.execute("""
+        SELECT ws.*, ts.session_id
+        FROM thread_workspaces ws
+        LEFT JOIN thread_sessions ts ON ws.thread_id = ts.thread_id
+        WHERE ws.status = 'ready'
+        ORDER BY ws.created_at
+    """)
+    rows = cur.fetchall()
+
+    cleaned = 0
+    skipped_active = 0
+
+    for row in rows:
+        thread_id = row['thread_id']
+        branch_name = row['workspace_name']
+        worktree_dir = row['workspace_directory']
         project_dir = row['project_directory']
         created_at_str = row['created_at']
         session_id = row['session_id']
-        session_name = row['session_name'] or '(ingen navn)'
 
         if not worktree_dir or not project_dir:
-            info(f"Hopp over {branch_name}: mangler worktree_directory eller project_directory")
             continue
 
-        # Parse created_at
-        created_at = parse_timestamp(created_at_str) if created_at_str else None
-
-        worktree_exists = os.path.exists(worktree_dir)
-        project_exists = os.path.exists(project_dir)
-
-        print(f"── {branch_name}")
-        info(f"  Thread: {thread_id}")
-        info(f"  Session: {session_name}")
-        info(f"  Opprettet: {created_at_str or 'N/A'}")
-        info(f"  Session ID: {session_id or 'N/A'}")
-        info(f"  Worktree finnes: {'✅' if worktree_exists else '❌ (allerede borte)'}")
-        info(f"  Prosjekt finnes: {'✅' if project_exists else '❌'}")
-        info(f"  Mappe: {worktree_dir}")
-
-        # ── Hvis prosjektet ikke finnes ─────────────────────────────
+        project_exists = os.path.isdir(project_dir)
         if not project_exists:
-            action("Prosjektmappe finnes ikke — sletter worktree og oppdaterer DB")
-            if worktree_exists:
-                remove_worktree_directory(worktree_dir)
-            if not DRY_RUN:
-                cur.execute("UPDATE thread_worktrees SET status = 'cleaned' WHERE thread_id = ?", (thread_id,))
-                conn.commit()
-            cleaned += 1
-            print()
             continue
 
-        # ── Finn siste aktivitet (3 kilder, prioritert) ────────────
+        # Finn siste aktivitet
         last_activity = None
-        activity_source = ""
 
-        # Kilde 1: Session events (PRIMÆR)
+        # Kilde 1: Session events
         if session_id:
             dt = get_last_session_activity(cur, session_id)
             if dt:
                 last_activity = dt
-                activity_source = "siste session-event"
 
-        # Kilde 2: Git commit (FALLBACK)
+        # Kilde 2: Git commit
         if last_activity is None:
             dt = get_last_commit_date(project_dir, branch_name)
             if dt:
                 last_activity = dt
-                activity_source = "siste git-commit"
 
-        # Kilde 3: created_at (SISTE FALLBACK)
-        if last_activity is None and created_at:
-            last_activity = created_at
-            activity_source = "opprettet-dato"
+        # Kilde 3: created_at
+        if last_activity is None and created_at_str:
+            last_activity = parse_timestamp(created_at_str)
 
-        # ── Vurder cleanup ─────────────────────────────────────────
-        if last_activity:
-            days_since = (NOW - last_activity).days
-            info(f"  Siste aktivitet ({activity_source}): {last_activity.strftime('%Y-%m-%d %H:%M')} ({days_since} dager siden)")
+        if last_activity is None:
+            continue
 
-            if days_since >= DAYS_THRESHOLD or not worktree_exists:
-                if not worktree_exists:
-                    action(f"Fjerner DB-oppføring (worktree allerede borte, inaktiv i {days_since} dager)")
-                    if not DRY_RUN:
-                        run_git(project_dir, 'branch', '-D', branch_name)
-                        if branch_exists_on_origin(project_dir, branch_name):
-                            run_git(project_dir, 'push', 'origin', '--delete', branch_name)
-                        cur.execute("UPDATE thread_worktrees SET status = 'cleaned' WHERE thread_id = ?", (thread_id,))
-                        conn.commit()
-                    cleaned += 1
-                else:
-                    cleanup_worktree(project_dir, worktree_dir, branch_name,
-                                     reason=f"{activity_source}: {days_since} dager siden")
-                    if not DRY_RUN:
-                        cur.execute("UPDATE thread_worktrees SET status = 'cleaned' WHERE thread_id = ?", (thread_id,))
-                        conn.commit()
-                    cleaned += 1
+        days_since = (NOW - last_activity).days
+
+        if days_since >= DAYS_THRESHOLD:
+            worktree_exists = os.path.isdir(worktree_dir)
+            branch_name_stripped = branch_name.split('/')[-1] if '/' in branch_name else branch_name
+
+            print(f"  🗑️  {branch_name} — {days_since} dager inaktiv")
+            if not DRY_RUN:
+                # Fjern worktree hvis det finnes
+                if worktree_exists:
+                    run_git(project_dir, 'worktree', 'remove', '--force', worktree_dir)
+                    remove_worktree_directory(worktree_dir)
+
+                # Fjern lokal branch
+                run_git(project_dir, 'branch', '-D', branch_name_stripped)
+
+                # Fjern remote branch hvis den finnes
+                if branch_exists_on_origin(project_dir, branch_name_stripped):
+                    run_git(project_dir, 'push', 'origin', '--delete', branch_name_stripped)
+
+                # Oppdater DB
+                cur.execute(
+                    "UPDATE thread_workspaces SET status = 'cleaned' WHERE thread_id = ?",
+                    (thread_id,)
+                )
+                conn.commit()
+
+                print(f"     ✅ Ryddet opp")
             else:
-                info(f"  ⏩ Fortsatt aktiv: {days_since} dager siden siste {activity_source} (< {DAYS_THRESHOLD})")
-                skipped_active += 1
+                print(f"     🔷 [DRY-RUN] Ville ryddet opp")
+            cleaned += 1
         else:
-            if not worktree_exists:
-                # Ingen info, og worktree er borte — bare rydd DB
-                action("Fjerner DB-oppføring (worktree finnes ikke, ingen aktivitetsdata)")
-                if not DRY_RUN:
-                    cur.execute("UPDATE thread_worktrees SET status = 'cleaned' WHERE thread_id = ?", (thread_id,))
-                    conn.commit()
-                cleaned += 1
-            else:
-                info("  ⚠️  Kunne ikke bestemme alder — hopper over")
-                errors += 1
+            skipped_active += 1
 
-        print()
+    print(f"\n  Oppsummert: {cleaned} ryddet, {skipped_active} aktive (<{DAYS_THRESHOLD} dager)\n")
 
     # ═══════════════════════════════════════════════════════════════════
-    # FASE 2: Orphaned worktree-kataloger (finnes på disk, men ikke i DB)
+    # FASE 3: Orphaned worktree-kataloger
     # ═══════════════════════════════════════════════════════════════════
     print(f"{'='*60}")
-    print("  FASE 2: ORPHANED WORKTREE-KATALOGER")
-    print(f"{'='*60}")
-    print()
+    print("  FASE 3: ORPHANED WORKTREE-KATALOGER")
+    print(f"{'='*60}\n")
 
     # Bygg sett med kjente worktree-kataloger fra DB
-    cur.execute("SELECT worktree_directory FROM thread_worktrees WHERE worktree_directory IS NOT NULL")
+    cur.execute("SELECT workspace_directory FROM thread_workspaces WHERE workspace_directory IS NOT NULL")
     known_dirs = set()
     for r in cur.fetchall():
-        d = os.path.realpath(r['worktree_directory']) if r['worktree_directory'] else None
+        d = os.path.realpath(r['workspace_directory']) if r['workspace_directory'] else None
         if d:
             known_dirs.add(d)
 
@@ -383,34 +426,17 @@ def main():
                     continue
                 real_path = os.path.realpath(wt_path)
                 if real_path not in known_dirs:
-                    # Sjekk om dette er et git worktree
                     git_file = os.path.join(wt_path, '.git')
                     if os.path.isdir(git_file) or os.path.isfile(git_file):
-                        print(f"  🗑️  Orphaned worktree: {wt_path}")
-                        action(f"Sletter orphaned worktree: {wt_path}")
+                        print(f"  🗑️  Orphaned: {wt_path}")
                         if not DRY_RUN:
-                            # Finn main repo via .git-fila
-                            main_repo = None
-                            if os.path.isfile(git_file):
-                                with open(git_file) as f:
-                                    content = f.read().strip()
-                                if content.startswith('gitdir: '):
-                                    # ../.git/worktrees/<name> → main repo
-                                    main_git_dir = content[8:]
-                                    if '/.git/worktrees/' in main_git_dir:
-                                        main_git_dir = main_git_dir.split('/.git/worktrees/')[0] + '/.git'
-                                    else:
-                                        main_git_dir = main_git_dir.replace('/worktrees/', '/').rsplit('/', 1)[0]
-                                    if main_git_dir:
-                                        main_repo = os.path.realpath(os.path.join(wt_path, main_git_dir, '..'))
-                            if main_repo and os.path.exists(main_repo):
-                                run_git(main_repo, 'worktree', 'remove', '--force', wt_path)
                             remove_worktree_directory(wt_path)
                         orphaned_count += 1
 
     if orphaned_count == 0:
-        print("  ✅ Ingen orphaned worktrees funnet.")
-    print()
+        print("  ✅ Ingen orphaned worktrees.\n")
+    else:
+        print()
 
     # ═══════════════════════════════════════════════════════════════════
     # OPPSUMMERING
@@ -418,15 +444,16 @@ def main():
     print(f"{'='*60}")
     print("  OPPSUMMERING")
     print(f"{'='*60}")
-    print(f"  Ryddet opp:            {cleaned}")
-    print(f"  Hoppet over (aktive):  {skipped_active}")
-    print(f"  Orphaned kataloger:    {orphaned_count}")
-    print(f"  Feil:                  {errors}")
+    print(f"  Gjenopprettet:     {restored}")
+    print(f"  Allerede OK:       {already_ok}")
+    print(f"  Ryddet (>14 dag):  {cleaned}")
+    print(f"  Orphaned:          {orphaned_count}")
+    print(f"  Feil:              {restore_errors + restore_errors}")
     print()
     if DRY_RUN:
         print("  🔍 Dette var en dry-run. Kjør med --apply for å utføre.")
     else:
-        print("  ✅ Cleanup fullført.")
+        print("  ✅ Fullført.")
 
     conn.close()
 

@@ -1,6 +1,8 @@
 ---
 name: kimaki-project-add
-description: Registers a local repo as a Discord-visible Kimaki project by running `npx kimaki project add` from the project directory. Use when setting up a new project folder/repo that should be visible in Discord channels.
+description: Registers a local repo as a Discord-visible Kimaki project and manages Kimaki worktrees — creation, nightly GC recovery, cleanup, and operational hardening.
+tags: [kimaki, opencode, worktree, discord, git]
+related_skills: [discord-agent-runtime-diagnosis]
 ---
 
 # Kimaki Project Add (Discord visibility)
@@ -43,20 +45,27 @@ Use this after creating or cloning a repository that should appear in Discord vi
 - If Discord-side automation becomes unresponsive, avoid rebooting first; run the troubleshooting checks in `references/unresponsive-discord-bot.md`.
 - **Workspace creation fails with `err_e2b0c342`**: the OpenCode ACP server may have developed a Bun runtime degradation after extended uptime. See `discord-agent-runtime-diagnosis` → "Bun runtime degradation" section. Fix: `pm2 restart kimaki`.
 
-- **\"Directory does not exist or is not accessible\" on a known thread**: Two separate cleanup mechanisms affect Kimaki worktrees nightly:
-  1. **OpenCode snapshot GC (~02:00)**: Internal to the OpenCode binary — runs `git gc --prune=7.days` on snapshot repos. Empties the worktree directory but the git branch always survives. **Cannot be disabled** (compiled binary, no config knob). This is what causes the error message.
-  2. **Our cron job (04:00)**: `kimaki-worktree-cleanup.py` deletes worktrees inactive >14 days — both directory AND git branch. This is controllable via the cron job.
+- **\\\\\\\"Directory does not exist or is not accessible\\\\\\\" on a known thread**: Two separate cleanup mechanisms affect Kimaki worktrees nightly:
+  1. **OpenCode snapshot GC (~02:00)**: Internal to the OpenCode binary — runs `git gc --prune=7.days` on snapshot repos. **Deletes the entire worktree directory** (not just empties it). Git branch may or may not survive — we've observed both outcomes even for worktrees 1-2 days old. **Cannot be disabled** (compiled binary, no config knob). This is what causes the error message.
+  2. **Our cron job (02:15)**: `kimaki-worktree-cleanup.py` now runs a 3-phase restore/cleanup process. Phase 1 restores recent worktrees (<7 days) deleted by OpenCode's GC. Phase 2 cleans up old worktrees (>14 days). Phase 3 handles orphaned directories.
 
-  - **"Directory does not exist or is not accessible" on a known thread**: Kimaki worktrees under `~/.kimaki/worktrees/<hash>/` get cleaned up overnight (~02:00) by OpenCode's snapshot/git-GC cleanup. The git branch with all commits survives — only the local checkout directory is removed.
+  ⚠️ **Two broken scripts (fixed)**: Both the WIP auto-commit and the Kimaki cleanup script queried `thread_worktrees` table, but Kimaki registers worktrees in `thread_workspaces`. This caused:
+  - WIP auto-commit to silently skip all worktrees (never preserving uncommitted changes)
+  - Kimaki cleanup to delete branches for worktrees deleted by OpenCode's GC, even if they were recent (<14 days)
 
-    **WIP auto-commit is scheduled at 01:50** (`kimaki-wip-autocommit.sh` via cron job `76d12211602a`) so uncommitted changes are preserved in git before the GC runs. Without this, uncommitted work in progress would be lost.
+  **Fixes deployed** (Aug 2026):
+  - `kimaki-wip-autocommit.sh` now queries `thread_workspaces`
+  - `kimaki-worktree-cleanup.py` rewritten as 3-phase restore/cleanup script
+  - Cron job `3fca63db50fc` moved from 04:00 to 02:15 (15 min after OpenCode GC)
 
-    The fix for empty worktrees:
-    1. Identify the thread's project and worktree branch. Check the kanal's `config.json` for project directory, or query the DB: `python3 -c "import sqlite3; c=sqlite3.connect('$HOME/.kimaki/discord-sessions.db'); print('\\\\n'.join(str(r) for r in c.execute('SELECT workspace_name, workspace_directory, project_directory FROM thread_workspaces WHERE thread_id=\\\"<thread_id>\\\"')))"`
-    2. Verify the git branch still exists: `cd <project_directory> && git branch -a | grep <worktree_name>`
-    3. Recreate the worktree: `cd <project_directory> && git worktree add <workspace_directory> <worktree_branch>`
+  The automated fix for empty worktrees:
+  1. The cron job at 02:15 automatically restores worktrees that are <7 days old
+  2. For manual recovery, query the DB: `python3 -c "import sqlite3; c=sqlite3.connect('$HOME/.kimaki/discord-sessions.db'); print('\\\\\\\\\\\\\\\\n'.join(str(r) for r in c.execute('SELECT workspace_name, workspace_directory, project_directory FROM thread_workspaces WHERE thread_id=\\\\\\\\\\\\\"<thread_id>\\\\\\\\\\\\\"')))"`
+  3. Verify the git branch still exists: `cd <project_directory> && git branch -a | grep <worktree_name>`
+  4. If branch exists → recreate: `cd <project_directory> && git worktree add <workspace_directory> <worktree_branch>`
+  5. If branch is GONE → find the project's main dev branch (e.g. `v2`, `develop`, `main`) with matching commits and recreate from there. Kimaki branches can be deleted even for worktrees only 1-2 days old.
     See `references/worktree-cleanup-recovery.md` for full session detail with DB queries and log analysis.
-  **Multi-day work**: Users who want to keep threads alive across days should know that OpenCode GC will empty the checkout nightly, but recreation is instant. The cron job's 14-day threshold is separate and only deletes if truly inactive.
+  **Multi-day work**: Users who want to keep threads alive across days should know that OpenCode GC will delete the checkout nightly, and the git branch may also be lost — even for worktrees only 1-2 days old. The automated restore at 02:15 handles most cases. Recreation is instant if the branch survives; if not, find the equivalent branch in the project (e.g. `v2`, `develop`, `main`).
   See `references/worktree-cleanup-recovery.md` for full session detail with DB queries and log analysis.
 
 ## Model switching via agent files

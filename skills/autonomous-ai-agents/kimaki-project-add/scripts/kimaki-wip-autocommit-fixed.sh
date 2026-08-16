@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 # Kimaki WIP Auto-Commit — kjører kl. 01:50 (10 min før OpenCode's GC kl. 02:00)
 # Committer uncommitted changes i alle aktive worktrees slik at arbeidet
-# bevares i git-greina selv om worktree-katalogen blir tømt.
+# bevares i git-greina selv om worktree-katalogen blir slettet.
+#
+# FIX (Aug 2026): Bruker thread_workspaces (ikke thread_worktrees) —
+# det er her Kimaki lagrer worktree-info for moderne sessions.
 set -euo pipefail
 
 KIMAKI_DB="$HOME/.kimaki/discord-sessions.db"
