@@ -64,15 +64,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 1657
+        "completed": 1658
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-08-17T00:49:05.342636+02:00",
-      "last_run_at": "2026-08-16T22:48:07.664965+02:00",
+      "next_run_at": "2026-08-17T01:50:05.820981+02:00",
+      "last_run_at": "2026-08-16T23:49:08.666845+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -309,7 +309,49 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null
+    },
+    {
+      "id": "d6b75ae1dfb3",
+      "name": "Sjekk Kimaki v2-st\u00f8tte",
+      "prompt": "Run the Kimaki v2 check script and report results",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "check-kimaki-v2.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 10 * * *",
+        "display": "0 10 * * *"
+      },
+      "schedule_display": "0 10 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-17T00:06:36.646508+02:00",
+      "next_run_at": "2026-08-17T10:00:00+02:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1538625515286700032",
+        "chat_name": "Tobben MC / #general / Kan du fikse dette? Alle filene er borte f\u00f8r commit. \u2717 Directory does not exi...",
+        "thread_id": "1538625515286700032"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-08-16T23:49:05.342937+02:00"
+  "updated_at": "2026-08-17T00:50:05.821216+02:00"
 }

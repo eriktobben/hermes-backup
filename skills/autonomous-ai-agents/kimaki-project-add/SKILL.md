@@ -64,11 +64,11 @@ Use this after creating or cloning a repository that should appear in Discord vi
   3. Verify the git branch still exists: `cd <project_directory> && git branch -a | grep <worktree_name>`
   4. If branch exists → recreate: `cd <project_directory> && git worktree add <workspace_directory> <worktree_branch>`
   5. If branch is GONE → find the project's main dev branch (e.g. `v2`, `develop`, `main`) with matching commits and recreate from there. Kimaki branches can be deleted even for worktrees only 1-2 days old.
-    See `references/worktree-cleanup-recovery.md` for full session detail with DB queries and log analysis.
+    See `references/worktree-cleanup-recovery.md` for full session detail and `references/worktree-cleanup-investigation.md` for the diagnostic methodology.
   **Multi-day work**: Users who want to keep threads alive across days should know that OpenCode GC will delete the checkout nightly, and the git branch may also be lost — even for worktrees only 1-2 days old. The automated restore at 02:15 handles most cases. Recreation is instant if the branch survives; if not, find the equivalent branch in the project (e.g. `v2`, `develop`, `main`).
-  See `references/worktree-cleanup-recovery.md` for full session detail with DB queries and log analysis.
+  See `references/worktree-cleanup-recovery.md` for full session detail and `references/worktree-cleanup-investigation.md` for the diagnostic methodology.
 
-## Model switching via agent files
+  ## Model switching via agent files
 
 Kimaki uses OpenCode under the hood. Agent files (`.opencode/agent/*.md`) let you switch models with a single slash command instead of clicking through the `/model` menus.
 
@@ -101,6 +101,21 @@ To list available models: `curl -s "https://opencode.ai/zen/go/v1/models" -H "Au
 - **Wrong project directory = no agents visible.** Each Discord channel is mapped to a project directory. If you put agent files in `~/.kimaki/projects/kimaki/.opencode/agent/` but the thread uses `/home/erik/Projects/serenahome`, the agents won't appear. Check `kimaki.log` for `Using project directory: ...` to find the correct path.
 - **Must restart Kimaki after adding/changing agent files.** `pm2 restart kimaki` — the agent list is loaded at OpenCode server startup.
 - **Agent filter**: only agents with `mode: primary` or `mode: all` and `hidden: false` appear in the `/agent` dropdown. OpenCode's built-in `build` and `plan` agents are always present.
+
+## OpenCode v2 compatibility
+
+**Do NOT upgrade to OpenCode v2 yet** — Kimaki (v0.25.0) does not support it.
+
+OpenCode v2 (beta, `npm install -g @opencode-ai/cli@beta`) has three breaking changes:
+1. **Plugins** — New plugin API. V1 plugins will not work in V2.
+2. **Server API and clients** — New contracts. Must use `@opencode-ai/client` instead of `@opencode-ai/sdk`.
+3. **TUI configuration** — Moves to `cli.json`.
+
+V1 and V2 can be installed side by side (`opencode` vs `opencode2`). Existing config is read automatically, but Kimaki's plugins and SDK calls use V1 APIs.
+
+Monitor Kimaki releases for v2 support. When available, test in a non-production environment first.
+
+See `references/opencode-v2-migration.md` for details.
 
 ## Operational hardening (PM2 / long-running bot)
 When Kimaki is run as a persistent bot process, reduce freeze/restart loops by:
