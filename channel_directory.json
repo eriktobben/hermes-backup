@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T13:24:52.508611",
+  "updated_at": "2026-08-18T14:24:52.960253",
   "platforms": {
     "discord": [
       {
@@ -835,6 +835,12 @@
         "name": "Tobben MC / #general / Kan du lage følgende agenter globalt i OpenCode? dsflash -> DeepSeek v4 Flash... / topic 1539201428080435261",
         "type": "thread",
         "thread_id": "1539201428080435261"
+      },
+      {
+        "id": "1539264888877088778:1539264888877088778",
+        "name": "Tobben MC / #general / Jeg holder på å lage en nettbutikk som skal selge Apple-produkter og IT-utsty... / topic 1539264888877088778",
+        "type": "thread",
+        "thread_id": "1539264888877088778"
       }
     ],
     "telegram": [],

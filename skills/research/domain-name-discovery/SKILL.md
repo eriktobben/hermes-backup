@@ -1,9 +1,10 @@
 ---
 name: domain-name-discovery
-description: >
-  Brainstorm SaaS or project names that work across languages (especially Norwegian + English) and
-  verify domain availability across .com, .co, and .io TLDs via raw TCP WHOIS lookups. Covers the
-  full pipeline from name ideation with localisation constraints to availability verification to
+description: >-
+  Brainstorm project/brand names that work across languages (especially Norwegian + English) and
+  verify domain availability via DNS pre-filtering and WHOIS lookups. Covers .no, .com, .co, .io TLDs.
+  Includes naming strategy for B2B/fintech (Klarna/Affirm-style), consumer SaaS, and tech brands.
+  Full pipeline from name ideation with localisation constraints to availability verification to
   registrar recommendations.
 tags: [domains, naming, whois, registration, brainstorming, brand]
 ---
@@ -34,6 +35,15 @@ Use when the user wants to brainstorm names for a project, SaaS, or brand and ch
 - Past participles (*backupet*, *lagret*, *kopiert*) work as memorable brands
 
 6. **Abstract tech brand names** — short made-up words with no literal meaning but a tech/futuristic vibe (e.g. *zynk*, *nexa*, *velo*, *pixl*, *kiro*). These are often 4-5 letters, easy to pronounce internationally, and evoke brands like Stripe, Vercel, Linear. Good when the user explicitly wants "tech vibe" without semantic baggage. Combine phonemes that sound modern: x, z, v, k, p endings; soft vowels; sharp consonant clusters.
+
+7. **Klarna/Affirm-style brand names** — for B2B, fintech, or SaaS where the name must feel established and trustworthy, not playful. Reference brands: Klarna, Affirm, Collector, Stripe, Vercel. Key traits:
+   - **4-6 letters**, 2 syllables max
+   - **Every letter unambiguous** — no Q, X, Z (hard to spell in Norwegian). Avoid double letters that create pronunciation doubt
+   - **Hard consonant start** (K, V, T, R, B) signals authority; soft starts (S, A) signal approachability
+   - **No service-descriptive words** — no "rent", "lease", "cloud", "pay", "shop" in the name. The name should be a clean slate for branding
+   - **No generic suffixes** — avoid -ly, -ify, -io, -ly that scream "startup". These age poorly and blur together
+   - **Vowel-consonant alternation** makes names easy to say: K-L-A-R-N-A, A-F-F-I-R-M
+   - **Example generation pattern**: Pick a hard start (K/V/T/R) + 2-3 alternating consonants/vowels + clean ending. E.g. *Kresto*, *Kredo*, *Vorso*, *Terio*
 
 ## Phase 2: Domain Availability Check
 
@@ -100,6 +110,25 @@ dig +short "$domain" MX   # MX records - definitely in use
 
 If a domain has NS or MX records, it is almost certainly registered and you can skip the WHOIS call.
 
+### Batch DNS pre-filter script
+For quickly checking many candidate domains before doing full WHOIS:
+
+```bash
+for domain in kresto.no kredo.no vorso.no terio.no; do
+  dns=$(dig "$domain" +short 2>/dev/null)
+  http=$(curl -s -o /dev/null -w "%{http_code}" --max-time 3 "http://$domain" 2>/dev/null || echo "err")
+  if [ -z "$dns" ] && [ "$http" = "000" -o "$http" = "err" ]; then
+    echo "🟢 $domain (LEDIG - ingen DNS, ingen HTTP)"
+  elif [ -z "$dns" ]; then
+    echo "🟡 $domain (DNS ledig, HTTP $http - sjekk nærmere)"
+  else
+    echo "🔴 $domain (OPPTATT - DNS peker: $dns)"
+  fi
+done
+```
+
+**Interpretation**: 🟢 = likely available (no DNS + no HTTP response). 🟡 = probably available but verify with WHOIS. 🔴 = definitely taken. DNS-only check is not 100% reliable — domains can be registered but unpointed — so always recommend the user verify on the registrar (norid.no for .no) before committing.
+
 ### Alternative (when WHOIS is unreachable)
 Use the browser to check a registrar directly (Namecheap works). Navigate to:
 `https://www.namecheap.com/domains/registration/results/?domain=<name>`
@@ -120,7 +149,16 @@ Highlight top 5 recommendations with:
 2. The TLD that is available
 3. How it positions the product
 
-### Common pitfalls
+### Common pitfalls — naming
+- **Avoid service-descriptive names** — "Rently", "Leasly", "CloudX" etc. feel generic and age poorly. Users often say they want this, then reject it when they see it. Lead with abstract/brandable names first, offer descriptive as fallback only
+- **Avoid -ly suffixes** — overused in startup naming (Shopify, Spotify, etc.), signals "just another SaaS". Users frequently reject these
+- **Avoid Q, X, Z in Nordic markets** — hard to spell and pronounce in Norwegian. "Quippo" sounds good but fails the "is it easy to spell on the phone?" test
+- **Avoid double letters that create ambiguity** — "Bocco", "Fazzo" look good but people ask "er det to c'er? én z?"
+- **Test the "Klarna standard"** — if you can't spell it after hearing it once, it's too complex. K-L-A-R-N-A: every letter is immediately clear
+- **Check .no domain FIRST** for Norwegian businesses — many short .com names are taken but .no may be free. Don't fall in love with a .com if the business is Norway-only
+- **User preferences vary widely** — some want literal/descriptive, others want abstract. Ask early, don't assume
+
+### Common pitfalls — domain verification
 - WHOIS servers enforce strict rate limits across IP ranges; single-thread plus sleep is essential
 - .io WHOIS (whois.nic.io) rejects queries that do not end with '\r\n' - binary socket ensures this
 - Short dictionary-word .io domains are almost always premium or registered
