@@ -98,6 +98,7 @@ To list available models: `curl -s "https://opencode.ai/zen/go/v1/models" -H "Au
 
 ### Pitfalls
 - **Agent files are per-project, NOT global.** Kimaki calls `getClient().app.agents({ directory: projectDir })` — it only looks in the active project's `.opencode/agent/`. There is no global agent directory in OpenCode.
+- **Global `opencode.json` agents are invisible to Kimaki.** Kimaki starts OpenCode with `OPENCODE_CONFIG=~/.kimaki/opencode-config.json` (its own config). Even if you define agents in `~/.config/opencode/opencode.json`, Kimaki's OpenCode instance never reads that file. Always create agent `.md` files in the project's `.opencode/agent/` directory for Kimaki visibility.
 - **Wrong project directory = no agents visible.** Each Discord channel is mapped to a project directory. If you put agent files in `~/.kimaki/projects/kimaki/.opencode/agent/` but the thread uses `/home/erik/Projects/serenahome`, the agents won't appear. Check `kimaki.log` for `Using project directory: ...` to find the correct path.
 - **Must restart Kimaki after adding/changing agent files.** `pm2 restart kimaki` — the agent list is loaded at OpenCode server startup.
 - **Agent filter**: only agents with `mode: primary` or `mode: all` and `hidden: false` appear in the `/agent` dropdown. OpenCode's built-in `build` and `plan` agents are always present.

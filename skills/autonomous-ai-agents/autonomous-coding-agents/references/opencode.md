@@ -170,6 +170,27 @@ opencode debug agent <name>
 
 **Note:** `opencode agent create` is an interactive LLM-powered command that generates agent `.md` files in `agents/` directories. For global agents, editing `opencode.json` directly is simpler and more predictable.
 
+### ⚠️ Kimaki Does NOT Pick Up Global Agents
+
+Kimaki starts OpenCode with `OPENCODE_CONFIG=~/.kimaki/opencode-config.json` — its own separate config file. This means:
+
+- **Global agents** in `~/.config/opencode/opencode.json` are **NOT visible** to Kimaki's OpenCode instance.
+- **Project-level agents** in `.opencode/agent/*.md` **DO work** — Kimaki queries agents via `getClient().app.agents({ directory: projectDir })`.
+- The `/agent` Discord slash command only lists agents from the active project's `.opencode/agent/` directory.
+
+**To use custom agents with Kimaki, create `.md` files in the project's `.opencode/agent/` directory** (see `kimaki-project-add` skill for the format). Do NOT rely on global `opencode.json` agents being available through Kimaki.
+
+Agent `.md` file format for `.opencode/agent/`:
+```yaml
+---
+description: Short description
+primary model: provider/model-id
+permission:
+  question: allow
+  plan_enter: allow
+---
+```
+
 ### Checking Available Models & Capabilities
 
 List all models from a provider:
