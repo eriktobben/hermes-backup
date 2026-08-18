@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-18T09:19:50.514782",
+  "updated_at": "2026-08-18T10:24:51.033657",
   "platforms": {
     "discord": [
       {
@@ -11,6 +11,42 @@
       {
         "id": "1499181605833670756",
         "name": "serena",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1499183215494037554",
+        "name": "🗞️-briefings",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1510010610304155738",
+        "name": "bilkjøp",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1511404097302171818",
+        "name": "serena-dev",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1511501933180092478",
+        "name": "masterfeed-dev",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1511529337885691965",
+        "name": "🔔-varslinger",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1521885249628274718",
+        "name": "trading",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -57,68 +93,8 @@
         "type": "channel"
       },
       {
-        "id": "1492850504894775307",
-        "name": "rasletind",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
         "id": "1493580416135987342",
         "name": "igwebshop",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1479641599700111533",
-        "name": "lyra",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1479804333934510111",
-        "name": "kaira",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1480845753961152632",
-        "name": "🖼️-ads-generation",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1479972072326303995",
-        "name": "emilie",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1479996867101069604",
-        "name": "markus",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1480328006458282107",
-        "name": "nova",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1481057798962811112",
-        "name": "selma",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1482525623866888362",
-        "name": "athena",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1499183215494037554",
-        "name": "🗞️-briefings",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -183,30 +159,6 @@
         "type": "channel"
       },
       {
-        "id": "1510010610304155738",
-        "name": "bilkjøp",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1511404097302171818",
-        "name": "serena-dev",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1511501933180092478",
-        "name": "masterfeed-dev",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1511529337885691965",
-        "name": "🔔-varslinger",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
         "id": "1513335942428233848",
         "name": "hermes-reseller",
         "guild": "Tobben MC",
@@ -243,12 +195,6 @@
         "type": "channel"
       },
       {
-        "id": "1521885249628274718",
-        "name": "trading",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
         "id": "1524760580479783124",
         "name": "droplane",
         "guild": "Tobben MC",
@@ -267,8 +213,62 @@
         "type": "channel"
       },
       {
+        "id": "1492850504894775307",
+        "name": "rasletind",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
         "id": "1536730327945322500",
         "name": "helix",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1479641599700111533",
+        "name": "lyra",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1479804333934510111",
+        "name": "kaira",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1480845753961152632",
+        "name": "🖼️-ads-generation",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1479972072326303995",
+        "name": "emilie",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1479996867101069604",
+        "name": "markus",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1480328006458282107",
+        "name": "nova",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1481057798962811112",
+        "name": "selma",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1482525623866888362",
+        "name": "athena",
         "guild": "Tobben MC",
         "type": "channel"
       },

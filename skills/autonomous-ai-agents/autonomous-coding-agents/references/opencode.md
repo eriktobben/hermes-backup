@@ -104,6 +104,72 @@ This keeps strong-model API calls on the direct provider's billing while letting
 
 **Model naming convention:** `provider/model-name` — e.g. `deepseek/deepseek-v4-pro`, `opencode-go/deepseek-v4-flash`, `opencode-go/minimax-m2.7`.
 
+### Custom Agents (Named Model Profiles)
+
+Define reusable named agents in `opencode.json` under the `agent` key. Each agent gets its own model, permissions, and can be selected via `--agent <name>` in the TUI or CLI.
+
+```json
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "agent": {
+    "dsflash": {
+      "name": "dsflash",
+      "description": "DeepSeek v4 Flash via OpenCode Go — rask og rimelig for enkle oppgaver",
+      "primary model": "opencode-go/deepseek-v4-flash",
+      "permission": {
+        "question": "allow",
+        "plan_enter": "allow"
+      },
+      "prompt": "",
+      "options": {
+        "primary model": "opencode-go/deepseek-v4-flash"
+      }
+    },
+    "dspro": {
+      "name": "dspro",
+      "description": "DeepSeek v4 Pro via DeepSeek API — kraftigere for komplekse oppgaver",
+      "primary model": "deepseek/deepseek-v4-pro",
+      "permission": {
+        "question": "allow",
+        "plan_enter": "allow"
+      },
+      "prompt": "",
+      "options": {
+        "primary model": "deepseek/deepseek-v4-pro"
+      }
+    }
+  }
+}
+```
+
+**Required fields per agent:**
+- `name` — agent identifier (used with `--agent <name>`)
+- `description` — shown in agent selector
+- `primary model` — model in `provider/model` format (also set in `options.primary model`)
+- `permission` — at minimum `question: "allow"` and `plan_enter: "allow"`
+- `prompt` — system prompt override (empty string = default)
+- `options.primary model` — must match top-level `primary model`
+
+**Available providers:** `opencode-go/`, `deepseek/`, `openrouter/`, `minimax/`
+
+**List available models per provider:**
+```bash
+opencode models opencode-go
+opencode models deepseek
+```
+
+**List registered agents:**
+```bash
+opencode agent list
+```
+
+**Inspect an agent's config:**
+```bash
+opencode debug agent <name>
+```
+
+**Note:** `opencode agent create` is an interactive LLM-powered command that generates agent `.md` files in `agents/` directories. For global agents, editing `opencode.json` directly is simpler and more predictable.
+
 ### Checking Available Models & Capabilities
 
 List all models from a provider:
