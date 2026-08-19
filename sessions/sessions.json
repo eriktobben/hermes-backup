@@ -2686,9 +2686,9 @@
   },
   "agent:main:discord:thread:1524711822056226828:1524711822056226828": {
     "session_key": "agent:main:discord:thread:1524711822056226828:1524711822056226828",
-    "session_id": "20260709_094027_41a89878",
-    "created_at": "2026-07-09T09:40:27.843404",
-    "updated_at": "2026-07-09T09:46:05.248354",
+    "session_id": "20260819_112017_c0c21016",
+    "created_at": "2026-08-19T11:20:17.551401",
+    "updated_at": "2026-08-19T11:21:01.843007",
     "display_name": "Tobben MC / #general / Oppretter en ny tr\u00e5d/samtale med Kimaki mot Opencode, men f\u00e5r f\u00f8lgende feil: ...",
     "platform": "discord",
     "chat_type": "thread",
@@ -2697,10 +2697,10 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 73787,
+    "last_prompt_tokens": 28817,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
-    "expiry_finalized": true,
+    "expiry_finalized": false,
     "suspended": false,
     "resume_pending": false,
     "resume_reason": null,
@@ -2720,7 +2720,7 @@
       "chat_topic": null,
       "guild_id": "1479597162685006058",
       "parent_chat_id": "1499181433200312381",
-      "message_id": "1524711822056226828"
+      "message_id": "1539594848024272896"
     }
   },
   "agent:main:discord:thread:1524744970173550703:1524744970173550703": {
@@ -3663,7 +3663,7 @@
     "session_key": "agent:main:discord:thread:1539264888877088778:1539264888877088778",
     "session_id": "20260819_100336_2f3ee4a3",
     "created_at": "2026-08-19T10:03:36.571318",
-    "updated_at": "2026-08-19T10:13:55.857606",
+    "updated_at": "2026-08-19T11:40:10.409058",
     "display_name": "Tobben MC / #general / Jeg holder p\u00e5 \u00e5 lage en nettbutikk som skal selge Apple-produkter og IT-utsty...",
     "platform": "discord",
     "chat_type": "thread",
@@ -3672,7 +3672,7 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 36865,
+    "last_prompt_tokens": 70821,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
     "expiry_finalized": false,

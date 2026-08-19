@@ -11,20 +11,19 @@ if [ -z "$OLD_PID" ]; then
     exit 1
 fi
 
-OLD_PORT=$(cat /proc/$OLD_PID/cmdline 2>/dev/null | tr '\0' ' ' | grep -oP '--port \K\d+' || echo "ukjent")
-echo "♻️  Restarter opencode serve (PID $OLD_PID, port $OLD_PORT)"
+OLD_PORT=$(cat /proc/$OLD_PID/cmdline 2>/dev/null | tr '\0' ' ' | grep -oP -- '--port \K\d+' || echo "ukjent")
 
 kill "$OLD_PID"
 sleep 4
 
 if pgrep -f "opencode serve" > /dev/null 2>&1; then
-    NEW_PID=$(pgrep -f "opencode serve" | head -1)
-    NEW_PORT=$(cat /proc/$NEW_PID/cmdline 2>/dev/null | tr '\0' ' ' | grep -oP '--port \K\d+' || echo "ukjent")
-    echo "✅ Opencode server restartet (PID $NEW_PID, port $NEW_PORT)"
+    # Suksess — ingen output (stille i Discord)
+    :
 else
     echo "⚠️  Opencode server kom ikke opp igjen automatisk. Sjekk Kimaki."
+    exit 1
 fi
 
 # Prune stale git worktrees
 cd /home/erik/.kimaki/projects/kimaki
-git worktree prune 2>/dev/null && echo "🧹 Stale worktrees pruned"
+git worktree prune 2>/dev/null
