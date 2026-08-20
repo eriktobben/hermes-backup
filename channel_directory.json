@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T11:10:16.239447",
+  "updated_at": "2026-08-20T12:14:28.016020",
   "platforms": {
     "discord": [
       {
@@ -269,6 +269,12 @@
       {
         "id": "1482525623866888362",
         "name": "athena",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1539961866892349492",
+        "name": "forgeclient",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -841,6 +847,12 @@
         "name": "Tobben MC / #general / Jeg holder på å lage en nettbutikk som skal selge Apple-produkter og IT-utsty... / topic 1539264888877088778",
         "type": "thread",
         "thread_id": "1539264888877088778"
+      },
+      {
+        "id": "1539961695454236672:1539961695454236672",
+        "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt med følgende git repo: git@github.com:erik... / topic 1539961695454236672",
+        "type": "thread",
+        "thread_id": "1539961695454236672"
       }
     ],
     "telegram": [],
