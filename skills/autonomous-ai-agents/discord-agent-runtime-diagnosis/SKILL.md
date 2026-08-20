@@ -179,6 +179,39 @@ Immediate mitigation order:
 3. If desync repeats, archive thread and create a fresh thread in same channel as canary.
 4. Escalate to global restart/DB reset only if failures spread beyond one/few sessions.
 
+## Broken OpenCode plugin causing silent gateway death after restart
+
+A broken plugin in `~/.config/opencode/plugins/` can cause Kimaki to appear healthy (bot connected, channels found, slash commands registered) while the Discord gateway silently stops delivering messages.
+
+### Mechanism
+1. OpenCode **auto-discovers** `.js` files in `~/.config/opencode/plugins/` — having a file there causes it to be loaded, even if not referenced in any config.
+2. A plugin with wrong export type (e.g. exporting an object/class instead of a function) causes `Plugin export is not a function` errors at every session startup (~30 errors in rapid succession).
+3. The plugin errors don't crash the server, but after a Kimaki restart the gateway connection can silently die — the bot reports "Connected to Discord!" and "Found N channel(s)" but receives zero events.
+
+### Detection
+- Bot appears healthy in PM2 (`online`, recent uptime) but no `DISCORD Message in thread` entries appear in logs after startup.
+- `claude-mem.js` or similar `failed to load plugin ... Plugin export is not a function` errors spam at startup.
+- Previous sessions were working, then Kimaki was restarted, and messages stopped arriving.
+
+### Fix
+1. Identify broken plugins:
+   ```bash
+   ls ~/.config/opencode/plugins/
+   ```
+2. Move broken plugins out of the way:
+   ```bash
+   mv ~/.config/opencode/plugins/broken-plugin.js ~/.config/opencode/plugins/broken-plugin.js.disabled
+   ```
+3. Remove from `~/.config/opencode/opencode.json` plugin array if referenced there.
+4. Restart Kimaki — **may need two restarts** for gateway to fully re-establish:
+   ```bash
+   pm2 restart kimaki
+   ```
+5. Verify messages arrive by checking logs for `DISCORD Message in thread` entries.
+
+### Pitfall
+The first restart after clearing a broken plugin may not fully restore gateway event delivery. If no messages arrive within 1-2 minutes after the first restart, restart again. The gateway WebSocket connection sometimes needs a clean startup without plugin error noise to properly subscribe to events.
+
 ## Common pitfall
 A brand-new Discord thread can still fail with "no response" even when context is small; this does **not** prove context-window overflow. The model may have produced output while listener/persistence broke before Discord delivery.
 
@@ -207,3 +240,4 @@ Triage and containment:
 - `references/session-scoped-llm-failure.md` — how to diagnose and recover when one thread hits `AI_APICallError` while others still complete.
 - `references/http-none-nonretryable.md` — `HTTP None`/`NoneType` parser-failure signatures and containment sequence.
 - `references/zombie-opencode-servers.md` — how orphaned opencode server processes accumulate, why they cause `reply for unknown request`, and how to clean them up.
+- `references/broken-plugin-gateway-death.md` — broken OpenCode plugin causing silent gateway death after restart (claude-mem.js case study).

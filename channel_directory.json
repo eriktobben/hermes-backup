@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T12:14:28.016020",
+  "updated_at": "2026-08-20T13:13:29.694266",
   "platforms": {
     "discord": [
       {
@@ -853,6 +853,12 @@
         "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt med følgende git repo: git@github.com:erik... / topic 1539961695454236672",
         "type": "thread",
         "thread_id": "1539961695454236672"
+      },
+      {
+        "id": "1539977039983943771:1539977039983943771",
+        "name": "Tobben MC / #general / OpenCode har sluttet å svare via Kimaki på flere prosjekter. Kan du sjekke? / topic 1539977039983943771",
+        "type": "thread",
+        "thread_id": "1539977039983943771"
       }
     ],
     "telegram": [],
