@@ -212,6 +212,52 @@ A broken plugin in `~/.config/opencode/plugins/` can cause Kimaki to appear heal
 ### Pitfall
 The first restart after clearing a broken plugin may not fully restore gateway event delivery. If no messages arrive within 1-2 minutes after the first restart, restart again. The gateway WebSocket connection sometimes needs a clean startup without plugin error noise to properly subscribe to events.
 
+## Session context bloat causing empty responses
+
+When a session accumulates too much context (e.g., 1M+ input tokens from many tool calls, large file reads, or long conversations), the model may produce empty or invisible responses.
+
+### Symptoms
+- `[ASSISTANT COMPLETED] no visible output, skipping footer` in logs
+- Session shows very high token counts: `curl -s http://localhost:<port>/api/session/<id>` → `tokens.input` > 500K
+- Previous messages in same session worked fine, then responses stopped
+- Other sessions on same bot work normally
+
+### Diagnosis
+```bash
+# Find the session token count
+curl -s "http://localhost:<port>/api/session/<sessionID>" | python3 -c "
+import json,sys; d=json.load(sys.stdin)['data']
+print(f'Input tokens: {d[\"tokens\"][\"input\"]:,}')
+print(f'Cache read: {d[\"tokens\"][\"cache\"][\"read\"]:,}')
+"
+```
+
+### Fix: session reset
+OpenCode's `/compact` endpoint is not yet available. The fix is to delete the session and let Kimaki create a fresh one:
+
+1. Delete from OpenCode:
+   ```bash
+   opencode session delete <sessionID>
+   ```
+2. Delete thread mapping from Kimaki DB:
+   ```bash
+   python3 -c "
+   import sqlite3
+   conn = sqlite3.connect('/home/erik/.kimaki/discord-sessions.db')
+   cur = conn.cursor()
+   cur.execute(\"DELETE FROM thread_sessions WHERE thread_id = '<threadID>'\")
+   cur.execute(\"DELETE FROM part_messages WHERE thread_id = '<threadID>'\")
+   conn.commit()
+   conn.close()
+   "
+   ```
+3. Next message in the thread creates a fresh session automatically.
+
+### Prevention
+- Avoid uploading large files (CSV, SQL dumps, logs) directly into Kimaki threads
+- Instead, place files in the worktree and ask the agent to read them
+- If a session runs for hours with many tool calls, consider starting fresh periodically
+
 ## Common pitfall
 A brand-new Discord thread can still fail with "no response" even when context is small; this does **not** prove context-window overflow. The model may have produced output while listener/persistence broke before Discord delivery.
 
@@ -241,3 +287,4 @@ Triage and containment:
 - `references/http-none-nonretryable.md` — `HTTP None`/`NoneType` parser-failure signatures and containment sequence.
 - `references/zombie-opencode-servers.md` — how orphaned opencode server processes accumulate, why they cause `reply for unknown request`, and how to clean them up.
 - `references/broken-plugin-gateway-death.md` — broken OpenCode plugin causing silent gateway death after restart (claude-mem.js case study).
+- `references/session-context-bloat-reset.md` — step-by-step procedure to reset a bloated session (OpenCode + Kimaki DB cleanup).
