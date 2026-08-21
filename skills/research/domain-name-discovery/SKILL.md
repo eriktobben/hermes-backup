@@ -166,4 +166,5 @@ Highlight top 5 recommendations with:
 - .co WHOIS server (whois.nic.co) is unreliable from some networks
 - Some registry WHOIS servers only show NOT FOUND versus registered state; pattern-match carefully
 - .no (NORID) requires `domain: <name>.no` format, not bare domain — `nc whois.norid.no 43` works when `whois` CLI is missing
+- **Norid API details**: See `references/norid-api.md` for RDAP, DAS, WHOIS endpoints, rate limits, and limitations (including that expiry dates are NOT exposed via any public API)
 - Batch WHOIS lookups via subagents can return inconsistent results due to rate limiting or format issues. Always re-verify a subset individually before presenting final results to the user

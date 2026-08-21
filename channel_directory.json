@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T09:33:41.120848",
+  "updated_at": "2026-08-21T10:33:41.716866",
   "platforms": {
     "discord": [
       {
@@ -859,6 +859,12 @@
         "name": "Tobben MC / #general / OpenCode har sluttet å svare via Kimaki på flere prosjekter. Kan du sjekke? / topic 1539977039983943771",
         "type": "thread",
         "thread_id": "1539977039983943771"
+      },
+      {
+        "id": "1540293463805788170:1540293463805788170",
+        "name": "Tobben MC / #general / Jeg sitter med en idé om å lage en nettside som har oversikt over alle utløpt... / topic 1540293463805788170",
+        "type": "thread",
+        "thread_id": "1540293463805788170"
       }
     ],
     "telegram": [],
