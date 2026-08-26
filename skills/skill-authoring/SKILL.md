@@ -158,6 +158,10 @@ Pick the closest. Don't invent new top-level categories casually.
 - Current session's skill loader is cached — new skills won't appear until next session
 - Prefer extending an existing skill to creating a narrow sibling
 
+## Adapting Third-Party Skills
+
+Skills from Claude Code, Codex, Cursor, etc. often work in Hermes unchanged. See `references/cross-agent-skill-adaptation.md` for the compatibility check, install steps, and pitfalls.
+
 ## Review Checklist
 
 After drafting, verify:
