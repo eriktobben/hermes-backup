@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-27T10:55:02.616378",
+  "updated_at": "2026-08-27T12:00:03.196978",
   "platforms": {
     "discord": [
       {
@@ -877,6 +877,12 @@
         "name": "Tobben MC / #general / Kan du bruke skillen som er her? Den er egentlig laget for Claude. https://gi... / topic 1542135612059029504",
         "type": "thread",
         "thread_id": "1542135612059029504"
+      },
+      {
+        "id": "1542496478134804621:1542496478134804621",
+        "name": "Tobben MC / #general / Måltidsplanlegging. Jeg ønsker en balansert ukesmeny som er sunn, enkel og kj... / topic 1542496478134804621",
+        "type": "thread",
+        "thread_id": "1542496478134804621"
       }
     ],
     "telegram": [],
