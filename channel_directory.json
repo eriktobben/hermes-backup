@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-27T13:00:03.694684",
+  "updated_at": "2026-08-27T14:00:04.266364",
   "platforms": {
     "discord": [
       {
@@ -275,6 +275,12 @@
       {
         "id": "1539961866892349492",
         "name": "forgeclient",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1542524015699173457",
+        "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -883,6 +889,12 @@
         "name": "Tobben MC / #general / Måltidsplanlegging. Jeg ønsker en balansert ukesmeny som er sunn, enkel og kj... / topic 1542496478134804621",
         "type": "thread",
         "thread_id": "1542496478134804621"
+      },
+      {
+        "id": "1542525487484764221:1542525487484764221",
+        "name": "Tobben MC / #ig-vaktlister / Jeg ønsker å bruke denne kanalen for bistand til å sette opp vaktlister for I... / topic 1542525487484764221",
+        "type": "thread",
+        "thread_id": "1542525487484764221"
       }
     ],
     "telegram": [],
