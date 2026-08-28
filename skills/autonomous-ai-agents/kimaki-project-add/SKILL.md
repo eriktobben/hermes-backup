@@ -45,6 +45,15 @@ Use this after creating or cloning a repository that should appear in Discord vi
 - If Discord-side automation becomes unresponsive, avoid rebooting first; run the troubleshooting checks in `references/unresponsive-discord-bot.md`.
 - **Workspace creation fails with `err_e2b0c342`**: the OpenCode ACP server may have developed a Bun runtime degradation after extended uptime. See `discord-agent-runtime-diagnosis` → "Bun runtime degradation" section. Fix: `pm2 restart kimaki`.
 
+- **`fatal: 'branch-name' is already used by worktree`**: When a worktree creation fails or is interrupted, the branch can remain registered in git's worktree system even if the worktree directory was removed. Git refuses to create a new worktree with the same branch name. **Fix sequence**:
+  1. `cd <project-directory> && git worktree prune` — removes stale worktree references
+  2. `git branch -D "opencode/kimaki-<slug>"` — delete the stuck branch
+  3. `rm -rf ~/.kimaki/worktrees/<hash>/` — clean up leftover directories
+  4. `pm2 restart kimaki` — restart to pick up clean state
+  5. User retries the worktree creation in Discord
+  **Root cause**: Kimaki's `createWorktreeWithSubmodules` uses `git worktree add -B` which fails if the branch is "in use" by any registered worktree, even stale ones. The `-B` flag would reset an existing branch but cannot override the worktree lock. Kimaki does not currently run `git worktree prune` before creation attempts.
+  See `references/stuck-branch-worktree-fix.md` for full investigation and code path analysis.
+
 - **\\\\\\\"Directory does not exist or is not accessible\\\\\\\" on a known thread**: Two separate cleanup mechanisms affect Kimaki worktrees nightly:
   1. **OpenCode snapshot GC (~02:00)**: Internal to the OpenCode binary — runs `git gc --prune=7.days` on snapshot repos. **Deletes the entire worktree directory** (not just empties it). Git branch may or may not survive — we've observed both outcomes even for worktrees 1-2 days old. **Cannot be disabled** (compiled binary, no config knob). This is what causes the error message.
   2. **Our cron job (02:15)**: `kimaki-worktree-cleanup.py` now runs a 3-phase restore/cleanup process. Phase 1 restores recent worktrees (<7 days) deleted by OpenCode's GC. Phase 2 cleans up old worktrees (>14 days). Phase 3 handles orphaned directories.
