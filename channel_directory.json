@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T22:45:58.542711",
+  "updated_at": "2026-08-31T23:45:59.057326",
   "platforms": {
     "discord": [
       {
@@ -303,22 +303,10 @@
         "thread_id": null
       },
       {
-        "id": "1511404097302171818",
-        "name": "Tobben MC / #serena-dev",
-        "type": "group",
-        "thread_id": null
-      },
-      {
         "id": "1511501933180092478",
         "name": "Tobben MC / #masterfeed-dev",
         "type": "group",
         "thread_id": null
-      },
-      {
-        "id": "1511506529805926451:1511506529805926451",
-        "name": "Tobben MC / #general / Nå har gatewayen restartet. Hva nå? / topic 1511506529805926451",
-        "type": "thread",
-        "thread_id": "1511506529805926451"
       },
       {
         "id": "1511512227046228109:1511512227046228109",
