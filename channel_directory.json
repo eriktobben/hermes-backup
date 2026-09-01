@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T07:51:03.226398",
+  "updated_at": "2026-09-01T08:56:03.751167",
   "platforms": {
     "discord": [
       {
@@ -301,12 +301,6 @@
         "name": "Tobben MC / #🔔-varslinger",
         "type": "group",
         "thread_id": null
-      },
-      {
-        "id": "1511644514845069422:1511644514845069422",
-        "name": "Tobben MC / #serena-dev / Kan du kjøre full test suite og verifisere at den returnerer grønt? / topic 1511644514845069422",
-        "type": "thread",
-        "thread_id": "1511644514845069422"
       },
       {
         "id": "1511646062438387834:1511646062438387834",
