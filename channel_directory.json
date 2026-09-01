@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T06:51:02.713765",
+  "updated_at": "2026-09-01T07:51:03.226398",
   "platforms": {
     "discord": [
       {
@@ -301,12 +301,6 @@
         "name": "Tobben MC / #🔔-varslinger",
         "type": "group",
         "thread_id": null
-      },
-      {
-        "id": "1511531396081123468:1511531396081123468",
-        "name": "Tobben MC / #masterfeed-dev / Kan du gjøre en sikkerhetsvurdering av denne Laravel appen? Bruk Opencode / topic 1511531396081123468",
-        "type": "thread",
-        "thread_id": "1511531396081123468"
       },
       {
         "id": "1511644514845069422:1511644514845069422",
