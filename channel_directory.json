@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T09:56:04.281108",
+  "updated_at": "2026-09-01T10:56:04.753630",
   "platforms": {
     "discord": [
       {
@@ -295,18 +295,6 @@
         "name": "Tobben MC / #bilkjøp",
         "type": "group",
         "thread_id": null
-      },
-      {
-        "id": "1511529337885691965",
-        "name": "Tobben MC / #🔔-varslinger",
-        "type": "group",
-        "thread_id": null
-      },
-      {
-        "id": "1511646062438387834:1511646062438387834",
-        "name": "Tobben MC / #masterfeed-dev / Kan du gjøre en sikkerhetsvurdering eksplisitt på krypteringen av bilder? Hvo... / topic 1511646062438387834",
-        "type": "thread",
-        "thread_id": "1511646062438387834"
       },
       {
         "id": "1513138239555506177:1513138239555506177",
