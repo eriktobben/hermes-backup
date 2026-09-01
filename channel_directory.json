@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T23:45:59.057326",
+  "updated_at": "2026-09-01T00:45:59.557460",
   "platforms": {
     "discord": [
       {
@@ -301,42 +301,6 @@
         "name": "Tobben MC / #bilkjøp",
         "type": "group",
         "thread_id": null
-      },
-      {
-        "id": "1511501933180092478",
-        "name": "Tobben MC / #masterfeed-dev",
-        "type": "group",
-        "thread_id": null
-      },
-      {
-        "id": "1511512227046228109:1511512227046228109",
-        "name": "Tobben MC / #general / Problemet nå er at samtalen vi har her i får auto thread, det ønsker jeg ikke... / topic 1511512227046228109",
-        "type": "thread",
-        "thread_id": "1511512227046228109"
-      },
-      {
-        "id": "1511521166572130426:1511521166572130426",
-        "name": "Tobben MC / #masterfeed-dev / Dette er en test / topic 1511521166572130426",
-        "type": "thread",
-        "thread_id": "1511521166572130426"
-      },
-      {
-        "id": "1511522678270595246:1511522678270595246",
-        "name": "Tobben MC / #general / Hei / topic 1511522678270595246",
-        "type": "thread",
-        "thread_id": "1511522678270595246"
-      },
-      {
-        "id": "1511523424558907462:1511523424558907462",
-        "name": "Tobben MC / #general / hei / topic 1511523424558907462",
-        "type": "thread",
-        "thread_id": "1511523424558907462"
-      },
-      {
-        "id": "1511524263612649554:1511524263612649554",
-        "name": "Tobben MC / #general / Testmelding / topic 1511524263612649554",
-        "type": "thread",
-        "thread_id": "1511524263612649554"
       },
       {
         "id": "1511529337885691965",
