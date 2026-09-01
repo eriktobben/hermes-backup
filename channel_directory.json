@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T00:45:59.557460",
+  "updated_at": "2026-09-01T01:46:00.087737",
   "platforms": {
     "discord": [
       {
@@ -283,12 +283,6 @@
         "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1499183215494037554",
-        "name": "Tobben MC / #🗞️-briefings",
-        "type": "group",
-        "thread_id": null
       },
       {
         "id": "1499181433200312381",
