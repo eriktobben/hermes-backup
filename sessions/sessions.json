@@ -3506,5 +3506,44 @@
       "parent_chat_id": "1499181433200312381",
       "message_id": "1542818983164780615"
     }
+  },
+  "agent:main:discord:thread:1544614188444553216:1544614188444553216": {
+    "session_key": "agent:main:discord:thread:1544614188444553216:1544614188444553216",
+    "session_id": "20260902_074521_cd5d3283",
+    "created_at": "2026-09-02T07:45:21.903697",
+    "updated_at": "2026-09-02T07:55:02.809554",
+    "display_name": "Tobben MC / #general / Kimaki / Opencode svarer ikke n\u00e5r jeg sender melding i tr\u00e5den igwebshop: -s-g...",
+    "platform": "discord",
+    "chat_type": "thread",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "total_tokens": 0,
+    "last_prompt_tokens": 44006,
+    "estimated_cost_usd": 0.0,
+    "cost_status": "unknown",
+    "expiry_finalized": false,
+    "suspended": false,
+    "resume_pending": false,
+    "resume_reason": null,
+    "last_resume_marked_at": null,
+    "is_fresh_reset": false,
+    "was_auto_reset": false,
+    "auto_reset_reason": null,
+    "reset_had_activity": false,
+    "origin": {
+      "platform": "discord",
+      "chat_id": "1544614188444553216",
+      "chat_name": "Tobben MC / #general / Kimaki / Opencode svarer ikke n\u00e5r jeg sender melding i tr\u00e5den igwebshop: -s-g...",
+      "chat_type": "thread",
+      "user_id": "872777029244829706",
+      "user_name": "Tobben",
+      "thread_id": "1544614188444553216",
+      "chat_topic": null,
+      "guild_id": "1479597162685006058",
+      "parent_chat_id": "1499181433200312381",
+      "message_id": "1544614188444553216"
+    }
   }
 }

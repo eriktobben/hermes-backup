@@ -43,6 +43,7 @@ Use this after creating or cloning a repository that should appear in Discord vi
   - If the patch script reports "No Kimaki instances needed patching" but Kimaki still crashes, the file may have orphaned lines the patch doesn't yet handle. See `references/kimaki-new-worktree-orphan-fix.md` for manual fix steps.
   - After fixing, update `~/.local/bin/kimaki-patch-worktree` to cover the new orphan pattern so future upgrades handle it automatically.
 - If Discord-side automation becomes unresponsive, avoid rebooting first; run the troubleshooting checks in `references/unresponsive-discord-bot.md`.
+- **Kimaki crash-looping with `ENOTEMPTY` or `ENOSPC` in PM2 logs**: Almost always means the disk is full. `npm` cannot install packages on a full disk, and partial installs leave corrupted npx cache that produces misleading `ENOTEMPTY` errors on retry. Fix: `pm2 stop kimaki` → free disk space → `rm -rf ~/.npm/_npx/` → `pm2 restart kimaki`. See `references/unresponsive-discord-bot.md` → "Disk full causing crash loops".
 - **Workspace creation fails with `err_e2b0c342`**: the OpenCode ACP server may have developed a Bun runtime degradation after extended uptime. See `discord-agent-runtime-diagnosis` → "Bun runtime degradation" section. Fix: `pm2 restart kimaki`.
 
 - **`fatal: 'branch-name' is already used by worktree`**: When a worktree creation fails or is interrupted, the branch can remain registered in git's worktree system even if the worktree directory was removed. Git refuses to create a new worktree with the same branch name. **Fix sequence**:
@@ -135,5 +136,6 @@ When Kimaki is run as a persistent bot process, reduce freeze/restart loops by:
 4. Enable log rotation for PM2 logs to prevent uncontrolled growth.
 5. Ensure Bun is in the PM2 runtime PATH (or export it in the start command), otherwise Kimaki may repeatedly auto-install Bun and restart.
 6. If one Discord thread is poisoned (context-window errors + listener reconnect loop), clear only that thread/session mapping in Kimaki DB instead of rebooting the server.
+7. **Monitor disk space.** Kimaki restarts trigger `npx -y kimaki@latest`, which downloads and installs packages. If the disk is full, npm fails with ENOSPC, which can manifest as confusing `ENOTEMPTY` errors (corrupted npx cache from partial writes). Kimaki will crash-loop indefinitely — PM2's autorestart retries immediately, burning thousands of restarts. See `references/unresponsive-discord-bot.md` → "Disk full causing crash loops" for the cleanup procedure.
 
 See detailed runbook: `references/unresponsive-discord-bot.md`.

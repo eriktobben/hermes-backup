@@ -313,13 +313,13 @@
     "archived_at": null,
     "created_at": "2026-05-24T19:30:46.350174+00:00",
     "last_patched_at": "2026-08-20T13:24:56.706631+00:00",
-    "last_used_at": "2026-08-20T13:25:02.628852+00:00",
-    "last_viewed_at": "2026-08-20T13:25:02.625405+00:00",
+    "last_used_at": "2026-09-02T07:56:50.653713+00:00",
+    "last_viewed_at": "2026-09-02T07:56:50.648174+00:00",
     "patch_count": 21,
     "pinned": false,
     "state": "active",
-    "use_count": 20,
-    "view_count": 23
+    "use_count": 21,
+    "view_count": 24
   },
   "discord-channel-repo-routing": {
     "archived_at": null,
@@ -636,13 +636,13 @@
     "created_at": "2026-06-25T01:53:14.136891+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-07-09T09:43:49.973113+00:00",
-    "last_used_at": "2026-08-20T13:23:35.478953+00:00",
-    "last_viewed_at": "2026-08-20T13:23:35.474960+00:00",
+    "last_used_at": "2026-09-02T07:55:31.682634+00:00",
+    "last_viewed_at": "2026-09-02T07:55:31.674880+00:00",
     "patch_count": 5,
     "pinned": false,
     "state": "active",
-    "use_count": 10,
-    "view_count": 10
+    "use_count": 11,
+    "view_count": 11
   },
   "himalaya": {
     "archived_at": null,
@@ -790,14 +790,14 @@
   "kimaki-project-add": {
     "archived_at": null,
     "created_at": "2026-05-24T18:05:09.698537+00:00",
-    "last_patched_at": "2026-08-28T09:01:49.341893+00:00",
-    "last_used_at": "2026-08-28T08:59:54.505530+00:00",
-    "last_viewed_at": "2026-08-28T08:59:54.500771+00:00",
-    "patch_count": 38,
+    "last_patched_at": "2026-09-02T07:56:40.839046+00:00",
+    "last_used_at": "2026-09-02T07:55:45.653942+00:00",
+    "last_viewed_at": "2026-09-02T07:55:45.649225+00:00",
+    "patch_count": 41,
     "pinned": false,
     "state": "active",
-    "use_count": 41,
-    "view_count": 45
+    "use_count": 43,
+    "view_count": 47
   },
   "linear": {
     "archived_at": null,

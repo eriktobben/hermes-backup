@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T07:16:14.401031",
+  "updated_at": "2026-09-02T08:16:14.860307",
   "platforms": {
     "discord": [
       {
@@ -823,6 +823,12 @@
         "name": "Tobben MC / #general / Jeg får følgende feil når jeg bruker OpenCode via Kimaki: 🌳 Worktree: opencod... / topic 1542818983164780615",
         "type": "thread",
         "thread_id": "1542818983164780615"
+      },
+      {
+        "id": "1544614188444553216:1544614188444553216",
+        "name": "Tobben MC / #general / Kimaki / Opencode svarer ikke når jeg sender melding i tråden igwebshop: -s-g... / topic 1544614188444553216",
+        "type": "thread",
+        "thread_id": "1544614188444553216"
       }
     ],
     "telegram": [],
