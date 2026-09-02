@@ -67,10 +67,12 @@ tail -50 ~/.pm2/logs/kimaki-error.log | grep -E 'ENOSPC|ENOTEMPTY'
 
 **Known big space consumers on this server (as of Sep 2026):**
 - `~/.npm` — npm cache (can grow to 19GB+)
-- `~/.openclaw` — OpenClaw workspaces/memory (~17GB, ask user before deleting)
+- `~/.openclaw` — OpenClaw workspaces/memory (~17GB, ask user before deleting — old AI assistant, likely unused)
 - `~/.kimaki/worktrees` — Kimaki worktrees (~7GB)
 - `~/.cache` — general XDG cache (~11GB)
 - `~/.bun` — Bun cache (~1.6GB)
+
+⚠️ **After manual worktree deletion**: If you `rm -rf ~/.kimaki/worktrees/*`, also update `thread_workspaces`/`thread_worktrees` in `~/.kimaki/discord-sessions.db` (set status to `cleaned` for the deleted paths) — otherwise Kimaki shows "Directory does not exist" for affected threads.
 
 ## Thread-specific deadlock pattern (high-value)
 Symptom set:

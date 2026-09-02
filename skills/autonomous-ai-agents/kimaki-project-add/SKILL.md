@@ -46,6 +46,16 @@ Use this after creating or cloning a repository that should appear in Discord vi
 - **Kimaki crash-looping with `ENOTEMPTY` or `ENOSPC` in PM2 logs**: Almost always means the disk is full. `npm` cannot install packages on a full disk, and partial installs leave corrupted npx cache that produces misleading `ENOTEMPTY` errors on retry. Fix: `pm2 stop kimaki` → free disk space → `rm -rf ~/.npm/_npx/` → `pm2 restart kimaki`. See `references/unresponsive-discord-bot.md` → "Disk full causing crash loops".
 - **Workspace creation fails with `err_e2b0c342`**: the OpenCode ACP server may have developed a Bun runtime degradation after extended uptime. See `discord-agent-runtime-diagnosis` → "Bun runtime degradation" section. Fix: `pm2 restart kimaki`.
 
+- **Emergency disk cleanup deletes worktrees but leaves DB references intact**: When you `rm -rf ~/.kimaki/worktrees/*` to free disk space, the `thread_workspaces` and `thread_worktrees` tables in `~/.kimaki/discord-sessions.db` still have `status: 'ready'` entries pointing to the deleted paths. Kimaki will then show "Directory does not exist or is not accessible" when the user tries to continue in that thread. **Fix**: After deleting worktree directories, also update the DB:
+  ```python
+  import sqlite3
+  conn = sqlite3.connect(os.path.expanduser('~/.kimaki/discord-sessions.db'))
+  conn.execute("UPDATE thread_workspaces SET status = 'cleaned' WHERE status = 'ready' AND workspace_directory LIKE '%<deleted-hash>%'")
+  conn.execute("UPDATE thread_worktrees SET status = 'cleaned' WHERE status = 'ready' AND worktree_directory LIKE '%<deleted-hash>%'")
+  conn.commit()
+  ```
+  Or if you need the thread to work again: recreate the worktree from the surviving git branch (see `references/worktree-cleanup-recovery.md` → step 3a). Both approaches require `pm2 restart kimaki` afterwards.
+
 - **`fatal: 'branch-name' is already used by worktree`**: When a worktree creation fails or is interrupted, the branch can remain registered in git's worktree system even if the worktree directory was removed. Git refuses to create a new worktree with the same branch name. **Fix sequence**:
   1. `cd <project-directory> && git worktree prune` — removes stale worktree references
   2. `git branch -D "opencode/kimaki-<slug>"` — delete the stuck branch
@@ -70,10 +80,18 @@ Use this after creating or cloning a repository that should appear in Discord vi
 
   The automated fix for empty worktrees:
   1. The cron job at 02:15 automatically restores worktrees that are <7 days old
-  2. For manual recovery, query the DB: `python3 -c "import sqlite3; c=sqlite3.connect('$HOME/.kimaki/discord-sessions.db'); print('\\\\\\\\\\\\\\\\n'.join(str(r) for r in c.execute('SELECT workspace_name, workspace_directory, project_directory FROM thread_workspaces WHERE thread_id=\\\\\\\\\\\\\"<thread_id>\\\\\\\\\\\\\"')))"`
+  2. For manual recovery, query the DB: `python3 -c "import sqlite3; c=sqlite3.connect('$HOME/.kimaki/discord-sessions.db'); print('\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n'.join(str(r) for r in c.execute('SELECT workspace_name, workspace_directory, project_directory FROM thread_workspaces WHERE thread_id=\\\\\\\\\\\\\\\\\\\\\\\\\\\"<thread_id>\\\\\\\\\\\\\\\\\\\\\\\\\\\"')))"`
   3. Verify the git branch still exists: `cd <project_directory> && git branch -a | grep <worktree_name>`
   4. If branch exists → recreate: `cd <project_directory> && git worktree add <workspace_directory> <worktree_branch>`
-  5. If branch is GONE → find the project's main dev branch (e.g. `v2`, `develop`, `main`) with matching commits and recreate from there. Kimaki branches can be deleted even for worktrees only 1-2 days old.
+  5. **After recreating the worktree directory, update the DB status** so Kimaki recognizes it:
+     ```python
+     import sqlite3
+     conn = sqlite3.connect(os.path.expanduser('~/.kimaki/discord-sessions.db'))
+     conn.execute("UPDATE thread_workspaces SET status = 'ready' WHERE thread_id = '<thread_id>'")
+     conn.commit()
+     ```
+  6. Restart Kimaki: `pm2 restart kimaki`
+  7. If branch is GONE → find the project's main dev branch (e.g. `v2`, `develop`, `main`) with matching commits and recreate from there. Kimaki branches can be deleted even for worktrees only 1-2 days old.
     See `references/worktree-cleanup-recovery.md` for full session detail and `references/worktree-cleanup-investigation.md` for the diagnostic methodology.
   **Multi-day work**: Users who want to keep threads alive across days should know that OpenCode GC will delete the checkout nightly, and the git branch may also be lost — even for worktrees only 1-2 days old. The automated restore at 02:15 handles most cases. Recreation is instant if the branch survives; if not, find the equivalent branch in the project (e.g. `v2`, `develop`, `main`).
   See `references/worktree-cleanup-recovery.md` for full session detail and `references/worktree-cleanup-investigation.md` for the diagnostic methodology.
@@ -137,5 +155,19 @@ When Kimaki is run as a persistent bot process, reduce freeze/restart loops by:
 5. Ensure Bun is in the PM2 runtime PATH (or export it in the start command), otherwise Kimaki may repeatedly auto-install Bun and restart.
 6. If one Discord thread is poisoned (context-window errors + listener reconnect loop), clear only that thread/session mapping in Kimaki DB instead of rebooting the server.
 7. **Monitor disk space.** Kimaki restarts trigger `npx -y kimaki@latest`, which downloads and installs packages. If the disk is full, npm fails with ENOSPC, which can manifest as confusing `ENOTEMPTY` errors (corrupted npx cache from partial writes). Kimaki will crash-loop indefinitely — PM2's autorestart retries immediately, burning thousands of restarts. See `references/unresponsive-discord-bot.md` → "Disk full causing crash loops" for the cleanup procedure.
+
+## Daily automated cache cleanup
+
+A cron job (`3fca63db50fc`, runs 02:15 daily) executes `~/.hermes/scripts/daily-cache-cleanup.sh` which handles:
+- **npm cache**: `npm cache clean --force` (⚠️ needs ~1GB free to run — script handles this by running after other cleanups free space)
+- **Bun cache**: `rm -rf ~/.bun/install/cache/*`
+- **General XDG cache**: deletes files older than 14 days in `~/.cache`
+- **PM2 logs**: rotates logs keeping last 1000 lines per file
+- **Kimaki worktrees**: runs the 3-phase restore/cleanup script
+- **Git worktree pruning**: prunes orphaned worktree references across all projects in `~/Projects/`
+- **npx stale cache**: deletes npx dirs older than 30 days
+- **Disk monitoring**: warns at 75% usage, alerts at 90%
+
+The script is silent when nothing needs reporting — it only outputs when cleanup was performed or disk thresholds are exceeded.
 
 See detailed runbook: `references/unresponsive-discord-bot.md`.

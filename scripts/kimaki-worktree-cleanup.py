@@ -259,6 +259,13 @@ def main():
         if created_at:
             days_old = (NOW - created_at).days
             if days_old > 7:
+                # Marker som cleaned i DB siden worktree ikke finnes og er for gammel
+                if not DRY_RUN:
+                    cur.execute(
+                        "UPDATE thread_workspaces SET status = 'cleaned' WHERE thread_id = ? AND status = 'ready'",
+                        (thread_id,)
+                    )
+                    conn.commit()
                 skipped_old += 1
                 continue
 

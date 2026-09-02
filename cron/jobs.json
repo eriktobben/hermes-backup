@@ -64,15 +64,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2045
+        "completed": 2046
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-02T11:20:06.814528+02:00",
-      "last_run_at": "2026-09-02T09:19:09.207870+02:00",
+      "next_run_at": "2026-09-02T12:21:07.295037+02:00",
+      "last_run_at": "2026-09-02T10:20:10.226706+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -90,14 +90,14 @@
     },
     {
       "id": "3fca63db50fc",
-      "name": "Kimaki worktree cleanup (14 dager inaktiv)",
+      "name": "Daily disk cleanup (cacher, worktrees, logs)",
       "prompt": "",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
       "base_url": null,
-      "script": "kimaki-worktree-cleanup-wrapper.sh",
+      "script": "daily-cache-cleanup.sh",
       "no_agent": true,
       "context_from": null,
       "schedule": {
@@ -354,5 +354,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-09-02T10:20:06.814658+02:00"
+  "updated_at": "2026-09-02T11:21:07.295274+02:00"
 }
