@@ -64,15 +64,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2113
+        "completed": 2114
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-05T08:28:39.696608+02:00",
-      "last_run_at": "2026-09-05T06:27:42.209947+02:00",
+      "next_run_at": "2026-09-05T09:29:40.187017+02:00",
+      "last_run_at": "2026-09-05T07:28:42.737633+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -154,17 +154,17 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 63
+        "completed": 64
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-09-05T08:00:00+02:00",
-      "last_run_at": "2026-09-04T08:04:27.993033+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-09-06T08:00:00+02:00",
+      "last_run_at": "2026-09-05T08:00:44.400512+02:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 401: Insufficient balance. Manage your billing here: https://opencode.ai/workspace/wrk_01KQERNS2QXP1DQ42FYMZDMR40/billing",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -354,5 +354,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-09-05T07:28:39.696865+02:00"
+  "updated_at": "2026-09-05T08:29:40.188530+02:00"
 }
