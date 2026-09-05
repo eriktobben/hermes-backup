@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T20:41:58.732887",
+  "updated_at": "2026-09-05T21:41:59.242232",
   "platforms": {
     "discord": [
       {
@@ -283,12 +283,6 @@
         "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1513283477590511616:1513283477590511616",
-        "name": "Tobben MC / #general / Jeg bruker Kimaki som en bridge mellom OpenCode og Discord. Jeg har skrevet o... / topic 1513283477590511616",
-        "type": "thread",
-        "thread_id": "1513283477590511616"
       },
       {
         "id": "1513301329345511595:1513301329345511595",
