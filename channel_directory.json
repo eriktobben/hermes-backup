@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T19:41:58.273986",
+  "updated_at": "2026-09-05T20:41:58.732887",
   "platforms": {
     "discord": [
       {
@@ -283,12 +283,6 @@
         "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1513254751503126559:1513254751503126559",
-        "name": "Tobben MC / #general / Kan du sette opp OpenCode til å bruke Deepseek V4 Pro som orchestrator og pla... / topic 1513254751503126559",
-        "type": "thread",
-        "thread_id": "1513254751503126559"
       },
       {
         "id": "1513283477590511616:1513283477590511616",
