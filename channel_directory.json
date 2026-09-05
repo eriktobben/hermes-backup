@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T11:31:54.169248",
+  "updated_at": "2026-09-05T12:31:54.696755",
   "platforms": {
     "discord": [
       {
@@ -289,12 +289,6 @@
         "name": "Tobben MC / #general",
         "type": "group",
         "thread_id": null
-      },
-      {
-        "id": "1513138239555506177:1513138239555506177",
-        "name": "Tobben MC / #general / SLM / topic 1513138239555506177",
-        "type": "thread",
-        "thread_id": "1513138239555506177"
       },
       {
         "id": "1513151821089345597:1513151821089345597",
