@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T18:36:57.728210",
+  "updated_at": "2026-09-05T19:41:58.273986",
   "platforms": {
     "discord": [
       {
@@ -283,12 +283,6 @@
         "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1499181433200312381",
-        "name": "Tobben MC / #general",
-        "type": "group",
-        "thread_id": null
       },
       {
         "id": "1513254751503126559:1513254751503126559",
