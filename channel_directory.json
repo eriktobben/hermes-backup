@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T06:52:03.410225",
+  "updated_at": "2026-09-06T07:52:03.923689",
   "platforms": {
     "discord": [
       {
@@ -283,12 +283,6 @@
         "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1513301329345511595:1513301329345511595",
-        "name": "Tobben MC / #general / Kan du sette opp en cron job som comitter Hermes data til Github som en type ... / topic 1513301329345511595",
-        "type": "thread",
-        "thread_id": "1513301329345511595"
       },
       {
         "id": "1513469083998224384:1513469083998224384",
