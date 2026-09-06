@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T00:47:00.662863",
+  "updated_at": "2026-09-06T01:47:01.116995",
   "platforms": {
     "discord": [
       {
@@ -289,12 +289,6 @@
         "name": "Tobben MC / #general / Kan du sette opp en cron job som comitter Hermes data til Github som en type ... / topic 1513301329345511595",
         "type": "thread",
         "thread_id": "1513301329345511595"
-      },
-      {
-        "id": "1513335652857544724:1513335652857544724",
-        "name": "Tobben MC / #general / Kan du sette opp Kimaki prosjekt med repo git@github.com:Serena-AS/hermes-res... / topic 1513335652857544724",
-        "type": "thread",
-        "thread_id": "1513335652857544724"
       },
       {
         "id": "1513469083998224384:1513469083998224384",
