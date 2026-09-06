@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T11:57:05.838727",
+  "updated_at": "2026-09-06T12:57:06.323786",
   "platforms": {
     "discord": [
       {
@@ -283,24 +283,6 @@
         "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1513469083998224384:1513469083998224384",
-        "name": "Tobben MC / #general / Nå bruker jeg Kimaki til å opprette Git Worktree Isolation per discord thread... / topic 1513469083998224384",
-        "type": "thread",
-        "thread_id": "1513469083998224384"
-      },
-      {
-        "id": "1513520000051449996:1513520000051449996",
-        "name": "Tobben MC / #general / Jeg har en Polar-klokke jeg ønsker å søke reklamasjon på. Hvordan gjør jeg de... / topic 1513520000051449996",
-        "type": "thread",
-        "thread_id": "1513520000051449996"
-      },
-      {
-        "id": "1513523149889736804:1513523149889736804",
-        "name": "Tobben MC / #general / Jeg ønsker å lage en mail klient for Mac og iOS hvor en a hovedfunksjonene er... / topic 1513523149889736804",
-        "type": "thread",
-        "thread_id": "1513523149889736804"
       },
       {
         "id": "1513534243119038585:1513534243119038585",
