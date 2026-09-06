@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T12:57:06.323786",
+  "updated_at": "2026-09-06T13:57:06.778662",
   "platforms": {
     "discord": [
       {
@@ -283,12 +283,6 @@
         "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
-      },
-      {
-        "id": "1513534243119038585:1513534243119038585",
-        "name": "Tobben MC / #general / Kan du sette opp følgende Kimaki prosjekt: git@github.com:Tobbens-Empire/embe... / topic 1513534243119038585",
-        "type": "thread",
-        "thread_id": "1513534243119038585"
       },
       {
         "id": "1513591245929185290:1513591245929185290",
