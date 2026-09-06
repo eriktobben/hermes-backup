@@ -64,15 +64,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2137
+        "completed": 2138
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-06T08:52:51.143825+02:00",
-      "last_run_at": "2026-09-06T06:51:53.687561+02:00",
+      "next_run_at": "2026-09-06T09:53:51.624010+02:00",
+      "last_run_at": "2026-09-06T07:52:54.130204+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -154,15 +154,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 64
+        "completed": 65
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-09-06T08:00:00+02:00",
-      "last_run_at": "2026-09-05T08:00:44.400512+02:00",
+      "next_run_at": "2026-09-07T08:00:00+02:00",
+      "last_run_at": "2026-09-06T08:01:01.127349+02:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 401: Insufficient balance. Manage your billing here: https://opencode.ai/workspace/wrk_01KQERNS2QXP1DQ42FYMZDMR40/billing",
       "last_delivery_error": null,
@@ -354,5 +354,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-09-06T07:52:51.144036+02:00"
+  "updated_at": "2026-09-06T08:53:51.624250+02:00"
 }
