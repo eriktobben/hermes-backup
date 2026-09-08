@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T08:42:26.240514",
+  "updated_at": "2026-09-08T09:39:33.757448",
   "platforms": {
     "discord": [
       {
@@ -285,232 +285,172 @@
         "type": "channel"
       },
       {
-        "id": "1513591245929185290:1513591245929185290",
-        "name": "Tobben MC / #general / Vurdering av blogg / topic 1513591245929185290",
-        "type": "thread",
-        "thread_id": "1513591245929185290"
+        "id": "1499181433200312381",
+        "name": "Tobben MC / #general",
+        "type": "group",
+        "thread_id": null
       },
       {
-        "id": "1514538440455094433:1514538440455094433",
-        "name": "Tobben MC / #general / Jeg prøver å reklamere på en Polar-klokke jeg har kjøpt hos Fjellsport, men s... / topic 1514538440455094433",
+        "id": "1546809391595126846:1546809391595126846",
+        "name": "Tobben MC / #general / Hei / topic 1546809391595126846",
         "type": "thread",
-        "thread_id": "1514538440455094433"
+        "thread_id": "1546809391595126846"
       },
       {
-        "id": "1514552150800339105:1514552150800339105",
-        "name": "Tobben MC / #general / Kan du huske på at jeg ALDRI vi at du skal bruke em dash (–). Bruk alltid van... / topic 1514552150800339105",
+        "id": "1546806918801006663:1546806918801006663",
+        "name": "Tobben MC / #general / Kan du sette opp sending av epost via SES for e-posten noreply@app.finly.no? / topic 1546806918801006663",
         "type": "thread",
-        "thread_id": "1514552150800339105"
+        "thread_id": "1546806918801006663"
       },
       {
-        "id": "1514751586134523924:1514751586134523924",
-        "name": "Tobben MC / #🗞️-briefings / Kan du oppdatere \"reminder AI Model Daily Briefing\" til å lage en here.now si... / topic 1514751586134523924",
+        "id": "1545078991847821353:1545078991847821353",
+        "name": "Tobben MC / #general / Jeg fikk følgende mail fra OpenCode Go i dag: Some of your requests to OpenCo... / topic 1545078991847821353",
         "type": "thread",
-        "thread_id": "1514751586134523924"
+        "thread_id": "1545078991847821353"
       },
       {
-        "id": "1514900468994932827:1514900468994932827",
-        "name": "Tobben MC / #bilkjøp / Kan du oppdatere \"reminder FINN bilvarsel (el + bensin-kjede)\" til å lage en ... / topic 1514900468994932827",
+        "id": "1545077369029656748:1545077369029656748",
+        "name": "Tobben MC / #general / Kan du finne Facebook / Instagram / VSCO profilen til en person som heter Lis... / topic 1545077369029656748",
         "type": "thread",
-        "thread_id": "1514900468994932827"
+        "thread_id": "1545077369029656748"
       },
       {
-        "id": "1514908138137194538:1514908138137194538",
-        "name": "Tobben MC / #general / Jeg får veldig ofte varsler om at jeg må godkjenne noe Hermes gjør, eks denne... / topic 1514908138137194538",
+        "id": "1544614188444553216:1544614188444553216",
+        "name": "Tobben MC / #general / Kimaki / Opencode svarer ikke når jeg sender melding i tråden igwebshop: -s-g... / topic 1544614188444553216",
         "type": "thread",
-        "thread_id": "1514908138137194538"
+        "thread_id": "1544614188444553216"
       },
       {
-        "id": "1514936625946169355:1514936625946169355",
-        "name": "Tobben MC / #bilkjøp / Kan du finne de beste Tesla-alternativene som er til salgs her basert på mine... / topic 1514936625946169355",
+        "id": "1542818983164780615:1542818983164780615",
+        "name": "Tobben MC / #general / Jeg får følgende feil når jeg bruker OpenCode via Kimaki: 🌳 Worktree: opencod... / topic 1542818983164780615",
         "type": "thread",
-        "thread_id": "1514936625946169355"
+        "thread_id": "1542818983164780615"
       },
       {
-        "id": "1515027326851612713:1515027326851612713",
-        "name": "Tobben MC / #general / Jeg prøvde nå å fortsette en samtale i en thread som er fra 8. juni, men Herm... / topic 1515027326851612713",
+        "id": "1542525487484764221:1542525487484764221",
+        "name": "Tobben MC / #ig-vaktlister / Jeg ønsker å bruke denne kanalen for bistand til å sette opp vaktlister for I... / topic 1542525487484764221",
         "type": "thread",
-        "thread_id": "1515027326851612713"
+        "thread_id": "1542525487484764221"
       },
       {
-        "id": "1515097943097737287:1515097943097737287",
-        "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt med følgende repo? git@github.com:eriktobb... / topic 1515097943097737287",
+        "id": "1542496478134804621:1542496478134804621",
+        "name": "Tobben MC / #general / Måltidsplanlegging. Jeg ønsker en balansert ukesmeny som er sunn, enkel og kj... / topic 1542496478134804621",
         "type": "thread",
-        "thread_id": "1515097943097737287"
+        "thread_id": "1542496478134804621"
       },
       {
-        "id": "1515235420009664662:1515235420009664662",
-        "name": "Tobben MC / #general / Kan du installere og sette opp følgende slik at både Hermes og OpenCode kan b... / topic 1515235420009664662",
+        "id": "1542135612059029504:1542135612059029504",
+        "name": "Tobben MC / #general / Kan du bruke skillen som er her? Den er egentlig laget for Claude. https://gi... / topic 1542135612059029504",
         "type": "thread",
-        "thread_id": "1515235420009664662"
+        "thread_id": "1542135612059029504"
       },
       {
-        "id": "1515533557869838376:1515533557869838376",
-        "name": "Tobben MC / #general / Serveren som du er på bruker Tailscale. Jeg har en Mac Mini hjemme som er kob... / topic 1515533557869838376",
+        "id": "1540349881321791579:1540349881321791579",
+        "name": "Tobben MC / #general / Jeg bruker i dag Google sin OCR API for å lese brukernavn på Instagram-story ... / topic 1540349881321791579",
         "type": "thread",
-        "thread_id": "1515533557869838376"
+        "thread_id": "1540349881321791579"
       },
       {
-        "id": "1515720798109962270:1515720798109962270",
-        "name": "Tobben MC / #general / Får jeg kontakt med deg? / topic 1515720798109962270",
+        "id": "1540293463805788170:1540293463805788170",
+        "name": "Tobben MC / #general / Jeg sitter med en idé om å lage en nettside som har oversikt over alle utløpt... / topic 1540293463805788170",
         "type": "thread",
-        "thread_id": "1515720798109962270"
+        "thread_id": "1540293463805788170"
       },
       {
-        "id": "1515862452460327082:1515862452460327082",
-        "name": "Tobben MC / #general / Jeg har lyst til å lage min egen versjon av simplebackups.com ved bruk av Lar... / topic 1515862452460327082",
+        "id": "1539977039983943771:1539977039983943771",
+        "name": "Tobben MC / #general / OpenCode har sluttet å svare via Kimaki på flere prosjekter. Kan du sjekke? / topic 1539977039983943771",
         "type": "thread",
-        "thread_id": "1515862452460327082"
+        "thread_id": "1539977039983943771"
       },
       {
-        "id": "1515999061432467457:1515999061432467457",
-        "name": "Tobben MC / #general / Kan du installere mnemosyne for å erstatte standard minne for Hermes? https:/... / topic 1515999061432467457",
+        "id": "1539961695454236672:1539961695454236672",
+        "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt med følgende git repo: git@github.com:erik... / topic 1539961695454236672",
         "type": "thread",
-        "thread_id": "1515999061432467457"
+        "thread_id": "1539961695454236672"
       },
       {
-        "id": "1516068346318291108:1516068346318291108",
-        "name": "Tobben MC / #general / Hvilken informasjon har du lagret om Veronica? / topic 1516068346318291108",
+        "id": "1539264888877088778:1539264888877088778",
+        "name": "Tobben MC / #general / Jeg holder på å lage en nettbutikk som skal selge Apple-produkter og IT-utsty... / topic 1539264888877088778",
         "type": "thread",
-        "thread_id": "1516068346318291108"
+        "thread_id": "1539264888877088778"
       },
       {
-        "id": "1516071345199382538:1516071345199382538",
-        "name": "Tobben MC / #general / Jeg har lys til å lage et SaaS tilsvarende simplebackup.com. Jeg trenger noen... / topic 1516071345199382538",
+        "id": "1524711822056226828:1524711822056226828",
+        "name": "Tobben MC / #general / Oppretter en ny tråd/samtale med Kimaki mot Opencode, men får følgende feil: ... / topic 1524711822056226828",
         "type": "thread",
-        "thread_id": "1516071345199382538"
+        "thread_id": "1524711822056226828"
       },
       {
-        "id": "1516083474560188578:1516083474560188578",
-        "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt kalt VivaltoBackup med følgende repo: git@... / topic 1516083474560188578",
+        "id": "1539201428080435261:1539201428080435261",
+        "name": "Tobben MC / #general / Kan du lage følgende agenter globalt i OpenCode? dsflash -> DeepSeek v4 Flash... / topic 1539201428080435261",
         "type": "thread",
-        "thread_id": "1516083474560188578"
+        "thread_id": "1539201428080435261"
       },
       {
-        "id": "1516432050209423381:1516432050209423381",
-        "name": "Tobben MC / #general / Kan du sette opp Kimaki i en mappe kalt igMetrics. Legge til repo git@github.... / topic 1516432050209423381",
+        "id": "1538625515286700032:1538625515286700032",
+        "name": "Tobben MC / #general / Kan du fikse dette? Alle filene er borte før commit. ✗ Directory does not exi... / topic 1538625515286700032",
         "type": "thread",
-        "thread_id": "1516432050209423381"
+        "thread_id": "1538625515286700032"
       },
       {
-        "id": "1516552646864011428:1516552646864011428",
-        "name": "Tobben MC / #general / Daten med Veronica varte fra kl 19.00 - 21.40 i dag. Kan du lagre det? / topic 1516552646864011428",
+        "id": "1537383051007627315:1537383051007627315",
+        "name": "Tobben MC / #general / Jeg får denne feilmeldingen, kan du fikse? ✗ Directory does not exist or is n... / topic 1537383051007627315",
         "type": "thread",
-        "thread_id": "1516552646864011428"
+        "thread_id": "1537383051007627315"
       },
       {
-        "id": "1517443904528711790:1517443904528711790",
-        "name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt kalt imsgViewer med følgende repo: git@gi... / topic 1517443904528711790",
+        "id": "1537213588752695447:1537213588752695447",
+        "name": "Tobben MC / #general / Deepseek har kommet med en ny versjon av V4 Pro, men jeg får den ikke frem nå... / topic 1537213588752695447",
         "type": "thread",
-        "thread_id": "1517443904528711790"
+        "thread_id": "1537213588752695447"
       },
       {
-        "id": "1517459544127569950:1517459544127569950",
-        "name": "Tobben MC / #general / Kan du skrive om denne teksten slik at den ikke blir fanget opp av AI sjekker? / topic 1517459544127569950",
+        "id": "1537002411758067743:1537002411758067743",
+        "name": "Tobben MC / #general / Kan du opprette en cron som daglig sjekker linken under og KUN gir meg beskje... / topic 1537002411758067743",
         "type": "thread",
-        "thread_id": "1517459544127569950"
+        "thread_id": "1537002411758067743"
       },
       {
-        "id": "1517480917718007911:1517480917718007911",
-        "name": "Tobben MC / #bilkjøp / Med tanke på mine preferanser rundt bil. Hva tenker du om denne? https://www.... / topic 1517480917718007911",
+        "id": "1536730055441383534:1536730055441383534",
+        "name": "Tobben MC / #general / Kan du setet opp Kimaki med følgende repo? git@github.com:Serena-AS/helix.git / topic 1536730055441383534",
         "type": "thread",
-        "thread_id": "1517480917718007911"
+        "thread_id": "1536730055441383534"
       },
       {
-        "id": "1518158158806257756:1518158158806257756",
-        "name": "Tobben MC / #bilkjøp / Hvilken av disse bør jeg gå for? https://www.finn.no/466691937 https://www.fi... / topic 1518158158806257756",
+        "id": "1536320658361942066:1536320658361942066",
+        "name": "Tobben MC / #general / Kan du sette opp Kimaki med følgende repo? git@github.com:Tobbens-Empire/loya... / topic 1536320658361942066",
         "type": "thread",
-        "thread_id": "1518158158806257756"
+        "thread_id": "1536320658361942066"
       },
       {
-        "id": "1518568603094614087:1518568603094614087",
-        "name": "Tobben MC / #bilkjøp / Kan du se gjennom disse annonsene. Jeg har bestilt NAF-test på 2020-modellen ... / topic 1518568603094614087",
+        "id": "1535748787241361540:1535748787241361540",
+        "name": "Tobben MC / #general / Kan du sende meg swot analysen og dokumentene knyttet til leasing prosjektet? / topic 1535748787241361540",
         "type": "thread",
-        "thread_id": "1518568603094614087"
+        "thread_id": "1535748787241361540"
       },
       {
-        "id": "1518629960875639005:1518629960875639005",
-        "name": "Tobben MC / #bilkjøp / Hva tenker du om denne bilen? https://app.rebil.no/cars/b2c-698 / topic 1518629960875639005",
+        "id": "1534143288754573373:1534143288754573373",
+        "name": "Tobben MC / #autoads / Jeg ønsker å lage et SaaS for automatisk håndtering av annonser på Meta (Face... / topic 1534143288754573373",
         "type": "thread",
-        "thread_id": "1518629960875639005"
+        "thread_id": "1534143288754573373"
       },
       {
-        "id": "1518648508029341937:1518648508029341937",
-        "name": "Tobben MC / #general / Klarer du å formatere tabellene bedre slik at det ser bra ut på discord? Alle... / topic 1518648508029341937",
+        "id": "1534140717721456712:1534140717721456712",
+        "name": "Tobben MC / #general / Kan du sette opp Kimaki på dette repoet: git@github.com:Serena-AS/autoads.git / topic 1534140717721456712",
         "type": "thread",
-        "thread_id": "1518648508029341937"
+        "thread_id": "1534140717721456712"
       },
       {
-        "id": "1518651500656721990:1518651500656721990",
-        "name": "Tobben MC / #general / Kan du oppdatere Hermès? / topic 1518651500656721990",
+        "id": "1533755624909701250:1533755624909701250",
+        "name": "Tobben MC / #general / Jeg har i dag boxere fra Piere Robert som jeg er veldig fornøyd med. Kjøpte d... / topic 1533755624909701250",
         "type": "thread",
-        "thread_id": "1518651500656721990"
+        "thread_id": "1533755624909701250"
       },
       {
-        "id": "1519518530540798064:1519518530540798064",
-        "name": "Tobben MC / #🗞️-briefings / Kan du sjekke hvorfor jeg får følgende feilmelding? Cronjob Response: AI Mode... / topic 1519518530540798064",
+        "id": "1533265452200104017:1533265452200104017",
+        "name": "Tobben MC / #general / Kan du logge inn på smooth-fire via Tailscale og hjelpe meg å feilsøke den ek... / topic 1533265452200104017",
         "type": "thread",
-        "thread_id": "1519518530540798064"
-      },
-      {
-        "id": "1519519348463505530:1519519348463505530",
-        "name": "Tobben MC / #general / Hva gjør reasoning i deepseek v4 flash og pro? / topic 1519519348463505530",
-        "type": "thread",
-        "thread_id": "1519519348463505530"
-      },
-      {
-        "id": "1520003787769774141:1520003787769774141",
-        "name": "Tobben MC / #bilkjøp / Du kan stoppe cron jobben da jeg nå har kjøpt bil. / topic 1520003787769774141",
-        "type": "thread",
-        "thread_id": "1520003787769774141"
-      },
-      {
-        "id": "1521123806213570572:1521123806213570572",
-        "name": "Tobben MC / #general / Hei! Jeg har fått tilbud fra WaterCircles Forsikring på Innbo, Reise, Husdyr ... / topic 1521123806213570572",
-        "type": "thread",
-        "thread_id": "1521123806213570572"
-      },
-      {
-        "id": "1521145613612351508:1521145613612351508",
-        "name": "Tobben MC / #general / Jeg har i mange år betalt for Uførepensjon hos Gjensidige. Her betaler jeg 16... / topic 1521145613612351508",
-        "type": "thread",
-        "thread_id": "1521145613612351508"
-      },
-      {
-        "id": "1521523617865928874:1521523617865928874",
-        "name": "Tobben MC / #bilkjøp / På min Tesla, hvordan bruker jeg spylervæske og hvordan fyller jeg på? / topic 1521523617865928874",
-        "type": "thread",
-        "thread_id": "1521523617865928874"
-      },
-      {
-        "id": "1521885335162720297:1521885335162720297",
-        "name": "Tobben MC / #trading / Hei! Dette er vår channel for trading crypto og aksjer / topic 1521885335162720297",
-        "type": "thread",
-        "thread_id": "1521885335162720297"
-      },
-      {
-        "id": "1521967777563545785:1521967777563545785",
-        "name": "Tobben MC / #general / Kan du sjekke forsikringsvilkårene til Fremtind sin behandlingsforsikring? Je... / topic 1521967777563545785",
-        "type": "thread",
-        "thread_id": "1521967777563545785"
-      },
-      {
-        "id": "1522694571409149993:1522694571409149993",
-        "name": "Tobben MC / #bilkjøp / Hvilke sikkerhetsfunksjoner finnes på min Tesla? / topic 1522694571409149993",
-        "type": "thread",
-        "thread_id": "1522694571409149993"
-      },
-      {
-        "id": "1522905934349860964:1522905934349860964",
-        "name": "Tobben MC / #bilkjøp / Bytte kupefilter på Teslaen / topic 1522905934349860964",
-        "type": "thread",
-        "thread_id": "1522905934349860964"
-      },
-      {
-        "id": "1522966293513502762:1522966293513502762",
-        "name": "Tobben MC / #🗞️-briefings / Nå får jeg \"⚠️ Cron 'AI Model Daily Briefing' failed: provider timeout. Fallb... / topic 1522966293513502762",
-        "type": "thread",
-        "thread_id": "1522966293513502762"
+        "thread_id": "1533265452200104017"
       },
       {
         "id": "1523307812149661828:1523307812149661828",
@@ -519,34 +459,70 @@
         "thread_id": "1523307812149661828"
       },
       {
-        "id": "1523615098567000096:1523615098567000096",
-        "name": "Tobben MC / #general / Jeg får plutselig følgende feil når jeg bruker Kimaki i Discord til å kode i ... / topic 1523615098567000096",
+        "id": "1532344323302101112:1532344323302101112",
+        "name": "Tobben MC / #general / Jeg har opprettet CAPIG via Stape.io, og lurer på hvordan jeg implementerer d... / topic 1532344323302101112",
         "type": "thread",
-        "thread_id": "1523615098567000096"
+        "thread_id": "1532344323302101112"
       },
       {
-        "id": "1523694543961329664:1523694543961329664",
-        "name": "Tobben MC / #general / Jeg ønsker å sette opp Coolify på en Hetzner-server. Hvis jeg oppretter serve... / topic 1523694543961329664",
+        "id": "1522966293513502762:1522966293513502762",
+        "name": "Tobben MC / #🗞️-briefings / Nå får jeg \"⚠️ Cron 'AI Model Daily Briefing' failed: provider timeout. Fallb... / topic 1522966293513502762",
         "type": "thread",
-        "thread_id": "1523694543961329664"
+        "thread_id": "1522966293513502762"
       },
       {
-        "id": "1523965808584163399:1523965808584163399",
-        "name": "Tobben MC / #general / Jeg hadde en thread i Kimaki som jeg jobbet på i går. Når jeg i dag skal be d... / topic 1523965808584163399",
+        "id": "1529095944942129174:1529095944942129174",
+        "name": "Tobben MC / #general / Kan du hjelpe meg å sette opp enkel modell switching via Kimaki? https://kima... / topic 1529095944942129174",
         "type": "thread",
-        "thread_id": "1523965808584163399"
+        "thread_id": "1529095944942129174"
       },
       {
-        "id": "1523992796862611576:1523992796862611576",
-        "name": "Tobben MC / #general / Jeg har satt opp faraday i Coolify, men får status Degraded (unhealthy). Kan ... / topic 1523992796862611576",
+        "id": "1529078145184038923:1529078145184038923",
+        "name": "Tobben MC / #bilkjøp / Nå har jeg hatt Teslaen inne til NAF-test, og her er resultatet: Sender som a... / topic 1529078145184038923",
         "type": "thread",
-        "thread_id": "1523992796862611576"
+        "thread_id": "1529078145184038923"
       },
       {
-        "id": "1524711822056226828:1524711822056226828",
-        "name": "Tobben MC / #general / Oppretter en ny tråd/samtale med Kimaki mot Opencode, men får følgende feil: ... / topic 1524711822056226828",
+        "id": "1528399715861790790:1528399715861790790",
+        "name": "Tobben MC / #general / Jeg har lenge gått med planer om å lage en leasing-first nettbutikk som selge... / topic 1528399715861790790",
         "type": "thread",
-        "thread_id": "1524711822056226828"
+        "thread_id": "1528399715861790790"
+      },
+      {
+        "id": "1528235691245568012:1528235691245568012",
+        "name": "Tobben MC / #general / Kan du fikse dette? ✗ Directory does not exist or is not accessible: /home/er... / topic 1528235691245568012",
+        "type": "thread",
+        "thread_id": "1528235691245568012"
+      },
+      {
+        "id": "1526722030932856863:1526722030932856863",
+        "name": "Tobben MC / #general / Ladet Teslaen til 89% og den viser 440km / topic 1526722030932856863",
+        "type": "thread",
+        "thread_id": "1526722030932856863"
+      },
+      {
+        "id": "1526645744805740845:1526645744805740845",
+        "name": "Tobben MC / #general / Har du tilgang til Playwright? / topic 1526645744805740845",
+        "type": "thread",
+        "thread_id": "1526645744805740845"
+      },
+      {
+        "id": "1525909247907336373:1525909247907336373",
+        "name": "Tobben MC / #bilkjøp / Hva er det rimeligste jeg kan bytte dekk for på Teslaen? / topic 1525909247907336373",
+        "type": "thread",
+        "thread_id": "1525909247907336373"
+      },
+      {
+        "id": "1525088315949453384:1525088315949453384",
+        "name": "Tobben MC / #general / Jeg får fortsatt følgende feilmelding når jeg fortsetter en tråd som er 12-14... / topic 1525088315949453384",
+        "type": "thread",
+        "thread_id": "1525088315949453384"
+      },
+      {
+        "id": "1524757813031600350:1524757813031600350",
+        "name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt og konfigurere git: git@github.com:vivalt... / topic 1524757813031600350",
+        "type": "thread",
+        "thread_id": "1524757813031600350"
       },
       {
         "id": "1524744970173550703:1524744970173550703",
@@ -561,237 +537,251 @@
         "thread_id": "1524745812842774578"
       },
       {
-        "id": "1524757813031600350:1524757813031600350",
-        "name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt og konfigurere git: git@github.com:vivalt... / topic 1524757813031600350",
+        "id": "1523992796862611576:1523992796862611576",
+        "name": "Tobben MC / #general / Jeg har satt opp faraday i Coolify, men får status Degraded (unhealthy). Kan ... / topic 1523992796862611576",
         "type": "thread",
-        "thread_id": "1524757813031600350"
+        "thread_id": "1523992796862611576"
       },
       {
-        "id": "1525088315949453384:1525088315949453384",
-        "name": "Tobben MC / #general / Jeg får fortsatt følgende feilmelding når jeg fortsetter en tråd som er 12-14... / topic 1525088315949453384",
+        "id": "1523694543961329664:1523694543961329664",
+        "name": "Tobben MC / #general / Jeg ønsker å sette opp Coolify på en Hetzner-server. Hvis jeg oppretter serve... / topic 1523694543961329664",
         "type": "thread",
-        "thread_id": "1525088315949453384"
+        "thread_id": "1523694543961329664"
       },
       {
-        "id": "1525909247907336373:1525909247907336373",
-        "name": "Tobben MC / #bilkjøp / Hva er det rimeligste jeg kan bytte dekk for på Teslaen? / topic 1525909247907336373",
+        "id": "1523965808584163399:1523965808584163399",
+        "name": "Tobben MC / #general / Jeg hadde en thread i Kimaki som jeg jobbet på i går. Når jeg i dag skal be d... / topic 1523965808584163399",
         "type": "thread",
-        "thread_id": "1525909247907336373"
+        "thread_id": "1523965808584163399"
       },
       {
-        "id": "1526645744805740845:1526645744805740845",
-        "name": "Tobben MC / #general / Har du tilgang til Playwright? / topic 1526645744805740845",
+        "id": "1523615098567000096:1523615098567000096",
+        "name": "Tobben MC / #general / Jeg får plutselig følgende feil når jeg bruker Kimaki i Discord til å kode i ... / topic 1523615098567000096",
         "type": "thread",
-        "thread_id": "1526645744805740845"
+        "thread_id": "1523615098567000096"
       },
       {
-        "id": "1526722030932856863:1526722030932856863",
-        "name": "Tobben MC / #general / Ladet Teslaen til 89% og den viser 440km / topic 1526722030932856863",
+        "id": "1522905934349860964:1522905934349860964",
+        "name": "Tobben MC / #bilkjøp / Bytte kupefilter på Teslaen / topic 1522905934349860964",
         "type": "thread",
-        "thread_id": "1526722030932856863"
+        "thread_id": "1522905934349860964"
       },
       {
-        "id": "1528235691245568012:1528235691245568012",
-        "name": "Tobben MC / #general / Kan du fikse dette? ✗ Directory does not exist or is not accessible: /home/er... / topic 1528235691245568012",
+        "id": "1522694571409149993:1522694571409149993",
+        "name": "Tobben MC / #bilkjøp / Hvilke sikkerhetsfunksjoner finnes på min Tesla? / topic 1522694571409149993",
         "type": "thread",
-        "thread_id": "1528235691245568012"
+        "thread_id": "1522694571409149993"
       },
       {
-        "id": "1528399715861790790:1528399715861790790",
-        "name": "Tobben MC / #general / Jeg har lenge gått med planer om å lage en leasing-first nettbutikk som selge... / topic 1528399715861790790",
+        "id": "1521885335162720297:1521885335162720297",
+        "name": "Tobben MC / #trading / Hei! Dette er vår channel for trading crypto og aksjer / topic 1521885335162720297",
         "type": "thread",
-        "thread_id": "1528399715861790790"
+        "thread_id": "1521885335162720297"
       },
       {
-        "id": "1529078145184038923:1529078145184038923",
-        "name": "Tobben MC / #bilkjøp / Nå har jeg hatt Teslaen inne til NAF-test, og her er resultatet: Sender som a... / topic 1529078145184038923",
+        "id": "1521967777563545785:1521967777563545785",
+        "name": "Tobben MC / #general / Kan du sjekke forsikringsvilkårene til Fremtind sin behandlingsforsikring? Je... / topic 1521967777563545785",
         "type": "thread",
-        "thread_id": "1529078145184038923"
+        "thread_id": "1521967777563545785"
       },
       {
-        "id": "1529095944942129174:1529095944942129174",
-        "name": "Tobben MC / #general / Kan du hjelpe meg å sette opp enkel modell switching via Kimaki? https://kima... / topic 1529095944942129174",
+        "id": "1521523617865928874:1521523617865928874",
+        "name": "Tobben MC / #bilkjøp / På min Tesla, hvordan bruker jeg spylervæske og hvordan fyller jeg på? / topic 1521523617865928874",
         "type": "thread",
-        "thread_id": "1529095944942129174"
+        "thread_id": "1521523617865928874"
       },
       {
-        "id": "1532344323302101112:1532344323302101112",
-        "name": "Tobben MC / #general / Jeg har opprettet CAPIG via Stape.io, og lurer på hvordan jeg implementerer d... / topic 1532344323302101112",
+        "id": "1521145613612351508:1521145613612351508",
+        "name": "Tobben MC / #general / Jeg har i mange år betalt for Uførepensjon hos Gjensidige. Her betaler jeg 16... / topic 1521145613612351508",
         "type": "thread",
-        "thread_id": "1532344323302101112"
+        "thread_id": "1521145613612351508"
       },
       {
-        "id": "1533265452200104017:1533265452200104017",
-        "name": "Tobben MC / #general / Kan du logge inn på smooth-fire via Tailscale og hjelpe meg å feilsøke den ek... / topic 1533265452200104017",
+        "id": "1521123806213570572:1521123806213570572",
+        "name": "Tobben MC / #general / Hei! Jeg har fått tilbud fra WaterCircles Forsikring på Innbo, Reise, Husdyr ... / topic 1521123806213570572",
         "type": "thread",
-        "thread_id": "1533265452200104017"
+        "thread_id": "1521123806213570572"
       },
       {
-        "id": "1533755624909701250:1533755624909701250",
-        "name": "Tobben MC / #general / Jeg har i dag boxere fra Piere Robert som jeg er veldig fornøyd med. Kjøpte d... / topic 1533755624909701250",
+        "id": "1518629960875639005:1518629960875639005",
+        "name": "Tobben MC / #bilkjøp / Hva tenker du om denne bilen? https://app.rebil.no/cars/b2c-698 / topic 1518629960875639005",
         "type": "thread",
-        "thread_id": "1533755624909701250"
+        "thread_id": "1518629960875639005"
       },
       {
-        "id": "1534140717721456712:1534140717721456712",
-        "name": "Tobben MC / #general / Kan du sette opp Kimaki på dette repoet: git@github.com:Serena-AS/autoads.git / topic 1534140717721456712",
+        "id": "1520003787769774141:1520003787769774141",
+        "name": "Tobben MC / #bilkjøp / Du kan stoppe cron jobben da jeg nå har kjøpt bil. / topic 1520003787769774141",
         "type": "thread",
-        "thread_id": "1534140717721456712"
+        "thread_id": "1520003787769774141"
       },
       {
-        "id": "1534143288754573373:1534143288754573373",
-        "name": "Tobben MC / #autoads / Jeg ønsker å lage et SaaS for automatisk håndtering av annonser på Meta (Face... / topic 1534143288754573373",
+        "id": "1519518530540798064:1519518530540798064",
+        "name": "Tobben MC / #🗞️-briefings / Kan du sjekke hvorfor jeg får følgende feilmelding? Cronjob Response: AI Mode... / topic 1519518530540798064",
         "type": "thread",
-        "thread_id": "1534143288754573373"
+        "thread_id": "1519518530540798064"
       },
       {
-        "id": "1535748787241361540:1535748787241361540",
-        "name": "Tobben MC / #general / Kan du sende meg swot analysen og dokumentene knyttet til leasing prosjektet? / topic 1535748787241361540",
+        "id": "1519519348463505530:1519519348463505530",
+        "name": "Tobben MC / #general / Hva gjør reasoning i deepseek v4 flash og pro? / topic 1519519348463505530",
         "type": "thread",
-        "thread_id": "1535748787241361540"
+        "thread_id": "1519519348463505530"
       },
       {
-        "id": "1536320658361942066:1536320658361942066",
-        "name": "Tobben MC / #general / Kan du sette opp Kimaki med følgende repo? git@github.com:Tobbens-Empire/loya... / topic 1536320658361942066",
+        "id": "1518651500656721990:1518651500656721990",
+        "name": "Tobben MC / #general / Kan du oppdatere Hermès? / topic 1518651500656721990",
         "type": "thread",
-        "thread_id": "1536320658361942066"
+        "thread_id": "1518651500656721990"
       },
       {
-        "id": "1536730055441383534:1536730055441383534",
-        "name": "Tobben MC / #general / Kan du setet opp Kimaki med følgende repo? git@github.com:Serena-AS/helix.git / topic 1536730055441383534",
+        "id": "1518648508029341937:1518648508029341937",
+        "name": "Tobben MC / #general / Klarer du å formatere tabellene bedre slik at det ser bra ut på discord? Alle... / topic 1518648508029341937",
         "type": "thread",
-        "thread_id": "1536730055441383534"
+        "thread_id": "1518648508029341937"
       },
       {
-        "id": "1537002411758067743:1537002411758067743",
-        "name": "Tobben MC / #general / Kan du opprette en cron som daglig sjekker linken under og KUN gir meg beskje... / topic 1537002411758067743",
+        "id": "1518568603094614087:1518568603094614087",
+        "name": "Tobben MC / #bilkjøp / Kan du se gjennom disse annonsene. Jeg har bestilt NAF-test på 2020-modellen ... / topic 1518568603094614087",
         "type": "thread",
-        "thread_id": "1537002411758067743"
+        "thread_id": "1518568603094614087"
       },
       {
-        "id": "1537213588752695447:1537213588752695447",
-        "name": "Tobben MC / #general / Deepseek har kommet med en ny versjon av V4 Pro, men jeg får den ikke frem nå... / topic 1537213588752695447",
+        "id": "1518158158806257756:1518158158806257756",
+        "name": "Tobben MC / #bilkjøp / Hvilken av disse bør jeg gå for? https://www.finn.no/466691937 https://www.fi... / topic 1518158158806257756",
         "type": "thread",
-        "thread_id": "1537213588752695447"
+        "thread_id": "1518158158806257756"
       },
       {
-        "id": "1537383051007627315:1537383051007627315",
-        "name": "Tobben MC / #general / Jeg får denne feilmeldingen, kan du fikse? ✗ Directory does not exist or is n... / topic 1537383051007627315",
+        "id": "1517480917718007911:1517480917718007911",
+        "name": "Tobben MC / #bilkjøp / Med tanke på mine preferanser rundt bil. Hva tenker du om denne? https://www.... / topic 1517480917718007911",
         "type": "thread",
-        "thread_id": "1537383051007627315"
+        "thread_id": "1517480917718007911"
       },
       {
-        "id": "1538625515286700032:1538625515286700032",
-        "name": "Tobben MC / #general / Kan du fikse dette? Alle filene er borte før commit. ✗ Directory does not exi... / topic 1538625515286700032",
+        "id": "1517459544127569950:1517459544127569950",
+        "name": "Tobben MC / #general / Kan du skrive om denne teksten slik at den ikke blir fanget opp av AI sjekker? / topic 1517459544127569950",
         "type": "thread",
-        "thread_id": "1538625515286700032"
+        "thread_id": "1517459544127569950"
       },
       {
-        "id": "1539201428080435261:1539201428080435261",
-        "name": "Tobben MC / #general / Kan du lage følgende agenter globalt i OpenCode? dsflash -> DeepSeek v4 Flash... / topic 1539201428080435261",
+        "id": "1517443904528711790:1517443904528711790",
+        "name": "Tobben MC / #general / Kan du sette opp et Kimaki prosjekt kalt imsgViewer med følgende repo: git@gi... / topic 1517443904528711790",
         "type": "thread",
-        "thread_id": "1539201428080435261"
+        "thread_id": "1517443904528711790"
       },
       {
-        "id": "1539264888877088778:1539264888877088778",
-        "name": "Tobben MC / #general / Jeg holder på å lage en nettbutikk som skal selge Apple-produkter og IT-utsty... / topic 1539264888877088778",
+        "id": "1516552646864011428:1516552646864011428",
+        "name": "Tobben MC / #general / Daten med Veronica varte fra kl 19.00 - 21.40 i dag. Kan du lagre det? / topic 1516552646864011428",
         "type": "thread",
-        "thread_id": "1539264888877088778"
+        "thread_id": "1516552646864011428"
       },
       {
-        "id": "1539961695454236672:1539961695454236672",
-        "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt med følgende git repo: git@github.com:erik... / topic 1539961695454236672",
+        "id": "1516432050209423381:1516432050209423381",
+        "name": "Tobben MC / #general / Kan du sette opp Kimaki i en mappe kalt igMetrics. Legge til repo git@github.... / topic 1516432050209423381",
         "type": "thread",
-        "thread_id": "1539961695454236672"
+        "thread_id": "1516432050209423381"
       },
       {
-        "id": "1539977039983943771:1539977039983943771",
-        "name": "Tobben MC / #general / OpenCode har sluttet å svare via Kimaki på flere prosjekter. Kan du sjekke? / topic 1539977039983943771",
+        "id": "1516083474560188578:1516083474560188578",
+        "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt kalt VivaltoBackup med følgende repo: git@... / topic 1516083474560188578",
         "type": "thread",
-        "thread_id": "1539977039983943771"
+        "thread_id": "1516083474560188578"
       },
       {
-        "id": "1540293463805788170:1540293463805788170",
-        "name": "Tobben MC / #general / Jeg sitter med en idé om å lage en nettside som har oversikt over alle utløpt... / topic 1540293463805788170",
+        "id": "1516071345199382538:1516071345199382538",
+        "name": "Tobben MC / #general / Jeg har lys til å lage et SaaS tilsvarende simplebackup.com. Jeg trenger noen... / topic 1516071345199382538",
         "type": "thread",
-        "thread_id": "1540293463805788170"
+        "thread_id": "1516071345199382538"
       },
       {
-        "id": "1540349881321791579:1540349881321791579",
-        "name": "Tobben MC / #general / Jeg bruker i dag Google sin OCR API for å lese brukernavn på Instagram-story ... / topic 1540349881321791579",
+        "id": "1516068346318291108:1516068346318291108",
+        "name": "Tobben MC / #general / Hvilken informasjon har du lagret om Veronica? / topic 1516068346318291108",
         "type": "thread",
-        "thread_id": "1540349881321791579"
+        "thread_id": "1516068346318291108"
       },
       {
-        "id": "1542135612059029504:1542135612059029504",
-        "name": "Tobben MC / #general / Kan du bruke skillen som er her? Den er egentlig laget for Claude. https://gi... / topic 1542135612059029504",
+        "id": "1513591245929185290:1513591245929185290",
+        "name": "Tobben MC / #general / Vurdering av blogg / topic 1513591245929185290",
         "type": "thread",
-        "thread_id": "1542135612059029504"
+        "thread_id": "1513591245929185290"
       },
       {
-        "id": "1542496478134804621:1542496478134804621",
-        "name": "Tobben MC / #general / Måltidsplanlegging. Jeg ønsker en balansert ukesmeny som er sunn, enkel og kj... / topic 1542496478134804621",
+        "id": "1515999061432467457:1515999061432467457",
+        "name": "Tobben MC / #general / Kan du installere mnemosyne for å erstatte standard minne for Hermes? https:/... / topic 1515999061432467457",
         "type": "thread",
-        "thread_id": "1542496478134804621"
+        "thread_id": "1515999061432467457"
       },
       {
-        "id": "1542525487484764221:1542525487484764221",
-        "name": "Tobben MC / #ig-vaktlister / Jeg ønsker å bruke denne kanalen for bistand til å sette opp vaktlister for I... / topic 1542525487484764221",
+        "id": "1515862452460327082:1515862452460327082",
+        "name": "Tobben MC / #general / Jeg har lyst til å lage min egen versjon av simplebackups.com ved bruk av Lar... / topic 1515862452460327082",
         "type": "thread",
-        "thread_id": "1542525487484764221"
+        "thread_id": "1515862452460327082"
       },
       {
-        "id": "1542818983164780615:1542818983164780615",
-        "name": "Tobben MC / #general / Jeg får følgende feil når jeg bruker OpenCode via Kimaki: 🌳 Worktree: opencod... / topic 1542818983164780615",
+        "id": "1515720798109962270:1515720798109962270",
+        "name": "Tobben MC / #general / Får jeg kontakt med deg? / topic 1515720798109962270",
         "type": "thread",
-        "thread_id": "1542818983164780615"
+        "thread_id": "1515720798109962270"
       },
       {
-        "id": "1544614188444553216:1544614188444553216",
-        "name": "Tobben MC / #general / Kimaki / Opencode svarer ikke når jeg sender melding i tråden igwebshop: -s-g... / topic 1544614188444553216",
+        "id": "1515533557869838376:1515533557869838376",
+        "name": "Tobben MC / #general / Serveren som du er på bruker Tailscale. Jeg har en Mac Mini hjemme som er kob... / topic 1515533557869838376",
         "type": "thread",
-        "thread_id": "1544614188444553216"
+        "thread_id": "1515533557869838376"
       },
       {
-        "id": "1545077369029656748:1545077369029656748",
-        "name": "Tobben MC / #general / Kan du finne Facebook / Instagram / VSCO profilen til en person som heter Lis... / topic 1545077369029656748",
+        "id": "1515235420009664662:1515235420009664662",
+        "name": "Tobben MC / #general / Kan du installere og sette opp følgende slik at både Hermes og OpenCode kan b... / topic 1515235420009664662",
         "type": "thread",
-        "thread_id": "1545077369029656748"
+        "thread_id": "1515235420009664662"
       },
       {
-        "id": "1545078991847821353:1545078991847821353",
-        "name": "Tobben MC / #general / Jeg fikk følgende mail fra OpenCode Go i dag: Some of your requests to OpenCo... / topic 1545078991847821353",
+        "id": "1515097943097737287:1515097943097737287",
+        "name": "Tobben MC / #general / Kan du opprette et Kimaki prosjekt med følgende repo? git@github.com:eriktobb... / topic 1515097943097737287",
         "type": "thread",
-        "thread_id": "1545078991847821353"
+        "thread_id": "1515097943097737287"
+      },
+      {
+        "id": "1515027326851612713:1515027326851612713",
+        "name": "Tobben MC / #general / Jeg prøvde nå å fortsette en samtale i en thread som er fra 8. juni, men Herm... / topic 1515027326851612713",
+        "type": "thread",
+        "thread_id": "1515027326851612713"
+      },
+      {
+        "id": "1514936625946169355:1514936625946169355",
+        "name": "Tobben MC / #bilkjøp / Kan du finne de beste Tesla-alternativene som er til salgs her basert på mine... / topic 1514936625946169355",
+        "type": "thread",
+        "thread_id": "1514936625946169355"
+      },
+      {
+        "id": "1514908138137194538:1514908138137194538",
+        "name": "Tobben MC / #general / Jeg får veldig ofte varsler om at jeg må godkjenne noe Hermes gjør, eks denne... / topic 1514908138137194538",
+        "type": "thread",
+        "thread_id": "1514908138137194538"
+      },
+      {
+        "id": "1514900468994932827:1514900468994932827",
+        "name": "Tobben MC / #bilkjøp / Kan du oppdatere \"reminder FINN bilvarsel (el + bensin-kjede)\" til å lage en ... / topic 1514900468994932827",
+        "type": "thread",
+        "thread_id": "1514900468994932827"
+      },
+      {
+        "id": "1514751586134523924:1514751586134523924",
+        "name": "Tobben MC / #🗞️-briefings / Kan du oppdatere \"reminder AI Model Daily Briefing\" til å lage en here.now si... / topic 1514751586134523924",
+        "type": "thread",
+        "thread_id": "1514751586134523924"
+      },
+      {
+        "id": "1514538440455094433:1514538440455094433",
+        "name": "Tobben MC / #general / Jeg prøver å reklamere på en Polar-klokke jeg har kjøpt hos Fjellsport, men s... / topic 1514538440455094433",
+        "type": "thread",
+        "thread_id": "1514538440455094433"
+      },
+      {
+        "id": "1514552150800339105:1514552150800339105",
+        "name": "Tobben MC / #general / Kan du huske på at jeg ALDRI vi at du skal bruke em dash (–). Bruk alltid van... / topic 1514552150800339105",
+        "type": "thread",
+        "thread_id": "1514552150800339105"
       }
-    ],
-    "telegram": [],
-    "whatsapp": [],
-    "whatsapp_cloud": [],
-    "slack": [],
-    "signal": [],
-    "mattermost": [],
-    "matrix": [],
-    "homeassistant": [],
-    "email": [],
-    "sms": [],
-    "dingtalk": [],
-    "msgraph_webhook": [],
-    "feishu": [],
-    "wecom": [],
-    "wecom_callback": [],
-    "weixin": [],
-    "bluebubbles": [],
-    "qqbot": [],
-    "yuanbao": [],
-    "relay": [],
-    "google_chat": [],
-    "irc": [],
-    "line": [],
-    "ntfy": [],
-    "photon": [],
-    "raft": [],
-    "simplex": [],
-    "teams": []
+    ]
   }
 }
