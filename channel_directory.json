@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T10:41:20.383981",
+  "updated_at": "2026-09-08T11:41:31.498251",
   "platforms": {
     "discord": [
       {
@@ -47,6 +47,12 @@
       {
         "id": "1521885249628274718",
         "name": "trading",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1542524015699173457",
+        "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -225,6 +231,12 @@
         "type": "channel"
       },
       {
+        "id": "1539961866892349492",
+        "name": "forgeclient",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
         "id": "1479641599700111533",
         "name": "lyra",
         "guild": "Tobben MC",
@@ -273,16 +285,10 @@
         "type": "channel"
       },
       {
-        "id": "1539961866892349492",
-        "name": "forgeclient",
-        "guild": "Tobben MC",
-        "type": "channel"
-      },
-      {
-        "id": "1542524015699173457",
-        "name": "ig-vaktlister",
-        "guild": "Tobben MC",
-        "type": "channel"
+        "id": "1546839108058349628:1546839108058349628",
+        "name": "Tobben MC / #general / Det ser ut som DNS er oppdatert for app.finly.no. Kan du verifisere med AWS? / topic 1546839108058349628",
+        "type": "thread",
+        "thread_id": "1546839108058349628"
       },
       {
         "id": "1546825515862859787:1546825515862859787",
