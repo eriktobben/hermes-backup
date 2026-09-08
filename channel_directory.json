@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T09:39:33.757448",
+  "updated_at": "2026-09-08T10:41:20.383981",
   "platforms": {
     "discord": [
       {
@@ -283,6 +283,18 @@
         "name": "ig-vaktlister",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1546825515862859787:1546825515862859787",
+        "name": "Tobben MC / #general / Kan du sjekke hvorfor jeg ikke lenger får svar fra OpenCode via Kimaki på den... / topic 1546825515862859787",
+        "type": "thread",
+        "thread_id": "1546825515862859787"
+      },
+      {
+        "id": "1546823635568959629:1546823635568959629",
+        "name": "Tobben MC / #general / Er hermes aktiv igjen? / topic 1546823635568959629",
+        "type": "thread",
+        "thread_id": "1546823635568959629"
       },
       {
         "id": "1499181433200312381",
