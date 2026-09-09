@@ -108,15 +108,15 @@
     "created_at": "2026-09-08T09:44:29.697061+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-09-08T09:45:00.978321+00:00",
-    "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-08T10:00:11.726661+00:00",
-    "last_viewed_at": "2026-09-08T10:00:11.716851+00:00",
+    "last_reused_patch_generation": 2,
+    "last_used_at": "2026-09-09T11:26:50.924706+00:00",
+    "last_viewed_at": "2026-09-09T11:26:50.920113+00:00",
     "patch_count": 2,
     "patch_generation": 2,
     "pinned": false,
     "state": "active",
-    "use_count": 1,
-    "view_count": 1
+    "use_count": 3,
+    "view_count": 3
   },
   "axolotl": {
     "archived_at": null,
