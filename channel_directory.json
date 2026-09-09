@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T09:00:35.820210",
+  "updated_at": "2026-09-09T10:00:48.201265",
   "platforms": {
     "discord": [
       {
@@ -283,6 +283,12 @@
         "name": "finly",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1547178137358434335:1547178137358434335",
+        "name": "Tobben MC / #general / Jeg opplever at alle threads / worktrees alltid er bak main / origin. Jeg tro... / topic 1547178137358434335",
+        "type": "thread",
+        "thread_id": "1547178137358434335"
       },
       {
         "id": "1546976353197228033:1546976353197228033",
