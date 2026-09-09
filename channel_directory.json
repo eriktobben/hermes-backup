@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T13:06:26.409428",
+  "updated_at": "2026-09-09T14:06:40.044472",
   "platforms": {
     "discord": [
       {
@@ -285,16 +285,16 @@
         "type": "channel"
       },
       {
-        "id": "1547206555961663508:1547206555961663508",
-        "name": "Tobben MC / #general / Kan du sende meg API credentials for Amazon SES for app.finly.no? / topic 1547206555961663508",
-        "type": "thread",
-        "thread_id": "1547206555961663508"
-      },
-      {
         "id": "1547178137358434335:1547178137358434335",
         "name": "Tobben MC / #general / Jeg opplever at alle threads / worktrees alltid er bak main / origin. Jeg tro... / topic 1547178137358434335",
         "type": "thread",
         "thread_id": "1547178137358434335"
+      },
+      {
+        "id": "1547206555961663508:1547206555961663508",
+        "name": "Tobben MC / #general / Kan du sende meg API credentials for Amazon SES for app.finly.no? / topic 1547206555961663508",
+        "type": "thread",
+        "thread_id": "1547206555961663508"
       },
       {
         "id": "1546976353197228033:1546976353197228033",
