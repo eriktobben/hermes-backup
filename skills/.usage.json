@@ -95,13 +95,15 @@
     "created_at": "2026-06-07T18:59:54.690755+00:00",
     "created_by": null,
     "last_patched_at": "2026-08-18T10:34:23.802384+00:00",
-    "last_used_at": "2026-08-18T10:32:01.022564+00:00",
-    "last_viewed_at": "2026-08-18T10:32:01.018826+00:00",
+    "last_reused_patch_generation": 0,
+    "last_used_at": "2026-09-10T21:17:38.166223+00:00",
+    "last_viewed_at": "2026-09-10T21:17:38.160193+00:00",
     "patch_count": 5,
+    "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 15,
-    "view_count": 15
+    "use_count": 19,
+    "view_count": 19
   },
   "aws-ses-email-setup": {
     "archived_at": null,
@@ -958,14 +960,14 @@
     "created_at": "2026-05-24T18:05:09.698537+00:00",
     "last_patched_at": "2026-09-02T08:46:53.391328+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-09T17:41:53.179074+00:00",
-    "last_viewed_at": "2026-09-09T17:41:53.174854+00:00",
+    "last_used_at": "2026-09-10T21:20:57.019077+00:00",
+    "last_viewed_at": "2026-09-10T21:20:57.014858+00:00",
     "patch_count": 45,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 56,
-    "view_count": 60
+    "use_count": 59,
+    "view_count": 63
   },
   "linear": {
     "archived_at": null,

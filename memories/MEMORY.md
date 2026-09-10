@@ -6,9 +6,11 @@ masterfeed-dev + masterfeed-scroll i ~/Projects/. Feature branches + PR til main
 §
 Epost-klassifisering: ~/Projects/epost-klassifisering/. nb-bert-base, 5 kategorier. FastAPI :8000.
 §
-Kimaki: patch worktree (~/.local/bin/kimaki-patch-worktree). Cleanup cron (3fca63db50fc) 04:00 daglig, sletter worktrees >14 dager inaktive.
+Kimaki: patch worktree (~/.local/bin/kimaki-patch-worktree). Cleanup cron (3fca63db50fc) 04:00 daglig, sletter worktrees >14 dager inaktive. Ved oppgradering av Kimaki: kjør patch-scriptet for å fikse worktree-oppretting (henter fra origin/<default-branch> i stedet for lokal HEAD). Støtter npx-old, npx-new, og v0.27+.
 §
 Kimaki-prosjekt embermail: git@github.com:Tobbens-Empire/embermail.git, lokasjon /home/erik/Projects/embermail, Discord-kanal #embermail.
+§
+DeepSeek V4.1 Flash: Modell-ID er `deepseek-flash`. Tilgjengelig i OpenCode Go som `opencode-go/deepseek-v4.1-flash`. Gamle navn `deepseek-v4-flash` og `deepseek-v4-flash-vision-exp` rutes automatisk til V4.1 Flash. Oppdater OpenCode Go med `npm update -g opencode-ai`, Kimaki med `npm update -g kimaki` + `pm2 restart kimaki`.
 §
 here.now: trailing slash BUG — sti UTEN trailing slash. Daily AI brief (f3a42a49fae6, 08:00). FINN bilvarsel (b6d12ab73f07, 09:00) slug summit-lichen-sntr.
 §
