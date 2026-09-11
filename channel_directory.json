@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-11T15:47:14.699113",
+  "updated_at": "2026-09-11T16:47:28.179173",
   "platforms": {
     "discord": [
       {
@@ -291,6 +291,12 @@
         "thread_id": "1547714536985985144"
       },
       {
+        "id": "1538625515286700032:1538625515286700032",
+        "name": "Tobben MC / #general / Kan du fikse dette? Alle filene er borte før commit. ✗ Directory does not exi... / topic 1538625515286700032",
+        "type": "thread",
+        "thread_id": "1538625515286700032"
+      },
+      {
         "id": "1547178137358434335:1547178137358434335",
         "name": "Tobben MC / #general / Jeg opplever at alle threads / worktrees alltid er bak main / origin. Jeg tro... / topic 1547178137358434335",
         "type": "thread",
@@ -427,12 +433,6 @@
         "name": "Tobben MC / #general / Kan du lage følgende agenter globalt i OpenCode? dsflash -> DeepSeek v4 Flash... / topic 1539201428080435261",
         "type": "thread",
         "thread_id": "1539201428080435261"
-      },
-      {
-        "id": "1538625515286700032:1538625515286700032",
-        "name": "Tobben MC / #general / Kan du fikse dette? Alle filene er borte før commit. ✗ Directory does not exi... / topic 1538625515286700032",
-        "type": "thread",
-        "thread_id": "1538625515286700032"
       },
       {
         "id": "1537383051007627315:1537383051007627315",

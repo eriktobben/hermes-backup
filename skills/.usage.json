@@ -758,14 +758,14 @@
     "created_by": null,
     "last_patched_at": "2026-06-10T10:15:37.754105+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-08T10:12:31.268114+00:00",
-    "last_viewed_at": "2026-09-08T10:12:31.263604+00:00",
+    "last_used_at": "2026-09-11T16:21:08.613806+00:00",
+    "last_viewed_at": "2026-09-11T16:21:08.605756+00:00",
     "patch_count": 1,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 23,
-    "view_count": 23
+    "use_count": 25,
+    "view_count": 25
   },
   "hermes-s6-container-supervision": {
     "archived_at": null,
@@ -960,14 +960,14 @@
     "created_at": "2026-05-24T18:05:09.698537+00:00",
     "last_patched_at": "2026-09-02T08:46:53.391328+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-10T21:20:57.019077+00:00",
-    "last_viewed_at": "2026-09-10T21:20:57.014858+00:00",
+    "last_used_at": "2026-09-11T16:21:23.527472+00:00",
+    "last_viewed_at": "2026-09-11T16:21:23.522586+00:00",
     "patch_count": 45,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 59,
-    "view_count": 63
+    "use_count": 61,
+    "view_count": 65
   },
   "linear": {
     "archived_at": null,
