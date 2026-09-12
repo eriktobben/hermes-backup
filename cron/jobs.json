@@ -27,7 +27,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-09-12T09:00:00+02:00",
+      "next_run_at": "2026-09-13T09:00:00+02:00",
       "last_run_at": "2026-09-11T09:00:20.581987+02:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
@@ -42,11 +42,14 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null,
-      "fire_claim": null,
+      "fire_claim": {
+        "at": "2026-09-12T09:00:52.827162+02:00",
+        "by": "hetz-red-butterfly:1507571:bbcf439ae1ba4c59b583cbc7a43570dc"
+      },
       "last_dispatch": {
-        "scheduled_at": "2026-09-11T09:00:00+02:00",
-        "dispatched_at": "2026-09-11T09:00:08.104555+02:00",
-        "lateness_seconds": 8.1,
+        "scheduled_at": "2026-09-12T09:00:00+02:00",
+        "dispatched_at": "2026-09-12T09:00:52.383876+02:00",
+        "lateness_seconds": 52.4,
         "kind": "on_time"
       },
       "failure_streak": 3
@@ -71,15 +74,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2279
+        "completed": 2280
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-12T08:59:51.194711+02:00",
-      "last_run_at": "2026-09-12T06:58:53.129326+02:00",
+      "next_run_at": "2026-09-12T10:00:52.425948+02:00",
+      "last_run_at": "2026-09-12T07:59:54.761364+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +97,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-12T07:59:51.666722+02:00",
-        "by": "hetz-red-butterfly:1507571:cf717bec96b44f67bb88bee913ec82ca"
+        "at": "2026-09-12T09:00:52.755721+02:00",
+        "by": "hetz-red-butterfly:1507571:6e6bbc24da4c400299a13ecb48b40453"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-12T07:58:53.129326+02:00",
-        "dispatched_at": "2026-09-12T07:59:51.159616+02:00",
-        "lateness_seconds": 58.0,
+        "scheduled_at": "2026-09-12T08:59:54.761364+02:00",
+        "dispatched_at": "2026-09-12T09:00:52.383876+02:00",
+        "lateness_seconds": 57.6,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -178,15 +181,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 70
+        "completed": 71
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-09-12T08:00:00+02:00",
-      "last_run_at": "2026-09-11T08:03:07.745766+02:00",
+      "next_run_at": "2026-09-13T08:00:00+02:00",
+      "last_run_at": "2026-09-12T08:02:20.486773+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -205,9 +208,9 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-11T08:00:00+02:00",
-        "dispatched_at": "2026-09-11T08:00:06.156809+02:00",
-        "lateness_seconds": 6.2,
+        "scheduled_at": "2026-09-12T08:00:00+02:00",
+        "dispatched_at": "2026-09-12T08:00:51.200340+02:00",
+        "lateness_seconds": 51.2,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -289,7 +292,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-09-12T09:00:00+02:00",
+      "next_run_at": "2026-09-13T09:00:00+02:00",
       "last_run_at": "2026-09-11T09:00:09.466375+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -303,11 +306,14 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null,
+      "fire_claim": {
+        "at": "2026-09-12T09:00:52.852988+02:00",
+        "by": "hetz-red-butterfly:1507571:1da141bf944b4d05ba2e791adbe885d4"
+      },
       "last_dispatch": {
-        "scheduled_at": "2026-09-11T09:00:00+02:00",
-        "dispatched_at": "2026-09-11T09:00:08.104555+02:00",
-        "lateness_seconds": 8.1,
+        "scheduled_at": "2026-09-12T09:00:00+02:00",
+        "dispatched_at": "2026-09-12T09:00:52.383876+02:00",
+        "lateness_seconds": 52.4,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -413,5 +419,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-12T07:59:51.666925+02:00"
+  "updated_at": "2026-09-12T09:00:52.853409+02:00"
 }
