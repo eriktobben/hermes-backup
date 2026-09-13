@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2299
+        "completed": 2300
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-13T05:16:44.331018+02:00",
-      "last_run_at": "2026-09-13T03:15:46.270523+02:00",
+      "next_run_at": "2026-09-13T06:17:46.489763+02:00",
+      "last_run_at": "2026-09-13T04:16:47.479157+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-13T04:16:44.564779+02:00",
-        "by": "hetz-red-butterfly:1507571:818d1e6378d3470f90be28d037ead801"
+        "at": "2026-09-13T05:17:46.747014+02:00",
+        "by": "hetz-red-butterfly:1507571:e387e0a32f6b4b5a8bc9fe4489cdd85e"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-13T04:15:46.270523+02:00",
-        "dispatched_at": "2026-09-13T04:16:44.295926+02:00",
-        "lateness_seconds": 58.0,
+        "scheduled_at": "2026-09-13T05:16:47.479157+02:00",
+        "dispatched_at": "2026-09-13T05:17:46.452791+02:00",
+        "lateness_seconds": 59.0,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -232,17 +232,17 @@
       "schedule_display": "0 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 65
+        "completed": 66
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-09T11:45:38.111899+02:00",
-      "next_run_at": "2026-09-13T05:00:00+02:00",
-      "last_run_at": "2026-09-12T05:01:42.129714+02:00",
-      "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\n⚠️  Opencode server kom ikke opp igjen automatisk. Sjekk Kimaki.",
+      "next_run_at": "2026-09-14T05:00:00+02:00",
+      "last_run_at": "2026-09-13T05:00:50.488779+02:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -255,12 +255,12 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-12T05:00:00+02:00",
-        "dispatched_at": "2026-09-12T05:00:45.601578+02:00",
-        "lateness_seconds": 45.6,
+        "scheduled_at": "2026-09-13T05:00:00+02:00",
+        "dispatched_at": "2026-09-13T05:00:46.094975+02:00",
+        "lateness_seconds": 46.1,
         "kind": "on_time"
       },
-      "failure_streak": 1
+      "failure_streak": 0
     },
     {
       "id": "878cb32b3906",
@@ -413,5 +413,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-13T04:16:44.564977+02:00"
+  "updated_at": "2026-09-13T05:17:46.747232+02:00"
 }
