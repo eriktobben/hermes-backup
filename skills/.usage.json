@@ -745,13 +745,13 @@
     "created_by": null,
     "last_patched_at": "2026-06-11T22:28:48.515290+00:00",
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-09-13T06:00:50.257401+00:00",
+    "last_used_at": "2026-09-14T06:00:39.924262+00:00",
     "last_viewed_at": "2026-08-08T20:38:28.896330+00:00",
     "patch_count": 3,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 129,
+    "use_count": 130,
     "view_count": 13
   },
   "hermes-agent": {
