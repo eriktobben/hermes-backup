@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T23:34:16.599235",
+  "updated_at": "2026-09-14T00:34:29.924358",
   "platforms": {
     "discord": [
       {
@@ -283,6 +283,12 @@
         "name": "finly",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1548840456417447948:1548840456417447948",
+        "name": "Tobben MC / #general / Når jeg bruker OpenCode med Discord via Kimaki får jeg nå ikke frem knapper e... / topic 1548840456417447948",
+        "type": "thread",
+        "thread_id": "1548840456417447948"
       },
       {
         "id": "1547714536985985144:1547714536985985144",
