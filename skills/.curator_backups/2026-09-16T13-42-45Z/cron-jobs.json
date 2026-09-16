@@ -78,7 +78,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-16T17:27:01.564925+02:00",
+      "next_run_at": "2026-09-16T16:26:02.042774+02:00",
       "last_run_at": "2026-09-16T15:26:02.042774+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -93,14 +93,11 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null,
-      "fire_claim": {
-        "at": "2026-09-16T16:27:02.472527+02:00",
-        "by": "hetz-red-butterfly:1507571:0e70125ffc91405aa2ccdf3eefff1a3e"
-      },
+      "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-16T16:26:02.042774+02:00",
-        "dispatched_at": "2026-09-16T16:27:01.502472+02:00",
-        "lateness_seconds": 59.5,
+        "scheduled_at": "2026-09-16T15:25:00.645840+02:00",
+        "dispatched_at": "2026-09-16T15:25:58.668492+02:00",
+        "lateness_seconds": 58.0,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -413,5 +410,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-16T16:27:02.472774+02:00"
+  "updated_at": "2026-09-16T15:26:02.043016+02:00"
 }
