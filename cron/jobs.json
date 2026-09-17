@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2397
+        "completed": 2398
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-17T08:41:34.040007+02:00",
-      "last_run_at": "2026-09-17T06:40:35.953459+02:00",
+      "next_run_at": "2026-09-17T09:42:35.286023+02:00",
+      "last_run_at": "2026-09-17T07:41:37.262810+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-17T07:41:34.316207+02:00",
-        "by": "hetz-red-butterfly:1507571:518f990de97b4afcb5540fbbc53ef133"
+        "at": "2026-09-17T08:42:35.663646+02:00",
+        "by": "hetz-red-butterfly:1507571:92aa0a71d1aa4b80bf188abc66e6dbb0"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-17T07:40:35.953459+02:00",
-        "dispatched_at": "2026-09-17T07:41:34.003647+02:00",
-        "lateness_seconds": 58.1,
+        "scheduled_at": "2026-09-17T08:41:37.262810+02:00",
+        "dispatched_at": "2026-09-17T08:42:35.255151+02:00",
+        "lateness_seconds": 58.0,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -178,15 +178,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 75
+        "completed": 76
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-09-17T08:00:00+02:00",
-      "last_run_at": "2026-09-16T08:03:07.122944+02:00",
+      "next_run_at": "2026-09-18T08:00:00+02:00",
+      "last_run_at": "2026-09-17T08:02:25.323723+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -205,9 +205,9 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-16T08:00:00+02:00",
-        "dispatched_at": "2026-09-16T08:00:37.525015+02:00",
-        "lateness_seconds": 37.5,
+        "scheduled_at": "2026-09-17T08:00:00+02:00",
+        "dispatched_at": "2026-09-17T08:00:34.386846+02:00",
+        "lateness_seconds": 34.4,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -413,5 +413,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-17T07:41:34.316437+02:00"
+  "updated_at": "2026-09-17T08:42:35.663860+02:00"
 }
