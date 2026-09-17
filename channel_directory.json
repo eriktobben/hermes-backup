@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T18:49:10.091429",
+  "updated_at": "2026-09-17T19:49:23.001717",
   "platforms": {
     "discord": [
       {
@@ -283,6 +283,18 @@
         "name": "finly",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1550228652917006356",
+        "name": "hei-sofie",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1550228533165563925:1550228533165563925",
+        "name": "Tobben MC / #general / Kan du sette opp følgende i Kimaki? git@github.com:Serena-AS/hei-sofie.git / topic 1550228533165563925",
+        "type": "thread",
+        "thread_id": "1550228533165563925"
       },
       {
         "id": "1549574430643191990:1549574430643191990",
