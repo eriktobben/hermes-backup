@@ -33,6 +33,7 @@ Use when the user wants to brainstorm names for a project, SaaS, or brand and ch
 - Short Norwegian words ending in consonants are often pronounceable by English speakers
 - Examples: *Trygg* (safe), *Borg* (fortress), *Vern* (protection), *Vakt* (guard), *Heim* (home), *Kopi* (copy), *Stasj* (stash), *Lagre* (save/store)
 - Past participles (*backupet*, *lagret*, *kopiert*) work as memorable brands
+- See `references/norwegian-naming-patterns.md` for detailed patterns: personal name compounds, concept compounds, competitor proximity pitfalls, and Norwegian words useful for branding
 
 6. **Abstract tech brand names** — short made-up words with no literal meaning but a tech/futuristic vibe (e.g. *zynk*, *nexa*, *velo*, *pixl*, *kiro*). These are often 4-5 letters, easy to pronounce internationally, and evoke brands like Stripe, Vercel, Linear. Good when the user explicitly wants "tech vibe" without semantic baggage. Combine phonemes that sound modern: x, z, v, k, p endings; soft vowels; sharp consonant clusters.
 
@@ -156,7 +157,10 @@ Highlight top 5 recommendations with:
 - **Avoid double letters that create ambiguity** — "Bocco", "Fazzo" look good but people ask "er det to c'er? én z?"
 - **Test the "Klarna standard"** — if you can't spell it after hearing it once, it's too complex. K-L-A-R-N-A: every letter is immediately clear
 - **Check .no domain FIRST** for Norwegian businesses — many short .com names are taken but .no may be free. Don't fall in love with a .com if the business is Norway-only
-- **User preferences vary widely** — some want literal/descriptive, others want abstract. Ask early, don't assume
+- **Avoid competitor name proximity** — if a competitor uses "heikari", names like "heimari" feel derivative and cause confusion. Choose a distinct prefix or drop the pattern entirely
+- **Check compound names for unintended words** — Norwegian compound names can spell unintended words. "Hei" + "Lise" = "Heilise" which partially spells "heil". Always visually inspect the combined name
+- **User preferences vary widely** — some want literal/descriptive, others want abstract. Ask early, don't assume. When users reject first-round names, pivot to a different naming pattern (e.g. from personal names to concept compounds)
+- **Iterate quickly on naming direction** — if users don't like the first batch, don't just generate more of the same. Switch category: personal→concept, descriptive→abstract, Norwegian→English hybrid
 
 ### Common pitfalls — domain verification
 - WHOIS servers enforce strict rate limits across IP ranges; single-thread plus sleep is essential
