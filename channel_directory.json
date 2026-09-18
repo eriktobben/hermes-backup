@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T23:55:15.745866",
+  "updated_at": "2026-09-18T00:55:29.033248",
   "platforms": {
     "discord": [
       {
@@ -291,16 +291,16 @@
         "type": "channel"
       },
       {
-        "id": "1550228533165563925:1550228533165563925",
-        "name": "Tobben MC / #general / Kan du sette opp følgende i Kimaki? git@github.com:Serena-AS/hei-sofie.git / topic 1550228533165563925",
-        "type": "thread",
-        "thread_id": "1550228533165563925"
-      },
-      {
         "id": "1549574430643191990:1549574430643191990",
         "name": "Tobben MC / #general / Kan vi lage en bedre variant av https://heiemma.no / topic 1549574430643191990",
         "type": "thread",
         "thread_id": "1549574430643191990"
+      },
+      {
+        "id": "1550228533165563925:1550228533165563925",
+        "name": "Tobben MC / #general / Kan du sette opp følgende i Kimaki? git@github.com:Serena-AS/hei-sofie.git / topic 1550228533165563925",
+        "type": "thread",
+        "thread_id": "1550228533165563925"
       },
       {
         "id": "1549008683881730099:1549008683881730099",
