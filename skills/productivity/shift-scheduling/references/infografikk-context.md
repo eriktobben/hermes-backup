@@ -7,7 +7,7 @@
 - **Lørdag**: 09:55–16:05 (1 vakt)
 
 **Unntak/faste vakter:**
-- Man/tor/fre: Lars 09:15–17:15 (dekker posisjon 1)
+- Man/ons/fre: Lars 09:15–17:15 (dekker posisjon 1)
 - Tir/tor: Erik 11:00–15:00 (dekker posisjon 2)
 
 **Ekstra behov:**

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T09:07:36.788678",
+  "updated_at": "2026-09-21T10:12:50.809483",
   "platforms": {
     "discord": [
       {
@@ -291,6 +291,12 @@
         "type": "channel"
       },
       {
+        "id": "1549008683881730099:1549008683881730099",
+        "name": "Tobben MC / #ig-vaktlister / Nå er det på tide å legge ut vaktlisten for oktober. Den eneste endringen er ... / topic 1549008683881730099",
+        "type": "thread",
+        "thread_id": "1549008683881730099"
+      },
+      {
         "id": "1550870538443038833:1550870538443038833",
         "name": "Tobben MC / #general / Kan du sette opp AWS SES for app.svaria.no? Opprett så en IAM nøkkel som kun ... / topic 1550870538443038833",
         "type": "thread",
@@ -307,12 +313,6 @@
         "name": "Tobben MC / #general / Kan du sette opp følgende i Kimaki? git@github.com:Serena-AS/hei-sofie.git / topic 1550228533165563925",
         "type": "thread",
         "thread_id": "1550228533165563925"
-      },
-      {
-        "id": "1549008683881730099:1549008683881730099",
-        "name": "Tobben MC / #ig-vaktlister / Nå er det på tide å legge ut vaktlisten for oktober. Den eneste endringen er ... / topic 1549008683881730099",
-        "type": "thread",
-        "thread_id": "1549008683881730099"
       },
       {
         "id": "1548840456417447948:1548840456417447948",
