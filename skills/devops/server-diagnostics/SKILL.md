@@ -26,6 +26,8 @@ top -bn1 | head -20  # top processes
 - **Swap at 80%+**: System is memory-pressure. Heavy processes should be restarted.
 - **Load average > CPU cores**: CPU bottleneck.
 
+**The chain of causation**: Disk at 100% → swap operations fail → applications cannot write temp files or logs → apps hang/become unresponsive. This is why OpenCode becomes unresponsive when disk is full — it's not a RAM or CPU issue.
+
 ### 2. Find disk consumers
 ```bash
 du -h --max-depth=1 /home/erik 2>/dev/null | sort -hr | head -20
@@ -74,6 +76,36 @@ for dir in ~/.kimaki/worktrees/*/; do
 done
 ```
 
+## Kimaki worktree dependency cleanup
+Each kimaki worktree with feature branches has its own `vendor/` + `node_modules/` (~400-500MB each). With many inactive worktrees, this adds up to 10-15GB.
+
+**Before deleting vendor/node_modules:**
+1. Check which subdirectories have active PHP/Node processes
+2. Only clean dependencies from inactive subdirectories
+3. The main worktree (e.g., `3b985546`) contains many sub-feature-dirs — treat each separately
+
+```bash
+# Example: clean inactive kimaki subdirectories
+ACTIVE=("-admnpnlt-admn-sr-ikk-br-ut-hr-nsk" "-other-active-dir")
+for dir in ~/.kimaki/worktrees/<hash>/*/; do
+  name=$(basename "$dir")
+  skip=false
+  for active in "${ACTIVE[@]}"; do
+    if [ "$name" = "$active" ]; then skip=true; break; fi
+  done
+  if [ "$skip" = true ]; then continue; fi
+  rm -rf "$dir/vendor" "$dir/node_modules"
+done
+```
+
+## "Is this project safe to delete?" verification flow
+When user asks if a project can be deleted:
+1. Check git status: `cd <project> && git status` — working tree clean?
+2. Check remote: `git remote -v` — is code on origin?
+3. Check disk breakdown: `du -h --max-depth=1 <project>` — what's taking space?
+4. Many projects have `python/venv` (5GB+) or `node_modules` that can be deleted and recreated
+5. Present findings to user before deleting
+
 ## Pitfalls
 
 - **Disk at 100% causes `du` timeouts**: The filesystem I/O is overwhelmed. Use shorter timeouts and check directories individually.
@@ -81,6 +113,7 @@ done
 - **Kimaki worktrees with active PHP/Node processes must NOT be deleted**: Always check for running processes first.
 - **Swap exhaustion causes cascading failures**: When swap is full, the OOM killer starts terminating processes. Restart heavy processes (especially OpenCode) before this happens.
 - **After cleanup, restart heavy processes**: OpenCode and other long-running processes may have accumulated memory leaks or stale state. A restart frees memory and resets swap usage.
+- **Kimaki worktree dependencies add up**: Each feature branch dir has ~500MB of vendor/node_modules. 30+ inactive dirs = 15GB. Clean dependencies from inactive dirs only.
 
 ## Target metrics
 - Disk: below 85%
