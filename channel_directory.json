@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T06:52:24.952564",
+  "updated_at": "2026-09-23T07:52:38.267786",
   "platforms": {
     "discord": [
       {
@@ -289,6 +289,12 @@
         "name": "athena",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1552223234236354641:1552223234236354641",
+        "name": "Tobben MC / #general / OpenCode agenten klager på en nightly commit som ødelegger: PR-en står som CO... / topic 1552223234236354641",
+        "type": "thread",
+        "thread_id": "1552223234236354641"
       },
       {
         "id": "1551969412901511170:1551969412901511170",
