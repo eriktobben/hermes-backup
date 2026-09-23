@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2541
+        "completed": 2542
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-23T10:54:36.150552+02:00",
-      "last_run_at": "2026-09-23T08:53:36.704962+02:00",
+      "next_run_at": "2026-09-23T11:55:37.397810+02:00",
+      "last_run_at": "2026-09-23T09:54:39.933412+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-23T09:54:36.629927+02:00",
-        "by": "hetz-red-butterfly:1507571:09fffcbfef834bcbb3c6064abcf71d75"
+        "at": "2026-09-23T10:55:37.837503+02:00",
+        "by": "hetz-red-butterfly:1507571:b9090fb7bca240418647540d1ebb445d"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T09:53:36.704962+02:00",
-        "dispatched_at": "2026-09-23T09:54:36.114028+02:00",
-        "lateness_seconds": 59.4,
+        "scheduled_at": "2026-09-23T10:54:39.933412+02:00",
+        "dispatched_at": "2026-09-23T10:55:37.362965+02:00",
+        "lateness_seconds": 57.4,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -314,8 +314,8 @@
     },
     {
       "id": "76d12211602a",
-      "name": "Kimaki WIP auto-commit (før GC kl. 02:00)",
-      "prompt": "Run the WIP auto-commit script for Kimaki worktrees",
+      "name": "Kimaki worktree cleanup (14d inaktivitet → slett eller PR)",
+      "prompt": "Run the Kimaki worktree cleanup script for old inactive worktrees",
       "skills": [],
       "skill": null,
       "model": null,
@@ -334,9 +334,9 @@
         "times": null,
         "completed": 41
       },
-      "enabled": false,
-      "state": "paused",
-      "paused_at": "2026-09-23T09:48:53.661813+02:00",
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-13T11:05:50.510672+02:00",
       "next_run_at": "2026-09-24T01:50:00+02:00",
@@ -413,5 +413,5 @@
       "failure_streak": 0
     }
   ],
-  "updated_at": "2026-09-23T09:54:36.630134+02:00"
+  "updated_at": "2026-09-23T10:55:37.838084+02:00"
 }
