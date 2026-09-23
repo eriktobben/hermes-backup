@@ -2793,7 +2793,7 @@
     "session_key": "agent:main:discord:thread:1549008683881730099:1549008683881730099",
     "session_id": "20260914_104731_77a1b342",
     "created_at": "2026-09-14T10:47:31.360345",
-    "updated_at": "2026-09-21T10:14:06.136116",
+    "updated_at": "2026-09-23T14:07:05.631817",
     "display_name": "Tobben MC / #ig-vaktlister / N\u00e5 er det p\u00e5 tide \u00e5 legge ut vaktlisten for oktober. Den eneste endringen er ...",
     "platform": "discord",
     "chat_type": "thread",
@@ -2803,7 +2803,7 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 127286,
+    "last_prompt_tokens": 209851,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
     "expiry_finalized": false,
@@ -2818,6 +2818,11 @@
     "auto_reset_reason": null,
     "reset_had_activity": false,
     "prev_session_id": null,
+    "model_override": {
+      "model": "deepseek-v4.1-flash",
+      "provider": "opencode-go",
+      "base_url": "https://opencode.ai/zen/go/v1"
+    },
     "origin": {
       "platform": "discord",
       "chat_id": "1549008683881730099",

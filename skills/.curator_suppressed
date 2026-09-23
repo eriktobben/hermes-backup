@@ -2,6 +2,7 @@ airtable
 architecture-diagram
 ascii-video
 audiocraft-audio-generation
+computer-use
 design-md
 dogfood
 evaluating-llms-harness
@@ -17,6 +18,7 @@ popular-web-designs
 powerpoint
 segment-anything-model
 serving-llms-vllm
+simplify-code
 teams-meeting-pipeline
 xurl
 youtube-content

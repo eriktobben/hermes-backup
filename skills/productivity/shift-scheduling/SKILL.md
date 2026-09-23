@@ -67,6 +67,7 @@ Recommended structure:
 
 ## Pitfalls
 
+- **Hour notation**: Track and validate shifts in hours:minutes (6t10m = 6:10), never decimal hours — 6.2 ≠ 6:10, and the rounding drift creates phantom mismatches when reconciling against booking-system totals
 - **Split availability**: Employee has gap in availability (e.g., 09:45–12:15, 15:00–21:15) — cannot cover a continuous shift through the gap
 - **Late starts**: Employee available "from 14:00" cannot cover a shift starting at 13:05; accept solo coverage for the gap
 - **Double-booking**: Always check employee isn't assigned to two locations on the same day

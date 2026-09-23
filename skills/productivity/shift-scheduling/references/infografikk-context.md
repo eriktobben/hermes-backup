@@ -42,7 +42,7 @@
 9. Ikke øk timer unødvendig
 10. August ~360t ekstra, september kan være litt over
 11. Fordel helg rimelig, ikke samme personer hver lørdag
-12. **Håvard**: max 2 dager/uke, bruk strategisk, ~3t/måned
+- **Håvard**: min 1, maks 2 dager/uke (3 kun hvis nødvendig), bruk strategisk
 13. **Guro**: ikke på USIKKER-dager
 14. **Mathias**: kun tor/fre/lør, bekreft før publisering
 
@@ -54,7 +54,8 @@
 - **Lørdag**: Kan jobbe, bør ha ≥1 fri
 
 ### Dzhan
-- **Tilgjengelig**: Bred tilgjengelighet, ofte med spesifikke tidsvinduer
+- **Tilgjengelig**: Bred tilgjengelighet, men sjekk skolekalenderen hennes (forelesninger/eksamener) hver måned — hun har markert fravær som må respekteres
+- **Prioritet**: Dzhan prioriteres der hun kan jobbe (ønsket fra Tobias)
 - **Helg**: Kan jobbe mye, men bør få ≥1 lørdag fri
 - **Etter skole-slutt**: Usikker tilgjengelighet — må bekreftes
 - **Kan jobbe til 21:00** = tolkes som til 21:15
