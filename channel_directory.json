@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T12:58:44.819129",
+  "updated_at": "2026-09-23T13:58:58.235715",
   "platforms": {
     "discord": [
       {
@@ -291,6 +291,12 @@
         "type": "channel"
       },
       {
+        "id": "1549008683881730099:1549008683881730099",
+        "name": "Tobben MC / #ig-vaktlister / Nå er det på tide å legge ut vaktlisten for oktober. Den eneste endringen er ... / topic 1549008683881730099",
+        "type": "thread",
+        "thread_id": "1549008683881730099"
+      },
+      {
         "id": "1552223234236354641:1552223234236354641",
         "name": "Tobben MC / #general / OpenCode agenten klager på en nightly commit som ødelegger: PR-en står som CO... / topic 1552223234236354641",
         "type": "thread",
@@ -301,12 +307,6 @@
         "name": "Tobben MC / #general / Kan du se gjennom serveren her og se om den er overbelastet? Sliter med at Op... / topic 1551969412901511170",
         "type": "thread",
         "thread_id": "1551969412901511170"
-      },
-      {
-        "id": "1549008683881730099:1549008683881730099",
-        "name": "Tobben MC / #ig-vaktlister / Nå er det på tide å legge ut vaktlisten for oktober. Den eneste endringen er ... / topic 1549008683881730099",
-        "type": "thread",
-        "thread_id": "1549008683881730099"
       },
       {
         "id": "1550870538443038833:1550870538443038833",
