@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T14:30:11.523369",
+  "updated_at": "2026-09-27T15:30:24.671654",
   "platforms": {
     "discord": [
       {
@@ -289,6 +289,18 @@
         "name": "athena",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1553779788081266789",
+        "name": "pinecone",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1553779092611014769:1553779092611014769",
+        "name": "Tobben MC / #general / Kan du opprette et nytt Kimaki prosjekt på git@github.com:pineconehq/pinecone... / topic 1553779092611014769",
+        "type": "thread",
+        "thread_id": "1553779092611014769"
       },
       {
         "id": "1549008683881730099:1549008683881730099",
