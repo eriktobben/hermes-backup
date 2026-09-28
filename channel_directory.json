@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T12:50:03.879191",
+  "updated_at": "2026-09-28T13:50:17.051192",
   "platforms": {
     "discord": [
       {
@@ -238,7 +238,7 @@
       },
       {
         "id": "1550228652917006356",
-        "name": "hei-sofie",
+        "name": "svaria",
         "guild": "Tobben MC",
         "type": "channel"
       },
@@ -295,6 +295,12 @@
         "name": "pinecone",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1554117828771057805:1554117828771057805",
+        "name": "Tobben MC / #general / Kan du se på følgende session: 🌳 Worktree: opencode/kimaki--er-dt-mlg--flytt-... / topic 1554117828771057805",
+        "type": "thread",
+        "thread_id": "1554117828771057805"
       },
       {
         "id": "1553779092611014769:1553779092611014769",
