@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T18:16:31.276933",
+  "updated_at": "2026-09-29T19:21:46.385869",
   "platforms": {
     "discord": [
       {
@@ -295,6 +295,12 @@
         "name": "pinecone",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1554571758634401883:1554571758634401883",
+        "name": "Tobben MC / #general / Kan du finne ut hvorfor OpenCode og/eller Kimaki svarer med følgende i stedet... / topic 1554571758634401883",
+        "type": "thread",
+        "thread_id": "1554571758634401883"
       },
       {
         "id": "1554117828771057805:1554117828771057805",
