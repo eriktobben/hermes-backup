@@ -6,7 +6,7 @@ masterfeed-dev + masterfeed-scroll i ~/Projects/. Feature branches + PR til main
 §
 Epost-klassifisering: ~/Projects/epost-klassifisering/. nb-bert-base, 5 kategorier. FastAPI :8000.
 §
-Kimaki: patch worktree (~/.local/bin/kimaki-patch-worktree). Cleanup cron (3fca63db50fc) 04:00 daglig, sletter worktrees >14 dager inaktive. Ved oppgradering av Kimaki: kjør patch-scriptet for å fikse worktree-oppretting (henter fra origin/<default-branch> i stedet for lokal HEAD). Støtter npx-old, npx-new, og v0.27+.
+Kimaki: patch-script (~/.local/bin/kimaki-patch-worktree) MÅ kjøres etter enhver Kimaki-oppgradering (`kimaki upgrade` → `kimaki-patch-worktree` → `pm2 restart kimaki`). Inkluderer: (1) worktree-oppretting med origin/<default-branch> i stedet for lokal HEAD, (2) system message-patch som tvinger DeepSeek Flash til å bruke tool calls for `question`-verktøyet (ellers outputes XML som tekst i stedet for Discord-dropdowns). Cleanup cron (3fca63db50fc) 04:00 daglig, sletter worktrees >14 dager inaktive.
 §
 Kimaki-prosjekt embermail: git@github.com:Tobbens-Empire/embermail.git, lokasjon /home/erik/Projects/embermail, Discord-kanal #embermail.
 §

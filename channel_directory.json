@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T22:22:26.078901",
+  "updated_at": "2026-09-29T23:22:40.800699",
   "platforms": {
     "discord": [
       {
@@ -295,6 +295,12 @@
         "name": "pinecone",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1554626492028428299:1554626492028428299",
+        "name": "Tobben MC / #general / Opencode opererer med Git worktrees. Så får jeg følgende melding: > Can't sym... / topic 1554626492028428299",
+        "type": "thread",
+        "thread_id": "1554626492028428299"
       },
       {
         "id": "1554571758634401883:1554571758634401883",
