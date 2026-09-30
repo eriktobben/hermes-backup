@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2710
+        "completed": 2711
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-30T14:37:52.611629+02:00",
-      "last_run_at": "2026-09-30T12:37:27.162969+02:00",
+      "next_run_at": "2026-09-30T15:38:53.793637+02:00",
+      "last_run_at": "2026-09-30T13:37:57.073884+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-30T13:37:53.358605+02:00",
-        "by": "hetz-red-butterfly:327435:0b8cfaffe7764f88904549178e433ddd"
+        "at": "2026-09-30T14:38:54.032097+02:00",
+        "by": "hetz-red-butterfly:327435:3f6618727e7244feb4aa0a5dfadbc8c6"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T13:37:27.162969+02:00",
-        "dispatched_at": "2026-09-30T13:37:52.524540+02:00",
-        "lateness_seconds": 25.4,
+        "scheduled_at": "2026-09-30T14:37:57.073884+02:00",
+        "dispatched_at": "2026-09-30T14:38:53.761759+02:00",
+        "lateness_seconds": 56.7,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -411,7 +411,58 @@
         "kind": "on_time"
       },
       "failure_streak": 0
+    },
+    {
+      "id": "d088f674a976",
+      "name": "kimaki-weekly-restart",
+      "prompt": "Weekly Kimaki/opencode restart (memory hygiene + Bun degradation guard).",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "kimaki-weekly-restart.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * 0",
+        "display": "0 4 * * 0"
+      },
+      "schedule_display": "0 4 * * 0",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-30T14:03:04.059217+02:00",
+      "next_run_at": "2026-10-04T04:00:00+02:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1554810776856956982",
+        "chat_name": "Tobben MC / #general / Sjekk manglende svar fra OpenCode",
+        "thread_id": "1554810776856956982",
+        "user_id": "872777029244829706",
+        "scope_id": "1479597162685006058"
+      },
+      "enabled_toolsets": null,
+      "workdir": null
     }
   ],
-  "updated_at": "2026-09-30T13:37:53.358827+02:00"
+  "updated_at": "2026-09-30T14:38:54.032338+02:00"
 }

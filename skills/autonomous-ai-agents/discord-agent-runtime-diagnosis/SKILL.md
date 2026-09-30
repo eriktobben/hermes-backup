@@ -212,6 +212,20 @@ A broken plugin in `~/.config/opencode/plugins/` can cause Kimaki to appear heal
 ### Pitfall
 The first restart after clearing a broken plugin may not fully restore gateway event delivery. If no messages arrive within 1-2 minutes after the first restart, restart again. The gateway WebSocket connection sometimes needs a clean startup without plugin error noise to properly subscribe to events.
 
+## PM2 daemon dies with hermes-gateway (OOM cgroup coupling)
+If Kimaki is dead AND `pm2 list` spawns a fresh daemon (empty process list) after a `hermes-gateway.service` OOM-kill, the PM2 daemon was started from inside the hermes-gateway systemd cgroup (e.g. `pm2 start` from a terminal/agent session). systemd's cgroup cleanup on oom-kill takes PM2 and Kimaki down with it, and nothing restarts them — hermes-gateway itself recovers via systemd, masking the outage.
+
+Diagnosis: `journalctl --since today | grep -i oom` shows hermes-gateway oom-kill; `~/.pm2/pm2.log` shows a "New PM2 Daemon started" timestamp matching the recovery, not the outage.
+
+Fix (permanent): give PM2 its own user systemd unit instead of relying on a daemon spawned from a terminal:
+1. `pm2 save` (persist process list to `~/.pm2/dump.pm2`)
+2. Create `~/.config/systemd/user/pm2.service`: `Type=forking`, `PIDFile=~/.pm2/pm2.pid`, `ExecStart=<pm2-path> resurrect`, `ExecStop=<pm2-path> kill`, `Restart=on-failure`, PATH including `~/.bun/bin` and npm-global, plus `MemoryMax=3G` to contain opencode growth.
+3. `pm2 kill` (old daemon), `systemctl --user daemon-reload && systemctl --user enable --now pm2`
+4. Verify cgroup separation: `cat /proc/$(cat ~/.pm2/pm2.pid)/cgroup` must show `app.slice/pm2.service`, NOT `hermes-gateway.service`.
+5. Also cap `hermes-gateway.service` via drop-in `~/.config/systemd/user/hermes-gateway.service.d/override.conf` with `MemoryMax=2G` so its own bloat can't OOM the box.
+
+Long-term memory hygiene: opencode serve grows ~1.2–2GB with sessions and its Bun runtime degrades after ~44h; schedule a weekly low-activity restart (script kills `opencode serve`, `pm2 restart kimaki`, verifies exactly one fresh server). Biggest remaining swap consumer on a typical box is often an idle homebrew MySQL (`mysqld` ~670MB swap) — stop it if no local dev stack needs it.
+
 ## Session context bloat causing empty responses
 
 When a session accumulates too much context (e.g., 1M+ input tokens from many tool calls, large file reads, or long conversations), the model may produce empty or invisible responses.
