@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T15:41:55.399166",
+  "updated_at": "2026-09-30T16:42:06.975518",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1554884603498594466:1554884603498594466",
+        "name": "Tobben MC / #general / Kan du installere dette scriptet for meg? curl -fsSL https://codepulse.pro/in... / topic 1554884603498594466",
+        "type": "thread",
+        "thread_id": "1554884603498594466"
       },
       {
         "id": "1554810776856956982:1554810776856956982",
