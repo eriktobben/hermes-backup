@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T10:35:12.331675",
+  "updated_at": "2026-09-30T11:36:03.163389",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1554810776856956982:1554810776856956982",
+        "name": "Tobben MC / #general / Nå ser det ikke ut som jeg får svar fra OpenCode / Kimaki. Kan du sjekke? / topic 1554810776856956982",
+        "type": "thread",
+        "thread_id": "1554810776856956982"
       },
       {
         "id": "1554669684614234162:1554669684614234162",
