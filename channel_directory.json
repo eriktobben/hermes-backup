@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T00:22:54.698681",
+  "updated_at": "2026-09-30T01:28:09.159122",
   "platforms": {
     "discord": [
       {
@@ -295,6 +295,18 @@
         "name": "pinecone",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1554652930060062751",
+        "name": "missioncontrol",
+        "guild": "Tobben MC",
+        "type": "channel"
+      },
+      {
+        "id": "1554652728217837640:1554652728217837640",
+        "name": "Tobben MC / #general / Opprett nytt Kimaki prosjekt med git@github.com:pineconehq/missioncontrol.git / topic 1554652728217837640",
+        "type": "thread",
+        "thread_id": "1554652728217837640"
       },
       {
         "id": "1554626492028428299:1554626492028428299",
