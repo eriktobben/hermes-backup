@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2719
+        "completed": 2720
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-30T23:47:05.371596+02:00",
-      "last_run_at": "2026-09-30T21:46:07.506680+02:00",
+      "next_run_at": "2026-10-01T00:48:06.767054+02:00",
+      "last_run_at": "2026-09-30T22:47:08.712668+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-09-30T22:47:05.607473+02:00",
-        "by": "hetz-red-butterfly:327435:58be2bddccbb4d20a5fc0d6050328bf9"
+        "at": "2026-09-30T23:48:07.044009+02:00",
+        "by": "hetz-red-butterfly:327435:4481c3d1fd2e4c25bfb6cadb5bf90115"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T22:46:07.506680+02:00",
-        "dispatched_at": "2026-09-30T22:47:05.351385+02:00",
-        "lateness_seconds": 57.8,
+        "scheduled_at": "2026-09-30T23:47:08.712668+02:00",
+        "dispatched_at": "2026-09-30T23:48:06.728176+02:00",
+        "lateness_seconds": 58.0,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -414,7 +414,7 @@
     },
     {
       "id": "d088f674a976",
-      "name": "kimaki-weekly-restart",
+      "name": "opencode-daily-restart",
       "prompt": "Weekly Kimaki/opencode restart (memory hygiene + Bun degradation guard).",
       "skills": [],
       "skill": null,
@@ -431,10 +431,10 @@
       "context_from": null,
       "schedule": {
         "kind": "cron",
-        "expr": "0 4 * * 0",
-        "display": "0 4 * * 0"
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
       },
-      "schedule_display": "0 4 * * 0",
+      "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
         "completed": 0
@@ -444,7 +444,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-30T14:03:04.059217+02:00",
-      "next_run_at": "2026-10-04T04:00:00+02:00",
+      "next_run_at": "2026-10-01T04:00:00+02:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -464,5 +464,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-09-30T22:47:05.607675+02:00"
+  "updated_at": "2026-09-30T23:48:07.044274+02:00"
 }
