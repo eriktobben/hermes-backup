@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2724
+        "completed": 2725
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-01T04:52:01.624903+02:00",
-      "last_run_at": "2026-10-01T02:51:04.106124+02:00",
+      "next_run_at": "2026-10-01T05:53:02.967164+02:00",
+      "last_run_at": "2026-10-01T03:52:05.291586+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-01T03:52:02.067058+02:00",
-        "by": "hetz-red-butterfly:1189:50e1d1f5d5874dd99ee824bc8193636e"
+        "at": "2026-10-01T04:53:03.210051+02:00",
+        "by": "hetz-red-butterfly:1189:67da25ff39cb466aa9d13343fc71b8b4"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-01T03:51:04.106124+02:00",
-        "dispatched_at": "2026-10-01T03:52:01.588992+02:00",
-        "lateness_seconds": 57.5,
+        "scheduled_at": "2026-10-01T04:52:05.291586+02:00",
+        "dispatched_at": "2026-10-01T04:53:02.939103+02:00",
+        "lateness_seconds": 57.6,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -437,16 +437,16 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-30T14:03:04.059217+02:00",
-      "next_run_at": "2026-10-01T04:00:00+02:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-10-02T04:00:00+02:00",
+      "last_run_at": "2026-10-01T04:00:37.262695+02:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "last_delivery_unverified": null,
@@ -461,8 +461,15 @@
         "scope_id": "1479597162685006058"
       },
       "enabled_toolsets": null,
-      "workdir": null
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-01T04:00:00+02:00",
+        "dispatched_at": "2026-10-01T04:00:01.784280+02:00",
+        "lateness_seconds": 1.8,
+        "kind": "on_time"
+      },
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-01T03:52:02.067335+02:00"
+  "updated_at": "2026-10-01T04:53:03.210275+02:00"
 }
