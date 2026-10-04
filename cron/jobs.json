@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2798
+        "completed": 2799
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-04T08:03:16.281732+02:00",
-      "last_run_at": "2026-10-04T06:02:18.520079+02:00",
+      "next_run_at": "2026-10-04T09:04:19.411944+02:00",
+      "last_run_at": "2026-10-04T07:03:20.186092+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-04T07:03:16.963430+02:00",
-        "by": "hetz-red-butterfly:1189:778142cde3764249a292846516dabf8a"
+        "at": "2026-10-04T08:04:19.823752+02:00",
+        "by": "hetz-red-butterfly:1189:30d1334c8e74452f8382f5fa87356457"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-04T07:02:18.520079+02:00",
-        "dispatched_at": "2026-10-04T07:03:16.217536+02:00",
-        "lateness_seconds": 57.7,
+        "scheduled_at": "2026-10-04T08:03:20.186092+02:00",
+        "dispatched_at": "2026-10-04T08:04:19.371594+02:00",
+        "lateness_seconds": 59.2,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -185,7 +185,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-10-04T08:00:00+02:00",
+      "next_run_at": "2026-10-05T08:00:00+02:00",
       "last_run_at": "2026-10-03T08:04:04.451689+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -203,11 +203,14 @@
         "terminal"
       ],
       "workdir": "/home/erik/Projects/ai-daily-briefing",
-      "fire_claim": null,
+      "fire_claim": {
+        "at": "2026-10-04T08:04:19.958066+02:00",
+        "by": "hetz-red-butterfly:1189:a221f8f7109d4427be0ee54a582a0d47"
+      },
       "last_dispatch": {
-        "scheduled_at": "2026-10-03T08:00:00+02:00",
-        "dispatched_at": "2026-10-03T08:00:37.337460+02:00",
-        "lateness_seconds": 37.3,
+        "scheduled_at": "2026-10-04T08:00:00+02:00",
+        "dispatched_at": "2026-10-04T08:00:19.248532+02:00",
+        "lateness_seconds": 19.2,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -471,5 +474,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-04T07:03:16.963635+02:00"
+  "updated_at": "2026-10-04T08:04:19.958553+02:00"
 }
