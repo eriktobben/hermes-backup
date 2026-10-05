@@ -47,7 +47,9 @@ Failure modes that strand sessions ("worktree created, message stuck pending"):
   `worktree.rename` a title change triggers) still work. Before re-debugging adoption, prove
   the queue consumer with the sync probe from `codepulse-relay-pipeline` → "Deploy & recovery
   probes" (`scripts/replay-relay-event.py`): a title replay must rename the worktree branch if
-  the app is healthy.
+  the app is healthy. A deploy's queue restart only signals a *running* worker — a daemon that
+  is down (e.g. crash-looping on a boot-time DB error) stays down until an explicit
+  Forge → Processes → Restart.
 
 ## Dev workflow (repo AGENTS.md applies)
 
