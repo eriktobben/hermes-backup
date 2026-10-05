@@ -29,7 +29,7 @@ New worktree session: placeholder row (`worktree_status=pending`, `opencode_sess
 first message queued (`queued_messages.status=pending`) → `worktree.create` → relay creates
 the worktree → `worktree.ready` → app dispatches `session.create` → relay creates the opencode
 session → app **adopts** the placeholder (sets `opencode_session_id`) → `DrainSessionQueue`
-claims the row → `session.prompt` → relay `promptAsync` → ack flips the row to `sent`.
+claims the row → `session.prompt` (payload carries only a reference — `message_id` + signed `fetch_url`; the relay downloads the content before `promptAsync`) → ack flips the row to `sent`.
 
 Failure modes that strand sessions ("worktree created, message stuck pending"):
 
@@ -55,12 +55,11 @@ Failure modes that strand sessions ("worktree created, message stuck pending"):
 
 1. Work on a branch in `missioncontrol-test`; never commit to `main`.
 2. `php artisan test` — full suite must pass (~30 s; 800+ tests). Subsets:
-   `php artisan test tests/Feature/Sessions`.
+   `php artisan test tests/Feature/Sessions`. Relay changes: also `cd relay && PATH="$HOME/.bun/bin:$PATH" ~/.bun/bin/bun test` — `bun` must be on PATH or the relay build-script tests fail with `bun: command not found`.
 3. Style: `php vendor/bin/pint <files>` — invoke through `php`; a bare `vendor/bin/pint`
    call can trip the command safety filter.
 4. Push the branch and open a PR with `gh pr create` (gh authed as `lyrabot2000`).
-5. App-only fixes need no relay rebuild. Relay changes go through the relay release flow
-   (see `docs/forge-deployment.md` §7 in the repo).
+5. App-only fixes need no relay rebuild. For coordinated app↔relay contract changes the relay is backward compatible and the app is not — get the new relay running first, then merge the app PR (this host swaps the production relay binary locally; steps in `codepulse-relay-pipeline` → "Swapping the production relay binary"). Relay releases also use the release flow (`docs/forge-deployment.md` §7).
 6. After a merge, confirm the Forge deploy actually landed before calling a fix live: a deploy
    shows as one `command channel` blip in the relay journal (Forge runs `reverb:restart`). A
    "still broken" report made within ~1 minute of the merge may have tested pre-deploy code.
@@ -87,3 +86,15 @@ Failure modes that strand sessions ("worktree created, message stuck pending"):
   older `missioncontrol` clone must not be touched.
 - Relay event batches have no replay: never design recovery that assumes "the event will arrive
   eventually". Converge from command results (retried) or reconcile actively (sweep).
+- **Widening a central service's signature breaks hand-rolled mocks.** Before changing e.g.
+  `RelayCommandDispatcher::dispatch()`, grep the test tree for `Mockery::mock(<Class>)` helpers —
+  their `andReturnUsing(fn ($a, $b, …))` closures restate the OLD parameter list and silently
+  drop new trailing arguments, so tests keep asserting the old shape. Update every helper and
+  re-run those files.
+- **PHP arrow functions capture by value.** `fn ($e) => $arr[] = $e->payload` mutates the
+  closure's own copy; use `function ($e) use (&$arr)` when a listener or handler must collect
+  results for later assertions.
+- **After resolving test-file conflicts, re-run BOTH suites.** PHP and the relay's TS parse
+  independently, and conflicts in append-style test files can drop the previous test's closing
+  `});` — it surfaces as `Unexpected end of file` only in the suite whose files were affected.
+  Keep both sides when both appended tests, then run both suites.
