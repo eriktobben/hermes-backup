@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T09:27:35.672651",
+  "updated_at": "2026-10-05T10:27:48.123644",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1556600553839009843:1556600553839009843",
+        "name": "Tobben MC / #general / Kan du finne ut hvorfor jeg ikke får svar fra OpenCode i session /home/erik/P... / topic 1556600553839009843",
+        "type": "thread",
+        "thread_id": "1556600553839009843"
       },
       {
         "id": "1556503236519792691:1556503236519792691",
