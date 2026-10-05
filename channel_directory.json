@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T02:21:09.561610",
+  "updated_at": "2026-10-05T03:21:20.389408",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1556503236519792691:1556503236519792691",
+        "name": "Tobben MC / #general / Jeg bruker Codepulse.pro til å kommunisere med OpenCode. Men etter en endring... / topic 1556503236519792691",
+        "type": "thread",
+        "thread_id": "1556503236519792691"
       },
       {
         "id": "1554810776856956982:1554810776856956982",
