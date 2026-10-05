@@ -58,6 +58,15 @@
 4. If adoption is suspect: confirm `opencode_session_id`; if null, the placeholder was never
    adopted — check that the sweep reconciliation runs and the relay answers `session.sync`.
    If set, confirm a drain ran / queue worker is alive.
+5. **Stuck-busy check:** session `status='busy'` + no message activity for 15+ min + relay
+   online → the turn died mid-run. The QueueSweep reaper (`reapStalledBusySessions`) should
+   flip it to idle; if it hasn't, check that the sweep is running and the relay's
+   `last_seen_at` is fresh. The `sessions.error` column carries the reason — query it
+   directly. If the error mentions `ENOENT`/`FileSystem.realPath`/`NotFound`, the worktree
+   directory was deleted; `worktree.create` should have been auto-dispatched (check
+   `worktree-recovery:<session_id>` in the Cache store for attempt count).
+6. If worktree recreation succeeded but messages still don't flow: confirm the re-drain fired
+   (`DrainSessionQueue` dispatched from the `worktree.ready` handler for adopted sessions).
 
 ## Practical notes
 

@@ -33,6 +33,15 @@ claims the row → `session.prompt` (payload carries only a reference — `messa
 
 Failure modes that strand sessions ("worktree created, message stuck pending"):
 
+- **Session stuck busy with no feedback** (opencode dies mid-turn, e.g. worktree directory
+  vanished → ENOENT). The mirror stays `busy` forever, composer locks, user waits silently.
+  Fix layers: `sessions.error` column + red banner in ⚡show (prominent, not just the tiny
+  queued-card error); `session.error` notification event (push + toast for active users);
+  QueueSweep `reapStalledBusySessions` (15-min threshold, requires relay online + no message
+  activity → flips to idle + sets error + notifies); auto worktree recovery on missing-directory
+  prompt errors (ENOENT/`FileSystem.realPath`/`NotFound` → dispatch `worktree.create`, Cache-capped
+  at 3/hour); `worktree.ready` for adopted sessions with pending queued rows → re-drain.
+  All of this lives in `resolveQueuedMessageAck` + `attemptWorktreeRecovery` + the sweep step.
 - Adoption historically relied ONLY on the forwarded `session.created` event. The relay uplink
   POSTs each event batch once and DROPS it on any non-2xx — no retry, no replay. One 500 from
   the app can lose the adoption event forever, and the drain refuses to send while
@@ -94,6 +103,16 @@ Failure modes that strand sessions ("worktree created, message stuck pending"):
 - **PHP arrow functions capture by value.** `fn ($e) => $arr[] = $e->payload` mutates the
   closure's own copy; use `function ($e) use (&$arr)` when a listener or handler must collect
   results for later assertions.
+- **Dev worktree: run `composer install`, do not symlink `vendor`.** A symlinked vendor breaks
+  Pest's app bootstrapping — `Event::fake()` fails with a null dispatcher because the framework
+  resolves paths through the symlink incorrectly. Install properly in the worktree.
+- **Test fixtures: `queued_messages.payload` is NOT NULL.** Always include `'payload' => []`
+  when creating queued messages in tests. The Relay factory does NOT set `status_online` to
+  true — set it explicitly (`$relay->update(['status_online' => true])`) when testing sweep
+  logic that filters on relay liveness.
+- **When debugging with the user waiting, deliver incrementally.** State findings as they
+  land, don't go silent for long stretches. The user asked "hvor vanskelig kan det være" after
+  70 minutes of quiet investigation — status updates and partial fixes beat silence.
 - **After resolving test-file conflicts, re-run BOTH suites.** PHP and the relay's TS parse
   independently, and conflicts in append-style test files can drop the previous test's closing
   `});` — it surfaces as `Unexpected end of file` only in the suite whose files were affected.

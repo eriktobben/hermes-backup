@@ -36,6 +36,8 @@ CodePulse (codepulse.pro) drives OpenCode through a relay daemon on this box: th
 
 ## Diagnosis order
 
+**Status discipline (standing preference):** when the user asks for status or pushes on timing, answer from findings so far *before* any further tool call — root cause first, fix second. Never re-read the same file section twice in one session; capture output once and act on it. Timebox exploration and deliver.
+
 Work outside-in: persisted state at each hop before reading any code.
 
 1. **Locate live components** — `systemctl --user status mission-control-relay`, `ps aux | grep -E 'relay|opencode'`, read `relay.json`. Confirm the relay is the one enrolled to production.
@@ -59,6 +61,9 @@ Diagnostic consequence: prompt payloads are small again, so "Payload too large" 
 
 ## Known fragilities
 
+- **The agent deletes its own worktree → every later prompt dies with ENOENT.** An OpenCode turn that merges its PR and then runs `git worktree remove` + `git worktree prune` on its own session worktree leaves the session row `ready` with `opencode_session_id` set but the directory gone; subsequent prompts fail instantly with `NotFound: FileSystem.realPath (...)` / `prompt_async failed`. That error lands in the **opencode child journal** (filter `journalctl` by `_PID`, look for `prompt_async failed`), not the relay's — and the app surfaces nothing beyond a small red error on the queued card. Recovery is manual and needs no app change: `git worktree add <session.directory> -B <worktree_name> origin/<base_branch>` — the branch name comes from `sessions.worktree_name` and resets to the remote base (work is already merged). Check `git worktree list` + directory existence for the session's `directory` **early** in any "session not answering" diagnosis.
+- **Stuck-busy mirrors are invisible in the UI.** If OpenCode dies mid-turn without emitting `session.idle`, the app mirror stays `busy` forever: composer disabled, queued rows never reaped (the reaper skips busy sessions by design), and the user waits for hours believing work is happening. When a user reports hours of silence, query the app DB (operator tinker one-liner) for `status='busy'` with stale `last_activity_at` **before** assuming the queue is stuck — no stuck-busy reaper exists yet.
+- **Query `opencode.db` with `python3` + the sqlite3 module — the `sqlite3` CLI is not installed on this box.** One-liner pattern: `python3 -c "import sqlite3; ..."` against `~/.local/share/opencode/opencode.db`.
 - **Adoption silently no-ops.** If the placeholder query misses (directory mismatch, `worktree_status` outside the allowed set), `upsertEvent` returns `null` with **no log**; the event is dropped and nothing retries it — `QueueSweep` only drains sessions where `opencode_session_id` is already set. This is the classic permanent strand.
 - **Event batches are fire-and-forget.** An HTTP 500 from `/api/relay/events` loses the whole batch — no retry, no replay. One uncaught exception in any event mirror kills every event behind it in the same batch.
 - **`session.create` results are never applied to the row.** Convergence relies solely on the `session.created` event; the command result is only recorded.
