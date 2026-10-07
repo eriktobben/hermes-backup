@@ -33,6 +33,13 @@ claims the row → `session.prompt` (payload carries only a reference — `messa
 
 Failure modes that strand sessions ("worktree created, message stuck pending"):
 
+- **All sessions (incl. brand-new) fail at once ⇒ shared model provider, not delivery.** Prompts
+  still land but every assistant turn errors within a second; the relay journal shows identical
+  `stream error … Insufficient account funds` lines. Triage + gateway probe: `codepulse-relay-pipeline`
+  → "Switching model provider" + `references/model-provider-probes.md`. Note the three pin layers —
+  the default model in `~/.config/opencode/opencode.json`, per-session `session.model` in
+  `opencode.db`, and agent models in `opencode.json` + `opencode-swarm.json` — a fix that touches
+  only one layer leaves the rest broken.
 - **Session stuck busy with no feedback** (opencode dies mid-turn, e.g. worktree directory
   vanished → ENOENT). The mirror stays `busy` forever, composer locks, user waits silently.
   Fix layers: `sessions.error` column + red banner in ⚡show (prominent, not just the tiny

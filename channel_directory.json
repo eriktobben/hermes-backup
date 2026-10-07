@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T22:21:48.149607",
+  "updated_at": "2026-10-07T23:27:02.686102",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1557525440879530096:1557525440879530096",
+        "name": "Tobben MC / #general / Kan du finne ut hvorfor session session-rb2qig og session-sv0iuv plutselig sl... / topic 1557525440879530096",
+        "type": "thread",
+        "thread_id": "1557525440879530096"
       },
       {
         "id": "1557368707808891011:1557368707808891011",
