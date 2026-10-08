@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2893
+        "completed": 2894
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-08T08:31:39.276149+02:00",
-      "last_run_at": "2026-10-08T06:30:41.180609+02:00",
+      "next_run_at": "2026-10-08T09:32:40.665235+02:00",
+      "last_run_at": "2026-10-08T07:31:42.472755+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-08T07:31:39.543400+02:00",
-        "by": "hetz-red-butterfly:1189:d59a8180a41e48e0a80981920121cc68"
+        "at": "2026-10-08T08:32:41.170973+02:00",
+        "by": "hetz-red-butterfly:1189:d420c979ee2649c5b0750a3ce965cae4"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-08T07:30:41.180609+02:00",
-        "dispatched_at": "2026-10-08T07:31:39.235572+02:00",
-        "lateness_seconds": 58.1,
+        "scheduled_at": "2026-10-08T08:31:42.472755+02:00",
+        "dispatched_at": "2026-10-08T08:32:40.627828+02:00",
+        "lateness_seconds": 58.2,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -178,17 +178,17 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 96
+        "completed": 97
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-10-08T08:00:00+02:00",
-      "last_run_at": "2026-10-07T08:08:46.189251+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-10-09T08:00:00+02:00",
+      "last_run_at": "2026-10-08T08:01:32.104037+02:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 402: Upstream request failed: Insufficient account funds",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -205,12 +205,12 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T08:00:00+02:00",
-        "dispatched_at": "2026-10-07T08:00:54.373374+02:00",
-        "lateness_seconds": 54.4,
+        "scheduled_at": "2026-10-08T08:00:00+02:00",
+        "dispatched_at": "2026-10-08T08:00:39.892026+02:00",
+        "lateness_seconds": 39.9,
         "kind": "on_time"
       },
-      "failure_streak": 0
+      "failure_streak": 1
     },
     {
       "id": "8b03d0881387",
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-08T07:31:39.543594+02:00"
+  "updated_at": "2026-10-08T08:32:41.171239+02:00"
 }
