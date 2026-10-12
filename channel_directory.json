@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T10:05:41.218042",
+  "updated_at": "2026-10-12T11:05:54.675386",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1559155106048643083:1559155106048643083",
+        "name": "Tobben MC / #general / Jeg ba om å rydde opp i Kimaki-session i opencode.db via opencode serveren st... / topic 1559155106048643083",
+        "type": "thread",
+        "thread_id": "1559155106048643083"
       },
       {
         "id": "1559109951392059473:1559109951392059473",
