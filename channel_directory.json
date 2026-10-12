@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-12T07:05:00.825377",
+  "updated_at": "2026-10-12T08:05:14.524369",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1559109951392059473:1559109951392059473",
+        "name": "Tobben MC / #ig-vaktlister / På tide å lage vaktplanen for november. Ingen endringer bortsett fra følgende... / topic 1559109951392059473",
+        "type": "thread",
+        "thread_id": "1559109951392059473"
       },
       {
         "id": "1557525440879530096:1557525440879530096",
