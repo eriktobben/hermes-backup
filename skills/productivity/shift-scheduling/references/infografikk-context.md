@@ -40,9 +40,9 @@
 7. Kveldsvakt kan starte senere hvis ansatt ikke kan begynne før
 8. "Til 21:00" = til 21:15 (dekker 21:05-slutt)
 9. Ikke øk timer unødvendig
-10. August ~360t ekstra, september kan være litt over
+10. Ekstravakter (alle utenom Lars/Erik) lander typisk på ~350–390t/måned — litt over ~360t er greit hvis planen blir bedre, og en ansatt som er borte hele måneden må dekkes av de andre
 11. Fordel helg rimelig, ikke samme personer hver lørdag
-- **Håvard**: min 1, maks 2 dager/uke (3 kun hvis nødvendig), bruk strategisk
+12. **Håvard**: min 1, maks 2 dager/uke (3 kun hvis nødvendig), bruk strategisk
 13. **Guro**: ikke på USIKKER-dager
 14. **Mathias**: kun tor/fre/lør, bekreft før publisering
 
@@ -55,7 +55,8 @@
 
 ### Dzhan
 - **Tilgjengelig**: Bred tilgjengelighet, men sjekk skolekalenderen hennes (forelesninger/eksamener) hver måned — hun har markert fravær som må respekteres
-- **Prioritet**: Dzhan prioriteres der hun kan jobbe (ønsket fra Tobias)
+- **Standing pattern (okt/nov 2026, bekreft hver måned)**: forelesninger man/ons/fre 09:15–12:00 og tor 12:15–15:00 → praktisk talt: tirsdag full dag, man/ons/fre kveld fra 13:05, lørdager hele dagen; IKKE Kvad tir/tor-grunnvakt på torsdager
+- **Prioritet**: Dzhan prioriteres der hun kan jobbe (ønsket fra Tobias) — hun skal ha flest timer blant de ekstraansatte
 - **Helg**: Kan jobbe mye, men bør få ≥1 lørdag fri
 - **Etter skole-slutt**: Usikker tilgjengelighet — må bekreftes
 - **Kan jobbe til 21:00** = tolkes som til 21:15
@@ -72,7 +73,7 @@
 
 ### Mathias
 - **Tilgjengelig**: Kun torsdag, fredag, lørdag
-- **Kan jobbe**: Kvad man/wed/fri (ikke tir/thu pga Erik), Sørland tir/thu (ikke man/wed/fri pga Erik)
+- **Effektive slots (regn dette ut før planlegging)**: Sørland tor-kveld 14:05–21:05 + lørdager (begge) er de eneste praktiske vaktene. Sørland man/ons/fre-kveld er ulovlig (Erik 09:00–17:00 overlapper), Kvad tir/tor-grunnvakt er ulovlig (Erik 11:00–15:00 overlapper). Kvad man/ons/fre 11:00–15:00 er teknisk lovlig (kun Lars der) men har ikke vært brukt
 - **Må bekreftes** før endelig publisering
 
 ### Håvard
@@ -81,10 +82,11 @@
 - **Bruk**: Strategisk der han løser bemanningsproblem
 - **Helg**: Kan jobbe
 
-## Filer
+## Filer og arbeidsflyt
 
-- Rådata: `/home/erik/infografikk_vaktplan_sept2026_data.txt`
-- Script: `/home/erik/infografikk_vaktplan_sept2026_v3.py`
-- Plan: `/home/erik/infografikk_vaktplan_sept2026.md`
+- Planfil per måned: `/home/erik/infografikk_vaktplan_<mnd><år>.md` (f.eks. `infografikk_vaktplan_nov2026.md`); rådata fra Tobben som `-data.txt`
+- Forrige måneds plan: finnes sjelden i Discord-kanalen (bare forespørselen ligger der) — grav den fram med `session_search` og les planfilen; bygg alltid neste måned på forrige godkjente plan
+- Levering: svar i tråden med sammendrag + `MEDIA:<planfil>`-vedlegg — Discord-pluginen har ingen send-melding-action, svaret selv er leveransen
+- Bookingssystemet kan telle Kvad-grunnvakt som 8:00 selv om planen sier 09:45–17:15 (7:30) — ubesvart spørsmål til Tobben; avstem alltid timer i timer:minutter mot systemutskriften
 - Discord: #ig-vaktlister
 - Kontaktperson: Tobias (Tobben)

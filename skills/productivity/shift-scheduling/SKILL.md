@@ -20,6 +20,23 @@ Create employee shift schedules that satisfy multiple overlapping constraints ac
 
 ## Core methodology
 
+### 0. For recurring monthly schedules, extend last month — don't rebuild
+
+The user's monthly request usually means "same as last month, plus the changes I list".
+1. Recover last month's published plan: `session_search(query="vaktplan <month>")` — the
+   channel only holds the request; the accepted plan lives in old session history and as a
+   local plan file (path convention in the company reference).
+2. Read the previous plan file and carry over its structure, fixed shifts, and rotation
+   pattern as the baseline.
+3. Apply ONLY the stated changes; anything not mentioned is assumed unchanged.
+4. Flag in the confirmation list every standing assumption that transfers from last month
+   unverified (school schedules, time windows) — "no changes" from the user does not
+   re-verify them.
+
+When an employee is out for an entire month (praksis, leave), plan the month WITHOUT them
+using the remaining pool, and mark the slots where they can be inserted later — never leave
+shifts unfilled waiting for data that arrives mid-month.
+
 ### 1. Encode all constraints BEFORE scheduling
 
 Build a constraint checklist. Common categories:
@@ -73,6 +90,7 @@ Recommended structure:
 - **Double-booking**: Always check employee isn't assigned to two locations on the same day
 - **Constraint interactions**: Fixing one constraint (e.g., adding Håvard) may break another (weekend rotation)
 - **USIKKER/uncertain availability**: Don't schedule employees on days marked uncertain; note in confirmation items
+- **Pairing constraints shrink availability more than they look**: Derive each employee's *effective* weekday slots from fixed shifts + pairing rules before assigning (e.g., a "tor/fre/lør" employee paired against the person fixed on man/ons/fre may legally have exactly ONE weekday slot) — otherwise the solver fills shifts the rules will later veto
 
 ## References
 
