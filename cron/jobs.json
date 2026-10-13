@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3007
+        "completed": 3008
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-13T04:23:55.567787+02:00",
-      "last_run_at": "2026-10-13T02:22:56.912820+02:00",
+      "next_run_at": "2026-10-13T05:24:56.965373+02:00",
+      "last_run_at": "2026-10-13T03:23:59.041901+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-13T03:23:55.832270+02:00",
-        "by": "hetz-red-butterfly:1189:2eef94b5f10442f2bb7ddfbd7b7ae630"
+        "at": "2026-10-13T04:24:57.238355+02:00",
+        "by": "hetz-red-butterfly:1189:31acbc222ab943feb2cca32b9a020548"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-13T03:22:56.912820+02:00",
-        "dispatched_at": "2026-10-13T03:23:55.525251+02:00",
-        "lateness_seconds": 58.6,
+        "scheduled_at": "2026-10-13T04:23:59.041901+02:00",
+        "dispatched_at": "2026-10-13T04:24:56.947652+02:00",
+        "lateness_seconds": 57.9,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -437,15 +437,15 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 12
+        "completed": 13
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-30T14:03:04.059217+02:00",
-      "next_run_at": "2026-10-13T04:00:00+02:00",
-      "last_run_at": "2026-10-12T04:00:54.232580+02:00",
+      "next_run_at": "2026-10-14T04:00:00+02:00",
+      "last_run_at": "2026-10-13T04:01:09.151832+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -463,13 +463,13 @@
       "enabled_toolsets": null,
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-12T04:00:00+02:00",
-        "dispatched_at": "2026-10-12T04:00:18.872947+02:00",
-        "lateness_seconds": 18.9,
+        "scheduled_at": "2026-10-13T04:00:00+02:00",
+        "dispatched_at": "2026-10-13T04:00:56.381722+02:00",
+        "lateness_seconds": 56.4,
         "kind": "on_time"
       },
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-13T03:23:55.832461+02:00"
+  "updated_at": "2026-10-13T04:24:57.238556+02:00"
 }
