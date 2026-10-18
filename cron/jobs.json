@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3129
+        "completed": 3130
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-18T08:22:30.112478+02:00",
-      "last_run_at": "2026-10-18T06:22:28.427878+02:00",
+      "next_run_at": "2026-10-18T09:22:35.976373+02:00",
+      "last_run_at": "2026-10-18T07:22:33.921888+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-18T07:22:30.583206+02:00",
-        "by": "hetz-red-butterfly:1189:cb4ae4c973204da7b02fa701a3f2c6da"
+        "at": "2026-10-18T08:22:36.297266+02:00",
+        "by": "hetz-red-butterfly:1189:1eb7ab8ed3b44522b29802953545786f"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-18T07:22:28.427878+02:00",
-        "dispatched_at": "2026-10-18T07:22:29.871168+02:00",
-        "lateness_seconds": 1.4,
+        "scheduled_at": "2026-10-18T08:22:33.921888+02:00",
+        "dispatched_at": "2026-10-18T08:22:35.937626+02:00",
+        "lateness_seconds": 2.0,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -178,17 +178,17 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 106
+        "completed": 107
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-10-18T08:00:00+02:00",
-      "last_run_at": "2026-10-17T08:08:20.166772+02:00",
+      "next_run_at": "2026-10-19T08:00:00+02:00",
+      "last_run_at": "2026-10-18T08:01:39.528275+02:00",
       "last_status": "error",
-      "last_error": "Interrupted by shutdown before terminal completion.",
+      "last_error": "RuntimeError: HTTP 401: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key.",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -205,12 +205,12 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-17T08:00:00+02:00",
-        "dispatched_at": "2026-10-17T08:00:49.609343+02:00",
-        "lateness_seconds": 49.6,
+        "scheduled_at": "2026-10-18T08:00:00+02:00",
+        "dispatched_at": "2026-10-18T08:00:35.455301+02:00",
+        "lateness_seconds": 35.5,
         "kind": "on_time"
       },
-      "failure_streak": 1
+      "failure_streak": 2
     },
     {
       "id": "8b03d0881387",
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-18T07:22:30.583651+02:00"
+  "updated_at": "2026-10-18T08:22:36.297500+02:00"
 }
