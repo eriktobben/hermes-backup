@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3172
+        "completed": 3173
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-20T04:02:51.447627+02:00",
-      "last_run_at": "2026-10-20T02:01:54.068158+02:00",
+      "next_run_at": "2026-10-20T05:03:52.864050+02:00",
+      "last_run_at": "2026-10-20T03:02:55.104965+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-20T03:02:51.749161+02:00",
-        "by": "hetz-red-butterfly:1189:6babe8e819e042168d598908df4c1c45"
+        "at": "2026-10-20T04:03:53.117314+02:00",
+        "by": "hetz-red-butterfly:1189:baf670ba33384a35a82feaa2bfda0829"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-20T03:01:54.068158+02:00",
-        "dispatched_at": "2026-10-20T03:02:51.415469+02:00",
-        "lateness_seconds": 57.3,
+        "scheduled_at": "2026-10-20T04:02:55.104965+02:00",
+        "dispatched_at": "2026-10-20T04:03:52.827566+02:00",
+        "lateness_seconds": 57.7,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -437,20 +437,20 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 19
+        "completed": 20
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-30T14:03:04.059217+02:00",
-      "next_run_at": "2026-10-20T04:00:00+02:00",
-      "last_run_at": "2026-10-19T04:00:22.840099+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-10-21T04:00:00+02:00",
+      "last_run_at": "2026-10-20T04:02:25.062229+02:00",
+      "last_status": "error",
+      "last_error": "Interrupted by shutdown before terminal completion.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "discord",
@@ -463,13 +463,13 @@
       "enabled_toolsets": null,
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T04:00:00+02:00",
-        "dispatched_at": "2026-10-19T04:00:10.085947+02:00",
-        "lateness_seconds": 10.1,
+        "scheduled_at": "2026-10-20T04:00:00+02:00",
+        "dispatched_at": "2026-10-20T04:00:52.749612+02:00",
+        "lateness_seconds": 52.7,
         "kind": "on_time"
       },
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-20T03:02:51.749426+02:00"
+  "updated_at": "2026-10-20T04:03:53.117510+02:00"
 }
