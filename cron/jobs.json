@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3176
+        "completed": 3177
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-20T08:06:57.188483+02:00",
-      "last_run_at": "2026-10-20T06:05:59.347369+02:00",
+      "next_run_at": "2026-10-20T09:07:58.625291+02:00",
+      "last_run_at": "2026-10-20T07:07:00.311571+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-20T07:06:57.421625+02:00",
-        "by": "hetz-red-butterfly:1189:5be567f6c3e84545931a26c10e6c40fe"
+        "at": "2026-10-20T08:07:58.890733+02:00",
+        "by": "hetz-red-butterfly:1189:3922631d03f547ef8e9d0dfb4ccef68f"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-20T07:05:59.347369+02:00",
-        "dispatched_at": "2026-10-20T07:06:57.170833+02:00",
-        "lateness_seconds": 57.8,
+        "scheduled_at": "2026-10-20T08:07:00.311571+02:00",
+        "dispatched_at": "2026-10-20T08:07:58.586371+02:00",
+        "lateness_seconds": 58.3,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -178,15 +178,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 108
+        "completed": 109
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-10-20T08:00:00+02:00",
-      "last_run_at": "2026-10-19T08:00:58.481495+02:00",
+      "next_run_at": "2026-10-21T08:00:00+02:00",
+      "last_run_at": "2026-10-20T08:01:19.374892+02:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 401: This API key has expired. Create a new API key in OpenCode Console and replace it in your client or secret store. Signing in again will not renew this key.",
       "last_delivery_error": null,
@@ -205,12 +205,12 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-19T08:00:00+02:00",
-        "dispatched_at": "2026-10-19T08:00:18.489374+02:00",
-        "lateness_seconds": 18.5,
+        "scheduled_at": "2026-10-20T08:00:00+02:00",
+        "dispatched_at": "2026-10-20T08:00:58.390035+02:00",
+        "lateness_seconds": 58.4,
         "kind": "on_time"
       },
-      "failure_streak": 3
+      "failure_streak": 4
     },
     {
       "id": "8b03d0881387",
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-20T07:06:57.421848+02:00"
+  "updated_at": "2026-10-20T08:07:58.890956+02:00"
 }
