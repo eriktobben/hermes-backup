@@ -62,8 +62,8 @@
 - **Kan jobbe til 21:00** = tolkes som til 21:15
 
 ### Aleksander
-- **Tilgjengelig**: Spesifikke tidsvinduer per dag, ofte begrenset
-- **Lørdag**: Kan jobbe de oppgitte, bør få ≥1 fri
+- **Tilgjengelig**: Oppgir en månedsspesifikk dagliste (f.eks. "kan hele dagen 2., 3., 4., ..." + "fra kl. 14" på enkelte dager). Dager som ikke står på listen er utilgjengelige — ikke gjenbruk forrige måneds vinduer
+- **Lørdag**: Kan jobbe de oppgitte, bør få >=1 fri
 - **Kan jobbe til 21:00** = tolkes som til 21:15
 
 ### Guro
