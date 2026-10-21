@@ -10,7 +10,7 @@
     "patch_count": 1,
     "patch_generation": 1,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 0,
     "view_count": 0
   },
@@ -131,7 +131,7 @@
     "patch_count": 2,
     "patch_generation": 2,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 6,
     "view_count": 6
   },
@@ -255,7 +255,7 @@
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 3,
     "view_count": 3
   },
@@ -316,7 +316,7 @@
     "view_count": 1
   },
   "competitive-analysis": {
-    "archived_at": null,
+    "archived_at": "2026-10-21T16:04:58.739994+00:00",
     "created_at": "2026-07-19T13:59:26.626459+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-07-19T13:59:51.583138+00:00",
@@ -324,7 +324,7 @@
     "last_viewed_at": null,
     "patch_count": 1,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 0,
     "view_count": 0
   },
@@ -517,7 +517,7 @@
     "patch_count": 13,
     "patch_generation": 3,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 12,
     "view_count": 12
   },
@@ -1218,7 +1218,7 @@
     "view_count": 61
   },
   "norwegian-price-comparison": {
-    "archived_at": null,
+    "archived_at": "2026-10-21T16:04:59.069216+00:00",
     "created_at": "2026-07-12T17:11:42.895967+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-07-12T17:46:07.777207+00:00",
@@ -1226,7 +1226,7 @@
     "last_viewed_at": "2026-07-19T14:00:01.168510+00:00",
     "patch_count": 7,
     "pinned": false,
-    "state": "stale",
+    "state": "archived",
     "use_count": 5,
     "view_count": 5
   },
