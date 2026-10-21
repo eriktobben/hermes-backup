@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3197
+        "completed": 3198
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-21T05:26:37.836797+02:00",
-      "last_run_at": "2026-10-21T03:25:39.914781+02:00",
+      "next_run_at": "2026-10-21T06:27:39.268760+02:00",
+      "last_run_at": "2026-10-21T04:26:41.337819+02:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,12 +94,12 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-21T04:26:38.121984+02:00",
-        "by": "hetz-red-butterfly:1189:e4659d5290554be4a900a773a4ce89d4"
+        "at": "2026-10-21T05:27:39.806114+02:00",
+        "by": "hetz-red-butterfly:1189:31030093fb0f46e5b2db39e8050128d3"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-21T04:25:39.914781+02:00",
-        "dispatched_at": "2026-10-21T04:26:37.800529+02:00",
+        "scheduled_at": "2026-10-21T05:26:41.337819+02:00",
+        "dispatched_at": "2026-10-21T05:27:39.230557+02:00",
         "lateness_seconds": 57.9,
         "kind": "on_time"
       },
@@ -232,15 +232,15 @@
       "schedule_display": "0 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 103
+        "completed": 104
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-09T11:45:38.111899+02:00",
-      "next_run_at": "2026-10-21T05:00:00+02:00",
-      "last_run_at": "2026-10-20T05:01:38.621031+02:00",
+      "next_run_at": "2026-10-22T05:00:00+02:00",
+      "last_run_at": "2026-10-21T05:01:00.107581+02:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstdout:\n❌ Ingen opencode serve-prosess funnet. Sjekker om Kimaki kan starte en...",
       "last_delivery_error": null,
@@ -255,12 +255,12 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-20T05:00:00+02:00",
-        "dispatched_at": "2026-10-20T05:00:54.129231+02:00",
-        "lateness_seconds": 54.1,
+        "scheduled_at": "2026-10-21T05:00:00+02:00",
+        "dispatched_at": "2026-10-21T05:00:38.595792+02:00",
+        "lateness_seconds": 38.6,
         "kind": "on_time"
       },
-      "failure_streak": 1
+      "failure_streak": 2
     },
     {
       "id": "878cb32b3906",
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-21T04:26:38.122191+02:00"
+  "updated_at": "2026-10-21T05:27:39.806311+02:00"
 }
