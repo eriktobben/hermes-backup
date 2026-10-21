@@ -84,6 +84,7 @@ Recommended structure:
 
 ## Pitfalls
 
+- **Splitting a shift**: both halves must meet the 3h minimum, so the split point must be at least 3h after the start (13:05–21:05 splits legally at 16:05, not at 16:00 where the first half is 2:55). Always state the earliest legal split point when proposing one — a shift can only be split where both halves are ≥3h
 - **Hour notation**: Track and validate shifts in hours:minutes (6t10m = 6:10), never decimal hours — 6.2 ≠ 6:10, and the rounding drift creates phantom mismatches when reconciling against booking-system totals
 - **Split availability**: Employee has gap in availability (e.g., 09:45–12:15, 15:00–21:15) — cannot cover a continuous shift through the gap
 - **Late starts**: Employee available "from 14:00" cannot cover a shift starting at 13:05; accept solo coverage for the gap

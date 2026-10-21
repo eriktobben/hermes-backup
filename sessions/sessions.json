@@ -2580,7 +2580,7 @@
     "session_key": "agent:main:discord:thread:1559109951392059473:1559109951392059473",
     "session_id": "20261012_074620_d380c76f",
     "created_at": "2026-10-12T07:46:20.976212",
-    "updated_at": "2026-10-12T08:06:44.147812",
+    "updated_at": "2026-10-21T09:22:33.736419",
     "display_name": "Tobben MC / #ig-vaktlister / P\u00e5 tide \u00e5 lage vaktplanen for november. Ingen endringer bortsett fra f\u00f8lgende...",
     "platform": "discord",
     "chat_type": "thread",
@@ -2590,7 +2590,7 @@
     "cache_read_tokens": 0,
     "cache_write_tokens": 0,
     "total_tokens": 0,
-    "last_prompt_tokens": 109470,
+    "last_prompt_tokens": 110609,
     "estimated_cost_usd": 0.0,
     "cost_status": "unknown",
     "expiry_finalized": false,
@@ -2605,6 +2605,11 @@
     "auto_reset_reason": null,
     "reset_had_activity": false,
     "prev_session_id": null,
+    "model_override": {
+      "model": "deepseek-v4.1-flash",
+      "provider": "opencode-go",
+      "base_url": "https://opencode.ai/zen/go/v1"
+    },
     "origin": {
       "platform": "discord",
       "chat_id": "1559109951392059473",
