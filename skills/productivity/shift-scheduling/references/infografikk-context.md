@@ -3,6 +3,7 @@
 ## Lokasjoner
 
 ### Kvadraturen (Kristiansand sentrum)
+- Kan holdes stengt i en hel måned — da faller alle Kvad-vakter bort, og bare Sørland-planen gjenstår
 - **Man–fre grunnvakter**: 09:45–17:15 + 11:00–15:00
 - **Lørdag**: 09:55–16:05 (1 vakt)
 
@@ -31,7 +32,7 @@
 
 ## Regler (sortert etter prioritet)
 
-1. Lars og Eriks faste vakter beholdes
+1. Faste dekninger bekreftes hver måned — ikke antatt evige. En fast ansatt kan være helt ute av planen en måned; da må vedkommendes vakter erstattes (Erik: Sørland man/ons/fre 09:00–17:00 + Kvad 11:00–15:00 tir/tor), og Lars står alene på Kvad man/ons/fre
 2. **Lars + Guro**: aldri samme lokasjon samtidig
 3. **Erik + Mathias**: aldri samme lokasjon samtidig
 4. Minimum 3 timer per innkalt vakt (ingen korte vakter for å fylle hull)
@@ -51,6 +52,7 @@
 ### Sarah
 - **Tilgjengelig**: Alle dager, hele dagen
 - **Bruk**: Mest fleksibel, strategisk for å få planen til å gå opp
+- **Ønske**: Vil jobbe så mye som mulig — hun skal ha flest timer av de ekstraansatte når hun er tilgjengelig (reduser andre, ikke henne)
 - **Lørdag**: Kan jobbe, bør ha ≥1 fri
 
 ### Dzhan
@@ -67,8 +69,9 @@
 - **Kan jobbe til 21:00** = tolkes som til 21:15
 
 ### Guro
-- **Tilgjengelig**: Variabel, ofte USIKKER enkeltdager og uker
+- **Tilgjengelig**: Variabel; i praksisperioder får hun turnusen sent og oppgir månedlig tilgjengelighet med enkeltdager ("kan jobbe", "fra kl. 16", "praksis", "ikke mulighet")
 - **Kan jobbe**: Kvad tir/tor (ikke man/wed/fri pga Lars), Sørland man/wed/fri-kveld (ikke tir/thu pga Lars)
+- **Fra kl. 16**: kan bare ta kveldsvakt som starter 16:00/16:05 — ikke en full 13:05-vakt; det gir en periode der bare Erik/Lars er på gulvet, så vurder om noen andre skal ha hele vakten i stedet
 - **Ikke planlegg på USIKKER-dager**
 
 ### Mathias
