@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T11:54:34.354161",
+  "updated_at": "2026-10-22T12:54:48.259456",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1562804615051874475:1562804615051874475",
+        "name": "Tobben MC / #general / Kan du sette opp app.puggo.no i AWS SES? Trenger også en API-nøkkel som kan b... / topic 1562804615051874475",
+        "type": "thread",
+        "thread_id": "1562804615051874475"
       },
       {
         "id": "1562784717760106527:1562784717760106527",

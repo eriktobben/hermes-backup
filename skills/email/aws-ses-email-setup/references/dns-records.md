@@ -51,6 +51,17 @@ States: `Pending` → `Success` (DNS propagated) or `Failed` (wrong record).
 
 - DKIM is optional but strongly recommended — prevents spoofing and
   improves inbox placement.
+- A subdomain identity (`app.example.com`) needs its own TXT/CNAMEs
+  *under that subdomain*; apex records verify only the apex. Verifying
+  the apex does not cover mail sent as `@app.example.com` either.
+- Hand records over in both forms: the FQDN SES resolves
+  (`_amazonses.app.example.com`) and the registrar-panel host, which is
+  the FQDN minus the zone apex (`_amazonses.app`) for panels that append
+  the origin themselves — mismatches here are the usual cause of a
+  stuck `Pending`.
+- Confirm locally before polling SES: `dig +short TXT
+  _amazonses.<domain>` and `dig +short CNAME <token>._domainkey.<domain>`
+  against the authoritative NS.
 - DNS propagation can take minutes to hours. Check status periodically.
 - SES sandbox: new accounts can only send to verified addresses.
   Request production access in the AWS console.
