@@ -27,7 +27,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-10-25T10:00:00+01:00",
+      "next_run_at": "2026-10-26T09:00:00+01:00",
       "last_run_at": "2026-10-24T09:00:33.730805+02:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3296
+        "completed": 3297
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-25T10:01:43.781474+01:00",
-      "last_run_at": "2026-10-25T08:00:45.506537+01:00",
+      "next_run_at": "2026-10-25T11:02:45.277493+01:00",
+      "last_run_at": "2026-10-25T09:01:47.061946+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,12 +94,12 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-25T09:01:44.032202+01:00",
-        "by": "hetz-red-butterfly:1189:49e5431632974c8da61b0977b9e79d8f"
+        "at": "2026-10-25T10:02:45.545799+01:00",
+        "by": "hetz-red-butterfly:1189:114c53fb8713448fad18b007d9186564"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-25T09:00:45.506537+01:00",
-        "dispatched_at": "2026-10-25T09:01:43.740719+01:00",
+        "scheduled_at": "2026-10-25T10:01:47.061946+01:00",
+        "dispatched_at": "2026-10-25T10:02:45.238468+01:00",
         "lateness_seconds": 58.2,
         "kind": "on_time"
       },
@@ -289,7 +289,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-10-25T10:00:00+01:00",
+      "next_run_at": "2026-10-26T09:00:00+01:00",
       "last_run_at": "2026-10-24T09:00:35.095754+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-25T09:01:44.032397+01:00"
+  "updated_at": "2026-10-25T10:02:45.546031+01:00"
 }
