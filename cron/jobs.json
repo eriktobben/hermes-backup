@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3314
+        "completed": 3315
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-26T04:19:15.895604+01:00",
-      "last_run_at": "2026-10-26T02:18:17.164223+01:00",
+      "next_run_at": "2026-10-26T05:20:17.385481+01:00",
+      "last_run_at": "2026-10-26T03:19:19.188061+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-26T03:19:16.190282+01:00",
-        "by": "hetz-red-butterfly:1189:e9e5fb8c0adf467698996f5a6be3dd7e"
+        "at": "2026-10-26T04:20:17.650344+01:00",
+        "by": "hetz-red-butterfly:1189:7c9c8ff70d2844ab96f21d91e555e1a4"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-26T03:18:17.164223+01:00",
-        "dispatched_at": "2026-10-26T03:19:15.855523+01:00",
-        "lateness_seconds": 58.7,
+        "scheduled_at": "2026-10-26T04:19:19.188061+01:00",
+        "dispatched_at": "2026-10-26T04:20:17.341032+01:00",
+        "lateness_seconds": 58.2,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -437,20 +437,20 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 24
+        "completed": 25
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-30T14:03:04.059217+02:00",
-      "next_run_at": "2026-10-26T04:00:00+01:00",
-      "last_run_at": "2026-10-24T04:02:25.169161+02:00",
+      "next_run_at": "2026-10-27T04:00:00+01:00",
+      "last_run_at": "2026-10-26T04:01:37.153309+01:00",
       "last_status": "error",
-      "last_error": "Interrupted by shutdown before terminal completion.",
+      "last_error": "Script exited with code 1\nstdout:\nERROR 2026-10-26 03:01: ingen opencode serve etter restart (var 0MB før). Sjekk 'pm2 logs kimaki' og 'systemctl --user status pm2'.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 5,
+      "failure_streak": 6,
       "deliver": "origin",
       "origin": {
         "platform": "discord",
@@ -463,13 +463,13 @@
       "enabled_toolsets": null,
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-24T04:00:00+02:00",
-        "dispatched_at": "2026-10-24T04:00:50.852793+02:00",
-        "lateness_seconds": 50.9,
+        "scheduled_at": "2026-10-26T04:00:00+01:00",
+        "dispatched_at": "2026-10-26T04:00:16.831289+01:00",
+        "lateness_seconds": 16.8,
         "kind": "on_time"
       },
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-26T03:19:16.190809+01:00"
+  "updated_at": "2026-10-26T04:20:17.650543+01:00"
 }
