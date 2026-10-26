@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3313
+        "completed": 3314
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-26T03:18:13.139708+01:00",
-      "last_run_at": "2026-10-26T01:17:16.011242+01:00",
+      "next_run_at": "2026-10-26T04:19:15.895604+01:00",
+      "last_run_at": "2026-10-26T02:18:17.164223+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-26T02:18:13.755635+01:00",
-        "by": "hetz-red-butterfly:1189:7cc5fb70dea14ec18ad0ca007d490e8e"
+        "at": "2026-10-26T03:19:16.190282+01:00",
+        "by": "hetz-red-butterfly:1189:e9e5fb8c0adf467698996f5a6be3dd7e"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-26T02:17:16.011242+01:00",
-        "dispatched_at": "2026-10-26T02:18:13.094977+01:00",
-        "lateness_seconds": 57.1,
+        "scheduled_at": "2026-10-26T03:18:17.164223+01:00",
+        "dispatched_at": "2026-10-26T03:19:15.855523+01:00",
+        "lateness_seconds": 58.7,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -132,7 +132,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T12:06:21.663512+02:00",
-      "next_run_at": "2026-10-26T03:15:00+01:00",
+      "next_run_at": "2026-10-27T02:15:00+01:00",
       "last_run_at": "2026-10-25T02:16:30.764019+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -339,7 +339,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-13T11:05:50.510672+02:00",
-      "next_run_at": "2026-10-26T02:50:00+01:00",
+      "next_run_at": "2026-10-27T01:50:00+01:00",
       "last_run_at": "2026-10-25T01:50:28.828771+02:00",
       "last_status": "ok",
       "last_error": null,
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-26T02:18:13.756319+01:00"
+  "updated_at": "2026-10-26T03:19:16.190809+01:00"
 }
