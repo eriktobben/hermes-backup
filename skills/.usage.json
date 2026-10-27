@@ -1598,15 +1598,15 @@
     "created_at": "2026-08-27T14:14:01.899060+00:00",
     "created_by": "agent",
     "last_patched_at": "2026-10-22T11:05:21.241104+00:00",
-    "last_reused_patch_generation": 13,
-    "last_used_at": "2026-10-22T11:04:29.187612+00:00",
-    "last_viewed_at": "2026-10-22T11:04:29.182414+00:00",
+    "last_reused_patch_generation": 21,
+    "last_used_at": "2026-10-27T14:13:02.675088+00:00",
+    "last_viewed_at": "2026-10-27T14:13:02.670741+00:00",
     "patch_count": 24,
     "patch_generation": 21,
     "pinned": false,
     "state": "active",
-    "use_count": 11,
-    "view_count": 11
+    "use_count": 13,
+    "view_count": 13
   },
   "simplify-code": {
     "archived_at": "2026-09-23T14:19:04.009093+00:00",
