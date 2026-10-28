@@ -20,15 +20,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 116
+        "completed": 150
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-09-24T09:00:00+02:00",
-      "last_run_at": "2026-09-23T09:01:27.617492+02:00",
+      "next_run_at": "2026-10-29T09:00:00+01:00",
+      "last_run_at": "2026-10-28T09:01:47.562011+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
       "last_delivery_error": null,
@@ -44,12 +44,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T09:00:00+02:00",
-        "dispatched_at": "2026-09-23T09:00:32.883010+02:00",
-        "lateness_seconds": 32.9,
+        "scheduled_at": "2026-10-28T09:00:00+01:00",
+        "dispatched_at": "2026-10-28T09:00:50.049994+01:00",
+        "lateness_seconds": 50.0,
         "kind": "on_time"
       },
-      "failure_streak": 15
+      "failure_streak": 49
     },
     {
       "id": "180cd90f598f",
@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2548
+        "completed": 3376
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-23T16:59:59.391362+02:00",
-      "last_run_at": "2026-09-23T15:59:59.391362+02:00",
+      "next_run_at": "2026-10-28T18:20:13.462339+01:00",
+      "last_run_at": "2026-10-28T17:20:13.462339+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -95,9 +95,9 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T15:59:49.323443+02:00",
-        "dispatched_at": "2026-09-23T15:59:50.133579+02:00",
-        "lateness_seconds": 0.8,
+        "scheduled_at": "2026-10-28T17:19:12.446802+01:00",
+        "dispatched_at": "2026-10-28T17:20:09.203787+01:00",
+        "lateness_seconds": 56.8,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -122,15 +122,15 @@
       "schedule_display": "15 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 107
+        "completed": 141
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T12:06:21.663512+02:00",
-      "next_run_at": "2026-09-24T02:15:00+02:00",
-      "last_run_at": "2026-09-23T02:16:00.094406+02:00",
+      "next_run_at": "2026-10-29T02:15:00+01:00",
+      "last_run_at": "2026-10-28T02:16:14.328451+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -146,9 +146,9 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T02:15:00+02:00",
-        "dispatched_at": "2026-09-23T02:15:24.079769+02:00",
-        "lateness_seconds": 24.1,
+        "scheduled_at": "2026-10-28T02:15:00+01:00",
+        "dispatched_at": "2026-10-28T02:15:39.815977+01:00",
+        "lateness_seconds": 39.8,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -175,15 +175,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 82
+        "completed": 116
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-09-24T08:00:00+02:00",
-      "last_run_at": "2026-09-23T08:04:15.206907+02:00",
+      "next_run_at": "2026-10-29T08:00:00+01:00",
+      "last_run_at": "2026-10-28T08:05:34.849171+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -202,9 +202,9 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T08:00:00+02:00",
-        "dispatched_at": "2026-09-23T08:00:31.612674+02:00",
-        "lateness_seconds": 31.6,
+        "scheduled_at": "2026-10-28T08:00:00+01:00",
+        "dispatched_at": "2026-10-28T08:00:48.621737+01:00",
+        "lateness_seconds": 48.6,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -229,17 +229,17 @@
       "schedule_display": "0 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 76
+        "completed": 110
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-09T11:45:38.111899+02:00",
-      "next_run_at": "2026-09-24T05:00:00+02:00",
-      "last_run_at": "2026-09-23T05:00:32.273326+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-10-29T05:00:00+01:00",
+      "last_run_at": "2026-10-28T05:00:52.836977+01:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstdout:\n❌ Ingen opencode serve-prosess funnet. Sjekker om Kimaki kan starte en...",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -252,12 +252,12 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T05:00:00+02:00",
-        "dispatched_at": "2026-09-23T05:00:27.834791+02:00",
-        "lateness_seconds": 27.8,
+        "scheduled_at": "2026-10-28T05:00:00+01:00",
+        "dispatched_at": "2026-10-28T05:00:44.405737+01:00",
+        "lateness_seconds": 44.4,
         "kind": "on_time"
       },
-      "failure_streak": 0
+      "failure_streak": 8
     },
     {
       "id": "878cb32b3906",
@@ -279,15 +279,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 43
+        "completed": 77
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-09-24T09:00:00+02:00",
-      "last_run_at": "2026-09-23T09:00:34.306644+02:00",
+      "next_run_at": "2026-10-29T09:00:00+01:00",
+      "last_run_at": "2026-10-28T09:01:48.185047+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -302,9 +302,9 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T09:00:00+02:00",
-        "dispatched_at": "2026-09-23T09:00:32.883010+02:00",
-        "lateness_seconds": 32.9,
+        "scheduled_at": "2026-10-28T09:00:00+01:00",
+        "dispatched_at": "2026-10-28T09:00:50.049994+01:00",
+        "lateness_seconds": 50.0,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -329,15 +329,15 @@
       "schedule_display": "50 1 * * *",
       "repeat": {
         "times": null,
-        "completed": 41
+        "completed": 75
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-13T11:05:50.510672+02:00",
-      "next_run_at": "2026-09-24T01:50:00+02:00",
-      "last_run_at": "2026-09-23T01:50:46.406135+02:00",
+      "next_run_at": "2026-10-29T01:50:00+01:00",
+      "last_run_at": "2026-10-28T01:50:39.876326+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -352,9 +352,9 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-23T01:50:00+02:00",
-        "dispatched_at": "2026-09-23T01:50:23.532664+02:00",
-        "lateness_seconds": 23.5,
+        "scheduled_at": "2026-10-28T01:50:00+01:00",
+        "dispatched_at": "2026-10-28T01:50:39.211002+01:00",
+        "lateness_seconds": 39.2,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -408,7 +408,65 @@
         "kind": "on_time"
       },
       "failure_streak": 0
+    },
+    {
+      "id": "d088f674a976",
+      "name": "opencode-daily-restart",
+      "prompt": "Weekly Kimaki/opencode restart (memory hygiene + Bun degradation guard).",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": "kimaki-weekly-restart.sh",
+      "no_agent": true,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
+      },
+      "schedule_display": "0 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 27
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-09-30T14:03:04.059217+02:00",
+      "next_run_at": "2026-10-29T04:00:00+01:00",
+      "last_run_at": "2026-10-28T04:01:38.505649+01:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstdout:\nERROR 2026-10-28 03:01: ingen opencode serve etter restart (var 0MB før). Sjekk 'pm2 logs kimaki' og 'systemctl --user status pm2'.",
+      "last_delivery_error": null,
+      "last_delivery_unverified": null,
+      "failure_streak": 8,
+      "deliver": "origin",
+      "origin": {
+        "platform": "discord",
+        "chat_id": "1554810776856956982",
+        "chat_name": "Tobben MC / #general / Sjekk manglende svar fra OpenCode",
+        "thread_id": "1554810776856956982",
+        "user_id": "872777029244829706",
+        "scope_id": "1479597162685006058"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-10-28T04:00:00+01:00",
+        "dispatched_at": "2026-10-28T04:00:42.279749+01:00",
+        "lateness_seconds": 42.3,
+        "kind": "on_time"
+      },
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-09-23T15:59:59.391798+02:00"
+  "updated_at": "2026-10-28T17:20:13.462770+01:00"
 }
