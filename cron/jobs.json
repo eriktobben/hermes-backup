@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3386
+        "completed": 3387
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-29T05:30:31.718330+01:00",
-      "last_run_at": "2026-10-29T03:29:34.027549+01:00",
+      "next_run_at": "2026-10-29T06:31:35.175086+01:00",
+      "last_run_at": "2026-10-29T04:30:35.020220+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-10-29T04:30:32.015599+01:00",
-        "by": "hetz-red-butterfly:1189:fe11933c7b9840ebb2916bb0fa51a857"
+        "at": "2026-10-29T05:31:35.430207+01:00",
+        "by": "hetz-red-butterfly:1189:0b978892615b4b95a595c97e37115447"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-10-29T04:29:34.027549+01:00",
-        "dispatched_at": "2026-10-29T04:30:31.679253+01:00",
-        "lateness_seconds": 57.7,
+        "scheduled_at": "2026-10-29T05:30:35.020220+01:00",
+        "dispatched_at": "2026-10-29T05:31:34.890409+01:00",
+        "lateness_seconds": 59.9,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -232,15 +232,15 @@
       "schedule_display": "0 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 110
+        "completed": 111
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-09T11:45:38.111899+02:00",
-      "next_run_at": "2026-10-29T05:00:00+01:00",
-      "last_run_at": "2026-10-28T05:00:52.836977+01:00",
+      "next_run_at": "2026-10-30T05:00:00+01:00",
+      "last_run_at": "2026-10-29T05:01:28.916841+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstdout:\n❌ Ingen opencode serve-prosess funnet. Sjekker om Kimaki kan starte en...",
       "last_delivery_error": null,
@@ -255,12 +255,12 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-28T05:00:00+01:00",
-        "dispatched_at": "2026-10-28T05:00:44.405737+01:00",
-        "lateness_seconds": 44.4,
+        "scheduled_at": "2026-10-29T05:00:00+01:00",
+        "dispatched_at": "2026-10-29T05:00:32.374453+01:00",
+        "lateness_seconds": 32.4,
         "kind": "on_time"
       },
-      "failure_streak": 8
+      "failure_streak": 9
     },
     {
       "id": "878cb32b3906",
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-29T04:30:32.015817+01:00"
+  "updated_at": "2026-10-29T05:31:35.430799+01:00"
 }
