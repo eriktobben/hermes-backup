@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3483
+        "completed": 3484
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-11-02T08:02:37.036759+01:00",
-      "last_run_at": "2026-11-02T06:01:39.128273+01:00",
+      "next_run_at": "2026-11-02T09:03:38.394137+01:00",
+      "last_run_at": "2026-11-02T07:02:40.484223+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,12 +94,12 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-02T07:02:37.312283+01:00",
-        "by": "hetz-red-butterfly:1189:e4bce3c1f80a4d54b1c15098a5a7dcde"
+        "at": "2026-11-02T08:03:38.656562+01:00",
+        "by": "hetz-red-butterfly:1189:9b122ba9e83b4e50ad0518424d488823"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-02T07:01:39.128273+01:00",
-        "dispatched_at": "2026-11-02T07:02:36.998257+01:00",
+        "scheduled_at": "2026-11-02T08:02:40.484223+01:00",
+        "dispatched_at": "2026-11-02T08:03:38.351765+01:00",
         "lateness_seconds": 57.9,
         "kind": "on_time"
       },
@@ -178,15 +178,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 120
+        "completed": 121
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-11-02T08:00:00+01:00",
-      "last_run_at": "2026-11-01T08:01:45.187318+01:00",
+      "next_run_at": "2026-11-03T08:00:00+01:00",
+      "last_run_at": "2026-11-02T08:01:16.167152+01:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 410: Model mimo-v2.5 has been deprecated. Use mimo-v2.6-flash instead.",
       "last_delivery_error": null,
@@ -205,12 +205,12 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-01T08:00:00+01:00",
-        "dispatched_at": "2026-11-01T08:00:54.110423+01:00",
-        "lateness_seconds": 54.1,
+        "scheduled_at": "2026-11-02T08:00:00+01:00",
+        "dispatched_at": "2026-11-02T08:00:38.262403+01:00",
+        "lateness_seconds": 38.3,
         "kind": "on_time"
       },
-      "failure_streak": 3
+      "failure_streak": 4
     },
     {
       "id": "8b03d0881387",
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-02T07:02:37.312496+01:00"
+  "updated_at": "2026-11-02T08:03:38.656825+01:00"
 }
