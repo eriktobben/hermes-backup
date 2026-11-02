@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3480
+        "completed": 3481
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-11-02T05:00:29.947697+01:00",
-      "last_run_at": "2026-11-02T02:59:32.340102+01:00",
+      "next_run_at": "2026-11-02T06:00:34.226870+01:00",
+      "last_run_at": "2026-11-02T04:00:33.345330+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-02T04:00:30.226407+01:00",
-        "by": "hetz-red-butterfly:1189:3666521cf4634d49b8c221b3cfa34185"
+        "at": "2026-11-02T05:00:34.496463+01:00",
+        "by": "hetz-red-butterfly:1189:7df683f59e734e119c6273f23de8cb91"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-02T03:59:32.340102+01:00",
-        "dispatched_at": "2026-11-02T04:00:29.909717+01:00",
-        "lateness_seconds": 57.6,
+        "scheduled_at": "2026-11-02T05:00:33.345330+01:00",
+        "dispatched_at": "2026-11-02T05:00:34.192985+01:00",
+        "lateness_seconds": 0.8,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -239,7 +239,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-09T11:45:38.111899+02:00",
-      "next_run_at": "2026-11-02T05:00:00+01:00",
+      "next_run_at": "2026-11-03T05:00:00+01:00",
       "last_run_at": "2026-11-01T05:01:03.574275+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstdout:\n❌ Ingen opencode serve-prosess funnet. Sjekker om Kimaki kan starte en...",
@@ -253,11 +253,14 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null,
+      "fire_claim": {
+        "at": "2026-11-02T05:00:34.624720+01:00",
+        "by": "hetz-red-butterfly:1189:e7ba759a416a49299fce6c3f41b62e34"
+      },
       "last_dispatch": {
-        "scheduled_at": "2026-11-01T05:00:00+01:00",
-        "dispatched_at": "2026-11-01T05:00:50.066123+01:00",
-        "lateness_seconds": 50.1,
+        "scheduled_at": "2026-11-02T05:00:00+01:00",
+        "dispatched_at": "2026-11-02T05:00:34.192985+01:00",
+        "lateness_seconds": 34.2,
         "kind": "on_time"
       },
       "failure_streak": 12
@@ -437,7 +440,7 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 31
+        "completed": 32
       },
       "enabled": true,
       "state": "scheduled",
@@ -445,12 +448,12 @@
       "paused_reason": null,
       "created_at": "2026-09-30T14:03:04.059217+02:00",
       "next_run_at": "2026-11-03T04:00:00+01:00",
-      "last_run_at": "2026-11-01T04:01:49.914728+01:00",
+      "last_run_at": "2026-11-02T04:01:21.087414+01:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\nERROR 2026-11-01 03:01: ingen opencode serve etter restart (var 0MB før). Sjekk 'pm2 logs kimaki' og 'systemctl --user status pm2'.",
+      "last_error": "Script exited with code 1\nstdout:\nERROR 2026-11-02 03:01: ingen opencode serve etter restart (var 0MB før). Sjekk 'pm2 logs kimaki' og 'systemctl --user status pm2'.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 12,
+      "failure_streak": 13,
       "deliver": "origin",
       "origin": {
         "platform": "discord",
@@ -468,11 +471,8 @@
         "lateness_seconds": 29.9,
         "kind": "on_time"
       },
-      "fire_claim": {
-        "at": "2026-11-02T04:00:30.245991+01:00",
-        "by": "hetz-red-butterfly:1189:a2d08eaee3c341bebb3978bc9feb5537"
-      }
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-02T04:00:30.246199+01:00"
+  "updated_at": "2026-11-02T05:00:34.624926+01:00"
 }
