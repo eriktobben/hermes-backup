@@ -20,15 +20,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 123
+        "completed": 157
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-10-01T09:00:00+02:00",
-      "last_run_at": "2026-09-30T09:00:24.665395+02:00",
+      "next_run_at": "2026-11-05T09:00:00+01:00",
+      "last_run_at": "2026-11-04T09:00:39.062589+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
       "last_delivery_error": null,
@@ -44,12 +44,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T09:00:00+02:00",
-        "dispatched_at": "2026-09-30T09:00:18.916446+02:00",
-        "lateness_seconds": 18.9,
+        "scheduled_at": "2026-11-04T09:00:00+01:00",
+        "dispatched_at": "2026-11-04T09:00:02.539776+01:00",
+        "lateness_seconds": 2.5,
         "kind": "on_time"
       },
-      "failure_streak": 22
+      "failure_streak": 56
     },
     {
       "id": "180cd90f598f",
@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2714
+        "completed": 3542
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-09-30T17:40:59.856092+02:00",
-      "last_run_at": "2026-09-30T16:40:59.856092+02:00",
+      "next_run_at": "2026-11-04T19:00:19.970268+01:00",
+      "last_run_at": "2026-11-04T18:00:19.970268+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -95,9 +95,9 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T16:39:58.737603+02:00",
-        "dispatched_at": "2026-09-30T16:40:56.265631+02:00",
-        "lateness_seconds": 57.5,
+        "scheduled_at": "2026-11-04T17:59:18.902151+01:00",
+        "dispatched_at": "2026-11-04T18:00:16.099897+01:00",
+        "lateness_seconds": 57.2,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -122,15 +122,15 @@
       "schedule_display": "15 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 114
+        "completed": 148
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T12:06:21.663512+02:00",
-      "next_run_at": "2026-10-01T02:15:00+02:00",
-      "last_run_at": "2026-09-30T02:15:54.176613+02:00",
+      "next_run_at": "2026-11-05T02:15:00+01:00",
+      "last_run_at": "2026-11-04T02:16:06.019981+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -146,9 +146,9 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T02:15:00+02:00",
-        "dispatched_at": "2026-09-30T02:15:09.486111+02:00",
-        "lateness_seconds": 9.5,
+        "scheduled_at": "2026-11-04T02:15:00+01:00",
+        "dispatched_at": "2026-11-04T02:15:52.703338+01:00",
+        "lateness_seconds": 52.7,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -175,17 +175,17 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 89
+        "completed": 123
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-10-01T08:00:00+02:00",
-      "last_run_at": "2026-09-30T08:07:12.641790+02:00",
+      "next_run_at": "2026-11-05T08:00:00+01:00",
+      "last_run_at": "2026-11-04T08:00:25.283538+01:00",
       "last_status": "error",
-      "last_error": "Interrupted by shutdown before terminal completion.",
+      "last_error": "RuntimeError: HTTP 410: Model mimo-v2.5 has been deprecated. Use mimo-v2.6-flash instead.",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -202,12 +202,12 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T08:00:00+02:00",
-        "dispatched_at": "2026-09-30T08:00:17.587701+02:00",
-        "lateness_seconds": 17.6,
+        "scheduled_at": "2026-11-04T08:00:00+01:00",
+        "dispatched_at": "2026-11-04T08:00:01.197776+01:00",
+        "lateness_seconds": 1.2,
         "kind": "on_time"
       },
-      "failure_streak": 1
+      "failure_streak": 6
     },
     {
       "id": "8b03d0881387",
@@ -229,17 +229,17 @@
       "schedule_display": "0 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 83
+        "completed": 117
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-09T11:45:38.111899+02:00",
-      "next_run_at": "2026-10-01T05:00:00+02:00",
-      "last_run_at": "2026-09-30T05:00:30.605231+02:00",
+      "next_run_at": "2026-11-05T05:00:00+01:00",
+      "last_run_at": "2026-11-04T05:01:44.114621+01:00",
       "last_status": "error",
-      "last_error": "Script exited with code 1\nstdout:\n⚠️  Opencode server kom ikke opp igjen automatisk. Sjekk Kimaki.",
+      "last_error": "Script exited with code 1\nstdout:\n❌ Ingen opencode serve-prosess funnet. Sjekker om Kimaki kan starte en...",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -252,12 +252,12 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T05:00:00+02:00",
-        "dispatched_at": "2026-09-30T05:00:13.898479+02:00",
-        "lateness_seconds": 13.9,
+        "scheduled_at": "2026-11-04T05:00:00+01:00",
+        "dispatched_at": "2026-11-04T05:00:56.569515+01:00",
+        "lateness_seconds": 56.6,
         "kind": "on_time"
       },
-      "failure_streak": 1
+      "failure_streak": 15
     },
     {
       "id": "878cb32b3906",
@@ -279,15 +279,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 50
+        "completed": 84
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-10-01T09:00:00+02:00",
-      "last_run_at": "2026-09-30T09:00:20.497122+02:00",
+      "next_run_at": "2026-11-05T09:00:00+01:00",
+      "last_run_at": "2026-11-04T09:00:40.263462+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -302,9 +302,9 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T09:00:00+02:00",
-        "dispatched_at": "2026-09-30T09:00:18.916446+02:00",
-        "lateness_seconds": 18.9,
+        "scheduled_at": "2026-11-04T09:00:00+01:00",
+        "dispatched_at": "2026-11-04T09:00:02.539776+01:00",
+        "lateness_seconds": 2.5,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -329,15 +329,15 @@
       "schedule_display": "50 1 * * *",
       "repeat": {
         "times": null,
-        "completed": 48
+        "completed": 82
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-13T11:05:50.510672+02:00",
-      "next_run_at": "2026-10-01T01:50:00+02:00",
-      "last_run_at": "2026-09-30T01:50:23.208694+02:00",
+      "next_run_at": "2026-11-05T01:50:00+01:00",
+      "last_run_at": "2026-11-04T01:50:52.508505+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -352,9 +352,9 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-09-30T01:50:00+02:00",
-        "dispatched_at": "2026-09-30T01:50:09.056001+02:00",
-        "lateness_seconds": 9.1,
+        "scheduled_at": "2026-11-04T01:50:00+01:00",
+        "dispatched_at": "2026-11-04T01:50:52.108057+01:00",
+        "lateness_seconds": 52.1,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -411,7 +411,7 @@
     },
     {
       "id": "d088f674a976",
-      "name": "kimaki-weekly-restart",
+      "name": "opencode-daily-restart",
       "prompt": "Weekly Kimaki/opencode restart (memory hygiene + Bun degradation guard).",
       "skills": [],
       "skill": null,
@@ -428,26 +428,26 @@
       "context_from": null,
       "schedule": {
         "kind": "cron",
-        "expr": "0 4 * * 0",
-        "display": "0 4 * * 0"
+        "expr": "0 4 * * *",
+        "display": "0 4 * * *"
       },
-      "schedule_display": "0 4 * * 0",
+      "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 34
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-30T14:03:04.059217+02:00",
-      "next_run_at": "2026-10-04T04:00:00+02:00",
-      "last_run_at": null,
-      "last_status": null,
-      "last_error": null,
+      "next_run_at": "2026-11-05T04:00:00+01:00",
+      "last_run_at": "2026-11-04T04:02:30.540267+01:00",
+      "last_status": "error",
+      "last_error": "Interrupted by shutdown before terminal completion.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 15,
       "deliver": "origin",
       "origin": {
         "platform": "discord",
@@ -458,8 +458,15 @@
         "scope_id": "1479597162685006058"
       },
       "enabled_toolsets": null,
-      "workdir": null
+      "workdir": null,
+      "last_dispatch": {
+        "scheduled_at": "2026-11-04T04:00:00+01:00",
+        "dispatched_at": "2026-11-04T04:00:55.170862+01:00",
+        "lateness_seconds": 55.2,
+        "kind": "on_time"
+      },
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-09-30T16:40:59.856599+02:00"
+  "updated_at": "2026-11-04T18:00:19.970731+01:00"
 }
