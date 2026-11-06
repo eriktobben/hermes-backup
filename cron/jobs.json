@@ -20,15 +20,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 158
+        "completed": 159
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-11-06T09:00:00+01:00",
-      "last_run_at": "2026-11-05T09:01:21.477970+01:00",
+      "next_run_at": "2026-11-07T09:00:00+01:00",
+      "last_run_at": "2026-11-06T09:00:47.273015+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
       "last_delivery_error": null,
@@ -44,12 +44,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-05T09:00:00+01:00",
-        "dispatched_at": "2026-11-05T09:00:49.041877+01:00",
-        "lateness_seconds": 49.0,
+        "scheduled_at": "2026-11-06T09:00:00+01:00",
+        "dispatched_at": "2026-11-06T09:00:27.808128+01:00",
+        "lateness_seconds": 27.8,
         "kind": "on_time"
       },
-      "failure_streak": 57
+      "failure_streak": 58
     },
     {
       "id": "180cd90f598f",
@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3579
+        "completed": 3580
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-11-06T09:37:27.360755+01:00",
-      "last_run_at": "2026-11-06T07:36:29.315178+01:00",
+      "next_run_at": "2026-11-06T10:38:28.756272+01:00",
+      "last_run_at": "2026-11-06T08:37:31.141688+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-06T08:37:27.791123+01:00",
-        "by": "hetz-red-butterfly:1189:0e8ec25d534f44d1b6e9f9a70907abcf"
+        "at": "2026-11-06T09:38:29.282518+01:00",
+        "by": "hetz-red-butterfly:1189:d9553d4e95b4431ba4c77a47a92dbb94"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-06T08:36:29.315178+01:00",
-        "dispatched_at": "2026-11-06T08:37:27.320128+01:00",
-        "lateness_seconds": 58.0,
+        "scheduled_at": "2026-11-06T09:37:31.141688+01:00",
+        "dispatched_at": "2026-11-06T09:38:28.716330+01:00",
+        "lateness_seconds": 57.6,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -282,15 +282,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 85
+        "completed": 86
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-11-06T09:00:00+01:00",
-      "last_run_at": "2026-11-05T09:01:23.864201+01:00",
+      "next_run_at": "2026-11-07T09:00:00+01:00",
+      "last_run_at": "2026-11-06T09:00:48.546547+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -305,9 +305,9 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-05T09:00:00+01:00",
-        "dispatched_at": "2026-11-05T09:00:49.041877+01:00",
-        "lateness_seconds": 49.0,
+        "scheduled_at": "2026-11-06T09:00:00+01:00",
+        "dispatched_at": "2026-11-06T09:00:27.808128+01:00",
+        "lateness_seconds": 27.8,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-06T08:37:27.791325+01:00"
+  "updated_at": "2026-11-06T09:38:29.282722+01:00"
 }
