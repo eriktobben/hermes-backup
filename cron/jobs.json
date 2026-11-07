@@ -20,15 +20,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 159
+        "completed": 160
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-11-07T09:00:00+01:00",
-      "last_run_at": "2026-11-06T09:00:47.273015+01:00",
+      "next_run_at": "2026-11-08T09:00:00+01:00",
+      "last_run_at": "2026-11-07T09:00:15.492706+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
       "last_delivery_error": null,
@@ -44,12 +44,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-06T09:00:00+01:00",
-        "dispatched_at": "2026-11-06T09:00:27.808128+01:00",
-        "lateness_seconds": 27.8,
+        "scheduled_at": "2026-11-07T09:00:00+01:00",
+        "dispatched_at": "2026-11-07T09:00:10.107461+01:00",
+        "lateness_seconds": 10.1,
         "kind": "on_time"
       },
-      "failure_streak": 58
+      "failure_streak": 59
     },
     {
       "id": "180cd90f598f",
@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3602
+        "completed": 3603
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-11-07T09:00:07.076196+01:00",
-      "last_run_at": "2026-11-07T06:59:09.396993+01:00",
+      "next_run_at": "2026-11-07T10:01:10.185977+01:00",
+      "last_run_at": "2026-11-07T08:00:11.322537+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-07T08:00:07.492500+01:00",
-        "by": "hetz-red-butterfly:1189:31d046239cc44311b1cd3182d3a5bc7f"
+        "at": "2026-11-07T09:01:10.422193+01:00",
+        "by": "hetz-red-butterfly:1189:27a3d912ee904347a8d4f5216227e925"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-07T07:59:09.396993+01:00",
-        "dispatched_at": "2026-11-07T08:00:07.027801+01:00",
-        "lateness_seconds": 57.6,
+        "scheduled_at": "2026-11-07T09:00:11.322537+01:00",
+        "dispatched_at": "2026-11-07T09:01:10.147545+01:00",
+        "lateness_seconds": 58.8,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -178,7 +178,7 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 125
+        "completed": 126
       },
       "enabled": true,
       "state": "scheduled",
@@ -186,7 +186,7 @@
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
       "next_run_at": "2026-11-08T08:00:00+01:00",
-      "last_run_at": "2026-11-06T08:00:33.626804+01:00",
+      "last_run_at": "2026-11-07T08:01:02.469770+01:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 410: Model mimo-v2.5 has been deprecated. Use mimo-v2.6-flash instead.",
       "last_delivery_error": null,
@@ -203,17 +203,14 @@
         "terminal"
       ],
       "workdir": "/home/erik/Projects/ai-daily-briefing",
-      "fire_claim": {
-        "at": "2026-11-07T08:00:07.594308+01:00",
-        "by": "hetz-red-butterfly:1189:64ec755660274c4fab0f682b1f89d9c2"
-      },
+      "fire_claim": null,
       "last_dispatch": {
         "scheduled_at": "2026-11-07T08:00:00+01:00",
         "dispatched_at": "2026-11-07T08:00:07.027801+01:00",
         "lateness_seconds": 7.0,
         "kind": "on_time"
       },
-      "failure_streak": 8
+      "failure_streak": 9
     },
     {
       "id": "8b03d0881387",
@@ -285,15 +282,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 86
+        "completed": 87
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-11-07T09:00:00+01:00",
-      "last_run_at": "2026-11-06T09:00:48.546547+01:00",
+      "next_run_at": "2026-11-08T09:00:00+01:00",
+      "last_run_at": "2026-11-07T09:00:16.791552+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -308,9 +305,9 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-06T09:00:00+01:00",
-        "dispatched_at": "2026-11-06T09:00:27.808128+01:00",
-        "lateness_seconds": 27.8,
+        "scheduled_at": "2026-11-07T09:00:00+01:00",
+        "dispatched_at": "2026-11-07T09:00:10.107461+01:00",
+        "lateness_seconds": 10.1,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -474,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-07T08:00:07.594852+01:00"
+  "updated_at": "2026-11-07T09:01:10.422406+01:00"
 }
