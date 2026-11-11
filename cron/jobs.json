@@ -20,15 +20,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 163
+        "completed": 164
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-11-11T09:00:00+01:00",
-      "last_run_at": "2026-11-10T09:00:32.073352+01:00",
+      "next_run_at": "2026-11-12T09:00:00+01:00",
+      "last_run_at": "2026-11-11T09:00:58.925048+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
       "last_delivery_error": null,
@@ -44,12 +44,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-10T09:00:00+01:00",
-        "dispatched_at": "2026-11-10T09:00:04.344161+01:00",
-        "lateness_seconds": 4.3,
+        "scheduled_at": "2026-11-11T09:00:00+01:00",
+        "dispatched_at": "2026-11-11T09:00:45.163258+01:00",
+        "lateness_seconds": 45.2,
         "kind": "on_time"
       },
-      "failure_streak": 62
+      "failure_streak": 63
     },
     {
       "id": "180cd90f598f",
@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3697
+        "completed": 3698
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-11-11T09:36:44.617628+01:00",
-      "last_run_at": "2026-11-11T07:35:45.397678+01:00",
+      "next_run_at": "2026-11-11T10:37:46.087083+01:00",
+      "last_run_at": "2026-11-11T08:36:48.566758+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-11T08:36:45.014339+01:00",
-        "by": "hetz-red-butterfly:1189:7de2f6e1617947e783af79bd10b2b5cd"
+        "at": "2026-11-11T09:37:46.567375+01:00",
+        "by": "hetz-red-butterfly:1189:910ea7d0d51d4488a251947e8f7d8411"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T08:35:45.397678+01:00",
-        "dispatched_at": "2026-11-11T08:36:44.580169+01:00",
-        "lateness_seconds": 59.2,
+        "scheduled_at": "2026-11-11T09:36:48.566758+01:00",
+        "dispatched_at": "2026-11-11T09:37:46.047125+01:00",
+        "lateness_seconds": 57.5,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -282,17 +282,17 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 90
+        "completed": 91
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-11-11T09:00:00+01:00",
-      "last_run_at": "2026-11-10T09:00:32.224754+01:00",
-      "last_status": "error",
-      "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-begood-sale.py\", line 61, in <module>\n    main()\n  File \"/home/erik/.hermes/scripts/check-begood-sale.py\", line 37, in main\n    html = fetch()\n           ^^^^^^^\n  File \"/home/erik/.hermes/scripts/check-begood-sale.py\", line 13, in fetch\n    with urllib.request.urlopen(req, timeout=15) as resp:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/erik/.hermes/hermes-agent/.hermes-runtime/python/generation-1788858542-1502111-e2fef80b/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/urllib/request.py\", line 216, in urlopen\n    return opener.open(url, data, timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/erik/.hermes/hermes-agent/.hermes-runtime/python/generation-1788858542-1502111-e2fef80b/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/urllib/request.py\", line 525, in open\n    response = meth(req, response)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"/home/erik/.hermes/hermes-agent/.hermes-runtime/python/generation-1788858542-1502111-e2fef80b/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/urllib/request.py\", line 634, in http_response\n    response = self.parent.error(\n               ^^^^^^^^^^^^^^^^^^\n  File \"/home/erik/.hermes/hermes-agent/.hermes-runtime/python/generation-1788858542-1502111-e2fef80b/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/urllib/request.py\", line 563, in error\n    return self._call_chain(*args)\n           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/erik/.hermes/hermes-agent/.hermes-runtime/python/generation-1788858542-1502111-e2fef80b/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/urllib/request.py\", line 496, in _call_chain\n    result = func(*args)\n             ^^^^^^^^^^^\n  File \"/home/erik/.hermes/hermes-agent/.hermes-runtime/python/generation-1788858542-1502111-e2fef80b/cpython-3.11.16-linux-x86_64-gnu/lib/python3.11/urllib/request.py\", line 643, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 429: Too Many Requests",
+      "next_run_at": "2026-11-12T09:00:00+01:00",
+      "last_run_at": "2026-11-11T09:00:59.189719+01:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -305,12 +305,12 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-10T09:00:00+01:00",
-        "dispatched_at": "2026-11-10T09:00:04.344161+01:00",
-        "lateness_seconds": 4.3,
+        "scheduled_at": "2026-11-11T09:00:00+01:00",
+        "dispatched_at": "2026-11-11T09:00:45.163258+01:00",
+        "lateness_seconds": 45.2,
         "kind": "on_time"
       },
-      "failure_streak": 1
+      "failure_streak": 0
     },
     {
       "id": "76d12211602a",
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-11T08:36:45.014539+01:00"
+  "updated_at": "2026-11-11T09:37:46.567569+01:00"
 }
