@@ -20,15 +20,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 130
+        "completed": 164
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-10-08T09:00:00+02:00",
-      "last_run_at": "2026-10-07T09:01:56.443511+02:00",
+      "next_run_at": "2026-11-12T09:00:00+01:00",
+      "last_run_at": "2026-11-11T09:00:58.925048+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
       "last_delivery_error": null,
@@ -44,12 +44,12 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T09:00:00+02:00",
-        "dispatched_at": "2026-10-07T09:00:55.907698+02:00",
-        "lateness_seconds": 55.9,
+        "scheduled_at": "2026-11-11T09:00:00+01:00",
+        "dispatched_at": "2026-11-11T09:00:45.163258+01:00",
+        "lateness_seconds": 45.2,
         "kind": "on_time"
       },
-      "failure_streak": 29
+      "failure_streak": 63
     },
     {
       "id": "180cd90f598f",
@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 2879
+        "completed": 3708
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-10-07T17:18:15.731620+02:00",
-      "last_run_at": "2026-10-07T16:18:15.731620+02:00",
+      "next_run_at": "2026-11-11T19:46:07.221834+01:00",
+      "last_run_at": "2026-11-11T18:46:07.221834+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -95,9 +95,9 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T16:17:14.509530+02:00",
-        "dispatched_at": "2026-10-07T16:18:11.972224+02:00",
-        "lateness_seconds": 57.5,
+        "scheduled_at": "2026-11-11T18:46:02.752359+01:00",
+        "dispatched_at": "2026-11-11T18:46:03.455673+01:00",
+        "lateness_seconds": 0.7,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -122,15 +122,15 @@
       "schedule_display": "15 2 * * *",
       "repeat": {
         "times": null,
-        "completed": 121
+        "completed": 155
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T12:06:21.663512+02:00",
-      "next_run_at": "2026-10-08T02:15:00+02:00",
-      "last_run_at": "2026-10-07T02:16:34.978310+02:00",
+      "next_run_at": "2026-11-12T02:15:00+01:00",
+      "last_run_at": "2026-11-11T02:16:26.555962+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -146,9 +146,9 @@
       "profile": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T02:15:00+02:00",
-        "dispatched_at": "2026-10-07T02:15:43.250481+02:00",
-        "lateness_seconds": 43.3,
+        "scheduled_at": "2026-11-11T02:15:00+01:00",
+        "dispatched_at": "2026-11-11T02:15:33.336096+01:00",
+        "lateness_seconds": 33.3,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -175,17 +175,17 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 96
+        "completed": 130
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-10-08T08:00:00+02:00",
-      "last_run_at": "2026-10-07T08:08:46.189251+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-12T08:00:00+01:00",
+      "last_run_at": "2026-11-11T08:01:45.919784+01:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 410: Model mimo-v2.5 has been deprecated. Use mimo-v2.6-flash instead.",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -202,12 +202,12 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T08:00:00+02:00",
-        "dispatched_at": "2026-10-07T08:00:54.373374+02:00",
-        "lateness_seconds": 54.4,
+        "scheduled_at": "2026-11-11T08:00:00+01:00",
+        "dispatched_at": "2026-11-11T08:00:43.753489+01:00",
+        "lateness_seconds": 43.8,
         "kind": "on_time"
       },
-      "failure_streak": 0
+      "failure_streak": 13
     },
     {
       "id": "8b03d0881387",
@@ -229,17 +229,17 @@
       "schedule_display": "0 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 90
+        "completed": 124
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-09T11:45:38.111899+02:00",
-      "next_run_at": "2026-10-08T05:00:00+02:00",
-      "last_run_at": "2026-10-07T05:00:54.555822+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-12T05:00:00+01:00",
+      "last_run_at": "2026-11-11T05:01:03.614647+01:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstdout:\n❌ Ingen opencode serve-prosess funnet. Sjekker om Kimaki kan starte en...",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -252,12 +252,12 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T05:00:00+02:00",
-        "dispatched_at": "2026-10-07T05:00:50.140708+02:00",
-        "lateness_seconds": 50.1,
+        "scheduled_at": "2026-11-11T05:00:00+01:00",
+        "dispatched_at": "2026-11-11T05:00:37.947553+01:00",
+        "lateness_seconds": 37.9,
         "kind": "on_time"
       },
-      "failure_streak": 0
+      "failure_streak": 22
     },
     {
       "id": "878cb32b3906",
@@ -279,15 +279,15 @@
       "schedule_display": "0 9 * * *",
       "repeat": {
         "times": null,
-        "completed": 57
+        "completed": 91
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-10-08T09:00:00+02:00",
-      "last_run_at": "2026-10-07T09:00:58.764393+02:00",
+      "next_run_at": "2026-11-12T09:00:00+01:00",
+      "last_run_at": "2026-11-11T09:00:59.189719+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -302,9 +302,9 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T09:00:00+02:00",
-        "dispatched_at": "2026-10-07T09:00:55.907698+02:00",
-        "lateness_seconds": 55.9,
+        "scheduled_at": "2026-11-11T09:00:00+01:00",
+        "dispatched_at": "2026-11-11T09:00:45.163258+01:00",
+        "lateness_seconds": 45.2,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -329,15 +329,15 @@
       "schedule_display": "50 1 * * *",
       "repeat": {
         "times": null,
-        "completed": 55
+        "completed": 89
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-13T11:05:50.510672+02:00",
-      "next_run_at": "2026-10-08T01:50:00+02:00",
-      "last_run_at": "2026-10-07T01:51:21.824020+02:00",
+      "next_run_at": "2026-11-12T01:50:00+01:00",
+      "last_run_at": "2026-11-11T01:50:33.456206+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -352,9 +352,9 @@
       "workdir": null,
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T01:50:00+02:00",
-        "dispatched_at": "2026-10-07T01:50:42.639033+02:00",
-        "lateness_seconds": 42.6,
+        "scheduled_at": "2026-11-11T01:50:00+01:00",
+        "dispatched_at": "2026-11-11T01:50:32.745446+01:00",
+        "lateness_seconds": 32.7,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -434,20 +434,20 @@
       "schedule_display": "0 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 7
+        "completed": 41
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-09-30T14:03:04.059217+02:00",
-      "next_run_at": "2026-10-08T04:00:00+02:00",
-      "last_run_at": "2026-10-07T04:01:56.249018+02:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-11-12T04:00:00+01:00",
+      "last_run_at": "2026-11-11T04:01:49.948661+01:00",
+      "last_status": "error",
+      "last_error": "Script exited with code 1\nstdout:\nERROR 2026-11-11 03:01: ingen opencode serve etter restart (var 0MB før). Sjekk 'pm2 logs kimaki' og 'systemctl --user status pm2'.",
       "last_delivery_error": null,
       "last_delivery_unverified": null,
-      "failure_streak": 0,
+      "failure_streak": 22,
       "deliver": "origin",
       "origin": {
         "platform": "discord",
@@ -460,13 +460,13 @@
       "enabled_toolsets": null,
       "workdir": null,
       "last_dispatch": {
-        "scheduled_at": "2026-10-07T04:00:00+02:00",
-        "dispatched_at": "2026-10-07T04:00:48.718774+02:00",
-        "lateness_seconds": 48.7,
+        "scheduled_at": "2026-11-11T04:00:00+01:00",
+        "dispatched_at": "2026-11-11T04:00:36.545153+01:00",
+        "lateness_seconds": 36.5,
         "kind": "on_time"
       },
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-10-07T16:18:15.731896+02:00"
+  "updated_at": "2026-11-11T18:46:07.222448+01:00"
 }

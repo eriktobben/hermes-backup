@@ -283,7 +283,7 @@
     "patch_count": 16,
     "patch_generation": 16,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 17,
     "view_count": 17
   },
@@ -298,7 +298,7 @@
     "patch_count": 27,
     "patch_generation": 27,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 12,
     "view_count": 12
   },
@@ -1576,7 +1576,7 @@
     "patch_count": 2,
     "patch_generation": 2,
     "pinned": false,
-    "state": "active",
+    "state": "stale",
     "use_count": 4,
     "view_count": 4
   },
