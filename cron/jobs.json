@@ -27,7 +27,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-03T00:39:28.995231+00:00",
-      "next_run_at": "2026-11-12T09:00:00+01:00",
+      "next_run_at": "2026-11-13T09:00:00+01:00",
       "last_run_at": "2026-11-11T09:00:58.925048+01:00",
       "last_status": "error",
       "last_error": "Script exited with code 1\nstderr:\nTraceback (most recent call last):\n  File \"/home/erik/.hermes/scripts/check-lyskorn.py\", line 5, in <module>\n    import whois\nModuleNotFoundError: No module named 'whois'",
@@ -42,11 +42,14 @@
       "enabled_toolsets": null,
       "workdir": null,
       "profile": null,
-      "fire_claim": null,
+      "fire_claim": {
+        "at": "2026-11-12T09:00:27.346074+01:00",
+        "by": "hetz-red-butterfly:1189:5f031b39020c46fe926629f3531f9927"
+      },
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T09:00:00+01:00",
-        "dispatched_at": "2026-11-11T09:00:45.163258+01:00",
-        "lateness_seconds": 45.2,
+        "scheduled_at": "2026-11-12T09:00:00+01:00",
+        "dispatched_at": "2026-11-12T09:00:26.743526+01:00",
+        "lateness_seconds": 26.7,
         "kind": "on_time"
       },
       "failure_streak": 63
@@ -71,15 +74,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3720
+        "completed": 3721
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-11-12T08:59:24.325698+01:00",
-      "last_run_at": "2026-11-12T06:58:26.392327+01:00",
+      "next_run_at": "2026-11-12T10:00:27.009606+01:00",
+      "last_run_at": "2026-11-12T07:59:27.605738+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +97,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-12T07:59:24.588066+01:00",
-        "by": "hetz-red-butterfly:1189:69b12379474f46ae8e83c38aa5b12d2a"
+        "at": "2026-11-12T09:00:27.272466+01:00",
+        "by": "hetz-red-butterfly:1189:f0ab0f85e5da4c97b05c9d883baae14f"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-12T07:58:26.392327+01:00",
-        "dispatched_at": "2026-11-12T07:59:24.286421+01:00",
-        "lateness_seconds": 57.9,
+        "scheduled_at": "2026-11-12T08:59:27.605738+01:00",
+        "dispatched_at": "2026-11-12T09:00:26.743526+01:00",
+        "lateness_seconds": 59.1,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -178,15 +181,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 130
+        "completed": 131
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-11-12T08:00:00+01:00",
-      "last_run_at": "2026-11-11T08:01:45.919784+01:00",
+      "next_run_at": "2026-11-13T08:00:00+01:00",
+      "last_run_at": "2026-11-12T08:01:14.278575+01:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 410: Model mimo-v2.5 has been deprecated. Use mimo-v2.6-flash instead.",
       "last_delivery_error": null,
@@ -205,12 +208,12 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T08:00:00+01:00",
-        "dispatched_at": "2026-11-11T08:00:43.753489+01:00",
-        "lateness_seconds": 43.8,
+        "scheduled_at": "2026-11-12T08:00:00+01:00",
+        "dispatched_at": "2026-11-12T08:00:24.332145+01:00",
+        "lateness_seconds": 24.3,
         "kind": "on_time"
       },
-      "failure_streak": 13
+      "failure_streak": 14
     },
     {
       "id": "8b03d0881387",
@@ -289,7 +292,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T09:41:18.822407+02:00",
-      "next_run_at": "2026-11-12T09:00:00+01:00",
+      "next_run_at": "2026-11-13T09:00:00+01:00",
       "last_run_at": "2026-11-11T09:00:59.189719+01:00",
       "last_status": "ok",
       "last_error": null,
@@ -303,11 +306,14 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": null,
+      "fire_claim": {
+        "at": "2026-11-12T09:00:27.297582+01:00",
+        "by": "hetz-red-butterfly:1189:f27908e91a3e48649041aeb57ee6eb21"
+      },
       "last_dispatch": {
-        "scheduled_at": "2026-11-11T09:00:00+01:00",
-        "dispatched_at": "2026-11-11T09:00:45.163258+01:00",
-        "lateness_seconds": 45.2,
+        "scheduled_at": "2026-11-12T09:00:00+01:00",
+        "dispatched_at": "2026-11-12T09:00:26.743526+01:00",
+        "lateness_seconds": 26.7,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -471,5 +477,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-12T07:59:24.588341+01:00"
+  "updated_at": "2026-11-12T09:00:27.346375+01:00"
 }
