@@ -107,6 +107,7 @@ Recommended structure:
 - **Split availability**: Employee has gap in availability (e.g., 09:45–12:15, 15:00–21:15) — cannot cover a continuous shift through the gap
 - **Late starts**: Employee available "from 14:00" cannot cover a shift starting at 13:05; accept solo coverage for the gap
 - **Double-booking**: Always check employee isn't assigned to two locations on the same day
+- **Two availability lists in one message**: when a pasted message contains a list and then "oppdatert <måned>" followed by a second list, the second supersedes the first — never merge them. Merging silently re-adds days the person has withdrawn.
 - **Availability lists are exhaustive**: a day that is not on a person's day-by-day list is unavailable. Re-check every existing assignment for that person against the whole list, not just the days you expect to have changed — a day sandwiched between two listed days reads as included and ships as a booking they cannot work
 - **Validate coverage by position, not by head count**: include fixed staff in the model, and count positions per day — a split shift is one position covered by two people, so counting heads reports phantom surplus, while leaving fixed staff out reports phantom gaps
 - **Deviating opening hours**: when the month comes with a table of deviating hours, regenerate the shift templates from it (a 10–22 day needs e.g. 10–18 + 14–22); days absent from an "avvikende åpningstider" list keep normal hours — state that assumption in the confirmation list
