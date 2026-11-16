@@ -73,6 +73,7 @@
 - **Kan jobbe**: Kvad tir/tor (ikke man/wed/fri pga Lars), Sørland man/wed/fri-kveld (ikke tir/thu pga Lars)
 - **Fra kl. 16**: kan bare ta kveldsvakt som starter 16:00/16:05 — ikke en full 13:05-vakt; det gir en periode der bare Erik/Lars er på gulvet, så vurder om noen andre skal ha hele vakten i stedet
 - **Ikke planlegg på USIKKER-dager**
+- **"Hjemme" i Guros liste betyr IKKE tilgjengelig** — det er en status (hjemme fra praksis), ikke et ja. Bare "kan jobbe" (ev. "fra kl. X") er tilgjengelighet; bekreftet av Tobias 11/2026.
 
 ### Mathias
 - **Tilgjengelig**: Kun torsdag, fredag, lørdag
