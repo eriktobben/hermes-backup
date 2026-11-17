@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T21:09:29.582741",
+  "updated_at": "2026-11-17T22:09:44.796507",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,18 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1572372065590321265:1572372065590321265",
+        "name": "Tobben MC / #general / Kan du finne en relevant forskningsartikkel norsk som kan brukes som kildehen... / topic 1572372065590321265",
+        "type": "thread",
+        "thread_id": "1572372065590321265"
+      },
+      {
+        "id": "1572371893455949835:1572371893455949835",
+        "name": "Tobben MC / #general / Kan du finne en relevant forskningsartikkel norsk som kan brukes som kildehen... / topic 1572371893455949835",
+        "type": "thread",
+        "thread_id": "1572371893455949835"
       },
       {
         "id": "1571847290333958196:1571847290333958196",

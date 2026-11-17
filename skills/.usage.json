@@ -1,4 +1,19 @@
 {
+  "academic-literature-search": {
+    "archived_at": null,
+    "created_at": "2026-11-17T22:10:01.818999+00:00",
+    "created_by": "agent",
+    "last_patched_at": "2026-11-17T22:10:01.947097+00:00",
+    "last_reused_patch_generation": 0,
+    "last_used_at": null,
+    "last_viewed_at": null,
+    "patch_count": 1,
+    "patch_generation": 1,
+    "pinned": false,
+    "state": "active",
+    "use_count": 0,
+    "view_count": 0
+  },
   "ai-voice-stack": {
     "archived_at": null,
     "created_at": "2026-09-18T09:42:18.590883+00:00",
@@ -766,14 +781,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": null,
-    "last_viewed_at": null,
+    "last_used_at": "2026-11-17T22:06:07.150860+00:00",
+    "last_viewed_at": "2026-11-17T22:06:07.142189+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "stale",
-    "use_count": 0,
-    "view_count": 0
+    "use_count": 1,
+    "view_count": 1
   },
   "handoff": {
     "archived_at": null,
