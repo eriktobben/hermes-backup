@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3885
+        "completed": 3886
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-11-19T08:46:00.428329+01:00",
-      "last_run_at": "2026-11-19T06:45:02.359600+01:00",
+      "next_run_at": "2026-11-19T09:47:01.847353+01:00",
+      "last_run_at": "2026-11-19T07:46:04.486676+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-19T07:46:00.931459+01:00",
-        "by": "hetz-red-butterfly:1189:c4c7f549b7f84b62a6c3644105e38f6a"
+        "at": "2026-11-19T08:47:02.126161+01:00",
+        "by": "hetz-red-butterfly:1189:4566934a148346ae80b93d4d4a37d5e4"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-19T07:45:02.359600+01:00",
-        "dispatched_at": "2026-11-19T07:46:00.388316+01:00",
-        "lateness_seconds": 58.0,
+        "scheduled_at": "2026-11-19T08:46:04.486676+01:00",
+        "dispatched_at": "2026-11-19T08:47:01.819978+01:00",
+        "lateness_seconds": 57.3,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -178,15 +178,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 137
+        "completed": 138
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-04T16:16:30.715663+02:00",
-      "next_run_at": "2026-11-19T08:00:00+01:00",
-      "last_run_at": "2026-11-18T08:00:51.585214+01:00",
+      "next_run_at": "2026-11-20T08:00:00+01:00",
+      "last_run_at": "2026-11-19T08:00:39.768583+01:00",
       "last_status": "error",
       "last_error": "RuntimeError: HTTP 410: Model mimo-v2.5 has been deprecated. Use mimo-v2.6-flash instead.",
       "last_delivery_error": null,
@@ -205,12 +205,12 @@
       "workdir": "/home/erik/Projects/ai-daily-briefing",
       "fire_claim": null,
       "last_dispatch": {
-        "scheduled_at": "2026-11-18T08:00:00+01:00",
-        "dispatched_at": "2026-11-18T08:00:22.385575+01:00",
-        "lateness_seconds": 22.4,
+        "scheduled_at": "2026-11-19T08:00:00+01:00",
+        "dispatched_at": "2026-11-19T08:00:00.751528+01:00",
+        "lateness_seconds": 0.8,
         "kind": "on_time"
       },
-      "failure_streak": 20
+      "failure_streak": 21
     },
     {
       "id": "8b03d0881387",
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-19T07:46:00.931689+01:00"
+  "updated_at": "2026-11-19T08:47:02.126388+01:00"
 }
