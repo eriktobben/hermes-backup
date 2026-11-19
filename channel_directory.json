@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T23:35:51.831043",
+  "updated_at": "2026-11-19T00:36:06.581955",
   "platforms": {
     "discord": [
       {
@@ -301,6 +301,12 @@
         "name": "missioncontrol",
         "guild": "Tobben MC",
         "type": "channel"
+      },
+      {
+        "id": "1572768483194707988:1572768483194707988",
+        "name": "Tobben MC / #general / Kan du gå gjennom oppgaven her? Vurder det opp mot kravene i Semesteroppgave_... / topic 1572768483194707988",
+        "type": "thread",
+        "thread_id": "1572768483194707988"
       },
       {
         "id": "1571847290333958196:1571847290333958196",
