@@ -71,15 +71,15 @@
       "schedule_display": "every 60m",
       "repeat": {
         "times": null,
-        "completed": 3963
+        "completed": 3964
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-06-08T00:02:03.246008+02:00",
-      "next_run_at": "2026-11-22T16:05:06.883939+01:00",
-      "last_run_at": "2026-11-22T14:04:08.655677+01:00",
+      "next_run_at": "2026-11-22T17:06:08.264362+01:00",
+      "last_run_at": "2026-11-22T15:05:11.346773+01:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -94,13 +94,13 @@
       "workdir": null,
       "profile": null,
       "fire_claim": {
-        "at": "2026-11-22T15:05:07.435083+01:00",
-        "by": "hetz-red-butterfly:1189:bc15758fa20b4be1bdcc58bbcc293416"
+        "at": "2026-11-22T16:06:08.516570+01:00",
+        "by": "hetz-red-butterfly:1189:1b88e3bdc57749a5872052f068c8de99"
       },
       "last_dispatch": {
-        "scheduled_at": "2026-11-22T15:04:08.655677+01:00",
-        "dispatched_at": "2026-11-22T15:05:06.847698+01:00",
-        "lateness_seconds": 58.2,
+        "scheduled_at": "2026-11-22T16:05:11.346773+01:00",
+        "dispatched_at": "2026-11-22T16:06:08.220468+01:00",
+        "lateness_seconds": 56.9,
         "kind": "on_time"
       },
       "failure_streak": 0
@@ -471,5 +471,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-11-22T15:05:07.435285+01:00"
+  "updated_at": "2026-11-22T16:06:08.516810+01:00"
 }
